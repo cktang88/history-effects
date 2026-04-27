@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+
+# env
+.env
+.env.local
+.env.*.local
+
+# bun (legacy binary lockfile only; bun.lock is checked in)
+bun.lockb
+
+# vite / tsc
+.vite/
+*.tsbuildinfo
