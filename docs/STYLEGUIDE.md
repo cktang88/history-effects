@@ -54,4 +54,4 @@ These are the conventions for this repo. They were established in conversation; 
 ## Tests
 
 - Vitest in both packages. New CLI commands, helpers, and routes get unit tests.
-- Run `bun run precommit` (lint + tests across both packages) before committing — the pre-commit hook enforces it.
+- Pre-commit hooks are managed by [prek](https://github.com/j178/prek) (`.pre-commit-config.yaml`); they run oxlint + tests across both packages before every commit.

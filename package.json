@@ -5,14 +5,9 @@
   "scripts": {
     "lint": "oxlint server/src web/src",
     "test": "cd server && bun run test && cd ../web && bun run test",
-    "precommit": "bun run lint && bun run test",
-    "prepare": "simple-git-hooks || true"
+    "precommit": "bun run lint && bun run test"
   },
   "devDependencies": {
-    "oxlint": "^0.15.0",
-    "simple-git-hooks": "^2.11.1"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "bun run precommit"
+    "oxlint": "^0.15.0"
   }
 }

@@ -1,0 +1,16 @@
+repos:
+  - repo: local
+    hooks:
+      - id: oxlint
+        name: oxlint
+        entry: bun run lint
+        language: system
+        pass_filenames: false
+        types_or: [ts, tsx, javascript, jsx]
+
+      - id: vitest
+        name: vitest (server + web)
+        entry: bun run test
+        language: system
+        pass_filenames: false
+        types_or: [ts, tsx, javascript, jsx]

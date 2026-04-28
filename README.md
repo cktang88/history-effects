@@ -10,7 +10,7 @@ Edges are color-coded by causal strength: **primary** (direct, near-necessary ca
 - **Frontend**: React 19 + [React Flow 12](https://reactflow.dev/) (`@xyflow/react`) + Vite.
 - **Tests**: Vitest in both packages (43 tests total).
 - **Lint**: oxlint at the repo root.
-- **Pre-commit**: simple-git-hooks runs `bun run precommit` (lint + tests) before every commit.
+- **Pre-commit**: [prek](https://github.com/j178/prek) runs oxlint + tests via `.pre-commit-config.yaml` before every commit.
 - **Default model**: `moonshotai/kimi-k2.6` (override via `OPENROUTER_MODEL` env var).
 
 ## Project layout
@@ -98,6 +98,6 @@ bun run lint
 bun run test
 ```
 
-The pre-commit hook is registered automatically by `simple-git-hooks` during `bun install` at the root. To skip it for a single commit (not recommended): `SKIP_SIMPLE_GIT_HOOKS=1 git commit ...`.
+The pre-commit hook is managed by [prek](https://github.com/j178/prek). After cloning, install prek (`brew install j178/tap/prek`) and run `prek install` once to register the git hook. Config lives in `.pre-commit-config.yaml`.
 
 See [`docs/SPEC.md`](./docs/SPEC.md) for the full spec and [`docs/PROGRESS.md`](./docs/PROGRESS.md) for the build log.
