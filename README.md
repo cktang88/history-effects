@@ -1,14 +1,14 @@
 # History Effects
 
-Explore historical events as a fractal graph of causes and consequences. Type an event, the LLM expands its main effects and causes, and you can keep drilling down — or drag an edge between any two events to have the LLM fill in an intermediate event that bridges them.
+Explore historical events as a fractal graph of causes and consequences. Type an event, the LLM expands its main effects, and you can keep drilling down — or drag an edge between any two events to have the LLM fill in an intermediate event that bridges them.
 
 Edges are color-coded by causal strength: **primary** (direct, near-necessary cause), **contributing** (one of several factors), or **minor** (peripheral / speculative).
 
 ## Stack
 
-- **Backend**: Bun + Hono, calling [OpenRouter](https://openrouter.ai/) for LLM completions.
+- **Backend**: Bun + Hono, calling [OpenRouter](https://openrouter.ai/) through `@openrouter/sdk`.
 - **Frontend**: React 19 + [React Flow 12](https://reactflow.dev/) (`@xyflow/react`) + Vite.
-- **Tests**: Vitest in both packages (43 tests total).
+- **Tests**: Vitest in both packages (68 tests total).
 - **Lint**: oxlint at the repo root.
 - **Pre-commit**: [prek](https://github.com/j178/prek) runs oxlint + tests via `.pre-commit-config.yaml` before every commit.
 - **Default model**: `moonshotai/kimi-k2.6` (override via `OPENROUTER_MODEL` env var).
@@ -51,10 +51,13 @@ Open http://localhost:5173.
 ## Using the app
 
 1. Type a historical event in the input bar at the top, click **Add**. A node appears.
-2. On any node, click **→ Effects** to fan out N consequences, or **← Causes** to fan out N upstream causes.
+2. On any node, click **Effects →** to fan out N consequences, or **← Causes** to fan out N upstream causes. Repeated clicks are idempotent once that direction has already been expanded.
 3. **Drag an edge** from one node's bottom handle to another node's top handle — the LLM proposes an intermediate event that bridges them, with both legs color-coded.
-4. Click an edge to see the model's reasoning for the causal link.
-5. Select a node and press <kbd>Backspace</kbd> to delete it.
+4. Hover a node and click **Web detail** to enrich that node with OpenRouter web search. Web search is opt-in and is not used for normal generation.
+5. Hover a node and click **↻** to clear its downstream generated children and explicitly regenerate them.
+6. Click an edge to see the model's reasoning for the causal link.
+
+The graph is persisted in browser `localStorage`, and API responses are cached in `localStorage` by stable request key. Reloading the page restores the graph instead of rerunning LLM calls. Explicit regeneration bypasses the response cache.
 
 ## Endpoints
 
@@ -64,6 +67,16 @@ Open http://localhost:5173.
 | POST   | `/api/causes`  | `{ event: {title, description}, n? }` | `{ causes:  [{title, description, strength, reasoning}] }` |
 | POST   | `/api/bridge`  | `{ from, to }`                        | `{ intermediate, fromStrength, toStrength, reasoning }` |
 | POST   | `/api/seed`    | `{ text }`                            | `{ event: {title, description} }` (cleans up free-form input) |
+| POST   | `/api/enrich`  | `{ event: {title, description} }`     | `{ event: {title, description} }` (web-search-enriched detail) |
+
+## LLM behavior
+
+- Requests use OpenRouter JSON mode via `responseFormat: { type: "json_object" }`.
+- Prompts explicitly include the expected JSON shape, matching Kimi JSON Mode guidance.
+- Non-streaming calls enable OpenRouter's `response-healing` plugin.
+- If parsing still fails, the server performs a second JSON-repair request and parses the repaired output.
+- Prompt caching is enabled with OpenRouter `cache_control: { type: "ephemeral" }` on the request and the system prompt content block.
+- CLI calls stream tokens to stderr for responsiveness, then print the parsed final JSON.
 
 ## CLI (test LLM funcs without the frontend)
 

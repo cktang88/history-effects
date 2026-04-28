@@ -14,6 +14,9 @@ type CompletionOptions = {
 };
 
 const REQUEST_TIMEOUT_MS = Number(process.env.OPENROUTER_TIMEOUT_MS) || 180_000;
+const JSON_REPAIR_SYSTEM_PROMPT = `
+You repair malformed JSON. Return ONLY valid JSON. Do not explain, do not use markdown, and do not add fields that are not implied by the input.
+`.trim();
 
 export async function completeJSON<T = unknown>(opts: CompletionOptions): Promise<T> {
   const apiKey = process.env.OPENROUTER_API_KEY;
@@ -48,7 +51,10 @@ export async function completeJSON<T = unknown>(opts: CompletionOptions): Promis
     reasoning: { effort: "medium" },
     cacheControl: { type: "ephemeral" },
     stream: !!opts.onToken,
-    ...(opts.webSearch ? { plugins: [{ id: "web" }] } : {}),
+    plugins: [
+      ...(opts.onToken ? [] : [{ id: "response-healing" as const }]),
+      ...(opts.webSearch ? [{ id: "web" as const }] : []),
+    ],
   };
 
   const tag = opts.label ? `[${opts.label}] ` : "";
@@ -81,7 +87,18 @@ export async function completeJSON<T = unknown>(opts: CompletionOptions): Promis
     throw new Error("OpenRouter returned no content");
   }
 
-  return parseJSONLoose<T>(content);
+  try {
+    return parseJSONLoose<T>(content);
+  } catch (e) {
+    if (opts.onToken) process.stderr.write("\n");
+    process.stderr.write(`${tag}repairing malformed JSON output...\n`);
+    const repaired = await requestJSONRepair(client, model, opts, content);
+    try {
+      return parseJSONLoose<T>(repaired);
+    } catch {
+      throw e;
+    }
+  }
 }
 
 function readCompletionContent(result: ChatResult): string | undefined {
@@ -100,6 +117,48 @@ async function readStreamingContent(stream: AsyncIterable<ChatStreamChunk>, onTo
   }
 
   return content;
+}
+
+async function requestJSONRepair(
+  client: OpenRouter,
+  model: string,
+  opts: CompletionOptions,
+  malformedOutput: string
+): Promise<string> {
+  const result = await client.chat.send({
+    chatRequest: {
+      model,
+      messages: [
+        {
+          role: "system",
+          content: [
+            {
+              type: "text",
+              text: JSON_REPAIR_SYSTEM_PROMPT,
+              cacheControl: { type: "ephemeral" },
+            },
+          ],
+        },
+        {
+          role: "user",
+          content:
+            `Expected output contract:\n${extractReturnContract(opts.systemPrompt)}\n\n` +
+            `Malformed output to repair:\n${malformedOutput}`,
+        },
+      ],
+      temperature: 0,
+      responseFormat: { type: "json_object" },
+      cacheControl: { type: "ephemeral" },
+      stream: false,
+    },
+  });
+  return readCompletionContent(result) ?? "";
+}
+
+function extractReturnContract(systemPrompt: string): string {
+  const marker = "Return ONLY valid JSON";
+  const start = systemPrompt.lastIndexOf(marker);
+  return start === -1 ? systemPrompt : systemPrompt.slice(start);
 }
 
 // Some models wrap JSON in markdown fences or add prose around it. Try strict

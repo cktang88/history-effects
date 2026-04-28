@@ -19,6 +19,7 @@ type EventNodeData = {
   title: string;        // 4–10 word headline
   description: string;  // 2–3 sentence factual description
   loading?: boolean;    // true while LLM is filling this in (placeholder)
+  enriching?: boolean;  // true while web detail is being fetched
 };
 ```
 
@@ -52,7 +53,8 @@ type CausalEdgeData = {
 ### Seeding
 
 - Top-bar input: free-form text like "Seven Years' War" or "the printing press".
-- Submit → `POST /api/seed` returns a cleaned-up `{title, description}`. A node appears at the canvas center.
+- Submit → `POST /api/seed` returns a cleaned-up `{title, description}`. A node appears at the canvas center and its first downstream effects are generated.
+- If a node with the same normalized title already exists, the existing node is selected instead of creating duplicates.
 
 ### Expanding effects / causes
 
@@ -60,6 +62,13 @@ type CausalEdgeData = {
 - Click → node enters `loading` state → `POST /api/effects` (or `/api/causes`) returns up to N items.
 - Children are placed in a horizontal fan: effects below the source, causes above. Spacing: ~280 px x, 220 px y.
 - Each child is a new node; the edge carries the `strength` and `reasoning` returned by the model.
+- Repeated expansion clicks are idempotent once that direction has an existing edge from/to the source.
+
+### Web detail and regeneration
+
+- Hovering a node reveals **Web detail** and **↻** controls.
+- **Web detail** calls `POST /api/enrich`, which is the only normal path that enables OpenRouter web search.
+- **↻** removes downstream generated children and descendant edges for that node, then calls `/api/effects` with cache refresh enabled.
 
 ### Bridging two events (drag-edge UX)
 
@@ -79,6 +88,14 @@ type CausalEdgeData = {
 ### Deletion
 
 - Selected node + <kbd>Backspace</kbd> deletes the node and its edges (React Flow built-in).
+
+## Persistence and caching
+
+- Graph state is persisted in browser `localStorage` under `history-effects:graph:v1`.
+- Stored placeholder flags are cleared on restore (`loading=false`, `enriching=false`) so reloads do not resume in-flight LLM calls.
+- API responses are cached in browser `localStorage` under `history-effects:api:*`.
+- Cache keys use stable JSON stringification so object property ordering does not create duplicate cache entries.
+- Explicit regeneration passes `refresh: true` to bypass the browser response cache.
 
 ## API
 
@@ -131,6 +148,16 @@ Symmetric to `/api/effects` — returns upstream causes.
 }
 ```
 
+### `POST /api/enrich`
+
+```ts
+// Request
+{ "event": { "title": "...", "description": "..." } }
+
+// Response
+{ "event": { "title": "...", "description": "more detailed, web-verified description ..." } }
+```
+
 ## System prompts (summary — full text in `server/src/prompts.ts`)
 
 ### Effects / causes
@@ -151,6 +178,17 @@ The model is told to:
 - Classify both legs of the chain.
 - Return strict JSON.
 
+## OpenRouter / Kimi JSON handling
+
+- The server uses `@openrouter/sdk` rather than hand-built `fetch` calls.
+- The default model is `moonshotai/kimi-k2.6`.
+- Requests use OpenRouter JSON mode with `responseFormat: { type: "json_object" }`.
+- Prompts include explicit output examples and field meanings, matching Kimi's JSON Mode guidance.
+- Non-streaming calls enable OpenRouter's `response-healing` plugin.
+- If parsing still fails, `server/src/openrouter.ts` sends a second non-streaming repair request with temperature 0 and parses the repaired JSON.
+- Prompt caching is enabled via OpenRouter `cache_control: { type: "ephemeral" }` on both the request and system prompt content part.
+- Web search is not enabled by default; `/api/enrich` is the opt-in path that adds the `web` plugin.
+
 ## Configuration
 
 `server/.env`:
@@ -165,16 +203,14 @@ PORT=3000
 
 ## Non-goals (v1)
 
-- No persistence — graph lives in browser memory.
 - No auth / multi-user.
-- No streaming responses.
-- No source citations (the model speaks from its own knowledge).
+- No server-side multi-user persistence.
+- No automatic web search for normal generation.
 - No undo/redo beyond React Flow's selection/delete.
 
 ## Future ideas
 
 - Save/load graphs as JSON.
-- Stream tokens for faster perceived response.
 - "Why?" button on edges → expand the link itself into a sub-graph.
-- Citations / Wikipedia links per node.
 - Auto-layout (dagre) when graph gets dense.
+- In-app clear-all cache/graph controls.

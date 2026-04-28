@@ -80,7 +80,7 @@ describe("completeJSON", () => {
     const body = JSON.parse(await (req as Request).clone().text()) as {
       cache_control?: { type: string };
       messages?: Array<{ content: string | Array<{ cache_control?: { type: string } }> }>;
-      plugins?: unknown;
+      plugins?: Array<{ id: string }>;
       stream?: boolean;
     };
     expect(body.cache_control).toEqual({ type: "ephemeral" });
@@ -89,7 +89,7 @@ describe("completeJSON", () => {
     expect(systemContent[0]?.cache_control).toEqual({
       type: "ephemeral",
     });
-    expect(body.plugins).toBeUndefined();
+    expect(body.plugins).toEqual([{ id: "response-healing" }]);
     expect(body.stream).toBe(false);
   });
 
@@ -104,7 +104,7 @@ describe("completeJSON", () => {
 
     const [req] = fetchMock.mock.calls[0]!;
     const body = JSON.parse(await (req as Request).clone().text()) as { plugins?: Array<{ id: string }> };
-    expect(body.plugins).toEqual([{ id: "web" }]);
+    expect(body.plugins).toEqual([{ id: "response-healing" }, { id: "web" }]);
   });
 
   it("streams tokens through the SDK iterator", async () => {
@@ -134,5 +134,27 @@ describe("completeJSON", () => {
       completeJSON<{ a: number }>({ systemPrompt: "s", userPrompt: "u", onToken: (token) => tokens.push(token) })
     ).resolves.toEqual({ a: 1 });
     expect(tokens).toEqual(['{"a"', ":1}"]);
+  });
+
+  it("repairs malformed JSON output with a second SDK request", async () => {
+    vi.stubEnv("OPENROUTER_API_KEY", "test-key");
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(mockCompletion('{"a":'))
+      .mockResolvedValueOnce(mockCompletion('{"a":1}'));
+    vi.stubGlobal("fetch", fetchMock);
+
+    await expect(completeJSON<{ a: number }>({ systemPrompt: "Return ONLY valid JSON of the shape: {\"a\": 1}", userPrompt: "u" })).resolves.toEqual({
+      a: 1,
+    });
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+
+    const [repairReq] = fetchMock.mock.calls[1]!;
+    const body = JSON.parse(await (repairReq as Request).clone().text()) as {
+      messages: Array<{ role: string; content: string | Array<{ text?: string }> }>;
+      temperature: number;
+    };
+    expect(body.temperature).toBe(0);
+    expect(body.messages[1]?.content).toContain("Malformed output to repair");
   });
 });
