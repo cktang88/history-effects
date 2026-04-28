@@ -60,6 +60,7 @@ app.post("/api/seed", async (c) => {
     systemPrompt: seedSystemPrompt,
     userPrompt: `Phrase: ${text}`,
     temperature: 0.2,
+    label: "seed",
   });
 
   if (!result?.event?.title || !result?.event?.description) {
@@ -97,6 +98,7 @@ app.post("/api/enrich", async (c) => {
     systemPrompt: enrichEventSystemPrompt,
     userPrompt: renderEventPrompt(event, "Verify and enrich this event record."),
     temperature: 0.2,
+    label: "enrich",
     webSearch: true,
   });
 
@@ -137,6 +139,7 @@ app.post("/api/effects", async (c) => {
   const result = await completeJSON<{ effects: unknown }>({
     systemPrompt: effectsSystemPrompt,
     userPrompt,
+    label: "effects",
   });
 
   return c.json({ effects: sanitizeList(result?.effects, n) });
@@ -170,6 +173,7 @@ app.post("/api/causes", async (c) => {
   const result = await completeJSON<{ causes: unknown }>({
     systemPrompt: causesSystemPrompt,
     userPrompt,
+    label: "causes",
   });
 
   return c.json({ causes: sanitizeList(result?.causes, n) });
@@ -213,6 +217,7 @@ app.post("/api/bridge", async (c) => {
   }>({
     systemPrompt: bridgeSystemPrompt,
     userPrompt,
+    label: "bridge",
   });
 
   return c.json({

@@ -83,7 +83,7 @@ Every LLM endpoint also has an SSE variant at `/api/<name>/stream`. Stream respo
 - If parsing still fails, the server performs a second JSON-repair request and parses the repaired output.
 - Prompt caching is enabled with OpenRouter `cache_control: { type: "ephemeral" }` on the request and the system prompt content block.
 - CLI and frontend SSE calls stream tokens for responsiveness, then use the parsed final JSON.
-- Full LLM logs are written as JSON files in `server/logs/`, including request payloads, raw SDK responses or stream chunks, parsed output, repair attempts, usage, and any `reasoning` / `reasoningDetails` fields OpenRouter returns. This directory is git-ignored.
+- Full LLM logs are written as JSON files in `server/logs/`, including request payloads, raw SDK responses or stream chunks, parsed output, repair attempts, usage, and any `reasoning` / `reasoningDetails` fields OpenRouter returns. Streaming calls also write a separate `*-trajectory.json` file with the ordered chunk/token/reasoning trajectory. This directory is git-ignored. Logging is skipped under Vitest and can be disabled with `OPENROUTER_LOGS=0`.
 
 ## CLI (test LLM funcs without the frontend)
 

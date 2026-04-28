@@ -142,15 +142,23 @@ async function readStreamingContent(
   log: LlmLog
 ): Promise<string> {
   let content = "";
+  let index = 0;
 
   for await (const chunk of stream) {
     log.streamChunks.push(chunk);
+    log.trajectory.push({ type: "chunk", index, chunk });
     const reasoning = extractChunkReasoning(chunk);
-    if (reasoning) log.streamReasoning.push(reasoning);
+    if (reasoning) {
+      log.streamReasoning.push(reasoning);
+      log.trajectory.push({ type: "reasoning", index, value: reasoning });
+    }
     const token = chunk.choices[0]?.delta.content;
-    if (!token) continue;
-    content += token;
-    onToken(token);
+    if (token) {
+      content += token;
+      log.trajectory.push({ type: "token", index, token, accumulated: content });
+      onToken(token);
+    }
+    index++;
   }
 
   return content;
@@ -207,6 +215,7 @@ function extractReturnContract(systemPrompt: string): string {
 
 type LlmLog = {
   file: string;
+  trajectoryFile?: string;
   startedAt: string;
   completedAt?: string;
   label?: string;
@@ -215,6 +224,7 @@ type LlmLog = {
   response?: ChatResult;
   streamChunks: ChatStreamChunk[];
   streamReasoning: unknown[];
+  trajectory: StreamTrajectoryItem[];
   reasoning?: unknown;
   parsed?: unknown;
   repair?: {
@@ -223,6 +233,11 @@ type LlmLog = {
   };
   error?: unknown;
 };
+
+type StreamTrajectoryItem =
+  | { type: "chunk"; index: number; chunk: ChatStreamChunk }
+  | { type: "token"; index: number; token: string; accumulated: string }
+  | { type: "reasoning"; index: number; value: unknown };
 
 function createLlmLog(opts: CompletionOptions, model: string, request: ChatRequest | null): LlmLog {
   const startedAt = new Date();
@@ -236,6 +251,7 @@ function createLlmLog(opts: CompletionOptions, model: string, request: ChatReque
     request,
     streamChunks: [],
     streamReasoning: [],
+    trajectory: [],
   };
 }
 
@@ -246,11 +262,41 @@ async function writeLlmLog(log: LlmLog) {
 }
 
 async function safeWriteLlmLog(log: LlmLog) {
+  if (!shouldWriteLlmLogs()) return;
   try {
     await writeLlmLog(log);
+    if (log.trajectory.length > 0) await writeStreamTrajectoryLog(log);
   } catch (e) {
     console.error("failed to write LLM log", e);
   }
+}
+
+async function writeStreamTrajectoryLog(log: LlmLog) {
+  const trajectoryFile = log.file.replace(/\.json$/, "-trajectory.json");
+  log.trajectoryFile = trajectoryFile;
+  await writeFile(
+    new URL(trajectoryFile, LOG_DIR),
+    JSON.stringify(
+      {
+        file: trajectoryFile,
+        parentLogFile: log.file,
+        startedAt: log.startedAt,
+        completedAt: log.completedAt,
+        label: log.label,
+        model: log.model,
+        trajectory: log.trajectory,
+      },
+      null,
+      2
+    )
+  );
+  await writeLlmLog(log);
+}
+
+function shouldWriteLlmLogs(): boolean {
+  if (process.env.OPENROUTER_LOGS === "0") return false;
+  if (process.env.NODE_ENV === "test" || process.env.VITEST) return false;
+  return true;
 }
 
 function extractResultReasoning(result: ChatResult): unknown {

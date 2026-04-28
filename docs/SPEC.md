@@ -205,6 +205,8 @@ The model is told to:
 - Web search is not enabled by default; `/api/enrich` is the opt-in path that adds the `web` plugin.
 - Full LLM logs are written to `server/logs/*.json` and git-ignored.
 - Logs include request payloads, raw SDK responses or stream chunks, parsed output, repair attempts, usage, and any `reasoning` / `reasoningDetails` fields returned by OpenRouter.
+- Streaming calls also write a sibling `*-trajectory.json` file with the ordered chunk/token/reasoning trajectory and a pointer back to the main log file.
+- Logs are skipped under Vitest to avoid test-generated noise. Set `OPENROUTER_LOGS=0` to disable logging in other environments.
 - Reasoning trace completeness depends on the upstream model/provider. Some models return reasoning details, summaries, or encrypted reasoning blocks; others return only final content and usage counts.
 
 ## Configuration

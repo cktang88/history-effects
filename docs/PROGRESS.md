@@ -20,6 +20,7 @@ Running build log. Newest entry on top.
 - Frontend LLM actions now use SSE when they can display progress, showing transient raw JSON token previews on active nodes/placeholders.
 - Added full JSON LLM logging under `server/logs/` and ignored that directory in git.
 - Logs capture request payloads, raw SDK responses or stream chunks, parsed output, repair attempts, usage, and OpenRouter-returned `reasoning` / `reasoningDetails` fields when available.
+- Streaming calls also write a separate `*-trajectory.json` file containing the ordered chunk/token/reasoning trajectory.
 - Made normal Effects/Causes expansion idempotent for already-expanded directions.
 - Added hover-only node controls:
   - **Web detail** enriches a node using web search.
