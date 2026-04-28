@@ -30,6 +30,20 @@ export function EventNode({ id, data, selected }: NodeProps<EventNodeType>) {
 
       {!loading && (
         <button
+          className="node-btn node-btn-web"
+          title="Use web search to add detail"
+          disabled={data.enriching}
+          onClick={(e) => {
+            e.stopPropagation();
+            actions.enrichWithWeb(id);
+          }}
+        >
+          {data.enriching ? "Searching…" : "Web detail"}
+        </button>
+      )}
+
+      {!loading && (
+        <button
           className="node-btn node-btn-effects"
           title="Generate downstream effects"
           onClick={(e) => {

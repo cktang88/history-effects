@@ -125,6 +125,24 @@ function AppInner() {
       addFannedChildren(source, causes, "up");
     });
 
+  const enrichWithWeb = (sourceId: string) =>
+    guard(async () => {
+      const source = findNode(sourceId);
+      if (!source || source.data.loading || source.data.enriching) return;
+      updateNode(sourceId, { enriching: true });
+      try {
+        const { event } = await api.enrichEvent(eventOf(source));
+        updateNode(sourceId, {
+          title: event.title,
+          description: event.description,
+          enriching: false,
+        });
+      } catch (e) {
+        updateNode(sourceId, { enriching: false });
+        throw e;
+      }
+    });
+
   const handleSeed = async () => {
     const text = seedText.trim();
     if (!text || seeding) return;
@@ -245,7 +263,11 @@ function AppInner() {
     spawnFromHandle(fromNode, direction, screenToFlowPosition({ x: clientX, y: clientY }));
   };
 
-  const actions = { expandEffects: (id: string) => void expandEffects(id), expandCauses: (id: string) => void expandCauses(id) };
+  const actions = {
+    expandEffects: (id: string) => void expandEffects(id),
+    expandCauses: (id: string) => void expandCauses(id),
+    enrichWithWeb: (id: string) => void enrichWithWeb(id),
+  };
 
   const selectedEdge = edges.find((e) => e.id === selectedEdgeId);
   const selectedNode = nodes.find((n) => n.id === selectedNodeId);

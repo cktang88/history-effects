@@ -123,6 +123,8 @@ const seed: LlmFns["seed"] = async (text) => {
     systemPrompt: seedSystemPrompt,
     userPrompt: `Phrase: ${text}`,
     temperature: 0.2,
+    label: "seed",
+    onToken: streamCliToken,
   });
   if (!result?.event?.title) throw new Error(`bad seed result: ${JSON.stringify(result)}`);
   return result.event;
@@ -132,6 +134,8 @@ const effects: LlmFns["effects"] = async (event, n) => {
   const result = await completeJSON<{ effects: unknown }>({
     systemPrompt: effectsSystemPrompt,
     userPrompt: renderEventPrompt(event, `Generate the ${n} most significant downstream effects.`),
+    label: "effects",
+    onToken: streamCliToken,
   });
   return sanitizeList(result?.effects, n);
 };
@@ -140,6 +144,8 @@ const causes: LlmFns["causes"] = async (event, n) => {
   const result = await completeJSON<{ causes: unknown }>({
     systemPrompt: causesSystemPrompt,
     userPrompt: renderEventPrompt(event, `Generate the ${n} most significant upstream causes.`),
+    label: "causes",
+    onToken: streamCliToken,
   });
   return sanitizeList(result?.causes, n);
 };
@@ -151,6 +157,8 @@ const bridge: LlmFns["bridge"] = async (from, to) => {
       `EVENT_FROM (earlier):\nTitle: ${from.title}\nDescription: ${from.description ?? ""}\n\n` +
       `EVENT_TO (later):\nTitle: ${to.title}\nDescription: ${to.description ?? ""}\n\n` +
       `Find a significant intermediate event that bridges them.`,
+    label: "bridge",
+    onToken: streamCliToken,
   });
   return {
     intermediate: result?.intermediate ?? null,
@@ -162,10 +170,15 @@ const bridge: LlmFns["bridge"] = async (from, to) => {
 
 export const llmFns: LlmFns = { seed, effects, causes, bridge };
 
+function streamCliToken(token: string) {
+  process.stderr.write(token);
+}
+
 if (import.meta.main) {
   try {
     const cmd = parseArgs(process.argv.slice(2));
     const out = await runCommand(cmd, llmFns);
+    process.stderr.write("\n");
     for (const [k, v] of Object.entries(out)) {
       console.log(`\n=== ${k} ===`);
       console.log(JSON.stringify(v, null, 2));

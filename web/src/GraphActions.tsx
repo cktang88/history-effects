@@ -3,6 +3,7 @@ import { createContext, useContext } from "react";
 export type GraphActions = {
   expandEffects: (nodeId: string) => void;
   expandCauses: (nodeId: string) => void;
+  enrichWithWeb: (nodeId: string) => void;
 };
 
 export const GraphActionsContext = createContext<GraphActions | null>(null);

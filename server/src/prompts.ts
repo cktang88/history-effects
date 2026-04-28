@@ -27,6 +27,17 @@ Return ONLY valid JSON of the shape:
 { "event": { "title": "...", "description": "..." } }
 `.trim();
 
+export const enrichEventSystemPrompt = `
+${ANALYST_PERSONA}
+
+You will be given a historical event. Use current web search only to verify details and add specificity. Return an improved event record with:
+- "title": a short, specific headline (4–10 words). Preserve the original event identity.
+- "description": a more detailed factual 4–6 sentence description of what happened, including dates, places, principal actors, and concrete context where reliable. Do not speculate about causes or consequences unless they are necessary to identify the event.
+
+Return ONLY valid JSON of the shape:
+{ "event": { "title": "...", "description": "..." } }
+`.trim();
+
 export const effectsSystemPrompt = `
 ${ANALYST_PERSONA}
 

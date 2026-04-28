@@ -1,16 +1,19 @@
-// Minimal OpenRouter client. Returns parsed JSON from the model.
-// Uses chat/completions with response_format json_object when possible, plus a
-// defensive fallback that extracts the first JSON object from the text.
+// OpenRouter client wrapper. Returns parsed JSON from the model while keeping
+// request defaults in one place for the API server and CLI.
 
-const ENDPOINT = "https://openrouter.ai/api/v1/chat/completions";
-
-type Message = { role: "system" | "user" | "assistant"; content: string };
+import { OpenRouter } from "@openrouter/sdk";
+import type { ChatRequest, ChatResult, ChatStreamChunk } from "@openrouter/sdk/models";
 
 type CompletionOptions = {
   systemPrompt: string;
   userPrompt: string;
   temperature?: number;
+  label?: string;
+  webSearch?: boolean;
+  onToken?: (token: string) => void;
 };
+
+const REQUEST_TIMEOUT_MS = Number(process.env.OPENROUTER_TIMEOUT_MS) || 180_000;
 
 export async function completeJSON<T = unknown>(opts: CompletionOptions): Promise<T> {
   const apiKey = process.env.OPENROUTER_API_KEY;
@@ -18,47 +21,85 @@ export async function completeJSON<T = unknown>(opts: CompletionOptions): Promis
     throw new Error("OPENROUTER_API_KEY is not set. Copy server/.env.example to server/.env and add your key.");
   }
   const model = process.env.OPENROUTER_MODEL || "moonshotai/kimi-k2.6";
-
-  const messages: Message[] = [
-    { role: "system", content: opts.systemPrompt },
-    { role: "user", content: opts.userPrompt },
-  ];
-
-  const body = {
-    model,
-    messages,
-    temperature: opts.temperature ?? 0.4,
-    response_format: { type: "json_object" as const },
-    reasoning: { effort: "medium" as const },
-    plugins: [{ id: "web" }],
-  };
-
-  const res = await fetch(ENDPOINT, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${apiKey}`,
-      // OpenRouter recommends these for analytics; harmless if app isn't published.
-      "HTTP-Referer": "http://localhost:5173",
-      "X-Title": "History Effects",
-    },
-    body: JSON.stringify(body),
+  const client = new OpenRouter({
+    apiKey,
+    httpReferer: "http://localhost:5173",
+    appTitle: "History Effects",
+    timeoutMs: REQUEST_TIMEOUT_MS,
   });
 
-  if (!res.ok) {
-    const text = await res.text();
-    throw new Error(`OpenRouter error ${res.status}: ${text}`);
-  }
-
-  const data = (await res.json()) as {
-    choices?: Array<{ message?: { content?: string } }>;
+  const chatRequest: ChatRequest = {
+    model,
+    messages: [
+      {
+        role: "system",
+        content: [
+          {
+            type: "text",
+            text: opts.systemPrompt,
+            cacheControl: { type: "ephemeral" },
+          },
+        ],
+      },
+      { role: "user", content: opts.userPrompt },
+    ],
+    temperature: opts.temperature ?? 0.4,
+    responseFormat: { type: "json_object" },
+    reasoning: { effort: "medium" },
+    cacheControl: { type: "ephemeral" },
+    stream: !!opts.onToken,
+    ...(opts.webSearch ? { plugins: [{ id: "web" }] } : {}),
   };
-  const content = data.choices?.[0]?.message?.content;
+
+  const tag = opts.label ? `[${opts.label}] ` : "";
+  const tty = process.stderr.isTTY;
+  const started = Date.now();
+  const features = opts.webSearch ? "reasoning+web" : "reasoning";
+  process.stderr.write(`${tag}calling ${model} (${features}${opts.onToken ? ", streaming" : ""})...\n`);
+  const tick = tty
+    ? setInterval(() => {
+        const s = Math.round((Date.now() - started) / 1000);
+        process.stderr.write(`\r${tag}waiting ${s}s...`);
+      }, 1000)
+    : null;
+
+  let content: string | undefined;
+  try {
+    content = opts.onToken
+      ? await readStreamingContent(await client.chat.send({ chatRequest: { ...chatRequest, stream: true } }), opts.onToken)
+      : readCompletionContent(await client.chat.send({ chatRequest: { ...chatRequest, stream: false } }));
+  } catch (e) {
+    if (tick) clearInterval(tick);
+    if (tty) process.stderr.write("\n");
+    throw e;
+  }
+  if (tick) clearInterval(tick);
+  if (tty) process.stderr.write("\n");
+  process.stderr.write(`${tag}done in ${Math.round((Date.now() - started) / 1000)}s\n`);
+
   if (!content) {
-    throw new Error(`OpenRouter returned no content: ${JSON.stringify(data)}`);
+    throw new Error("OpenRouter returned no content");
   }
 
   return parseJSONLoose<T>(content);
+}
+
+function readCompletionContent(result: ChatResult): string | undefined {
+  const content = result.choices[0]?.message.content;
+  return typeof content === "string" ? content : undefined;
+}
+
+async function readStreamingContent(stream: AsyncIterable<ChatStreamChunk>, onToken: (token: string) => void): Promise<string> {
+  let content = "";
+
+  for await (const chunk of stream) {
+    const token = chunk.choices[0]?.delta.content;
+    if (!token) continue;
+    content += token;
+    onToken(token);
+  }
+
+  return content;
 }
 
 // Some models wrap JSON in markdown fences or add prose around it. Try strict

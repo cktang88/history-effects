@@ -37,6 +37,22 @@ describe("seedEvent", () => {
   });
 });
 
+describe("enrichEvent", () => {
+  it("POSTs to /api/enrich and returns the enriched event", async () => {
+    const fetchMock = mockJSON({ event: { title: "WW1", description: "Detailed war." } });
+    vi.stubGlobal("fetch", fetchMock);
+
+    const out = await api.enrichEvent({ title: "WW1", description: "War." });
+    expect(out.event.description).toBe("Detailed war.");
+
+    const [path, init] = fetchMock.mock.calls[0]!;
+    expect(path).toBe("/api/enrich");
+    expect(JSON.parse((init as RequestInit).body as string)).toEqual({
+      event: { title: "WW1", description: "War." },
+    });
+  });
+});
+
 describe("generateEffects", () => {
   it("POSTs the event and n, returns effects", async () => {
     const fetchMock = mockJSON({

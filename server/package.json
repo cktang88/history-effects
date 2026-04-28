@@ -13,6 +13,7 @@
     "lint": "oxlint src"
   },
   "dependencies": {
+    "@openrouter/sdk": "^0.12.22",
     "hono": "^4.6.14"
   },
   "devDependencies": {

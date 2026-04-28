@@ -9,7 +9,18 @@ function mockOpenRouterContent(content: unknown) {
     async () =>
       new Response(
         JSON.stringify({
-          choices: [{ message: { content: stringified } }],
+          id: "gen-test",
+          object: "chat.completion",
+          created: 1,
+          model: "test-model",
+          system_fingerprint: null,
+          choices: [
+            {
+              index: 0,
+              finish_reason: "stop",
+              message: { role: "assistant", content: stringified },
+            },
+          ],
         }),
         { status: 200, headers: { "content-type": "application/json" } }
       )
@@ -63,6 +74,39 @@ describe("POST /api/seed", () => {
   it("502s when model returns malformed event", async () => {
     vi.stubGlobal("fetch", mockOpenRouterContent({ event: { title: "" } }));
     const res = await jsonReq("/api/seed", { text: "x" });
+    expect(res.status).toBe(502);
+  });
+});
+
+// /api/enrich -----------------------------------------------------------------
+
+describe("POST /api/enrich", () => {
+  it("returns a web-enriched event", async () => {
+    vi.stubGlobal(
+      "fetch",
+      mockOpenRouterContent({
+        event: { title: "French Revolution (1789–1799)", description: "Detailed account." },
+      })
+    );
+    const res = await jsonReq("/api/enrich", {
+      event: { title: "French Revolution", description: "" },
+    });
+    expect(res.status).toBe(200);
+    const json = (await res.json()) as { event: { title: string; description: string } };
+    expect(json.event.title).toMatch(/French Revolution/);
+    expect(json.event.description).toBe("Detailed account.");
+  });
+
+  it("400s without event.title", async () => {
+    const res = await jsonReq("/api/enrich", { event: { description: "x" } });
+    expect(res.status).toBe(400);
+  });
+
+  it("502s when model returns malformed event", async () => {
+    vi.stubGlobal("fetch", mockOpenRouterContent({ event: { title: "" } }));
+    const res = await jsonReq("/api/enrich", {
+      event: { title: "X", description: "" },
+    });
     expect(res.status).toBe(502);
   });
 });

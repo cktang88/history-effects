@@ -166,15 +166,28 @@ html, body, #root {
   cursor: pointer;
   white-space: nowrap;
 }
+.event-node:not(:hover):not(.selected) .node-btn-web {
+  opacity: 0;
+  pointer-events: none;
+}
 .node-btn:hover {
   background: var(--accent);
   color: #fff;
   border-color: var(--accent);
 }
+.node-btn:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
 .node-btn-causes {
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
+}
+.node-btn-web {
+  top: 50%;
+  right: -12px;
+  transform: translate(100%, -50%);
 }
 .node-btn-effects {
   bottom: -12px;

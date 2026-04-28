@@ -17,6 +17,10 @@ export function seedEvent(text: string) {
   return postJSON<{ event: HistoricalEvent }>("/api/seed", { text });
 }
 
+export function enrichEvent(event: HistoricalEvent) {
+  return postJSON<{ event: HistoricalEvent }>("/api/enrich", { event });
+}
+
 export function generateEffects(event: HistoricalEvent, n = 5) {
   return postJSON<{ effects: CausalItem[] }>("/api/effects", { event, n });
 }

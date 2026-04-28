@@ -11,6 +11,7 @@ import {
 } from "./helpers.ts";
 import {
   seedSystemPrompt,
+  enrichEventSystemPrompt,
   effectsSystemPrompt,
   causesSystemPrompt,
   bridgeSystemPrompt,
@@ -20,7 +21,7 @@ export const app = new Hono();
 
 app.use("/api/*", cors({ origin: "*" }));
 
-app.get("/", (c) => c.text("history-effects API. POST /api/seed | /api/effects | /api/causes | /api/bridge"));
+app.get("/", (c) => c.text("history-effects API. POST /api/seed | /api/effects | /api/causes | /api/bridge | /api/enrich"));
 
 app.post("/api/seed", async (c) => {
   const body = await c.req.json<{ text?: string }>();
@@ -31,6 +32,24 @@ app.post("/api/seed", async (c) => {
     systemPrompt: seedSystemPrompt,
     userPrompt: `Phrase: ${text}`,
     temperature: 0.2,
+  });
+
+  if (!result?.event?.title || !result?.event?.description) {
+    return c.json({ error: "Model did not return a valid event", raw: result }, 502);
+  }
+  return c.json(result);
+});
+
+app.post("/api/enrich", async (c) => {
+  const body = await c.req.json<{ event?: Event }>();
+  const event = body.event;
+  if (!event?.title) return c.json({ error: "event.title is required" }, 400);
+
+  const result = await completeJSON<{ event: Event }>({
+    systemPrompt: enrichEventSystemPrompt,
+    userPrompt: renderEventPrompt(event, "Verify and enrich this event record."),
+    temperature: 0.2,
+    webSearch: true,
   });
 
   if (!result?.event?.title || !result?.event?.description) {
