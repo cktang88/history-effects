@@ -170,6 +170,10 @@ html, body, #root {
   opacity: 0;
   pointer-events: none;
 }
+.event-node:not(:hover):not(.selected) .node-btn-regen {
+  opacity: 0;
+  pointer-events: none;
+}
 .node-btn:hover {
   background: var(--accent);
   color: #fff;
@@ -188,6 +192,14 @@ html, body, #root {
   top: 50%;
   right: -12px;
   transform: translate(100%, -50%);
+}
+.node-btn-regen {
+  top: 50%;
+  left: -12px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  transform: translate(-100%, -50%);
 }
 .node-btn-effects {
   bottom: -12px;

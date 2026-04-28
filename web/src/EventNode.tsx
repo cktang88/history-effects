@@ -44,6 +44,20 @@ export function EventNode({ id, data, selected }: NodeProps<EventNodeType>) {
 
       {!loading && (
         <button
+          className="node-btn node-btn-regen"
+          title="Clear generated children and regenerate this node"
+          disabled={data.enriching}
+          onClick={(e) => {
+            e.stopPropagation();
+            actions.regenerateNode(id);
+          }}
+        >
+          ↻
+        </button>
+      )}
+
+      {!loading && (
+        <button
           className="node-btn node-btn-effects"
           title="Generate downstream effects"
           onClick={(e) => {

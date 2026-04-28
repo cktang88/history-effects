@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "cli": "cd server && bun run src/cli.ts",
     "lint": "oxlint server/src web/src",
     "test": "cd server && bun run test && cd ../web && bun run test",
     "precommit": "bun run lint && bun run test"

@@ -4,6 +4,7 @@ export type GraphActions = {
   expandEffects: (nodeId: string) => void;
   expandCauses: (nodeId: string) => void;
   enrichWithWeb: (nodeId: string) => void;
+  regenerateNode: (nodeId: string) => void;
 };
 
 export const GraphActionsContext = createContext<GraphActions | null>(null);

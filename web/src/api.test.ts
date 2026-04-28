@@ -11,6 +11,19 @@ function mockJSON(payload: unknown, status = 200) {
   );
 }
 
+function mockLocalStorage() {
+  const store = new Map<string, string>();
+  vi.stubGlobal("localStorage", {
+    getItem: vi.fn((key: string) => store.get(key) ?? null),
+    setItem: vi.fn((key: string, value: string) => {
+      store.set(key, value);
+    }),
+    removeItem: vi.fn((key: string) => {
+      store.delete(key);
+    }),
+  });
+}
+
 afterEach(() => {
   vi.unstubAllGlobals();
   vi.restoreAllMocks();
@@ -77,6 +90,30 @@ describe("generateEffects", () => {
     await api.generateEffects({ title: "X", description: "" });
     const [, init] = fetchMock.mock.calls[0]!;
     expect(JSON.parse((init as RequestInit).body as string).n).toBe(5);
+  });
+
+  it("caches identical requests in localStorage", async () => {
+    mockLocalStorage();
+    const fetchMock = mockJSON({
+      effects: [{ title: "T", description: "D", strength: "primary", reasoning: "R" }],
+    });
+    vi.stubGlobal("fetch", fetchMock);
+
+    await api.generateEffects({ title: "X", description: "Y" }, 3);
+    await api.generateEffects({ description: "Y", title: "X" }, 3);
+
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+
+  it("bypasses the cache when refresh is requested", async () => {
+    mockLocalStorage();
+    const fetchMock = mockJSON({ effects: [] });
+    vi.stubGlobal("fetch", fetchMock);
+
+    await api.generateEffects({ title: "X", description: "Y" }, 3);
+    await api.generateEffects({ title: "X", description: "Y" }, 3, { refresh: true });
+
+    expect(fetchMock).toHaveBeenCalledTimes(2);
   });
 });
 

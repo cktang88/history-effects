@@ -28,6 +28,7 @@ let idCounter = 1;
 const newId = () => `n${idCounter++}`;
 const newEdgeId = () => `e${idCounter++}`;
 
+const GRAPH_STORAGE_KEY = "history-effects:graph:v1";
 const FAN_X = 300;
 const FAN_Y = 220;
 
@@ -65,10 +66,87 @@ const childEdge = (source: EventNodeType, childId: string, item: CausalItem, dir
 });
 
 const asMessage = (e: unknown): string => (e instanceof Error ? e.message : String(e));
+const normalizeTitle = (title: string) => title.trim().toLowerCase();
+
+type StoredGraph = {
+  nodes: EventNodeType[];
+  edges: CausalEdgeType[];
+};
+
+type StateUpdater<T> = T | ((prev: T) => T);
+
+function readStoredGraph(): StoredGraph {
+  if (typeof localStorage === "undefined") return { nodes: [], edges: [] };
+  const raw = localStorage.getItem(GRAPH_STORAGE_KEY);
+  if (!raw) return { nodes: [], edges: [] };
+  try {
+    const parsed = JSON.parse(raw) as Partial<StoredGraph>;
+    const nodes = Array.isArray(parsed.nodes) ? parsed.nodes.map(restoreNode) : [];
+    const edges = Array.isArray(parsed.edges) ? parsed.edges.map(restoreEdge) : [];
+    bumpIdCounter(nodes, edges);
+    return { nodes, edges };
+  } catch {
+    localStorage.removeItem(GRAPH_STORAGE_KEY);
+    return { nodes: [], edges: [] };
+  }
+}
+
+function writeStoredGraph(nodes: EventNodeType[], edges: CausalEdgeType[]) {
+  if (typeof localStorage === "undefined") return;
+  localStorage.setItem(GRAPH_STORAGE_KEY, JSON.stringify({ nodes, edges }));
+}
+
+function restoreNode(node: EventNodeType): EventNodeType {
+  return {
+    ...node,
+    data: {
+      ...node.data,
+      loading: false,
+      enriching: false,
+    },
+  };
+}
+
+function restoreEdge(edge: CausalEdgeType): CausalEdgeType {
+  return {
+    ...edge,
+    data: edge.data ? { ...edge.data, loading: false } : edge.data,
+  };
+}
+
+function bumpIdCounter(nodes: EventNodeType[], edges: CausalEdgeType[]) {
+  const maxId = [...nodes.map((n) => n.id), ...edges.map((e) => e.id)]
+    .map((id) => Number(id.slice(1)))
+    .filter(Number.isFinite)
+    .reduce((max, id) => Math.max(max, id), 0);
+  idCounter = Math.max(idCounter, maxId + 1);
+}
+
+function applyStateUpdater<T>(prev: T, updater: StateUpdater<T>): T {
+  return typeof updater === "function" ? (updater as (current: T) => T)(prev) : updater;
+}
+
+function collectDownstreamIds(sourceId: string, edges: CausalEdgeType[]): string[] {
+  const found = new Set<string>();
+  const queue = [sourceId];
+
+  while (queue.length > 0) {
+    const id = queue.shift();
+    if (!id) continue;
+    for (const edge of edges) {
+      if (edge.source !== id || found.has(edge.target)) continue;
+      found.add(edge.target);
+      queue.push(edge.target);
+    }
+  }
+
+  return [...found];
+}
 
 function AppInner() {
-  const [nodes, setNodes] = useState<EventNodeType[]>([]);
-  const [edges, setEdges] = useState<CausalEdgeType[]>([]);
+  const [initialGraph] = useState(readStoredGraph);
+  const [nodes, setNodesState] = useState<EventNodeType[]>(initialGraph.nodes);
+  const [edges, setEdgesState] = useState<CausalEdgeType[]>(initialGraph.edges);
   const [seedText, setSeedText] = useState("");
   const [seeding, setSeeding] = useState(false);
   const [selectedEdgeId, setSelectedEdgeId] = useState<string | null>(null);
@@ -76,6 +154,22 @@ function AppInner() {
   const [error, setError] = useState<string | null>(null);
 
   const { screenToFlowPosition, getNodes } = useReactFlow<EventNodeType, CausalEdgeType>();
+
+  const setNodes = (updater: StateUpdater<EventNodeType[]>) =>
+    setNodesState((prev) => {
+      const next = applyStateUpdater(prev, updater);
+      const stored = readStoredGraph();
+      writeStoredGraph(next, stored.edges);
+      return next;
+    });
+
+  const setEdges = (updater: StateUpdater<CausalEdgeType[]>) =>
+    setEdgesState((prev) => {
+      const next = applyStateUpdater(prev, updater);
+      const stored = readStoredGraph();
+      writeStoredGraph(stored.nodes, next);
+      return next;
+    });
 
   const findNode = (id: string) => getNodes().find((n) => n.id === id);
 
@@ -88,6 +182,9 @@ function AppInner() {
   const removeNode = (id: string) => setNodes((ns) => ns.filter((n) => n.id !== id));
   const removeEdges = (...ids: string[]) =>
     setEdges((es) => es.filter((e) => !ids.includes(e.id)));
+
+  const hasExpansion = (sourceId: string, direction: "up" | "down") =>
+    edges.some((edge) => (direction === "down" ? edge.source === sourceId : edge.target === sourceId));
 
   const addFannedChildren = (source: EventNodeType, items: CausalItem[], direction: "up" | "down") => {
     if (items.length === 0) return;
@@ -113,6 +210,7 @@ function AppInner() {
     guard(async () => {
       const source = findNode(sourceId);
       if (!source) return;
+      if (hasExpansion(sourceId, "down")) return;
       const { effects } = await api.generateEffects(eventOf(source));
       addFannedChildren(source, effects, "down");
     });
@@ -121,6 +219,7 @@ function AppInner() {
     guard(async () => {
       const source = findNode(sourceId);
       if (!source) return;
+      if (hasExpansion(sourceId, "up")) return;
       const { causes } = await api.generateCauses(eventOf(source));
       addFannedChildren(source, causes, "up");
     });
@@ -143,6 +242,19 @@ function AppInner() {
       }
     });
 
+  const regenerateNode = (sourceId: string) =>
+    guard(async () => {
+      const source = findNode(sourceId);
+      if (!source || source.data.loading || source.data.enriching) return;
+      const childIds = collectDownstreamIds(sourceId, edges);
+      if (childIds.length > 0) {
+        setNodes((ns) => ns.filter((node) => !childIds.includes(node.id)));
+        setEdges((es) => es.filter((edge) => edge.source !== sourceId && !childIds.includes(edge.source) && !childIds.includes(edge.target)));
+      }
+      const { effects } = await api.generateEffects(eventOf(source), 5, { refresh: true });
+      addFannedChildren(source, effects, "down");
+    });
+
   const handleSeed = async () => {
     const text = seedText.trim();
     if (!text || seeding) return;
@@ -150,6 +262,13 @@ function AppInner() {
     try {
       await guard(async () => {
         const { event } = await api.seedEvent(text);
+        const existing = nodes.find((node) => normalizeTitle(node.data.title) === normalizeTitle(event.title));
+        if (existing) {
+          setSelectedNodeId(existing.id);
+          setSelectedEdgeId(null);
+          setSeedText("");
+          return;
+        }
         const id = newId();
         const node: EventNodeType = {
           id,
@@ -159,7 +278,8 @@ function AppInner() {
         };
         setNodes((ns) => [...ns, node]);
         setSeedText("");
-        await expandEffects(id);
+        const { effects } = await api.generateEffects(event, 5);
+        addFannedChildren(node, effects, "down");
       });
     } finally {
       setSeeding(false);
@@ -267,6 +387,7 @@ function AppInner() {
     expandEffects: (id: string) => void expandEffects(id),
     expandCauses: (id: string) => void expandCauses(id),
     enrichWithWeb: (id: string) => void enrichWithWeb(id),
+    regenerateNode: (id: string) => void regenerateNode(id),
   };
 
   const selectedEdge = edges.find((e) => e.id === selectedEdgeId);
