@@ -29,6 +29,8 @@ export async function completeJSON<T = unknown>(opts: CompletionOptions): Promis
     messages,
     temperature: opts.temperature ?? 0.4,
     response_format: { type: "json_object" as const },
+    reasoning: { effort: "medium" as const },
+    plugins: [{ id: "web" }],
   };
 
   const res = await fetch(ENDPOINT, {

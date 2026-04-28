@@ -65,6 +65,25 @@ Open http://localhost:5173.
 | POST   | `/api/bridge`  | `{ from, to }`                        | `{ intermediate, fromStrength, toStrength, reasoning }` |
 | POST   | `/api/seed`    | `{ text }`                            | `{ event: {title, description} }` (cleans up free-form input) |
 
+## CLI (test LLM funcs without the frontend)
+
+The server ships a CLI that calls the same prompt helpers as the HTTP routes — useful for iterating on prompts without launching the web app. Requires `server/.env` with `OPENROUTER_API_KEY`.
+
+```bash
+cd server
+bun run cli seed    "Seven Years' War"
+bun run cli effects "French Revolution" --n 5
+bun run cli causes  "World War I"
+bun run cli bridge  "Steam engine" "Industrial Revolution"
+bun run cli all     "Sputnik launch"
+```
+
+The CLI is split into a pure `parseArgs` + `runCommand(cmd, deps)`, both unit-tested in `server/src/cli.test.ts`.
+
+## Style
+
+See [`docs/STYLEGUIDE.md`](./docs/STYLEGUIDE.md) for the conventions this repo follows (React Compiler, no manual memoization, small composable functions, async/await, testable CLIs, etc.).
+
 ## Tests / lint / hooks
 
 ```bash

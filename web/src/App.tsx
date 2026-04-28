@@ -1,25 +1,25 @@
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useState } from "react";
 import {
   ReactFlow,
   ReactFlowProvider,
   Background,
   Controls,
   MiniMap,
-  addEdge,
   applyEdgeChanges,
   applyNodeChanges,
+  useReactFlow,
   type Connection,
   type EdgeChange,
   type NodeChange,
-  type OnConnect,
+  type FinalConnectionState,
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 
 import { EventNode, type EventNodeType } from "./EventNode";
 import { CausalEdge, type CausalEdgeType } from "./CausalEdge";
-import { GraphActionsContext, type GraphActions } from "./GraphActions";
+import { GraphActionsContext } from "./GraphActions";
 import * as api from "./api";
-import type { CausalEdgeData, HistoricalEvent } from "./types";
+import type { CausalItem, HistoricalEvent, Strength } from "./types";
 
 const nodeTypes = { event: EventNode };
 const edgeTypes = { causal: CausalEdge };
@@ -31,6 +31,41 @@ const newEdgeId = () => `e${idCounter++}`;
 const FAN_X = 300;
 const FAN_Y = 220;
 
+const eventOf = (n: EventNodeType): HistoricalEvent => ({
+  title: n.data.title,
+  description: n.data.description,
+});
+
+const placeholderNode = (id: string, position: { x: number; y: number }, title = "Thinking…"): EventNodeType => ({
+  id,
+  type: "event",
+  position,
+  data: { title, description: "", loading: true },
+});
+
+const placeholderEdge = (id: string, source: string, target: string): CausalEdgeType => ({
+  id,
+  type: "causal",
+  source,
+  target,
+  data: { strength: "contributing", loading: true },
+});
+
+const fanPosition = (source: EventNodeType, i: number, count: number, direction: "up" | "down") => ({
+  x: source.position.x + (i - (count - 1) / 2) * FAN_X,
+  y: source.position.y + (direction === "down" ? FAN_Y : -FAN_Y),
+});
+
+const childEdge = (source: EventNodeType, childId: string, item: CausalItem, direction: "up" | "down"): CausalEdgeType => ({
+  id: newEdgeId(),
+  type: "causal",
+  source: direction === "down" ? source.id : childId,
+  target: direction === "down" ? childId : source.id,
+  data: { strength: item.strength, reasoning: item.reasoning },
+});
+
+const asMessage = (e: unknown): string => (e instanceof Error ? e.message : String(e));
+
 function AppInner() {
   const [nodes, setNodes] = useState<EventNodeType[]>([]);
   const [edges, setEdges] = useState<CausalEdgeType[]>([]);
@@ -40,157 +75,177 @@ function AppInner() {
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  const nodesRef = useRef(nodes);
-  nodesRef.current = nodes;
+  const { screenToFlowPosition, getNodes } = useReactFlow<EventNodeType, CausalEdgeType>();
 
-  const onNodesChange = useCallback(
-    (changes: NodeChange<EventNodeType>[]) =>
-      setNodes((ns) => applyNodeChanges(changes, ns)),
-    []
-  );
-  const onEdgesChange = useCallback(
-    (changes: EdgeChange<CausalEdgeType>[]) =>
-      setEdges((es) => applyEdgeChanges(changes, es)),
-    []
-  );
+  const findNode = (id: string) => getNodes().find((n) => n.id === id);
 
-  const findNode = useCallback((id: string) => nodesRef.current.find((n) => n.id === id), []);
+  const updateNode = (id: string, patch: Partial<EventNodeType["data"]>) =>
+    setNodes((ns) => ns.map((n) => (n.id === id ? { ...n, data: { ...n.data, ...patch } } : n)));
 
-  const handleSeed = useCallback(async () => {
+  const updateEdgeData = (id: string, next: NonNullable<CausalEdgeType["data"]>) =>
+    setEdges((es) => es.map((e) => (e.id === id ? { ...e, data: next } : e)));
+
+  const removeNode = (id: string) => setNodes((ns) => ns.filter((n) => n.id !== id));
+  const removeEdges = (...ids: string[]) =>
+    setEdges((es) => es.filter((e) => !ids.includes(e.id)));
+
+  const addFannedChildren = (source: EventNodeType, items: CausalItem[], direction: "up" | "down") => {
+    if (items.length === 0) return;
+    const newNodes = items.map((item, i) => ({
+      ...placeholderNode(newId(), fanPosition(source, i, items.length, direction)),
+      data: { title: item.title, description: item.description },
+    }));
+    const newEdges = items.map((item, i) => childEdge(source, newNodes[i].id, item, direction));
+    setNodes((ns) => [...ns, ...newNodes]);
+    setEdges((es) => [...es, ...newEdges]);
+  };
+
+  const guard = async (fn: () => Promise<void>) => {
+    setError(null);
+    try {
+      await fn();
+    } catch (e) {
+      setError(asMessage(e));
+    }
+  };
+
+  const expandEffects = (sourceId: string) =>
+    guard(async () => {
+      const source = findNode(sourceId);
+      if (!source) return;
+      const { effects } = await api.generateEffects(eventOf(source));
+      addFannedChildren(source, effects, "down");
+    });
+
+  const expandCauses = (sourceId: string) =>
+    guard(async () => {
+      const source = findNode(sourceId);
+      if (!source) return;
+      const { causes } = await api.generateCauses(eventOf(source));
+      addFannedChildren(source, causes, "up");
+    });
+
+  const handleSeed = async () => {
     const text = seedText.trim();
     if (!text || seeding) return;
     setSeeding(true);
-    setError(null);
     try {
-      const { event } = await api.seedEvent(text);
-      const id = newId();
-      const node: EventNodeType = {
-        id,
-        type: "event",
-        position: { x: 0, y: 0 },
-        data: { title: event.title, description: event.description },
-      };
-      setNodes((ns) => [...ns, node]);
-      setSeedText("");
-    } catch (e) {
-      setError(asMessage(e));
+      await guard(async () => {
+        const { event } = await api.seedEvent(text);
+        const id = newId();
+        const node: EventNodeType = {
+          id,
+          type: "event",
+          position: { x: 0, y: 0 },
+          data: { title: event.title, description: event.description },
+        };
+        setNodes((ns) => [...ns, node]);
+        setSeedText("");
+        await expandEffects(id);
+      });
     } finally {
       setSeeding(false);
     }
-  }, [seedText, seeding]);
+  };
 
-  const expandEffects = useCallback(async (sourceId: string) => {
-    const source = findNode(sourceId);
-    if (!source) return;
-    setError(null);
-    try {
-      const { effects } = await api.generateEffects(eventOf(source));
-      addChildren(source, effects, "down", setNodes, setEdges);
-    } catch (e) {
-      setError(asMessage(e));
-    }
-  }, [findNode]);
+  const bridgeBetween = (fromNode: EventNodeType, toNode: EventNodeType) =>
+    guard(async () => {
+      const midId = newId();
+      const midPos = {
+        x: (fromNode.position.x + toNode.position.x) / 2,
+        y: (fromNode.position.y + toNode.position.y) / 2,
+      };
+      const fromEdgeId = newEdgeId();
+      const toEdgeId = newEdgeId();
 
-  const expandCauses = useCallback(async (sourceId: string) => {
-    const source = findNode(sourceId);
-    if (!source) return;
-    setError(null);
-    try {
-      const { causes } = await api.generateCauses(eventOf(source));
-      addChildren(source, causes, "up", setNodes, setEdges);
-    } catch (e) {
-      setError(asMessage(e));
-    }
-  }, [findNode]);
+      setNodes((ns) => [...ns, placeholderNode(midId, midPos, "Bridging…")]);
+      setEdges((es) => [
+        ...es,
+        placeholderEdge(fromEdgeId, fromNode.id, midId),
+        placeholderEdge(toEdgeId, midId, toNode.id),
+      ]);
 
-  const onConnect: OnConnect = useCallback((connection: Connection) => {
-    const { source, target } = connection;
-    if (!source || !target || source === target) return;
-    const fromNode = findNode(source);
-    const toNode = findNode(target);
-    if (!fromNode || !toNode) return;
-
-    // Insert a placeholder intermediate node midway between the two.
-    const midId = newId();
-    const midX = (fromNode.position.x + toNode.position.x) / 2;
-    const midY = (fromNode.position.y + toNode.position.y) / 2;
-    const midNode: EventNodeType = {
-      id: midId,
-      type: "event",
-      position: { x: midX, y: midY },
-      data: { title: "Bridging…", description: "", loading: true },
-    };
-
-    const edgeFromMidId = newEdgeId();
-    const edgeMidToId = newEdgeId();
-    const placeholderFrom: CausalEdgeType = {
-      id: edgeFromMidId,
-      type: "causal",
-      source: fromNode.id,
-      target: midId,
-      data: { strength: "contributing", loading: true },
-    };
-    const placeholderTo: CausalEdgeType = {
-      id: edgeMidToId,
-      type: "causal",
-      source: midId,
-      target: toNode.id,
-      data: { strength: "contributing", loading: true },
-    };
-
-    setNodes((ns) => [...ns, midNode]);
-    setEdges((es) => addEdge(placeholderFrom, addEdge(placeholderTo, es)));
-
-    api
-      .generateBridge(eventOf(fromNode), eventOf(toNode))
-      .then((res) => {
+      try {
+        const res = await api.generateBridge(eventOf(fromNode), eventOf(toNode));
         if (!res.intermediate) {
-          // No plausible bridge — drop the mid node and connect directly.
-          setNodes((ns) => ns.filter((n) => n.id !== midId));
-          setEdges((es) => {
-            const cleaned = es.filter((e) => e.id !== edgeFromMidId && e.id !== edgeMidToId);
-            const direct: CausalEdgeType = {
+          removeNode(midId);
+          removeEdges(fromEdgeId, toEdgeId);
+          setEdges((es) => [
+            ...es,
+            {
               id: newEdgeId(),
               type: "causal",
               source: fromNode.id,
               target: toNode.id,
               data: { strength: res.fromStrength, reasoning: res.reasoning },
-            };
-            return addEdge(direct, cleaned);
-          });
+            },
+          ]);
           return;
         }
-        const inter = res.intermediate;
-        setNodes((ns) =>
-          ns.map((n) =>
-            n.id === midId
-              ? { ...n, data: { title: inter.title, description: inter.description, loading: false } }
-              : n
-          )
-        );
-        setEdges((es) =>
-          es.map((e) => {
-            if (e.id === edgeFromMidId) {
-              return { ...e, data: { strength: res.fromStrength, reasoning: res.reasoning, loading: false } };
-            }
-            if (e.id === edgeMidToId) {
-              return { ...e, data: { strength: res.toStrength, reasoning: res.reasoning, loading: false } };
-            }
-            return e;
-          })
-        );
-      })
-      .catch((e) => {
-        setError(asMessage(e));
-        setNodes((ns) => ns.filter((n) => n.id !== midId));
-        setEdges((es) => es.filter((e2) => e2.id !== edgeFromMidId && e2.id !== edgeMidToId));
-      });
-  }, [findNode]);
+        updateNode(midId, {
+          title: res.intermediate.title,
+          description: res.intermediate.description,
+          loading: false,
+        });
+        updateEdgeData(fromEdgeId, { strength: res.fromStrength, reasoning: res.reasoning, loading: false });
+        updateEdgeData(toEdgeId, { strength: res.toStrength, reasoning: res.reasoning, loading: false });
+      } catch (e) {
+        removeNode(midId);
+        removeEdges(fromEdgeId, toEdgeId);
+        throw e;
+      }
+    });
 
-  const actions: GraphActions = useMemo(
-    () => ({ expandEffects, expandCauses }),
-    [expandEffects, expandCauses]
-  );
+  const spawnFromHandle = (
+    fromNode: EventNodeType,
+    direction: "up" | "down",
+    position: { x: number; y: number }
+  ) =>
+    guard(async () => {
+      const nodeId = newId();
+      const edgeId = newEdgeId();
+      const source = direction === "down" ? fromNode.id : nodeId;
+      const target = direction === "down" ? nodeId : fromNode.id;
+
+      setNodes((ns) => [...ns, placeholderNode(nodeId, position)]);
+      setEdges((es) => [...es, placeholderEdge(edgeId, source, target)]);
+
+      try {
+        const item = await fetchSingleRelated(eventOf(fromNode), direction);
+        if (!item) {
+          removeNode(nodeId);
+          removeEdges(edgeId);
+          return;
+        }
+        updateNode(nodeId, { title: item.title, description: item.description, loading: false });
+        updateEdgeData(edgeId, { strength: item.strength, reasoning: item.reasoning, loading: false });
+      } catch (e) {
+        removeNode(nodeId);
+        removeEdges(edgeId);
+        throw e;
+      }
+    });
+
+  const onConnect = (connection: Connection) => {
+    const { source, target } = connection;
+    if (!source || !target || source === target) return;
+    const fromNode = findNode(source);
+    const toNode = findNode(target);
+    if (!fromNode || !toNode) return;
+    bridgeBetween(fromNode, toNode);
+  };
+
+  const onConnectEnd = (event: MouseEvent | TouchEvent, connectionState: FinalConnectionState) => {
+    if (connectionState.isValid) return;
+    const fromNode = connectionState.fromNode as EventNodeType | null;
+    const handleType = connectionState.fromHandle?.type;
+    if (!fromNode || !handleType) return;
+    const { clientX, clientY } = "changedTouches" in event ? event.changedTouches[0] : event;
+    const direction = handleType === "source" ? "down" : "up";
+    spawnFromHandle(fromNode, direction, screenToFlowPosition({ x: clientX, y: clientY }));
+  };
+
+  const actions = { expandEffects: (id: string) => void expandEffects(id), expandCauses: (id: string) => void expandCauses(id) };
 
   const selectedEdge = edges.find((e) => e.id === selectedEdgeId);
   const selectedNode = nodes.find((n) => n.id === selectedNodeId);
@@ -215,10 +270,9 @@ function AppInner() {
               {seeding ? "Adding…" : "Add"}
             </button>
           </div>
-          <div className="topbar-legend">
-            <LegendChip strength="primary" label="primary" />
-            <LegendChip strength="contributing" label="contributing" />
-            <LegendChip strength="minor" label="minor" />
+          <Legend />
+          <div className="topbar-hint">
+            Drag from the <b>bottom</b> handle of a node into empty space to add an effect, from the <b>top</b> handle to add a cause. Drag between two nodes to bridge them.
           </div>
         </header>
 
@@ -232,9 +286,14 @@ function AppInner() {
           <ReactFlow
             nodes={nodes}
             edges={edges}
-            onNodesChange={onNodesChange}
-            onEdgesChange={onEdgesChange}
+            onNodesChange={(changes: NodeChange<EventNodeType>[]) =>
+              setNodes((ns) => applyNodeChanges(changes, ns))
+            }
+            onEdgesChange={(changes: EdgeChange<CausalEdgeType>[]) =>
+              setEdges((es) => applyEdgeChanges(changes, es))
+            }
             onConnect={onConnect}
+            onConnectEnd={onConnectEnd}
             onEdgeClick={(_, e) => {
               setSelectedEdgeId(e.id);
               setSelectedNodeId(null);
@@ -259,80 +318,61 @@ function AppInner() {
             <Controls />
           </ReactFlow>
 
-          {(selectedEdge || selectedNode) && (
-            <aside className="detail-panel">
-              {selectedNode && (
-                <>
-                  <div className="detail-label">Event</div>
-                  <div className="detail-title">{selectedNode.data.title}</div>
-                  <div className="detail-body">{selectedNode.data.description}</div>
-                </>
-              )}
-              {selectedEdge && (
-                <>
-                  <div className="detail-label">Causal link</div>
-                  <div className={`detail-strength strength-${selectedEdge.data?.strength}`}>
-                    {selectedEdge.data?.strength}
-                  </div>
-                  <div className="detail-body">
-                    {selectedEdge.data?.reasoning || <em style={{ opacity: 0.6 }}>No reasoning provided.</em>}
-                  </div>
-                </>
-              )}
-            </aside>
-          )}
+          <DetailPanel node={selectedNode} edge={selectedEdge} />
         </div>
       </div>
     </GraphActionsContext.Provider>
   );
 }
 
-function eventOf(node: EventNodeType): HistoricalEvent {
-  return { title: node.data.title, description: node.data.description };
+async function fetchSingleRelated(
+  event: HistoricalEvent,
+  direction: "up" | "down"
+): Promise<CausalItem | undefined> {
+  if (direction === "down") {
+    const { effects } = await api.generateEffects(event, 1);
+    return effects[0];
+  }
+  const { causes } = await api.generateCauses(event, 1);
+  return causes[0];
 }
 
-function addChildren(
-  source: EventNodeType,
-  items: { title: string; description: string; strength: CausalEdgeData["strength"]; reasoning: string }[],
-  direction: "up" | "down",
-  setNodes: React.Dispatch<React.SetStateAction<EventNodeType[]>>,
-  setEdges: React.Dispatch<React.SetStateAction<CausalEdgeType[]>>
-) {
-  const count = items.length;
-  if (count === 0) return;
-  const dy = direction === "down" ? FAN_Y : -FAN_Y;
-  const newNodes: EventNodeType[] = [];
-  const newEdges: CausalEdgeType[] = [];
-  items.forEach((item, i) => {
-    const id = newId();
-    const offset = i - (count - 1) / 2;
-    newNodes.push({
-      id,
-      type: "event",
-      position: {
-        x: source.position.x + offset * FAN_X,
-        y: source.position.y + dy,
-      },
-      data: { title: item.title, description: item.description },
-    });
-    newEdges.push({
-      id: newEdgeId(),
-      type: "causal",
-      source: direction === "down" ? source.id : id,
-      target: direction === "down" ? id : source.id,
-      data: { strength: item.strength, reasoning: item.reasoning },
-    });
-  });
-  setNodes((ns) => [...ns, ...newNodes]);
-  setEdges((es) => [...es, ...newEdges]);
+function Legend() {
+  return (
+    <div className="topbar-legend">
+      <LegendChip strength="primary" label="primary" />
+      <LegendChip strength="contributing" label="contributing" />
+      <LegendChip strength="minor" label="minor" />
+    </div>
+  );
 }
 
-function asMessage(e: unknown): string {
-  return e instanceof Error ? e.message : String(e);
-}
-
-function LegendChip({ strength, label }: { strength: "primary" | "contributing" | "minor"; label: string }) {
+function LegendChip({ strength, label }: { strength: Strength; label: string }) {
   return <span className={`legend-chip strength-${strength}`}>{label}</span>;
+}
+
+function DetailPanel({ node, edge }: { node?: EventNodeType; edge?: CausalEdgeType }) {
+  if (!node && !edge) return null;
+  return (
+    <aside className="detail-panel">
+      {node && (
+        <>
+          <div className="detail-label">Event</div>
+          <div className="detail-title">{node.data.title}</div>
+          <div className="detail-body">{node.data.description}</div>
+        </>
+      )}
+      {edge && (
+        <>
+          <div className="detail-label">Causal link</div>
+          <div className={`detail-strength strength-${edge.data?.strength}`}>{edge.data?.strength}</div>
+          <div className="detail-body">
+            {edge.data?.reasoning || <em style={{ opacity: 0.6 }}>No reasoning provided.</em>}
+          </div>
+        </>
+      )}
+    </aside>
+  );
 }
 
 export default function App() {

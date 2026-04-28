@@ -83,6 +83,13 @@ html, body, #root {
   gap: 6px;
   align-items: center;
 }
+.topbar-hint {
+  flex-basis: 100%;
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+.topbar-hint b { color: #111827; }
 .legend-chip {
   font-size: 11px;
   padding: 3px 8px;
