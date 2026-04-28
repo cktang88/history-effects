@@ -20,6 +20,7 @@ type EventNodeData = {
   description: string;  // 2–3 sentence factual description
   loading?: boolean;    // true while LLM is filling this in (placeholder)
   enriching?: boolean;  // true while web detail is being fetched
+  streamText?: string;  // transient raw JSON/token preview while SSE runs
 };
 ```
 
@@ -63,6 +64,7 @@ type CausalEdgeData = {
 - Children are placed in a horizontal fan: effects below the source, causes above. Spacing: ~280 px x, 220 px y.
 - Each child is a new node; the edge carries the `strength` and `reasoning` returned by the model.
 - Repeated expansion clicks are idempotent once that direction has an existing edge from/to the source.
+- Frontend actions call the `/stream` endpoint variants when they can display progress. Raw token deltas are shown temporarily on the source or placeholder node and removed when final parsed JSON is applied.
 
 ### Web detail and regeneration
 
@@ -100,6 +102,19 @@ type CausalEdgeData = {
 ## API
 
 All endpoints are `POST` with JSON. All return JSON. Errors return `{ error: string }` with HTTP 4xx/5xx.
+
+Each LLM endpoint also exposes an SSE variant at `/api/<name>/stream`. The request body is identical. Stream events are:
+
+```txt
+event: token
+data: {"token":"..."}
+
+event: result
+data: {...final endpoint JSON...}
+
+event: error
+data: {"error":"..."}
+```
 
 ### `POST /api/seed`
 
@@ -188,6 +203,9 @@ The model is told to:
 - If parsing still fails, `server/src/openrouter.ts` sends a second non-streaming repair request with temperature 0 and parses the repaired JSON.
 - Prompt caching is enabled via OpenRouter `cache_control: { type: "ephemeral" }` on both the request and system prompt content part.
 - Web search is not enabled by default; `/api/enrich` is the opt-in path that adds the `web` plugin.
+- Full LLM logs are written to `server/logs/*.json` and git-ignored.
+- Logs include request payloads, raw SDK responses or stream chunks, parsed output, repair attempts, usage, and any `reasoning` / `reasoningDetails` fields returned by OpenRouter.
+- Reasoning trace completeness depends on the upstream model/provider. Some models return reasoning details, summaries, or encrypted reasoning blocks; others return only final content and usage counts.
 
 ## Configuration
 

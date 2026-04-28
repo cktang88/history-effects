@@ -27,6 +27,7 @@ export function EventNode({ id, data, selected }: NodeProps<EventNodeType>) {
 
       <div className="event-node-title">{data.title || (loading ? "Thinking…" : "Untitled")}</div>
       {data.description && <div className="event-node-desc">{data.description}</div>}
+      {data.streamText && <div className="event-node-stream">{data.streamText}</div>}
 
       {!loading && (
         <button

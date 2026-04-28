@@ -27,6 +27,21 @@ function mockOpenRouterContent(content: unknown) {
   );
 }
 
+function mockOpenRouterStream(chunks: string[]) {
+  return vi.fn(
+    async () =>
+      new Response(
+        new ReadableStream({
+          start(controller) {
+            for (const chunk of chunks) controller.enqueue(new TextEncoder().encode(chunk));
+            controller.close();
+          },
+        }),
+        { status: 200, headers: { "content-type": "text/event-stream" } }
+      )
+  );
+}
+
 function jsonReq(path: string, body: unknown) {
   return app.request(path, {
     method: "POST",
@@ -165,6 +180,31 @@ describe("POST /api/effects", () => {
     expect(res.status).toBe(200);
     const json = (await res.json()) as { effects: unknown[] };
     expect(json.effects).toEqual([]);
+  });
+});
+
+describe("POST /api/effects/stream", () => {
+  it("streams tokens and final sanitized effects", async () => {
+    vi.stubGlobal(
+      "fetch",
+      mockOpenRouterStream([
+        'data: {"id":"gen-test","object":"chat.completion.chunk","created":1,"model":"test-model","choices":[{"index":0,"finish_reason":null,"delta":{"content":"{\\"effects\\":["}}]}\n\n',
+        'data: {"id":"gen-test","object":"chat.completion.chunk","created":1,"model":"test-model","choices":[{"index":0,"finish_reason":null,"delta":{"content":"{\\"title\\":\\"T\\",\\"description\\":\\"D\\",\\"strength\\":\\"primary\\",\\"reasoning\\":\\"R\\"}]}"}}]}\n\n',
+        'data: {"id":"gen-test","object":"chat.completion.chunk","created":1,"model":"test-model","choices":[{"index":0,"finish_reason":"stop","delta":{}}]}\n\n',
+        "data: [DONE]\n\n",
+      ])
+    );
+
+    const res = await jsonReq("/api/effects/stream", {
+      event: { title: "X", description: "" },
+      n: 1,
+    });
+    expect(res.status).toBe(200);
+    expect(res.headers.get("content-type")).toContain("text/event-stream");
+    const text = await res.text();
+    expect(text).toContain("event: token");
+    expect(text).toContain("event: result");
+    expect(text).toContain('"effects":[{"title":"T"');
   });
 });
 

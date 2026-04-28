@@ -103,6 +103,7 @@ function restoreNode(node: EventNodeType): EventNodeType {
       ...node.data,
       loading: false,
       enriching: false,
+      streamText: undefined,
     },
   };
 }
@@ -176,6 +177,21 @@ function AppInner() {
   const updateNode = (id: string, patch: Partial<EventNodeType["data"]>) =>
     setNodes((ns) => ns.map((n) => (n.id === id ? { ...n, data: { ...n.data, ...patch } } : n)));
 
+  const appendNodeStream = (id: string, token: string) =>
+    setNodes((ns) =>
+      ns.map((n) =>
+        n.id === id
+          ? {
+              ...n,
+              data: {
+                ...n.data,
+                streamText: `${n.data.streamText ?? ""}${token}`.slice(-900),
+              },
+            }
+          : n
+      )
+    );
+
   const updateEdgeData = (id: string, next: NonNullable<CausalEdgeType["data"]>) =>
     setEdges((es) => es.map((e) => (e.id === id ? { ...e, data: next } : e)));
 
@@ -211,8 +227,15 @@ function AppInner() {
       const source = findNode(sourceId);
       if (!source) return;
       if (hasExpansion(sourceId, "down")) return;
-      const { effects } = await api.generateEffects(eventOf(source));
-      addFannedChildren(source, effects, "down");
+      updateNode(sourceId, { streamText: "" });
+      try {
+        const { effects } = await api.generateEffects(eventOf(source), 5, {
+          onToken: (token) => appendNodeStream(sourceId, token),
+        });
+        addFannedChildren(source, effects, "down");
+      } finally {
+        updateNode(sourceId, { streamText: undefined });
+      }
     });
 
   const expandCauses = (sourceId: string) =>
@@ -220,24 +243,34 @@ function AppInner() {
       const source = findNode(sourceId);
       if (!source) return;
       if (hasExpansion(sourceId, "up")) return;
-      const { causes } = await api.generateCauses(eventOf(source));
-      addFannedChildren(source, causes, "up");
+      updateNode(sourceId, { streamText: "" });
+      try {
+        const { causes } = await api.generateCauses(eventOf(source), 5, {
+          onToken: (token) => appendNodeStream(sourceId, token),
+        });
+        addFannedChildren(source, causes, "up");
+      } finally {
+        updateNode(sourceId, { streamText: undefined });
+      }
     });
 
   const enrichWithWeb = (sourceId: string) =>
     guard(async () => {
       const source = findNode(sourceId);
       if (!source || source.data.loading || source.data.enriching) return;
-      updateNode(sourceId, { enriching: true });
+      updateNode(sourceId, { enriching: true, streamText: "" });
       try {
-        const { event } = await api.enrichEvent(eventOf(source));
+        const { event } = await api.enrichEvent(eventOf(source), {
+          onToken: (token) => appendNodeStream(sourceId, token),
+        });
         updateNode(sourceId, {
           title: event.title,
           description: event.description,
           enriching: false,
+          streamText: undefined,
         });
       } catch (e) {
-        updateNode(sourceId, { enriching: false });
+        updateNode(sourceId, { enriching: false, streamText: undefined });
         throw e;
       }
     });
@@ -251,8 +284,16 @@ function AppInner() {
         setNodes((ns) => ns.filter((node) => !childIds.includes(node.id)));
         setEdges((es) => es.filter((edge) => edge.source !== sourceId && !childIds.includes(edge.source) && !childIds.includes(edge.target)));
       }
-      const { effects } = await api.generateEffects(eventOf(source), 5, { refresh: true });
-      addFannedChildren(source, effects, "down");
+      updateNode(sourceId, { streamText: "" });
+      try {
+        const { effects } = await api.generateEffects(eventOf(source), 5, {
+          refresh: true,
+          onToken: (token) => appendNodeStream(sourceId, token),
+        });
+        addFannedChildren(source, effects, "down");
+      } finally {
+        updateNode(sourceId, { streamText: undefined });
+      }
     });
 
   const handleSeed = async () => {
@@ -278,7 +319,10 @@ function AppInner() {
         };
         setNodes((ns) => [...ns, node]);
         setSeedText("");
-        const { effects } = await api.generateEffects(event, 5);
+        const { effects } = await api.generateEffects(event, 5, {
+          onToken: (token) => appendNodeStream(id, token),
+        });
+        updateNode(id, { streamText: undefined });
         addFannedChildren(node, effects, "down");
       });
     } finally {
@@ -304,7 +348,9 @@ function AppInner() {
       ]);
 
       try {
-        const res = await api.generateBridge(eventOf(fromNode), eventOf(toNode));
+        const res = await api.generateBridge(eventOf(fromNode), eventOf(toNode), {
+          onToken: (token) => appendNodeStream(midId, token),
+        });
         if (!res.intermediate) {
           removeNode(midId);
           removeEdges(fromEdgeId, toEdgeId);
@@ -324,6 +370,7 @@ function AppInner() {
           title: res.intermediate.title,
           description: res.intermediate.description,
           loading: false,
+          streamText: undefined,
         });
         updateEdgeData(fromEdgeId, { strength: res.fromStrength, reasoning: res.reasoning, loading: false });
         updateEdgeData(toEdgeId, { strength: res.toStrength, reasoning: res.reasoning, loading: false });
@@ -349,7 +396,7 @@ function AppInner() {
       setEdges((es) => [...es, placeholderEdge(edgeId, source, target)]);
 
       try {
-        const item = await fetchSingleRelated(eventOf(fromNode), direction);
+        const item = await fetchSingleRelated(eventOf(fromNode), direction, (token) => appendNodeStream(nodeId, token));
         if (!item) {
           removeNode(nodeId);
           removeEdges(edgeId);
@@ -470,13 +517,14 @@ function AppInner() {
 
 async function fetchSingleRelated(
   event: HistoricalEvent,
-  direction: "up" | "down"
+  direction: "up" | "down",
+  onToken?: (token: string) => void
 ): Promise<CausalItem | undefined> {
   if (direction === "down") {
-    const { effects } = await api.generateEffects(event, 1);
+    const { effects } = await api.generateEffects(event, 1, { onToken });
     return effects[0];
   }
-  const { causes } = await api.generateCauses(event, 1);
+  const { causes } = await api.generateCauses(event, 1, { onToken });
   return causes[0];
 }
 

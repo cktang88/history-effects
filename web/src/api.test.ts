@@ -11,6 +11,16 @@ function mockJSON(payload: unknown, status = 200) {
   );
 }
 
+function mockSSE(events: string[]) {
+  return vi.fn<typeof fetch>(
+    async () =>
+      new Response(events.join(""), {
+        status: 200,
+        headers: { "content-type": "text/event-stream" },
+      })
+  );
+}
+
 function mockLocalStorage() {
   const store = new Map<string, string>();
   vi.stubGlobal("localStorage", {
@@ -114,6 +124,25 @@ describe("generateEffects", () => {
     await api.generateEffects({ title: "X", description: "Y" }, 3, { refresh: true });
 
     expect(fetchMock).toHaveBeenCalledTimes(2);
+  });
+
+  it("uses the streaming endpoint when an onToken callback is provided", async () => {
+    const fetchMock = mockSSE([
+      'event: token\ndata: {"token":"{\\"effects\\":["}\n\n',
+      'event: result\ndata: {"effects":[{"title":"T","description":"D","strength":"primary","reasoning":"R"}]}\n\n',
+    ]);
+    vi.stubGlobal("fetch", fetchMock);
+    const tokens: string[] = [];
+
+    const out = await api.generateEffects({ title: "X", description: "Y" }, 3, {
+      onToken: (token) => tokens.push(token),
+    });
+
+    expect(out.effects[0]?.title).toBe("T");
+    expect(tokens).toEqual(['{"effects":[']);
+    const [path, init] = fetchMock.mock.calls[0]!;
+    expect(path).toBe("/api/effects/stream");
+    expect((init as RequestInit).headers).toMatchObject({ Accept: "text/event-stream" });
   });
 });
 

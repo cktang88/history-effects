@@ -13,6 +13,7 @@ export type CausalItem = HistoricalEvent & {
 export type EventNodeData = HistoricalEvent & {
   loading?: boolean;
   enriching?: boolean;
+  streamText?: string;
 };
 
 export type CausalEdgeData = {

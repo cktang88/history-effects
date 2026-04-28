@@ -8,7 +8,7 @@ Edges are color-coded by causal strength: **primary** (direct, near-necessary ca
 
 - **Backend**: Bun + Hono, calling [OpenRouter](https://openrouter.ai/) through `@openrouter/sdk`.
 - **Frontend**: React 19 + [React Flow 12](https://reactflow.dev/) (`@xyflow/react`) + Vite.
-- **Tests**: Vitest in both packages (68 tests total).
+- **Tests**: Vitest in both packages (70 tests total).
 - **Lint**: oxlint at the repo root.
 - **Pre-commit**: [prek](https://github.com/j178/prek) runs oxlint + tests via `.pre-commit-config.yaml` before every commit.
 - **Default model**: `moonshotai/kimi-k2.6` (override via `OPENROUTER_MODEL` env var).
@@ -69,6 +69,12 @@ The graph is persisted in browser `localStorage`, and API responses are cached i
 | POST   | `/api/seed`    | `{ text }`                            | `{ event: {title, description} }` (cleans up free-form input) |
 | POST   | `/api/enrich`  | `{ event: {title, description} }`     | `{ event: {title, description} }` (web-search-enriched detail) |
 
+Every LLM endpoint also has an SSE variant at `/api/<name>/stream`. Stream responses emit:
+
+- `token`: raw model text deltas as they arrive.
+- `result`: the parsed final JSON payload.
+- `error`: an error payload if generation fails.
+
 ## LLM behavior
 
 - Requests use OpenRouter JSON mode via `responseFormat: { type: "json_object" }`.
@@ -76,7 +82,8 @@ The graph is persisted in browser `localStorage`, and API responses are cached i
 - Non-streaming calls enable OpenRouter's `response-healing` plugin.
 - If parsing still fails, the server performs a second JSON-repair request and parses the repaired output.
 - Prompt caching is enabled with OpenRouter `cache_control: { type: "ephemeral" }` on the request and the system prompt content block.
-- CLI calls stream tokens to stderr for responsiveness, then print the parsed final JSON.
+- CLI and frontend SSE calls stream tokens for responsiveness, then use the parsed final JSON.
+- Full LLM logs are written as JSON files in `server/logs/`, including request payloads, raw SDK responses or stream chunks, parsed output, repair attempts, usage, and any `reasoning` / `reasoningDetails` fields OpenRouter returns. This directory is git-ignored.
 
 ## CLI (test LLM funcs without the frontend)
 

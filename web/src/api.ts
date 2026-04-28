@@ -2,6 +2,7 @@ import type { CausalItem, HistoricalEvent, Strength } from "./types";
 
 type RequestOptions = {
   refresh?: boolean;
+  onToken?: (token: string) => void;
 };
 
 const API_CACHE_PREFIX = "history-effects:api:";
@@ -25,6 +26,29 @@ async function postJSON<T>(path: string, body: unknown, options: RequestOptions 
   const json = (await res.json()) as T;
   writeCache(cacheKey, json);
   return json;
+}
+
+async function postSSE<T>(path: string, body: unknown, options: RequestOptions = {}): Promise<T> {
+  const cacheKey = `${API_CACHE_PREFIX}${path}:${stableStringify(body)}`;
+  if (!options.refresh) {
+    const cached = readCache<T>(cacheKey);
+    if (cached) return cached;
+  }
+
+  const res = await fetch(`${path}/stream`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "Accept": "text/event-stream" },
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`${path}/stream failed: ${res.status} ${text}`);
+  }
+  if (!res.body) throw new Error(`${path}/stream returned no response body`);
+
+  const result = await readSSE<T>(res.body, options.onToken);
+  writeCache(cacheKey, result);
+  return result;
 }
 
 function readCache<T>(key: string): T | null {
@@ -58,27 +82,84 @@ function sortForCache(value: unknown): unknown {
   );
 }
 
+async function readSSE<T>(body: ReadableStream<Uint8Array>, onToken?: (token: string) => void): Promise<T> {
+  const reader = body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = "";
+  let result: T | undefined;
+  let error: string | undefined;
+
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    buffer += decoder.decode(value, { stream: true });
+    const events = buffer.split("\n\n");
+    buffer = events.pop() ?? "";
+    for (const event of events) {
+      const parsed = parseSSEEvent(event);
+      if (!parsed) continue;
+      if (parsed.event === "token") {
+        const data = JSON.parse(parsed.data) as { token?: string };
+        if (data.token) onToken?.(data.token);
+      } else if (parsed.event === "result") {
+        result = JSON.parse(parsed.data) as T;
+      } else if (parsed.event === "error") {
+        const data = JSON.parse(parsed.data) as { error?: string };
+        error = data.error ?? "stream failed";
+      }
+    }
+  }
+
+  buffer += decoder.decode();
+  const parsed = parseSSEEvent(buffer);
+  if (parsed?.event === "result") result = JSON.parse(parsed.data) as T;
+  if (parsed?.event === "error") {
+    const data = JSON.parse(parsed.data) as { error?: string };
+    error = data.error ?? "stream failed";
+  }
+
+  if (error) throw new Error(error);
+  if (result === undefined) throw new Error("stream ended without a result");
+  return result;
+}
+
+function parseSSEEvent(raw: string): { event: string; data: string } | null {
+  const lines = raw.split(/\r?\n/);
+  const event = lines.find((line) => line.startsWith("event: "))?.slice("event: ".length);
+  const data = lines
+    .filter((line) => line.startsWith("data: "))
+    .map((line) => line.slice("data: ".length))
+    .join("\n");
+  return event && data ? { event, data } : null;
+}
+
 export function seedEvent(text: string, options?: RequestOptions) {
-  return postJSON<{ event: HistoricalEvent }>("/api/seed", { text }, options);
+  const body = { text };
+  return options?.onToken ? postSSE<{ event: HistoricalEvent }>("/api/seed", body, options) : postJSON<{ event: HistoricalEvent }>("/api/seed", body, options);
 }
 
 export function enrichEvent(event: HistoricalEvent, options?: RequestOptions) {
-  return postJSON<{ event: HistoricalEvent }>("/api/enrich", { event }, options);
+  const body = { event };
+  return options?.onToken ? postSSE<{ event: HistoricalEvent }>("/api/enrich", body, options) : postJSON<{ event: HistoricalEvent }>("/api/enrich", body, options);
 }
 
 export function generateEffects(event: HistoricalEvent, n = 5, options?: RequestOptions) {
-  return postJSON<{ effects: CausalItem[] }>("/api/effects", { event, n }, options);
+  const body = { event, n };
+  return options?.onToken ? postSSE<{ effects: CausalItem[] }>("/api/effects", body, options) : postJSON<{ effects: CausalItem[] }>("/api/effects", body, options);
 }
 
 export function generateCauses(event: HistoricalEvent, n = 5, options?: RequestOptions) {
-  return postJSON<{ causes: CausalItem[] }>("/api/causes", { event, n }, options);
+  const body = { event, n };
+  return options?.onToken ? postSSE<{ causes: CausalItem[] }>("/api/causes", body, options) : postJSON<{ causes: CausalItem[] }>("/api/causes", body, options);
 }
 
 export function generateBridge(from: HistoricalEvent, to: HistoricalEvent, options?: RequestOptions) {
-  return postJSON<{
+  type BridgeResponse = {
     intermediate: HistoricalEvent | null;
     fromStrength: Strength;
     toStrength: Strength;
     reasoning: string;
-  }>("/api/bridge", { from, to }, options);
+  };
+  const body = { from, to };
+  return options?.onToken ? postSSE<BridgeResponse>("/api/bridge", body, options) : postJSON<BridgeResponse>("/api/bridge", body, options);
 }

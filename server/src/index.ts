@@ -23,6 +23,34 @@ app.use("/api/*", cors({ origin: "*" }));
 
 app.get("/", (c) => c.text("history-effects API. POST /api/seed | /api/effects | /api/causes | /api/bridge | /api/enrich"));
 
+function sseResponse<T>(producer: (emitToken: (token: string) => void) => Promise<T>) {
+  const encoder = new TextEncoder();
+  const stream = new ReadableStream<Uint8Array>({
+    async start(controller) {
+      const send = (event: string, data: unknown) => {
+        controller.enqueue(encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`));
+      };
+
+      try {
+        const result = await producer((token) => send("token", { token }));
+        send("result", result);
+      } catch (e) {
+        send("error", { error: e instanceof Error ? e.message : String(e) });
+      } finally {
+        controller.close();
+      }
+    },
+  });
+
+  return new Response(stream, {
+    headers: {
+      "Content-Type": "text/event-stream",
+      "Cache-Control": "no-cache, no-transform",
+      "Connection": "keep-alive",
+    },
+  });
+}
+
 app.post("/api/seed", async (c) => {
   const body = await c.req.json<{ text?: string }>();
   const text = (body.text || "").trim();
@@ -38,6 +66,26 @@ app.post("/api/seed", async (c) => {
     return c.json({ error: "Model did not return a valid event", raw: result }, 502);
   }
   return c.json(result);
+});
+
+app.post("/api/seed/stream", async (c) => {
+  const body = await c.req.json<{ text?: string }>();
+  const text = (body.text || "").trim();
+  if (!text) return c.json({ error: "text is required" }, 400);
+
+  return sseResponse(async (onToken) => {
+    const result = await completeJSON<{ event: Event }>({
+      systemPrompt: seedSystemPrompt,
+      userPrompt: `Phrase: ${text}`,
+      temperature: 0.2,
+      label: "seed",
+      onToken,
+    });
+    if (!result?.event?.title || !result?.event?.description) {
+      throw new Error("Model did not return a valid event");
+    }
+    return result;
+  });
 });
 
 app.post("/api/enrich", async (c) => {
@@ -58,6 +106,27 @@ app.post("/api/enrich", async (c) => {
   return c.json(result);
 });
 
+app.post("/api/enrich/stream", async (c) => {
+  const body = await c.req.json<{ event?: Event }>();
+  const event = body.event;
+  if (!event?.title) return c.json({ error: "event.title is required" }, 400);
+
+  return sseResponse(async (onToken) => {
+    const result = await completeJSON<{ event: Event }>({
+      systemPrompt: enrichEventSystemPrompt,
+      userPrompt: renderEventPrompt(event, "Verify and enrich this event record."),
+      temperature: 0.2,
+      label: "enrich",
+      webSearch: true,
+      onToken,
+    });
+    if (!result?.event?.title || !result?.event?.description) {
+      throw new Error("Model did not return a valid event");
+    }
+    return result;
+  });
+});
+
 app.post("/api/effects", async (c) => {
   const body = await c.req.json<{ event?: Event; n?: number }>();
   const event = body.event;
@@ -73,6 +142,24 @@ app.post("/api/effects", async (c) => {
   return c.json({ effects: sanitizeList(result?.effects, n) });
 });
 
+app.post("/api/effects/stream", async (c) => {
+  const body = await c.req.json<{ event?: Event; n?: number }>();
+  const event = body.event;
+  const n = clampN(body.n, 5);
+  if (!event?.title) return c.json({ error: "event.title is required" }, 400);
+
+  const userPrompt = renderEventPrompt(event, `Generate the ${n} most significant downstream effects.`);
+  return sseResponse(async (onToken) => {
+    const result = await completeJSON<{ effects: unknown }>({
+      systemPrompt: effectsSystemPrompt,
+      userPrompt,
+      label: "effects",
+      onToken,
+    });
+    return { effects: sanitizeList(result?.effects, n) };
+  });
+});
+
 app.post("/api/causes", async (c) => {
   const body = await c.req.json<{ event?: Event; n?: number }>();
   const event = body.event;
@@ -86,6 +173,24 @@ app.post("/api/causes", async (c) => {
   });
 
   return c.json({ causes: sanitizeList(result?.causes, n) });
+});
+
+app.post("/api/causes/stream", async (c) => {
+  const body = await c.req.json<{ event?: Event; n?: number }>();
+  const event = body.event;
+  const n = clampN(body.n, 5);
+  if (!event?.title) return c.json({ error: "event.title is required" }, 400);
+
+  const userPrompt = renderEventPrompt(event, `Generate the ${n} most significant upstream causes.`);
+  return sseResponse(async (onToken) => {
+    const result = await completeJSON<{ causes: unknown }>({
+      systemPrompt: causesSystemPrompt,
+      userPrompt,
+      label: "causes",
+      onToken,
+    });
+    return { causes: sanitizeList(result?.causes, n) };
+  });
 });
 
 app.post("/api/bridge", async (c) => {
@@ -115,6 +220,40 @@ app.post("/api/bridge", async (c) => {
     fromStrength: normalizeStrength(result?.fromStrength),
     toStrength: normalizeStrength(result?.toStrength),
     reasoning: typeof result?.reasoning === "string" ? result.reasoning : "",
+  });
+});
+
+app.post("/api/bridge/stream", async (c) => {
+  const body = await c.req.json<{ from?: Event; to?: Event }>();
+  const { from, to } = body;
+  if (!from?.title || !to?.title) {
+    return c.json({ error: "from.title and to.title are required" }, 400);
+  }
+
+  const userPrompt =
+    `EVENT_FROM (earlier):\nTitle: ${from.title}\nDescription: ${from.description ?? ""}\n\n` +
+    `EVENT_TO (later):\nTitle: ${to.title}\nDescription: ${to.description ?? ""}\n\n` +
+    `Find a significant intermediate event that bridges them.`;
+
+  return sseResponse(async (onToken) => {
+    const result = await completeJSON<{
+      intermediate: Event | null;
+      fromStrength: Strength;
+      toStrength: Strength;
+      reasoning: string;
+    }>({
+      systemPrompt: bridgeSystemPrompt,
+      userPrompt,
+      label: "bridge",
+      onToken,
+    });
+
+    return {
+      intermediate: result?.intermediate ?? null,
+      fromStrength: normalizeStrength(result?.fromStrength),
+      toStrength: normalizeStrength(result?.toStrength),
+      reasoning: typeof result?.reasoning === "string" ? result.reasoning : "",
+    };
   });
 });
 

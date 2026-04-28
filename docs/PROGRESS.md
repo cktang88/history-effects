@@ -16,6 +16,10 @@ Running build log. Newest entry on top.
 - Added server-side JSON repair retry when model output is malformed or truncated.
 - Added browser `localStorage` graph persistence (`history-effects:graph:v1`).
 - Added browser `localStorage` API response cache (`history-effects:api:*`) with stable request keys.
+- Added SSE variants for all LLM endpoints at `/api/<name>/stream`.
+- Frontend LLM actions now use SSE when they can display progress, showing transient raw JSON token previews on active nodes/placeholders.
+- Added full JSON LLM logging under `server/logs/` and ignored that directory in git.
+- Logs capture request payloads, raw SDK responses or stream chunks, parsed output, repair attempts, usage, and OpenRouter-returned `reasoning` / `reasoningDetails` fields when available.
 - Made normal Effects/Causes expansion idempotent for already-expanded directions.
 - Added hover-only node controls:
   - **Web detail** enriches a node using web search.
@@ -34,6 +38,7 @@ Running build log. Newest entry on top.
 - Consider moving from JSON object mode to `json_schema` for models where OpenRouter reports structured-output support.
 - Add visible clear-cache / clear-graph UI controls.
 - Add import/export graph JSON.
+- Add a log viewer or tail command for `server/logs/`.
 
 ---
 
@@ -53,7 +58,7 @@ Running build log. Newest entry on top.
 - [x] docs/SPEC.md
 - [x] docs/PROGRESS.md
 - [x] Backend scaffold
-  - [x] Hono app with `/api/seed`, `/api/effects`, `/api/causes`, `/api/bridge`
+  - [x] Hono app with `/api/seed`, `/api/enrich`, `/api/effects`, `/api/causes`, `/api/bridge`, plus `/stream` SSE variants
   - [x] OpenRouter SDK client (`response_format: json_object`, response healing, loose JSON fallback, repair retry)
   - [x] System prompts with shared strength rubric
   - [x] CORS, error handler, sanitization, n-clamping
@@ -97,10 +102,10 @@ Running build log. Newest entry on top.
 **Tests**
 - `server/src/helpers.test.ts` — 14 tests covering `clampN`, `normalizeStrength`, `sanitizeList`, `renderEventPrompt`.
 - `server/src/openrouter.test.ts` — covers `parseJSONLoose`, SDK request shape, prompt caching, streaming, web-search plugin opt-in, and JSON repair retry.
-- `server/src/index.test.ts` — covers all five routes (`/api/seed`, `/api/enrich`, `/api/effects`, `/api/causes`, `/api/bridge`) including happy paths, validation 400s, malformed-model 502, n-cap, strength normalization, intermediate=null, missing-API-key error.
-- `web/src/api.test.ts` — covers client wrappers plus browser response caching and refresh bypass.
+- `server/src/index.test.ts` — covers all five routes (`/api/seed`, `/api/enrich`, `/api/effects`, `/api/causes`, `/api/bridge`) plus SSE behavior, including happy paths, validation 400s, malformed-model 502, n-cap, strength normalization, intermediate=null, missing-API-key error.
+- `web/src/api.test.ts` — covers client wrappers plus browser response caching, refresh bypass, and SSE client parsing.
 
 **Verified**
 - `bun run lint`: 0 warnings, 0 errors across 15 files.
-- `bun run test`: 68 / 68 passing (server 58, web 10).
+- `bun run test`: 70 / 70 passing (server 59, web 11).
 - Pre-commit hook installed at `.git/hooks/pre-commit`.
