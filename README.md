@@ -36,7 +36,16 @@ history-effects/
 
 ## Setup
 
-### 1. Backend
+### Quick start
+
+```bash
+bun run dev        # installs deps if needed, starts API + web, Ctrl-C stops both
+bun run dev:mock   # same, but always with canned AI responses
+```
+
+Then open http://localhost:5173. Without an `OPENROUTER_API_KEY` in `server/.env` it falls back to mock AI automatically; the atlas works fully either way.
+
+### Manual: 1. Backend
 
 ```bash
 cd server
@@ -50,7 +59,7 @@ The API listens on `http://localhost:3000`.
 
 The atlas (browse, search, sourced links, paths) needs no API key. The key is only for AI features: explanations, and gap-filling beyond the database. Without one, `bun run dev:mock` serves canned AI responses so the whole UI works offline.
 
-### 2. Frontend
+### Manual: 2. Frontend
 
 ```bash
 cd web

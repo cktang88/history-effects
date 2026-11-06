@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev": "bash scripts/dev.sh",
+    "dev:mock": "bash scripts/dev.sh --mock",
     "cli": "cd server && bun run src/cli.ts",
     "lint": "oxlint server/src web/src pipeline",
     "test": "cd server && bun run test && bunx vitest run --root ../pipeline && cd ../web && bun run test",
