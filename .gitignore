@@ -19,3 +19,4 @@ bun.lockb
 # pipeline HTTP cache (re-runs are free; delete to refetch)
 pipeline/.cache/
 pipeline/out/
+__pycache__/
