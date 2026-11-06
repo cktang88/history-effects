@@ -95,3 +95,52 @@ describe("renderEventPrompt", () => {
     expect(out).toContain("Go.");
   });
 });
+
+describe("sanitizeEvent", async () => {
+  const { sanitizeEvent, renderEventPrompt, sanitizeContext } = await import("./helpers.ts");
+
+  it("keeps valid metadata and normalizes it", () => {
+    expect(
+      sanitizeEvent({ title: " Fall of Rome ", description: "d", year: "476", domain: "Political", place: " Italy ", dateLabel: "476" })
+    ).toEqual({ title: "Fall of Rome", description: "d", year: 476, domain: "political", place: "Italy", dateLabel: "476" });
+  });
+
+  it("drops invalid years, domains and end years before the start", () => {
+    expect(sanitizeEvent({ title: "T", description: "", year: 99999, domain: "vibes", endYear: 10 })).toEqual({
+      title: "T",
+      description: "",
+    });
+    expect(sanitizeEvent({ title: "T", description: "", year: 1500, endYear: 1400 })).toEqual({
+      title: "T",
+      description: "",
+      year: 1500,
+    });
+  });
+
+  it("supports BCE years", () => {
+    expect(sanitizeEvent({ title: "Caesar", description: "", year: -44 })?.year).toBe(-44);
+  });
+
+  it("returns null without a title", () => {
+    expect(sanitizeEvent({ description: "x" })).toBeNull();
+    expect(sanitizeEvent("nope")).toBeNull();
+  });
+
+  it("renders the exploration context into the prompt", () => {
+    const prompt = renderEventPrompt({ title: "C", description: "d", year: 1600 }, "Do it.", {
+      path: ["A", "B"],
+      exclude: ["Old effect"],
+      existing: ["Other event"],
+    });
+    expect(prompt).toContain("Title: C (1600)");
+    expect(prompt).toContain("A → B → [this event]");
+    expect(prompt).toContain("- Old effect");
+    expect(prompt).toContain("- Other event");
+    expect(prompt.endsWith("Do it.")).toBe(true);
+  });
+
+  it("sanitizes context lists", () => {
+    expect(sanitizeContext({ path: ["a", 3, " ", "b"], existing: "x" })).toEqual({ path: ["a", "b"], existing: undefined, exclude: undefined });
+    expect(sanitizeContext(null)).toEqual({});
+  });
+});

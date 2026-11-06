@@ -318,6 +318,138 @@ describe("POST /api/bridge", () => {
 
 // Error path ------------------------------------------------------------------
 
+function sseChunk(content: string) {
+  return `data: ${JSON.stringify({
+    id: "gen",
+    object: "chat.completion.chunk",
+    created: 1,
+    model: "test-model",
+    choices: [{ index: 0, delta: { content }, finish_reason: null }],
+  })}\n\n`;
+}
+
+function streamOf(doc: unknown) {
+  const text = JSON.stringify(doc);
+  const chunks: string[] = [];
+  for (let i = 0; i < text.length; i += 9) chunks.push(sseChunk(text.slice(i, i + 9)));
+  return mockOpenRouterStream([...chunks, "data: [DONE]\n\n"]);
+}
+
+function parseEvents(text: string) {
+  return text
+    .split("\n\n")
+    .filter(Boolean)
+    .map((block) => ({
+      event: block.match(/^event: (.+)$/m)?.[1],
+      data: JSON.parse(block.match(/^data: (.+)$/m)?.[1] ?? "null"),
+    }));
+}
+
+describe("POST /api/explore/stream", () => {
+  it("streams the event and each effect/cause as separate item events", async () => {
+    vi.stubGlobal(
+      "fetch",
+      streamOf({
+        event: { title: "Black Death", year: 1347, description: "Plague." },
+        effects: [
+          { title: "Peasants' Revolt", year: 1381, description: "d", strength: "contributing", reasoning: "r" },
+          { title: "Statute of Labourers", year: 1351, description: "d", strength: "bogus", reasoning: "r" },
+        ],
+        causes: [{ title: "Siege of Caffa", year: 1346, description: "d", strength: "primary", reasoning: "r" }],
+      })
+    );
+    const res = await jsonReq("/api/explore/stream", { text: "black death" });
+    const events = parseEvents(await res.text());
+    const items = events.filter((e) => e.event === "item").map((e) => [e.data.key, e.data.index, e.data.value.title]);
+    expect(items).toEqual([
+      ["event", 0, "Black Death"],
+      ["effects", 0, "Peasants' Revolt"],
+      ["effects", 1, "Statute of Labourers"],
+      ["causes", 0, "Siege of Caffa"],
+    ]);
+    const result = events.find((e) => e.event === "result")!.data;
+    expect(result.effects[1].strength).toBe("contributing");
+    expect(result.event.year).toBe(1347);
+  });
+
+  it("400s without text", async () => {
+    const res = await jsonReq("/api/explore/stream", { text: " " });
+    expect(res.status).toBe(400);
+  });
+});
+
+describe("POST /api/effects context", () => {
+  it("sends the exploration path and excluded titles to the model", async () => {
+    const fetchMock = mockOpenRouterContent({ effects: [] });
+    vi.stubGlobal("fetch", fetchMock);
+    await jsonReq("/api/effects", {
+      event: { title: "Printing press", description: "d" },
+      n: 3,
+      context: { path: ["Paper reaches Europe"], exclude: ["Reformation"] },
+    });
+    const request = fetchMock.mock.calls[0] as unknown as [Request | string, RequestInit | undefined];
+    const body = request[0] instanceof Request ? await request[0].text() : String(request[1]?.body);
+    expect(body).toContain("Paper reaches Europe → [this event]");
+    expect(body).toContain("do NOT repeat");
+    expect(body).toContain("- Reformation");
+  });
+});
+
+describe("POST /api/path", () => {
+  it("accepts phrases and returns a sanitized chain", async () => {
+    vi.stubGlobal(
+      "fetch",
+      mockOpenRouterContent({
+        from: { title: "Black Death", year: 1347, description: "d" },
+        to: { title: "Reformation", year: 1517, description: "d" },
+        steps: [{ title: "Serfdom collapses", year: 1350, description: "d", strength: "primary", reasoning: "r" }],
+        final: { strength: "minor", reasoning: "f" },
+        verdict: "weird",
+        summary: "s",
+      })
+    );
+    const res = await jsonReq("/api/path", { from: "black death", to: "reformation" });
+    expect(res.status).toBe(200);
+    const json = (await res.json()) as Record<string, any>;
+    expect(json.steps).toHaveLength(1);
+    expect(json.final).toEqual({ strength: "minor", reasoning: "f" });
+    expect(json.verdict).toBe("moderate");
+  });
+
+  it("400s without both endpoints", async () => {
+    const res = await jsonReq("/api/path", { from: "x" });
+    expect(res.status).toBe(400);
+  });
+});
+
+describe("POST /api/explain", () => {
+  it("returns a structured explanation", async () => {
+    vi.stubGlobal(
+      "fetch",
+      mockOpenRouterContent({
+        mechanism: "m",
+        keyFactors: ["a", 3, "b"],
+        certainty: "consensus",
+        debate: "d",
+        counterfactual: "c",
+      })
+    );
+    const res = await jsonReq("/api/explain", {
+      cause: { title: "A", description: "" },
+      effect: { title: "B", description: "" },
+      reasoning: "r",
+    });
+    const json = (await res.json()) as Record<string, any>;
+    expect(json).toEqual({ mechanism: "m", keyFactors: ["a", "b"], certainty: "consensus", debate: "d", counterfactual: "c" });
+  });
+
+  it("502s on an empty explanation", async () => {
+    vi.stubGlobal("fetch", mockOpenRouterContent({ mechanism: "" }));
+    const res = await jsonReq("/api/explain", { cause: { title: "A" }, effect: { title: "B" } });
+    expect(res.status).toBe(502);
+  });
+});
+
 describe("error handling", () => {
   it("returns 500 with friendly message when API key is missing", async () => {
     vi.unstubAllEnvs();

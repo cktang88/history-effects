@@ -49,7 +49,7 @@ These are the conventions for this repo. They were established in conversation; 
 
 - LLM calls are server-side only.
 - Models default to `moonshotai/kimi-k2.6` (override via `OPENROUTER_MODEL`).
-- `reasoning: { effort: "medium" }` and the `web` plugin (web search) are enabled by default in `server/src/openrouter.ts`.
+- Reasoning effort comes from `OPENROUTER_REASONING` (default `low`). Web search is opt-in, only via `/api/enrich`.
 
 ## Tests
 

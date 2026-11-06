@@ -4,6 +4,7 @@
 import { OpenRouter } from "@openrouter/sdk";
 import type { ChatRequest, ChatResult, ChatStreamChunk } from "@openrouter/sdk/models";
 import { mkdir, writeFile } from "node:fs/promises";
+import { mockCompletion } from "./mock.ts";
 
 type CompletionOptions = {
   systemPrompt: string;
@@ -12,7 +13,16 @@ type CompletionOptions = {
   label?: string;
   webSearch?: boolean;
   onToken?: (token: string) => void;
+  onReasoning?: (text: string) => void;
 };
+
+type ReasoningEffort = "minimal" | "low" | "medium" | "high";
+
+function reasoningEffort(): ReasoningEffort | null {
+  const v = (process.env.OPENROUTER_REASONING || "low").toLowerCase();
+  if (v === "off" || v === "none" || v === "0") return null;
+  return (["minimal", "low", "medium", "high"] as const).find((e) => e === v) ?? "low";
+}
 
 const REQUEST_TIMEOUT_MS = Number(process.env.OPENROUTER_TIMEOUT_MS) || 180_000;
 const LOG_DIR = new URL("../logs/", import.meta.url);
@@ -21,6 +31,9 @@ You repair malformed JSON. Return ONLY valid JSON. Do not explain, do not use ma
 `.trim();
 
 export async function completeJSON<T = unknown>(opts: CompletionOptions): Promise<T> {
+  if (process.env.MOCK_LLM === "1") {
+    return parseJSONLoose<T>(await mockCompletion(opts));
+  }
   const apiKey = process.env.OPENROUTER_API_KEY;
   if (!apiKey) {
     throw new Error("OPENROUTER_API_KEY is not set. Copy server/.env.example to server/.env and add your key.");
@@ -50,7 +63,7 @@ export async function completeJSON<T = unknown>(opts: CompletionOptions): Promis
     ],
     temperature: opts.temperature ?? 0.4,
     responseFormat: { type: "json_object" },
-    reasoning: { effort: "medium" },
+    ...(reasoningEffort() ? { reasoning: { effort: reasoningEffort()! } } : {}),
     cacheControl: { type: "ephemeral" },
     stream: !!opts.onToken,
     plugins: [
@@ -78,7 +91,8 @@ export async function completeJSON<T = unknown>(opts: CompletionOptions): Promis
       content = await readStreamingContent(
         await client.chat.send({ chatRequest: { ...chatRequest, stream: true } }),
         opts.onToken,
-        log
+        log,
+        opts.onReasoning
       );
     } else {
       const result = await client.chat.send({ chatRequest: { ...chatRequest, stream: false } });
@@ -139,7 +153,8 @@ function readCompletionContent(result: ChatResult): string | undefined {
 async function readStreamingContent(
   stream: AsyncIterable<ChatStreamChunk>,
   onToken: (token: string) => void,
-  log: LlmLog
+  log: LlmLog,
+  onReasoning?: (text: string) => void
 ): Promise<string> {
   let content = "";
   let index = 0;
@@ -151,6 +166,8 @@ async function readStreamingContent(
     if (reasoning) {
       log.streamReasoning.push(reasoning);
       log.trajectory.push({ type: "reasoning", index, value: reasoning });
+      const text = chunk.choices[0]?.delta.reasoning;
+      if (typeof text === "string" && text) onReasoning?.(text);
     }
     const token = chunk.choices[0]?.delta.content;
     if (token) {

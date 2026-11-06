@@ -4,6 +4,35 @@ Running build log. Newest entry on top.
 
 ---
 
+## 2026-11-06 — rebuilt around learning how history connects
+
+**Product direction**
+- The map is now a timeline: x is time (ordinal, with nearby years clustered and gaps labeled), each node keeps a persistent row so the map stays recognizable as it grows.
+- New core flows: **Explore** (event + effects + causes in one streamed call), **Connect** (multi-step causal chain between any two events, with verdict and summary), **Explain** (in-depth mechanism, co-factors, debate, counterfactual for any link), **Show the steps in between** (expands a link into a chain).
+- New items merge into existing nodes by normalized title, so separate threads converge.
+- Selecting an event highlights its full lineage; the inspector lists causes and effects with mechanisms, traced chains it belongs to, and a "trace a connection" box.
+- Keyboard navigation along the chain, undo, semantic zoom (titles only when zoomed out), mobile layout, dark mode.
+
+**Speed / fluidity**
+- Server parses the model's JSON incrementally (`jsonStream.ts`) and emits each item as an SSE `item` event, so results appear one by one instead of after the full response.
+- Removed the per-token full-graph `localStorage` read+write (the main source of lag); persistence is now throttled.
+- Zustand store with narrow selectors; reasoning text is batched to a few updates per second.
+- Node positions tween in JS so edges move with the cards; the camera frames layout targets, leaving room for the inspector.
+- Default reasoning effort lowered to `low` (configurable). Bun `idleTimeout` raised so long SSE generations aren't cut off.
+
+**Accuracy**
+- Prompts rewritten: importance-ordered canonical effects first, accurate integer years, named developments, explicit mechanisms, temporal sanity (effects after, causes before), honesty about weak/no connections.
+- Expansion requests include the learner's causal path, titles to avoid, and titles already on the map.
+
+**Dev**
+- `MOCK_LLM=1` / `bun run dev:mock` streams canned responses for offline UI work.
+- New tests: incremental JSON parser, explore/path/explain routes, event sanitizing and prompt context, timeline layout, graph model, SSE client and cache replay.
+
+**Not verified**
+- No OpenRouter key was available, so output quality and latency with the real model are untested; everything else was exercised end to end against the mock in a browser.
+
+---
+
 ## 2026-04-28 — streaming, caching, opt-in web detail
 
 **Changes**

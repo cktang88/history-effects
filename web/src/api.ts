@@ -1,74 +1,82 @@
-import type { CausalItem, HistoricalEvent, Strength } from "./types";
+import type { CausalItem, Explanation, HistoricalEvent, PathResult } from "./types";
 
-type RequestOptions = {
+export type StreamHandlers = {
+  // Called once per object as soon as the model finishes writing it.
+  onItem?: (key: string, value: unknown, index: number) => void;
+  onThinking?: (text: string) => void;
+  signal?: AbortSignal;
   refresh?: boolean;
-  onToken?: (token: string) => void;
 };
 
-const API_CACHE_PREFIX = "history-effects:api:";
+export type ExpandContext = {
+  path?: string[];
+  existing?: string[];
+  exclude?: string[];
+};
 
-async function postJSON<T>(path: string, body: unknown, options: RequestOptions = {}): Promise<T> {
+const API_CACHE_PREFIX = "history-effects:api:v2:";
+
+type CachedStream<T> = { items: { key: string; value: unknown; index: number }[]; result: T };
+
+export async function postStream<T>(path: string, body: unknown, handlers: StreamHandlers = {}): Promise<T> {
   const cacheKey = `${API_CACHE_PREFIX}${path}:${stableStringify(body)}`;
-  if (!options.refresh) {
-    const cached = readCache<T>(cacheKey);
-    if (cached) return cached;
-  }
-
-  const res = await fetch(path, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
-  });
-  if (!res.ok) {
-    const text = await res.text();
-    throw new Error(`${path} failed: ${res.status} ${text}`);
-  }
-  const json = (await res.json()) as T;
-  writeCache(cacheKey, json);
-  return json;
-}
-
-async function postSSE<T>(path: string, body: unknown, options: RequestOptions = {}): Promise<T> {
-  const cacheKey = `${API_CACHE_PREFIX}${path}:${stableStringify(body)}`;
-  if (!options.refresh) {
-    const cached = readCache<T>(cacheKey);
-    if (cached) return cached;
+  const cached = handlers.refresh ? null : readCache<CachedStream<T>>(cacheKey);
+  if (cached) {
+    for (const item of cached.items) handlers.onItem?.(item.key, item.value, item.index);
+    return cached.result;
   }
 
   const res = await fetch(`${path}/stream`, {
     method: "POST",
-    headers: { "Content-Type": "application/json", "Accept": "text/event-stream" },
+    headers: { "Content-Type": "application/json", Accept: "text/event-stream" },
     body: JSON.stringify(body),
+    signal: handlers.signal,
   });
-  if (!res.ok) {
-    const text = await res.text();
-    throw new Error(`${path}/stream failed: ${res.status} ${text}`);
-  }
-  if (!res.body) throw new Error(`${path}/stream returned no response body`);
+  if (!res.ok) throw new Error(await errorMessage(res));
+  if (!res.body) throw new Error("The server returned an empty response.");
 
-  const result = await readSSE<T>(res.body, options.onToken);
-  writeCache(cacheKey, result);
+  const items: CachedStream<T>["items"] = [];
+  const result = await readSSE<T>(res.body, {
+    ...handlers,
+    onItem: (key, value, index) => {
+      items.push({ key, value, index });
+      handlers.onItem?.(key, value, index);
+    },
+  });
+  writeCache(cacheKey, { items, result });
   return result;
 }
 
-function readCache<T>(key: string): T | null {
-  if (typeof localStorage === "undefined") return null;
-  const raw = localStorage.getItem(key);
-  if (!raw) return null;
+async function errorMessage(res: Response): Promise<string> {
+  const text = await res.text();
   try {
-    return JSON.parse(raw) as T;
+    const parsed = JSON.parse(text) as { error?: string };
+    if (parsed.error) return parsed.error;
+  } catch {}
+  if (res.status === 502 || res.status === 504 || res.status === 500) {
+    return text || "The history server isn't reachable. Is it running on port 3000?";
+  }
+  return `${res.status} ${text}`;
+}
+
+function readCache<T>(key: string): T | null {
+  try {
+    const raw = localStorage.getItem(key);
+    return raw ? (JSON.parse(raw) as T) : null;
   } catch {
-    localStorage.removeItem(key);
     return null;
   }
 }
 
 function writeCache(key: string, value: unknown) {
-  if (typeof localStorage === "undefined") return;
-  localStorage.setItem(key, JSON.stringify(value));
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+  } catch {
+    // Storage full or unavailable: caching is best-effort.
+  }
 }
 
-function stableStringify(value: unknown): string {
+export function stableStringify(value: unknown): string {
   return JSON.stringify(sortForCache(value));
 }
 
@@ -82,12 +90,22 @@ function sortForCache(value: unknown): unknown {
   );
 }
 
-async function readSSE<T>(body: ReadableStream<Uint8Array>, onToken?: (token: string) => void): Promise<T> {
+export async function readSSE<T>(body: ReadableStream<Uint8Array>, handlers: StreamHandlers = {}): Promise<T> {
   const reader = body.getReader();
   const decoder = new TextDecoder();
   let buffer = "";
   let result: T | undefined;
   let error: string | undefined;
+
+  const handle = (raw: string) => {
+    const parsed = parseSSEEvent(raw);
+    if (!parsed) return;
+    const data = JSON.parse(parsed.data) as Record<string, unknown>;
+    if (parsed.event === "item") handlers.onItem?.(String(data.key), data.value, Number(data.index ?? 0));
+    else if (parsed.event === "thinking" && typeof data.text === "string") handlers.onThinking?.(data.text);
+    else if (parsed.event === "result") result = data as T;
+    else if (parsed.event === "error") error = typeof data.error === "string" ? data.error : "stream failed";
+  };
 
   while (true) {
     const { done, value } = await reader.read();
@@ -95,31 +113,13 @@ async function readSSE<T>(body: ReadableStream<Uint8Array>, onToken?: (token: st
     buffer += decoder.decode(value, { stream: true });
     const events = buffer.split("\n\n");
     buffer = events.pop() ?? "";
-    for (const event of events) {
-      const parsed = parseSSEEvent(event);
-      if (!parsed) continue;
-      if (parsed.event === "token") {
-        const data = JSON.parse(parsed.data) as { token?: string };
-        if (data.token) onToken?.(data.token);
-      } else if (parsed.event === "result") {
-        result = JSON.parse(parsed.data) as T;
-      } else if (parsed.event === "error") {
-        const data = JSON.parse(parsed.data) as { error?: string };
-        error = data.error ?? "stream failed";
-      }
-    }
+    events.forEach(handle);
   }
-
   buffer += decoder.decode();
-  const parsed = parseSSEEvent(buffer);
-  if (parsed?.event === "result") result = JSON.parse(parsed.data) as T;
-  if (parsed?.event === "error") {
-    const data = JSON.parse(parsed.data) as { error?: string };
-    error = data.error ?? "stream failed";
-  }
+  if (buffer.trim()) handle(buffer);
 
   if (error) throw new Error(error);
-  if (result === undefined) throw new Error("stream ended without a result");
+  if (result === undefined) throw new Error("The response ended early. Try again.");
   return result;
 }
 
@@ -133,33 +133,22 @@ function parseSSEEvent(raw: string): { event: string; data: string } | null {
   return event && data ? { event, data } : null;
 }
 
-export function seedEvent(text: string, options?: RequestOptions) {
-  const body = { text };
-  return options?.onToken ? postSSE<{ event: HistoricalEvent }>("/api/seed", body, options) : postJSON<{ event: HistoricalEvent }>("/api/seed", body, options);
-}
+export const explore = (text: string, h?: StreamHandlers) =>
+  postStream<{ event: HistoricalEvent; effects: CausalItem[]; causes: CausalItem[] }>("/api/explore", { text, n: 5 }, h);
 
-export function enrichEvent(event: HistoricalEvent, options?: RequestOptions) {
-  const body = { event };
-  return options?.onToken ? postSSE<{ event: HistoricalEvent }>("/api/enrich", body, options) : postJSON<{ event: HistoricalEvent }>("/api/enrich", body, options);
-}
+export const expand = (
+  direction: "effects" | "causes",
+  event: HistoricalEvent,
+  n: number,
+  context: ExpandContext,
+  h?: StreamHandlers
+) => postStream<Record<string, CausalItem[]>>(`/api/${direction}`, { event, n, context }, h);
 
-export function generateEffects(event: HistoricalEvent, n = 5, options?: RequestOptions) {
-  const body = { event, n };
-  return options?.onToken ? postSSE<{ effects: CausalItem[] }>("/api/effects", body, options) : postJSON<{ effects: CausalItem[] }>("/api/effects", body, options);
-}
+export const tracePath = (from: HistoricalEvent | string, to: HistoricalEvent | string, h?: StreamHandlers) =>
+  postStream<PathResult>("/api/path", { from, to }, h);
 
-export function generateCauses(event: HistoricalEvent, n = 5, options?: RequestOptions) {
-  const body = { event, n };
-  return options?.onToken ? postSSE<{ causes: CausalItem[] }>("/api/causes", body, options) : postJSON<{ causes: CausalItem[] }>("/api/causes", body, options);
-}
+export const explain = (cause: HistoricalEvent, effect: HistoricalEvent, reasoning: string, h?: StreamHandlers) =>
+  postStream<Explanation>("/api/explain", { cause, effect, reasoning }, h);
 
-export function generateBridge(from: HistoricalEvent, to: HistoricalEvent, options?: RequestOptions) {
-  type BridgeResponse = {
-    intermediate: HistoricalEvent | null;
-    fromStrength: Strength;
-    toStrength: Strength;
-    reasoning: string;
-  };
-  const body = { from, to };
-  return options?.onToken ? postSSE<BridgeResponse>("/api/bridge", body, options) : postJSON<BridgeResponse>("/api/bridge", body, options);
-}
+export const enrich = (event: HistoricalEvent, h?: StreamHandlers) =>
+  postStream<{ event: HistoricalEvent }>("/api/enrich", { event }, h);

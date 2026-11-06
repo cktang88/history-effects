@@ -15,7 +15,8 @@
   "dependencies": {
     "@xyflow/react": "^12.3.5",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "zustand": "5"
   },
   "devDependencies": {
     "@types/react": "^19.0.0",

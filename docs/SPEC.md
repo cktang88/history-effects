@@ -2,176 +2,73 @@
 
 ## Goal
 
-A canvas for exploring historical events as a directed causal graph. Each node is an event; each edge is a causal claim with a strength label. Users can grow the graph in three directions:
+Help a learner understand how history connects: what an event set in motion, what set it in motion, and how two distant events are linked, with every causal claim explained and weighted.
 
-1. **Forward** — generate downstream effects of an event.
-2. **Backward** — generate upstream causes of an event.
-3. **Bridge** — given two events A and B, generate an intermediate event such that A → intermediate → B.
+The canvas is a directed causal graph laid out on a timeline. Each node is a dated event; each edge is a causal claim with a strength and a mechanism. Users grow the graph by:
 
-The graph supports fractal exploration: every effect/cause/intermediate is itself a full event node that can be expanded further.
+1. **Explore**: a phrase becomes an event plus its major effects and causes, in one streamed call.
+2. **Expand**: effects (forward) or causes (backward) of any event. Repeat clicks find *more*, never repeats.
+3. **Connect**: a multi-step causal chain from A to B (existing nodes or free text), with a verdict and summary ("story").
+4. **Explain**: an in-depth explanation of one link (mechanism, co-factors, certainty, debate, counterfactual).
+5. **Steps in between**: replace a direct link with the chain that explains it.
 
 ## Domain model
 
-### Event (node)
-
 ```ts
-type EventNodeData = {
-  title: string;        // 4–10 word headline
-  description: string;  // 2–3 sentence factual description
-  loading?: boolean;    // true while LLM is filling this in (placeholder)
-  enriching?: boolean;  // true while web detail is being fetched
-  streamText?: string;  // transient raw JSON/token preview while SSE runs
+type Event = {
+  title: string;
+  description: string;
+  year?: number;      // integer, negative = BCE; drives the timeline
+  endYear?: number;
+  dateLabel?: string; // display, e.g. "1789–1799", "c. 1440"
+  place?: string;
+  domain?: "political" | "military" | "economic" | "social" | "religious"
+         | "cultural" | "scientific" | "technological" | "demographic" | "environmental";
 };
-```
 
-### Causal link (edge)
-
-```ts
-type Strength = "primary" | "contributing" | "minor";
+type EventNodeData = Event & { row: number; verified?: boolean };
 
 type CausalEdgeData = {
-  strength: Strength;
-  reasoning?: string;   // 1–2 sentences from the model on why this link
+  strength: "primary" | "contributing" | "minor";
+  reasoning?: string;        // the mechanism
+  explanation?: Explanation; // filled by /api/explain
 };
+
+type Story = { id; fromId; toId; nodeIds; edgeIds; verdict?; summary? };
 ```
 
 ### Strength definitions (same wording used in prompts)
 
-- **primary** — Direct, near-necessary cause. Without the source event, the consequence likely doesn't occur, or occurs much later / differently.
-- **contributing** — One of several meaningful factors. The consequence had multiple causes.
-- **minor** — Peripheral or speculative contribution. The connection is plausible but distal or weak.
+- **primary**: Direct, near-necessary cause. Without the source event, the consequence likely doesn't occur, or occurs much later / differently.
+- **contributing**: One of several meaningful factors.
+- **minor**: Peripheral, distal, or debated.
 
-### Visual mapping
+Visual encoding: line weight (primary thickest, minor dashed) plus a 3-bar strength meter in the inspector. Color is reserved for domain (card accent) and focus (lineage highlight).
 
-| Strength      | Color    | Stroke    |
-|---------------|----------|-----------|
-| primary       | `#dc2626` (red)    | 3px solid |
-| contributing  | `#f59e0b` (amber)  | 2px solid |
-| minor         | `#6b7280` (gray)   | 1.5px dashed |
+## Layout
 
-## User flow
+- x: ordinal time. Distinct years within 3 years of a cluster's start share a cluster; inside a cluster, causal order picks the sub-column (a cause is always left of its effect). The ruler labels each column and the gaps between clusters.
+- y: each node has a persistent `row`. New neighbors fan into free rows around their anchor, then are re-sorted by year so their edges don't cross. Overlaps within a column are resolved by pushing apart and re-centering.
+- Cards have a fixed height; zooming out below 0.6 switches them to large titles only.
+- Positions tween over ~480 ms in JS so edges track the cards. New nodes spawn at their anchor and glide out.
 
-### Seeding
+## Interaction
 
-- Top-bar input: free-form text like "Seven Years' War" or "the printing press".
-- Submit → `POST /api/seed` returns a cleaned-up `{title, description}`. A node appears at the canvas center and its first downstream effects are generated.
-- If a node with the same normalized title already exists, the existing node is selected instead of creating duplicates.
-
-### Expanding effects / causes
-
-- Each node has two buttons: **→ Effects** and **← Causes**.
-- Click → node enters `loading` state → `POST /api/effects` (or `/api/causes`) returns up to N items.
-- Children are placed in a horizontal fan: effects below the source, causes above. Spacing: ~280 px x, 220 px y.
-- Each child is a new node; the edge carries the `strength` and `reasoning` returned by the model.
-- Repeated expansion clicks are idempotent once that direction has an existing edge from/to the source.
-- Frontend actions call the `/stream` endpoint variants when they can display progress. Raw token deltas are shown temporarily on the source or placeholder node and removed when final parsed JSON is applied.
-
-### Web detail and regeneration
-
-- Hovering a node reveals **Web detail** and **↻** controls.
-- **Web detail** calls `POST /api/enrich`, which is the only normal path that enables OpenRouter web search.
-- **↻** removes downstream generated children and descendant edges for that node, then calls `/api/effects` with cache refresh enabled.
-
-### Bridging two events (drag-edge UX)
-
-- User drags an edge from node A's bottom handle to node B's top handle.
-- On `onConnect`, frontend:
-  1. Inserts a placeholder intermediate node midway between A and B (loading=true).
-  2. Inserts two placeholder edges: A → mid, mid → B.
-  3. `POST /api/bridge` with `{ from: A, to: B }`.
-  4. On response, replaces placeholder content; sets edge strengths and reasoning.
-  5. If the model returns `intermediate: null`, the placeholder is removed and a single direct edge between A and B is left in place (still color-coded, treated as a direct claim from the model).
-
-### Edge inspection
-
-- Clicking an edge opens a small popover showing `strength` and `reasoning`.
-- Edge labels show the strength as a small chip.
-
-### Deletion
-
-- Selected node + <kbd>Backspace</kbd> deletes the node and its edges (React Flow built-in).
+- Click an event: select it, highlight its lineage, open the inspector (description, caused by / led to with mechanisms, traced chains it belongs to, trace-a-connection box, verify, remove).
+- Click or hover a link: mechanism tooltip; inspector shows the pair, the time gap, strength, mechanism, explain, steps in between.
+- Drag from an event's right edge onto another event: trace the chain between them.
+- Keyboard: arrows navigate (left/right follow causes/effects), E/C expand, X explains a link, F fits, Z undoes, / searches, Esc deselects, Delete removes.
+- Explore box also accepts "How did X lead to Y?" and "X -> Y".
 
 ## Persistence and caching
 
-- Graph state is persisted in browser `localStorage` under `history-effects:graph:v1`.
-- Stored placeholder flags are cleared on restore (`loading=false`, `enriching=false`) so reloads do not resume in-flight LLM calls.
-- API responses are cached in browser `localStorage` under `history-effects:api:*`.
-- Cache keys use stable JSON stringification so object property ordering does not create duplicate cache entries.
-- Explicit regeneration passes `refresh: true` to bypass the browser response cache.
+- Map (nodes, edges, stories) in `localStorage` under `history-effects:graph:v2`, written at most every 400 ms.
+- Stream responses (items + result) cached under `history-effects:api:v2:*` and replayed on a cache hit.
+- In-flight jobs are cancellable (HUD ×) via `AbortController`; removing a node aborts its job.
 
 ## API
 
-All endpoints are `POST` with JSON. All return JSON. Errors return `{ error: string }` with HTTP 4xx/5xx.
-
-Each LLM endpoint also exposes an SSE variant at `/api/<name>/stream`. The request body is identical. Stream events are:
-
-```txt
-event: token
-data: {"token":"..."}
-
-event: result
-data: {...final endpoint JSON...}
-
-event: error
-data: {"error":"..."}
-```
-
-### `POST /api/seed`
-
-```ts
-// Request
-{ "text": "the seven years war" }
-
-// Response
-{ "event": { "title": "Seven Years' War (1756–1763)", "description": "Global conflict ..." } }
-```
-
-### `POST /api/effects`
-
-```ts
-// Request
-{ "event": { "title": "...", "description": "..." }, "n": 5 }
-
-// Response
-{
-  "effects": [
-    { "title": "...", "description": "...", "strength": "primary", "reasoning": "..." },
-    ...
-  ]
-}
-```
-
-### `POST /api/causes`
-
-Symmetric to `/api/effects` — returns upstream causes.
-
-### `POST /api/bridge`
-
-```ts
-// Request
-{
-  "from": { "title": "...", "description": "..." },
-  "to":   { "title": "...", "description": "..." }
-}
-
-// Response
-{
-  "intermediate": { "title": "...", "description": "..." } | null,
-  "fromStrength": "primary" | "contributing" | "minor",
-  "toStrength":   "primary" | "contributing" | "minor",
-  "reasoning": "..."
-}
-```
-
-### `POST /api/enrich`
-
-```ts
-// Request
-{ "event": { "title": "...", "description": "..." } }
-
-// Response
-{ "event": { "title": "...", "description": "more detailed, web-verified description ..." } }
-```
+See the endpoint table in the README. All endpoints are `POST` with JSON and have an SSE variant at `/api/<name>/stream` emitting `item` (`{key, index, value}` per completed object), `thinking`, `token`, `result`, and `error` events. Errors return `{ error }` with 4xx/5xx.
 
 ## System prompts (summary — full text in `server/src/prompts.ts`)
 
@@ -221,12 +118,11 @@ PORT=3000
 
 `OPENROUTER_MODEL` accepts any OpenRouter model slug.
 
-## Non-goals (v1)
+## Non-goals
 
 - No auth / multi-user.
 - No server-side multi-user persistence.
 - No automatic web search for normal generation.
-- No undo/redo beyond React Flow's selection/delete.
 
 ## Future ideas
 

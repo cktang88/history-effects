@@ -1,37 +1,31 @@
 import { describe, it, expect, afterEach, vi } from "vitest";
 import * as api from "./api";
 
-function mockJSON(payload: unknown, status = 200) {
-  return vi.fn<typeof fetch>(
-    async () =>
-      new Response(JSON.stringify(payload), {
-        status,
-        headers: { "content-type": "application/json" },
-      })
-  );
-}
+const sse = (event: string, data: unknown) => `event: ${event}\ndata: ${JSON.stringify(data)}\n\n`;
 
-function mockSSE(events: string[]) {
+function mockSSE(chunks: string[]) {
   return vi.fn<typeof fetch>(
     async () =>
-      new Response(events.join(""), {
-        status: 200,
-        headers: { "content-type": "text/event-stream" },
-      })
+      new Response(
+        new ReadableStream({
+          start(c) {
+            for (const chunk of chunks) c.enqueue(new TextEncoder().encode(chunk));
+            c.close();
+          },
+        }),
+        { status: 200, headers: { "content-type": "text/event-stream" } }
+      )
   );
 }
 
 function mockLocalStorage() {
   const store = new Map<string, string>();
   vi.stubGlobal("localStorage", {
-    getItem: vi.fn((key: string) => store.get(key) ?? null),
-    setItem: vi.fn((key: string, value: string) => {
-      store.set(key, value);
-    }),
-    removeItem: vi.fn((key: string) => {
-      store.delete(key);
-    }),
+    getItem: (k: string) => store.get(k) ?? null,
+    setItem: (k: string, v: string) => void store.set(k, v),
+    removeItem: (k: string) => void store.delete(k),
   });
+  return store;
 }
 
 afterEach(() => {
@@ -39,172 +33,82 @@ afterEach(() => {
   vi.restoreAllMocks();
 });
 
-describe("seedEvent", () => {
-  it("POSTs to /api/seed and returns the event", async () => {
-    const fetchMock = mockJSON({ event: { title: "WW1", description: "Big war." } });
-    vi.stubGlobal("fetch", fetchMock);
+const effect = { title: "Reformation", description: "d", strength: "primary", reasoning: "r", year: 1517 };
 
-    const out = await api.seedEvent("the great war");
-    expect(out.event.title).toBe("WW1");
-
-    expect(fetchMock).toHaveBeenCalledTimes(1);
-    const [path, init] = fetchMock.mock.calls[0]!;
-    expect(path).toBe("/api/seed");
-    expect((init as RequestInit).method).toBe("POST");
-    expect(JSON.parse((init as RequestInit).body as string)).toEqual({ text: "the great war" });
-  });
-
-  it("throws on non-OK response", async () => {
-    vi.stubGlobal("fetch", mockJSON({ error: "bad" }, 400));
-    await expect(api.seedEvent("x")).rejects.toThrow(/\/api\/seed failed: 400/);
-  });
-});
-
-describe("enrichEvent", () => {
-  it("POSTs to /api/enrich and returns the enriched event", async () => {
-    const fetchMock = mockJSON({ event: { title: "WW1", description: "Detailed war." } });
-    vi.stubGlobal("fetch", fetchMock);
-
-    const out = await api.enrichEvent({ title: "WW1", description: "War." });
-    expect(out.event.description).toBe("Detailed war.");
-
-    const [path, init] = fetchMock.mock.calls[0]!;
-    expect(path).toBe("/api/enrich");
-    expect(JSON.parse((init as RequestInit).body as string)).toEqual({
-      event: { title: "WW1", description: "War." },
-    });
-  });
-});
-
-describe("generateEffects", () => {
-  it("POSTs the event and n, returns effects", async () => {
-    const fetchMock = mockJSON({
-      effects: [{ title: "T", description: "D", strength: "primary", reasoning: "R" }],
-    });
-    vi.stubGlobal("fetch", fetchMock);
-
-    const out = await api.generateEffects({ title: "X", description: "Y" }, 3);
-    expect(out.effects[0]?.strength).toBe("primary");
-
-    const [path, init] = fetchMock.mock.calls[0]!;
-    expect(path).toBe("/api/effects");
-    expect(JSON.parse((init as RequestInit).body as string)).toEqual({
-      event: { title: "X", description: "Y" },
-      n: 3,
-    });
-  });
-
-  it("defaults n to 5 when not provided", async () => {
-    const fetchMock = mockJSON({ effects: [] });
-    vi.stubGlobal("fetch", fetchMock);
-    await api.generateEffects({ title: "X", description: "" });
-    const [, init] = fetchMock.mock.calls[0]!;
-    expect(JSON.parse((init as RequestInit).body as string).n).toBe(5);
-  });
-
-  it("caches identical requests in localStorage", async () => {
+describe("postStream", () => {
+  it("delivers items as they arrive, then the result", async () => {
     mockLocalStorage();
-    const fetchMock = mockJSON({
-      effects: [{ title: "T", description: "D", strength: "primary", reasoning: "R" }],
+    const body = sse("thinking", { text: "hmm" }) + sse("item", { key: "effects", index: 0, value: effect });
+    // Split mid-event to exercise buffering across chunks.
+    vi.stubGlobal("fetch", mockSSE([body.slice(0, 30), body.slice(30), sse("result", { effects: [effect] })]));
+
+    const items: unknown[] = [];
+    const thoughts: string[] = [];
+    const result = await api.expand("effects", { title: "Press", description: "" }, 5, {}, {
+      onItem: (key, value) => items.push([key, value]),
+      onThinking: (t) => thoughts.push(t),
     });
-    vi.stubGlobal("fetch", fetchMock);
 
-    await api.generateEffects({ title: "X", description: "Y" }, 3);
-    await api.generateEffects({ description: "Y", title: "X" }, 3);
-
-    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(items).toEqual([["effects", effect]]);
+    expect(thoughts).toEqual(["hmm"]);
+    expect(result.effects).toEqual([effect]);
   });
 
-  it("bypasses the cache when refresh is requested", async () => {
+  it("posts to the stream endpoint with context", async () => {
     mockLocalStorage();
-    const fetchMock = mockJSON({ effects: [] });
+    const fetchMock = mockSSE([sse("result", { effects: [] })]);
     vi.stubGlobal("fetch", fetchMock);
-
-    await api.generateEffects({ title: "X", description: "Y" }, 3);
-    await api.generateEffects({ title: "X", description: "Y" }, 3, { refresh: true });
-
-    expect(fetchMock).toHaveBeenCalledTimes(2);
+    await api.expand("causes", { title: "X", description: "" }, 3, { path: ["A"] });
+    const [url, init] = fetchMock.mock.calls[0]!;
+    expect(url).toBe("/api/causes/stream");
+    expect(JSON.parse(String(init?.body))).toEqual({ event: { title: "X", description: "" }, n: 3, context: { path: ["A"] } });
   });
 
-  it("uses the streaming endpoint when an onToken callback is provided", async () => {
-    const fetchMock = mockSSE([
-      'event: token\ndata: {"token":"{\\"effects\\":["}\n\n',
-      'event: result\ndata: {"effects":[{"title":"T","description":"D","strength":"primary","reasoning":"R"}]}\n\n',
-    ]);
+  it("replays cached items without refetching", async () => {
+    mockLocalStorage();
+    vi.stubGlobal("fetch", mockSSE([sse("item", { key: "event", index: 0, value: { title: "T" } }), sse("result", { event: { title: "T" } })]));
+    await api.explore("t");
+
+    const fetchMock = vi.fn<typeof fetch>();
     vi.stubGlobal("fetch", fetchMock);
-    const tokens: string[] = [];
+    const items: string[] = [];
+    await api.explore("t", { onItem: (key) => items.push(key) });
+    expect(fetchMock).not.toHaveBeenCalled();
+    expect(items).toEqual(["event"]);
+  });
 
-    const out = await api.generateEffects({ title: "X", description: "Y" }, 3, {
-      onToken: (token) => tokens.push(token),
-    });
+  it("bypasses the cache on refresh", async () => {
+    mockLocalStorage();
+    vi.stubGlobal("fetch", mockSSE([sse("result", { event: { title: "T" } })]));
+    await api.explore("t");
+    const fetchMock = mockSSE([sse("result", { event: { title: "T2" } })]);
+    vi.stubGlobal("fetch", fetchMock);
+    const r = await api.explore("t", { refresh: true });
+    expect(fetchMock).toHaveBeenCalledOnce();
+    expect(r.event.title).toBe("T2");
+  });
 
-    expect(out.effects[0]?.title).toBe("T");
-    expect(tokens).toEqual(['{"effects":[']);
-    const [path, init] = fetchMock.mock.calls[0]!;
-    expect(path).toBe("/api/effects/stream");
-    expect((init as RequestInit).headers).toMatchObject({ Accept: "text/event-stream" });
+  it("throws the server's stream error", async () => {
+    mockLocalStorage();
+    vi.stubGlobal("fetch", mockSSE([sse("error", { error: "model exploded" })]));
+    await expect(api.explore("x")).rejects.toThrow("model exploded");
+  });
+
+  it("surfaces JSON error bodies from failed requests", async () => {
+    mockLocalStorage();
+    vi.stubGlobal("fetch", vi.fn(async () => new Response(JSON.stringify({ error: "text is required" }), { status: 400 })));
+    await expect(api.explore("")).rejects.toThrow("text is required");
+  });
+
+  it("errors when the stream ends without a result", async () => {
+    mockLocalStorage();
+    vi.stubGlobal("fetch", mockSSE([sse("thinking", { text: "..." })]));
+    await expect(api.explore("x")).rejects.toThrow(/ended early/);
   });
 });
 
-describe("generateCauses", () => {
-  it("POSTs to /api/causes", async () => {
-    const fetchMock = mockJSON({
-      causes: [{ title: "C", description: "D", strength: "minor", reasoning: "" }],
-    });
-    vi.stubGlobal("fetch", fetchMock);
-
-    const out = await api.generateCauses({ title: "X", description: "" }, 2);
-    expect(out.causes[0]?.title).toBe("C");
-
-    const [path, init] = fetchMock.mock.calls[0]!;
-    expect(path).toBe("/api/causes");
-    expect(JSON.parse((init as RequestInit).body as string)).toEqual({
-      event: { title: "X", description: "" },
-      n: 2,
-    });
-  });
-});
-
-describe("generateBridge", () => {
-  it("POSTs from/to and returns intermediate + strengths", async () => {
-    const fetchMock = mockJSON({
-      intermediate: { title: "Mid", description: "M" },
-      fromStrength: "primary",
-      toStrength: "contributing",
-      reasoning: "Because.",
-    });
-    vi.stubGlobal("fetch", fetchMock);
-
-    const out = await api.generateBridge(
-      { title: "A", description: "" },
-      { title: "B", description: "" }
-    );
-    expect(out.intermediate?.title).toBe("Mid");
-    expect(out.fromStrength).toBe("primary");
-    expect(out.toStrength).toBe("contributing");
-
-    const [path, init] = fetchMock.mock.calls[0]!;
-    expect(path).toBe("/api/bridge");
-    expect(JSON.parse((init as RequestInit).body as string)).toEqual({
-      from: { title: "A", description: "" },
-      to: { title: "B", description: "" },
-    });
-  });
-
-  it("propagates intermediate=null", async () => {
-    vi.stubGlobal(
-      "fetch",
-      mockJSON({
-        intermediate: null,
-        fromStrength: "minor",
-        toStrength: "minor",
-        reasoning: "no link",
-      })
-    );
-    const out = await api.generateBridge(
-      { title: "A", description: "" },
-      { title: "B", description: "" }
-    );
-    expect(out.intermediate).toBeNull();
+describe("stableStringify", () => {
+  it("is independent of key order", () => {
+    expect(api.stableStringify({ b: 1, a: { d: 2, c: 3 } })).toBe(api.stableStringify({ a: { c: 3, d: 2 }, b: 1 }));
   });
 });

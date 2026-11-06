@@ -1,8 +1,15 @@
 # History Effects
 
-Explore historical events as a fractal graph of causes and consequences. Type an event, the LLM expands its main effects, and you can keep drilling down — or drag an edge between any two events to have the LLM fill in an intermediate event that bridges them.
+A map for learning how history connects. Start from any event and follow what it set in motion (and what set it in motion), or ask how two moments are connected and get the causal chain between them. Every link explains *how* one thing led to another.
 
-Edges are color-coded by causal strength: **primary** (direct, near-necessary cause), **contributing** (one of several factors), or **minor** (peripheral / speculative).
+- **Timeline map.** Left to right is time; causes sit before their effects. Nearby years share a column, and the ruler marks the gaps between periods.
+- **Explore.** Type an event and get the event, its major effects, and its causes in one pass. Items stream in one by one, most important first.
+- **Connect.** Ask "How did the Black Death lead to the Reformation?" (or `X -> Y`) and get the step-by-step chain, a verdict on how strong the connection is, and the story in plain words.
+- **Convergence.** When a new effect is an event already on the map, it links to that node instead of duplicating it, so separate threads visibly converge.
+- **Read the links.** Hover any link for its mechanism. Click it for an in-depth explanation: how it worked, what else it took, what historians debate, and what likely happens without it. "Show the steps in between" expands a link into a chain.
+- **Focus.** Selecting an event lights up its whole lineage (everything upstream and downstream) and dims the rest.
+
+Links are weighted by causal strength: **primary** (direct, near-necessary, thick line), **contributing** (one of several factors), **minor** (peripheral or debated, dashed).
 
 ## Stack
 
@@ -38,6 +45,8 @@ bun run dev
 
 The API listens on `http://localhost:3000`.
 
+No key yet? `bun run dev:mock` serves canned, streamed responses (with realistic data for the Black Death and the printing press) so you can try the whole UI offline.
+
 ### 2. Frontend
 
 ```bash
@@ -50,33 +59,42 @@ Open http://localhost:5173.
 
 ## Using the app
 
-1. Type a historical event in the input bar at the top, click **Add**. A node appears.
-2. On any node, click **Effects →** to fan out N consequences, or **← Causes** to fan out N upstream causes. Repeated clicks are idempotent once that direction has already been expanded.
-3. **Drag an edge** from one node's bottom handle to another node's top handle — the LLM proposes an intermediate event that bridges them, with both legs color-coded.
-4. Hover a node and click **Web detail** to enrich that node with OpenRouter web search. Web search is opt-in and is not used for normal generation.
-5. Hover a node and click **↻** to clear its downstream generated children and explicitly regenerate them.
-6. Click an edge to see the model's reasoning for the causal link.
+1. Type an event (or pick a starter) and press **Explore**. The event, its effects, and its causes stream onto the timeline.
+2. Click any event to open it: description, everything it caused, everything that caused it, each with its mechanism. **What caused this? / What did it lead to?** grow the map (later clicks find *more*, never duplicates).
+3. Click or hover a link to read why it holds. **Explain this connection in depth** gives the mechanism, co-factors, the debate, and a counterfactual. **Show the steps in between** expands the link into a chain.
+4. Use **Connect** (or type "How did X lead to Y?") to trace a causal chain between any two events, existing or new. You can also drag from an event's right edge onto another event.
+5. **Verify with web sources** re-checks an event's details using OpenRouter web search (the only place web search is used).
+6. Keyboard: arrows walk along the chain, <kbd>E</kbd>/<kbd>C</kbd> expand, <kbd>X</kbd> explains a link, <kbd>F</kbd> fits the map, <kbd>Z</kbd> undoes, <kbd>?</kbd> shows everything.
 
-The graph is persisted in browser `localStorage`, and API responses are cached in `localStorage` by stable request key. Reloading the page restores the graph instead of rerunning LLM calls. Explicit regeneration bypasses the response cache.
+The map is saved in browser `localStorage`, and API responses (including their streamed items) are cached by stable request key, so reloading or repeating a question is instant.
 
 ## Endpoints
 
-| Method | Path           | Body                                  | Returns |
-|--------|----------------|---------------------------------------|---------|
-| POST   | `/api/effects` | `{ event: {title, description}, n? }` | `{ effects: [{title, description, strength, reasoning}] }` |
-| POST   | `/api/causes`  | `{ event: {title, description}, n? }` | `{ causes:  [{title, description, strength, reasoning}] }` |
-| POST   | `/api/bridge`  | `{ from, to }`                        | `{ intermediate, fromStrength, toStrength, reasoning }` |
-| POST   | `/api/seed`    | `{ text }`                            | `{ event: {title, description} }` (cleans up free-form input) |
-| POST   | `/api/enrich`  | `{ event: {title, description} }`     | `{ event: {title, description} }` (web-search-enriched detail) |
+| Method | Path           | Body                                                  | Returns |
+|--------|----------------|-------------------------------------------------------|---------|
+| POST   | `/api/explore` | `{ text, n? }`                                        | `{ event, effects[], causes[] }` |
+| POST   | `/api/effects` | `{ event, n?, context?: { path?, existing?, exclude? } }` | `{ effects: CausalItem[] }` |
+| POST   | `/api/causes`  | same as effects                                       | `{ causes: CausalItem[] }` |
+| POST   | `/api/path`    | `{ from: event \| text, to: event \| text }`          | `{ from, to, steps: CausalItem[], final, verdict, summary }` |
+| POST   | `/api/explain` | `{ cause, effect, reasoning? }`                       | `{ mechanism, keyFactors[], certainty, debate, counterfactual }` |
+| POST   | `/api/seed`    | `{ text }`                                            | `{ event }` |
+| POST   | `/api/enrich`  | `{ event }`                                           | `{ event }` (web-search-verified) |
+| POST   | `/api/bridge`  | `{ from, to }`                                        | `{ intermediate, fromStrength, toStrength, reasoning }` |
 
-Every LLM endpoint also has an SSE variant at `/api/<name>/stream`. Stream responses emit:
+An event is `{ title, description, year?, endYear?, dateLabel?, place?, domain? }` (`year` is an integer, negative for BCE). A `CausalItem` adds `strength` and `reasoning` (the mechanism). `context` gives the model the chain the learner followed, events already on the map (so it reuses their exact titles), and titles to avoid repeating.
 
-- `token`: raw model text deltas as they arrive.
-- `result`: the parsed final JSON payload.
+Every endpoint also has an SSE variant at `/api/<name>/stream`, emitting:
+
+- `item`: `{ key, index, value }` as soon as each object (the event, each effect/cause/step) is complete in the model's output.
+- `thinking`: reasoning text deltas, when the model provides them.
+- `token`: raw model text deltas.
+- `result`: the parsed, sanitized final payload.
 - `error`: an error payload if generation fails.
 
 ## LLM behavior
 
+- Prompts ask for what a strong survey course would emphasize, ordered by importance, with accurate dates, named concrete developments, calibrated strength, and explicit mechanisms; effects must come after the event and causes before it.
+- Reasoning effort is set by `OPENROUTER_REASONING` (default `low`; `off`/`minimal`/`medium`/`high` also work).
 - Requests use OpenRouter JSON mode via `responseFormat: { type: "json_object" }`.
 - Prompts explicitly include the expected JSON shape, matching Kimi JSON Mode guidance.
 - Non-streaming calls enable OpenRouter's `response-healing` plugin.
