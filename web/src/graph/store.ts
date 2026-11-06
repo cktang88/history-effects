@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import type { Story } from "../types";
+import * as atlas from "../atlas/api";
 import { layoutTimeline, type Column } from "./layout";
 import { lineage, type CausalEdgeType, type EventNodeType } from "./model";
 
@@ -20,6 +21,7 @@ export type GraphState = Snapshot & {
   jobs: Record<string, Job>;
   toasts: Toast[];
   history: Snapshot[];
+  details: Record<string, atlas.Detail>;
 };
 
 const STORAGE_KEY = "history-effects:graph:v2";
@@ -61,6 +63,7 @@ export const useGraph = create<GraphState>(() => ({
   jobs: {},
   toasts: [],
   history: [],
+  details: {},
 }));
 
 export const graph = () => useGraph.getState();
@@ -138,6 +141,18 @@ export function undo() {
 
 export function select(selection: Selection) {
   useGraph.setState({ selection, focus: computeFocus(selection) });
+  if (selection?.type === "node") loadDetail(selection.id);
+}
+
+// Curated entities carry a Wikipedia summary, sourced links and structure;
+// fetch them when the entity is opened.
+export function loadDetail(id: string) {
+  const s = graph();
+  if (s.details[id] || s.nodes.find((n) => n.id === id)?.data.source !== "db") return;
+  atlas
+    .detail(id)
+    .then((d) => useGraph.setState((st) => ({ details: { ...st.details, [id]: d } })))
+    .catch(() => {});
 }
 
 function computeFocus(selection: Selection): GraphState["focus"] {

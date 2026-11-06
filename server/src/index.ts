@@ -1,6 +1,7 @@
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { completeJSON } from "./openrouter.ts";
+import { Atlas } from "./atlas.ts";
 import { createJsonObjectStream } from "./jsonStream.ts";
 import {
   clampN,
@@ -326,6 +327,43 @@ register<BridgeBody>("/api/bridge", {
   },
 });
 
+// --- curated database ----------------------------------------------------------
+
+export const atlas = Atlas.load();
+
+const numberParam = (v: string | undefined) => (v === undefined || v === "" || !Number.isFinite(Number(v)) ? undefined : Number(v));
+
+app.get("/api/atlas/meta", (c) => c.json(atlas.meta));
+
+app.get("/api/atlas/search", (c) => c.json({ results: atlas.search(c.req.query("q") ?? "", numberParam(c.req.query("limit")) ?? 8) }));
+
+app.get("/api/atlas/browse", (c) =>
+  c.json(
+    atlas.browse({
+      from: numberParam(c.req.query("from")),
+      to: numberParam(c.req.query("to")),
+      region: c.req.query("region"),
+      lens: c.req.query("lens"),
+      limit: Math.min(100, numberParam(c.req.query("limit")) ?? 40),
+    })
+  )
+);
+
+app.get("/api/atlas/entity/:id", (c) => {
+  const detail = atlas.detail(c.req.param("id"));
+  return detail ? c.json(detail) : c.json({ error: "not found" }, 404);
+});
+
+app.get("/api/atlas/path", (c) => {
+  const from = c.req.query("from") ?? "";
+  const to = c.req.query("to") ?? "";
+  const skipDirect = c.req.query("skipDirect") === "1";
+  const forward = atlas.path(from, to, { skipDirect });
+  if (forward) return c.json({ links: forward, reversed: false });
+  const backward = atlas.path(to, from, { skipDirect });
+  return c.json({ links: backward ?? [], reversed: !!backward });
+});
+
 app.onError((err, c) => {
   console.error(err);
   const message = err instanceof Error ? err.message : String(err);
@@ -337,6 +375,7 @@ const port = Number(process.env.PORT || 3000);
 if (import.meta.main) {
   const mode = process.env.MOCK_LLM === "1" ? " (MOCK_LLM: canned responses, no API calls)" : "";
   console.log(`history-effects API listening on http://localhost:${port}${mode}`);
+  console.log(`atlas: ${atlas.meta.total} entities, ${atlas.meta.links} causal links`);
 }
 
 export default {

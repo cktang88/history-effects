@@ -13,6 +13,7 @@ import { EventNode } from "./components/EventNode";
 import { CausalEdge, EdgeMarkers } from "./components/CausalEdge";
 import { Inspector } from "./components/Inspector";
 import { EmptyState, SearchForm, useSearch } from "./components/SearchBar";
+import { AtlasPanel } from "./components/AtlasPanel";
 import { ActivityHud, HelpDialog, Legend, TimeRuler, Toasts, Toolbar } from "./components/Overlay";
 import { useShortcuts } from "./hooks/useShortcuts";
 import { graph, select, undo, useGraph } from "./graph/store";
@@ -36,7 +37,7 @@ function onConnect(c: Connection) {
   void connect({ nodeId: c.source }, { nodeId: c.target }, { replaceDirect: true });
 }
 
-function handleKey(e: KeyboardEvent, openHelp: () => void) {
+function handleKey(e: KeyboardEvent, openHelp: () => void, toggleAtlas: () => void) {
   const { selection } = graph();
   const nodeId = selection?.type === "node" ? selection.id : null;
   const edgeId = selection?.type === "edge" ? selection.id : null;
@@ -51,6 +52,7 @@ function handleKey(e: KeyboardEvent, openHelp: () => void) {
     f: fitAll,
     z: undo,
     "?": openHelp,
+    a: toggleAtlas,
     "/": () => document.getElementById("search-input")?.focus(),
     Escape: () => {
       (document.activeElement as HTMLElement | null)?.blur();
@@ -72,8 +74,9 @@ function Canvas() {
   const far = useStore((s) => s.transform[2] < 0.6);
   const search = useSearch();
   const [help, setHelp] = useState(false);
+  const [atlasOpen, setAtlasOpen] = useState(false);
 
-  useShortcuts((e) => handleKey(e, () => setHelp((h) => !h)));
+  useShortcuts((e) => handleKey(e, () => setHelp((h) => !h), () => setAtlasOpen((o) => !o)));
 
   const empty = nodes.length === 0;
 
@@ -83,6 +86,9 @@ function Canvas() {
         <div className="brand">
           <span className="brand-mark">⟶</span> History Effects
         </div>
+        <button className={`atlas-toggle${atlasOpen ? " on" : ""}`} onClick={() => setAtlasOpen(!atlasOpen)} title="Browse by era, region and lens (A)">
+          Atlas
+        </button>
         {!empty && <SearchForm search={search} />}
         <div className="topbar-spacer" />
       </header>
@@ -115,7 +121,8 @@ function Canvas() {
           {!empty && <TimeRuler />}
         </ReactFlow>
 
-        {empty && <EmptyState search={search} />}
+        {empty && !atlasOpen && <EmptyState search={search} onAtlas={() => setAtlasOpen(true)} />}
+        <AtlasPanel open={atlasOpen} onClose={() => setAtlasOpen(false)} />
         <Inspector />
         {!empty && <Toolbar onHelp={() => setHelp(true)} />}
         {!empty && <Legend />}

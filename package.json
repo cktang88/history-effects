@@ -4,9 +4,18 @@
   "private": true,
   "scripts": {
     "cli": "cd server && bun run src/cli.ts",
-    "lint": "oxlint server/src web/src",
-    "test": "cd server && bun run test && cd ../web && bun run test",
-    "precommit": "bun run lint && bun run test"
+    "lint": "oxlint server/src web/src pipeline",
+    "test": "cd server && bun run test && bunx vitest run --root ../pipeline && cd ../web && bun run test",
+    "precommit": "bun run lint && bun run test",
+    "data:entities": "cd pipeline && bun run 01-entities.ts",
+    "data:relations": "cd pipeline && bun run 02-relations.ts",
+    "data:wikipedia": "cd pipeline && python3 03a-dump.py && bun run 03-wikipedia.ts",
+    "data:build": "cd pipeline && bun run 04-build.ts",
+    "data:review-prep": "cd pipeline && bun run 05-review-prep.ts",
+    "data:review-merge": "cd pipeline && bun run 05-review-merge.ts",
+    "data:expand": "cd pipeline && bun run 01b-expand.ts",
+    "data:gapfill-prep": "cd pipeline && bun run 06-gapfill-prep.ts",
+    "data:gapfill-merge": "cd pipeline && bun run 06-gapfill-merge.ts"
   },
   "devDependencies": {
     "oxlint": "^0.15.0"

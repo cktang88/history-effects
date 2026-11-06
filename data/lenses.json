@@ -1,0 +1,15 @@
+[
+{"id":"war","label":"Wars"},
+{"id":"battle","label":"Battles & sieges"},
+{"id":"revolution","label":"Revolutions & uprisings"},
+{"id":"treaty","label":"Treaties, alliances & institutions"},
+{"id":"disaster","label":"Epidemics, famines & disasters"},
+{"id":"atrocity","label":"Genocides & massacres"},
+{"id":"event","label":"Pivotal events"},
+{"id":"period","label":"Eras & movements"},
+{"id":"state","label":"States & empires"},
+{"id":"leader","label":"Rulers & leaders"},
+{"id":"thinker","label":"Thinkers, artists & prophets"},
+{"id":"invention","label":"Inventions & discoveries"},
+{"id":"idea","label":"Ideas & religions"}
+]

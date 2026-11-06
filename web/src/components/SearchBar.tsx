@@ -1,27 +1,30 @@
 import { useState } from "react";
+import * as atlas from "../atlas/api";
+import { useQuery } from "../atlas/useQuery";
 import { connect, explore, resolveEndpoint } from "../graph/actions";
+import { dateLabelOf, KIND_LABEL, openEntity } from "../graph/atlasActions";
 import { parseConnection } from "../graph/model";
 import { useGraph } from "../graph/store";
 
 type Mode = "explore" | "connect";
 
 const EXPLORE_STARTERS = [
-  "The Black Death",
-  "Gutenberg's printing press",
+  "Black Death",
+  "French Revolution",
   "Fall of Constantinople",
-  "The Columbian Exchange",
+  "Industrial Revolution",
   "Treaty of Versailles",
-  "Invention of the steam engine",
   "Meiji Restoration",
-  "Fall of the Western Roman Empire",
+  "Thirty Years' War",
+  "Protestant Reformation",
 ];
 
 const CONNECT_STARTERS: [string, string][] = [
-  ["The Black Death", "The Protestant Reformation"],
-  ["Gutenberg's printing press", "The French Revolution"],
   ["Treaty of Versailles", "World War II"],
-  ["The Opium Wars", "The Chinese Communist Revolution"],
-  ["The Columbian Exchange", "The Industrial Revolution"],
+  ["French Revolution", "Napoleonic Wars"],
+  ["Fall of Constantinople", "Age of Discovery"],
+  ["First Opium War", "Taiping Rebellion"],
+  ["Protestant Reformation", "Thirty Years' War"],
 ];
 
 export function useSearch() {
@@ -29,8 +32,15 @@ export function useSearch() {
   const [text, setText] = useState("");
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
+  const [highlight, setHighlight] = useState(-1);
 
-  const submit = () => {
+  const submit = (picked?: atlas.EntitySummary) => {
+    if (picked) {
+      void openEntity(picked.id);
+      setText("");
+      setHighlight(-1);
+      return;
+    }
     if (mode === "explore") {
       if (!text.trim()) return;
       const pair = parseConnection(text);
@@ -45,7 +55,22 @@ export function useSearch() {
     setTo("");
   };
 
-  return { mode, setMode, text, setText, from, setFrom, to, setTo, submit };
+  return {
+    mode,
+    setMode,
+    text,
+    setText: (t: string) => {
+      setText(t);
+      setHighlight(-1);
+    },
+    from,
+    setFrom,
+    to,
+    setTo,
+    submit,
+    highlight,
+    setHighlight,
+  };
 }
 
 type Search = ReturnType<typeof useSearch>;
@@ -53,12 +78,29 @@ type Search = ReturnType<typeof useSearch>;
 export function SearchForm({ search, large }: { search: Search; large?: boolean }) {
   const titles = useGraph((s) => s.nodes.map((n) => n.data.title).join("\u0000"));
   const { mode, setMode } = search;
+  const [focused, setFocused] = useState(false);
+  const q = search.text.trim();
+  const showSuggestions = mode === "explore" && focused && q.length >= 2 && !q.includes("->") && !/^how /i.test(q);
+  const suggestions = useQuery(showSuggestions ? `search:${q.toLowerCase()}` : null, () => atlas.search(q, 7));
+  const list = showSuggestions ? (suggestions.data ?? []) : [];
+
+  const onKeyDown = (e: React.KeyboardEvent) => {
+    if (list.length === 0) return;
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      search.setHighlight(Math.min(list.length - 1, search.highlight + 1));
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      search.setHighlight(Math.max(-1, search.highlight - 1));
+    }
+  };
+
   return (
     <form
       className={`search${large ? " search-large" : ""}`}
       onSubmit={(e) => {
         e.preventDefault();
-        search.submit();
+        search.submit(list[search.highlight]);
       }}
     >
       <div className="search-modes" role="tablist">
@@ -75,7 +117,10 @@ export function SearchForm({ search, large }: { search: Search; large?: boolean 
           className="search-input"
           value={search.text}
           onChange={(e) => search.setText(e.target.value)}
-          placeholder="Any event, invention, war, idea — or “How did X lead to Y?”"
+          onKeyDown={onKeyDown}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setTimeout(() => setFocused(false), 150)}
+          placeholder="A war, leader, empire, invention… or “How did X lead to Y?”"
           autoComplete="off"
           autoFocus={large}
         />
@@ -101,6 +146,31 @@ export function SearchForm({ search, large }: { search: Search; large?: boolean 
           />
         </div>
       )}
+      {list.length > 0 && (
+        <div className="suggest" role="listbox">
+          {list.map((e, i) => (
+            <button
+              type="button"
+              key={e.id}
+              role="option"
+              aria-selected={i === search.highlight}
+              className={`suggest-row${i === search.highlight ? " on" : ""}`}
+              onMouseEnter={() => search.setHighlight(i)}
+              onMouseDown={(ev) => ev.preventDefault()}
+              onClick={() => search.submit(e)}
+            >
+              <span className="suggest-title">{e.title}</span>
+              <span className="suggest-meta">
+                {KIND_LABEL[e.kind] ?? e.kind} · {dateLabelOf(e)}
+              </span>
+            </button>
+          ))}
+          <div className="suggest-foot">
+            Enter on free text asks the AI · <kbd>↑</kbd>
+            <kbd>↓</kbd> to choose
+          </div>
+        </div>
+      )}
       <button className="search-go" type="submit" aria-label="Go">
         {mode === "explore" ? "Explore" : "Trace"}
       </button>
@@ -116,20 +186,22 @@ export function SearchForm({ search, large }: { search: Search; large?: boolean 
   );
 }
 
-export function EmptyState({ search }: { search: Search }) {
+export function EmptyState({ search, onAtlas }: { search: Search; onAtlas: () => void }) {
+  const meta = useQuery("meta", atlas.meta);
   return (
     <div className="empty">
       <div className="empty-inner">
-        <h1 className="empty-title">Every event is a cause.</h1>
+        <h1 className="empty-title">How history connects.</h1>
         <p className="empty-sub">
-          Start anywhere in history and follow what it set in motion — or ask how two moments are connected. Each
-          link explains <em>how</em> one thing led to another.
+          {meta.data ? `${meta.data.total.toLocaleString()} of history's most significant wars, states, leaders, ideas and turning points` : "History's most significant wars, states, leaders, ideas and turning points"}
+          , drawn from Wikipedia and Wikidata, joined by {meta.data ? meta.data.links.toLocaleString() : "thousands of"} sourced
+          cause-and-effect links. Start anywhere and follow what it set in motion.
         </p>
         <SearchForm search={search} large />
         {search.mode === "explore" ? (
           <div className="starters">
             {EXPLORE_STARTERS.map((s) => (
-              <button key={s} className="starter" onClick={() => explore(s)}>
+              <button key={s} className="starter" onClick={() => void explore(s)}>
                 {s}
               </button>
             ))}
@@ -143,12 +215,15 @@ export function EmptyState({ search }: { search: Search }) {
             ))}
           </div>
         )}
+        <button className="atlas-cta" onClick={onAtlas}>
+          Or browse by era and region →
+        </button>
         <div className="empty-how">
           <div>
             <b>Timeline map.</b> Left to right is time. Causes sit before their effects.
           </div>
           <div>
-            <b>Click</b> any event or link to read why it matters. <b>+</b> grows causes or effects.
+            <b>Sourced first.</b> Every link cites its Wikipedia passage. AI only fills gaps, and says so.
           </div>
           <div>
             <b>Keyboard.</b> Arrows to move along the chain, <kbd>E</kbd>/<kbd>C</kbd> to expand, <kbd>?</kbd> for help.

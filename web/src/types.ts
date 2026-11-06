@@ -53,12 +53,28 @@ export type EventNodeData = HistoricalEvent & {
   // map stays stable as it grows.
   row: number;
   verified?: boolean;
+  // "db": a curated entity (node id is its Wikidata id); "ai": model-generated.
+  source?: Source;
+  kind?: string;
+  sig?: number;
+  region?: string;
+  country?: string;
 };
+
+export type Source = "db" | "ai";
+
+export type Evidence =
+  | { src: "wikidata"; prop: string }
+  | { src: "wikipedia"; article: string; section: string; text: string }
+  | { src: "curated" };
 
 export type CausalEdgeData = {
   strength: Strength;
   reasoning?: string;
   explanation?: Explanation;
+  source?: Source;
+  evidence?: Evidence[];
+  reviewed?: boolean;
 };
 
 export type Story = {

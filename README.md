@@ -1,15 +1,16 @@
 # History Effects
 
-A map for learning how history connects. Start from any event and follow what it set in motion (and what set it in motion), or ask how two moments are connected and get the causal chain between them. Every link explains *how* one thing led to another.
+A map for learning how history connects, built on a **curated database** rather than an LLM's improvisation.
 
-- **Timeline map.** Left to right is time; causes sit before their effects. Nearby years share a column, and the ruler marks the gaps between periods.
-- **Explore.** Type an event and get the event, its major effects, and its causes in one pass. Items stream in one by one, most important first.
-- **Connect.** Ask "How did the Black Death lead to the Reformation?" (or `X -> Y`) and get the step-by-step chain, a verdict on how strong the connection is, and the story in plain words.
-- **Convergence.** When a new effect is an event already on the map, it links to that node instead of duplicating it, so separate threads visibly converge.
-- **Read the links.** Hover any link for its mechanism. Click it for an in-depth explanation: how it worked, what else it took, what historians debate, and what likely happens without it. "Show the steps in between" expands a link into a chain.
-- **Focus.** Selecting an event lights up its whole lineage (everything upstream and downstream) and dims the rest.
+The skeleton is about 6,000 of history's most significant wars, battles, revolutions, treaties, states, leaders, thinkers, inventions, ideas and eras. They come from Wikidata, ranked by how many language editions of Wikipedia cover them, so the map shows the high-order bits rather than every skirmish. The links between them are cause-and-effect claims found in Wikipedia's *Background/Causes* and *Aftermath/Legacy* sections and in Wikidata. Cheap Haiku agents reviewed each link, kept about a third, and wrote a one-line mechanism for each survivor. Every link in the app shows its evidence. An LLM fills gaps only when asked, and is labeled when it does.
 
-Links are weighted by causal strength: **primary** (direct, near-necessary, thick line), **contributing** (one of several factors), **minor** (peripheral or debated, dashed).
+- **Atlas.** Browse by age × region × lens (for example "1840s · Europe · Revolutions"), with each slice ranked by significance. Put a slice on the map to see how its events connect.
+- **Timeline map.** Left to right is time, and causes sit before their effects. Opening an event brings its sourced causes and effects with it.
+- **Connect.** "How did the Treaty of Versailles lead to the Cold War?" finds the strongest chain of sourced links between two events.
+- **Evidence everywhere.** Click a link to read the Wikipedia passage it comes from (with a link to the section), the reviewed mechanism, and an optional in-depth AI explanation.
+- **Context.** Each event shows its Wikipedia summary and its structure: part of, includes, participants, preceded by, succeeded by.
+
+How the database is built is described in [`pipeline/README.md`](./pipeline/README.md).
 
 ## Stack
 
@@ -24,10 +25,12 @@ Links are weighted by causal strength: **primary** (direct, near-necessary, thic
 
 ```
 history-effects/
+├── data/             — the curated database (committed; built by /pipeline)
+├── pipeline/         — Wikidata + Wikipedia ingestion, scoring, review
 ├── docs/
 │   ├── SPEC.md       — product + technical spec
 │   └── PROGRESS.md   — running build log
-├── server/           — Bun + Hono API
+├── server/           — Bun + Hono API (atlas queries + LLM fallback)
 └── web/              — React Flow frontend
 ```
 
@@ -45,7 +48,7 @@ bun run dev
 
 The API listens on `http://localhost:3000`.
 
-No key yet? `bun run dev:mock` serves canned, streamed responses (with realistic data for the Black Death and the printing press) so you can try the whole UI offline.
+The atlas (browse, search, sourced links, paths) needs no API key. The key is only for AI features: explanations, and gap-filling beyond the database. Without one, `bun run dev:mock` serves canned AI responses so the whole UI works offline.
 
 ### 2. Frontend
 
@@ -59,16 +62,28 @@ Open http://localhost:5173.
 
 ## Using the app
 
-1. Type an event (or pick a starter) and press **Explore**. The event, its effects, and its causes stream onto the timeline.
-2. Click any event to open it: description, everything it caused, everything that caused it, each with its mechanism. **What caused this? / What did it lead to?** grow the map (later clicks find *more*, never duplicates).
-3. Click or hover a link to read why it holds. **Explain this connection in depth** gives the mechanism, co-factors, the debate, and a counterfactual. **Show the steps in between** expands the link into a chain.
-4. Use **Connect** (or type "How did X lead to Y?") to trace a causal chain between any two events, existing or new. You can also drag from an event's right edge onto another event.
-5. **Verify with web sources** re-checks an event's details using OpenRouter web search (the only place web search is used).
-6. Keyboard: arrows walk along the chain, <kbd>E</kbd>/<kbd>C</kbd> expand, <kbd>X</kbd> explains a link, <kbd>F</kbd> fits the map, <kbd>Z</kbd> undoes, <kbd>?</kbd> shows everything.
+1. Search for an event, person, state or idea. Suggestions come from the database as you type. Opening one adds it to the timeline with its sourced causes and effects.
+2. Or open **Atlas** (<kbd>A</kbd>), pick an age, era, region and lens, and browse the ranked list. **Map the top 12** puts that slice on the map and draws every sourced link among its events.
+3. Click an event to read its Wikipedia summary, its sourced causes and effects (ones not yet on the map are one click away), and its context. **What caused this? / What did it lead to?** add the next sourced links. When the database runs out, the AI is asked, and its additions are marked **AI**.
+4. Click or hover a link to see its evidence: the Wikipedia passage, a Wikidata claim, or the reviewed mechanism. **Explain this connection in depth** asks the AI for mechanism, co-factors, debate and counterfactual. **Show the steps in between** finds an indirect sourced chain.
+5. **Connect** (or type "How did X lead to Y?") traces the strongest sourced chain between two events, and falls back to the AI if none exists. You can also drag from an event's right edge onto another event.
+6. Keyboard: arrows walk along the chain, <kbd>E</kbd>/<kbd>C</kbd> expand, <kbd>X</kbd> explains a link, <kbd>A</kbd> opens the atlas, <kbd>F</kbd> fits the map, <kbd>Z</kbd> undoes, <kbd>?</kbd> shows everything.
 
-The map is saved in browser `localStorage`, and API responses (including their streamed items) are cached by stable request key, so reloading or repeating a question is instant.
+The map is saved in browser `localStorage`.
 
 ## Endpoints
+
+Curated database (no API key needed):
+
+| Method | Path | Query | Returns |
+|--------|------|-------|---------|
+| GET | `/api/atlas/meta` | | lens and region counts, totals |
+| GET | `/api/atlas/search` | `q`, `limit?` | entities ranked by match and significance |
+| GET | `/api/atlas/browse` | `from`, `to`, `region?`, `lens?`, `limit?` | the most significant entities of a time window |
+| GET | `/api/atlas/entity/:id` | | entity, sourced causes and effects (with evidence), neighbors, structure |
+| GET | `/api/atlas/path` | `from`, `to`, `skipDirect?` | strongest sourced chain (`reversed` if the second came first) |
+
+AI fallback (OpenRouter):
 
 | Method | Path           | Body                                                  | Returns |
 |--------|----------------|-------------------------------------------------------|---------|

@@ -34,7 +34,7 @@ export function CausalEdge({
     <>
       <path
         d={path}
-        className={`edge edge-${strength} focus-${focus}${selected ? " is-selected" : ""}${hover ? " is-hover" : ""}`}
+        className={`edge edge-${strength}${data?.source === "ai" ? " edge-ai" : ""} focus-${focus}${selected ? " is-selected" : ""}${hover ? " is-hover" : ""}`}
         pathLength={1}
         markerEnd={`url(#arrow-${selected || focus === "lit" ? "lit" : "base"})`}
       />
@@ -51,7 +51,16 @@ export function CausalEdge({
             className={`edge-tip strength-${strength}`}
             style={{ transform: `translate(-50%, calc(-100% - 10px)) translate(${labelX}px, ${labelY}px)` }}
           >
-            <div className="edge-tip-strength">{STRENGTH_LABEL[strength]}</div>
+            <div className="edge-tip-strength">
+              {STRENGTH_LABEL[strength]} ·{" "}
+              {data.source !== "db"
+                ? "AI-suggested"
+                : data.evidence?.some((e) => e.src === "curated")
+                  ? "curated by AI review"
+                  : data.reviewed
+                    ? "sourced, reviewed"
+                    : "sourced"}
+            </div>
             <div className="edge-tip-text">{data.reasoning}</div>
           </div>
         </EdgeLabelRenderer>

@@ -1,5 +1,6 @@
 import type { ReactFlowInstance } from "@xyflow/react";
 import * as api from "../api";
+import { connectFromDb, expandFromDb, openEntity, resolveEntity } from "./atlasActions";
 import type { CausalEdgeData, CausalItem, HistoricalEvent, Story } from "../types";
 import { NODE_H, NODE_W, ROW_H } from "./layout";
 import {
@@ -134,7 +135,7 @@ function upsertEvent(event: HistoricalEvent, row: number, spawnFrom?: string): {
     id: newId("n"),
     type: "event",
     position: spawn ?? { x: 0, y: row * ROW_H },
-    data: { ...event, row },
+    data: { ...event, row, source: "ai" },
   };
   setGraph({ nodes: [...nodes, node] });
   return { id: node.id, created: true };
@@ -145,7 +146,7 @@ function link(source: string, target: string, data: CausalEdgeData): string | nu
   const { edges } = graph();
   const existing = findEdgeBetween(edges, source, target);
   if (existing) return existing.id;
-  const edge: CausalEdgeType = { id: newId("e"), type: "causal", source, target, data };
+  const edge: CausalEdgeType = { id: newId("e"), type: "causal", source, target, data: { source: "ai", ...data } };
   setGraph({ edges: [...edges, edge] });
   return edge.id;
 }
@@ -165,7 +166,7 @@ function addLinked(anchorId: string, item: CausalItem, direction: "effects" | "c
 
 // New neighbors were placed in arrival (importance) order; once all are in,
 // reassign the same rows in year order so their edges fan without crossing.
-function sortRowsByYear(ids: string[]) {
+export function sortRowsByYear(ids: string[]) {
   const { nodes } = graph();
   const group = ids.map((id) => nodes.find((n) => n.id === id)).filter((n): n is EventNodeType => !!n);
   if (group.length < 2) return;
@@ -176,7 +177,7 @@ function sortRowsByYear(ids: string[]) {
 }
 
 // Free rows nearest to a center, skipping rows already used by siblings.
-function freeRows(center: number, count: number, taken: number[]): number[] {
+export function freeRows(center: number, count: number, taken: number[]): number[] {
   const rows: number[] = [];
   for (let k = 0; rows.length < count && k < 50; k++) {
     for (const r of k === 0 ? [center] : [center - k, center + k]) {
@@ -207,6 +208,8 @@ export async function explore(text: string) {
   if (!phrase) return;
   const match = findByTitle(phrase);
   if (match) return focusNode(match.id);
+  const entity = await resolveEntity(phrase).catch(() => null);
+  if (entity) return openEntity(entity.id);
 
   const { nodes } = graph();
   const row = nodes.length ? Math.round(maxRow(nodes)) + 4 : 0;
@@ -269,6 +272,11 @@ function settleRoot(placeholderId: string, event: HistoricalEvent): string {
 // --- expand ---------------------------------------------------------------------
 
 export async function expand(nodeId: string, direction: "effects" | "causes") {
+  if (graph().jobs[nodeId]) return;
+  if (await expandFromDb(nodeId, direction).catch(() => false)) return;
+  if (findNode(nodeId)?.data.source === "db") {
+    toast(`No more sourced ${direction} recorded — asking the AI (results will be marked AI).`, "info");
+  }
   const { nodes, edges } = graph();
   const node = nodes.find((n) => n.id === nodeId);
   if (!node) return;
@@ -333,7 +341,14 @@ export function resolveEndpoint(text: string): Endpoint {
   return match ? { nodeId: match.id } : { text: text.trim() };
 }
 
+async function toEntityId(p: Endpoint): Promise<string | null> {
+  if ("nodeId" in p) return findNode(p.nodeId)?.data.source === "db" ? p.nodeId : null;
+  return (await resolveEntity(p.text).catch(() => null))?.id ?? null;
+}
+
 export async function connect(from: Endpoint, to: Endpoint, opts: { replaceDirect?: boolean } = {}) {
+  const [a, b] = await Promise.all([toEntityId(from), toEntityId(to)]);
+  if (a && b && (await connectFromDb(a, b, { skipDirect: opts.replaceDirect }).catch(() => false))) return;
   const storyId = newId("s");
   const abort = startJob(storyId, "path", `Connecting ${endpointLabel(from)} → ${endpointLabel(to)}`);
   if (!abort) return;

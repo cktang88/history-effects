@@ -2,15 +2,20 @@
 
 ## Goal
 
-Help a learner understand how history connects: what an event set in motion, what set it in motion, and how two distant events are linked, with every causal claim explained and weighted.
+Help a learner understand how history connects: what an event set in motion, what set it in motion, and how two distant events are linked. Every causal claim is weighted and shows where it came from.
 
-The canvas is a directed causal graph laid out on a timeline. Each node is a dated event; each edge is a causal claim with a strength and a mechanism. Users grow the graph by:
+## Architecture: database first, LLM second
 
-1. **Explore**: a phrase becomes an event plus its major effects and causes, in one streamed call.
-2. **Expand**: effects (forward) or causes (backward) of any event. Repeat clicks find *more*, never repeats.
-3. **Connect**: a multi-step causal chain from A to B (existing nodes or free text), with a verdict and summary ("story").
-4. **Explain**: an in-depth explanation of one link (mechanism, co-factors, certainty, debate, counterfactual).
-5. **Steps in between**: replace a direct link with the chain that explains it.
+LLM-only generation proved unstructured and prone to "stretching the point", like the books arguing salt drove all of history. The app now explores a **curated database** (see [`pipeline/README.md`](../pipeline/README.md)):
+
+- **Entities** (~6k) from Wikidata, per lens (wars, battles, revolutions, treaties and institutions, disasters, atrocities, pivotal events, eras and movements, states, leaders, thinkers, inventions, ideas). They're ranked by sitelinks (how many Wikipedias cover them) so only high-order items make it in, then expanded with topics Wikipedia's own Background/Aftermath sections cite most.
+- **Causal links** from Wikidata causal properties and from links inside Wikipedia's Background/Causes and Aftermath/Legacy sections, with the sentence as evidence. They're scored by corroboration and significance, then reviewed by Haiku agents (keep / reject / reverse, plus strength and mechanism). Unreviewed links appear only if two sources corroborate them.
+- **Gap-fill links** chosen by agents from vetted shortlists for thin entities, labeled as curated by AI review.
+- **Structure** (part of, participants, succession) for context.
+
+The LLM (OpenRouter) remains for: in-depth explanations of a link, and growing the map beyond the database. Those results are marked **AI** in the UI.
+
+The views below (timeline map, Connect, Explain) work over both kinds of data.
 
 ## Domain model
 
@@ -26,12 +31,20 @@ type Event = {
          | "cultural" | "scientific" | "technological" | "demographic" | "environmental";
 };
 
-type EventNodeData = Event & { row: number; verified?: boolean };
+type EventNodeData = Event & {
+  row: number;
+  verified?: boolean;
+  source?: "db" | "ai"; // db nodes use their Wikidata QID as node id
+  kind?: string; sig?: number; region?: string; country?: string;
+};
 
 type CausalEdgeData = {
   strength: "primary" | "contributing" | "minor";
   reasoning?: string;        // the mechanism
   explanation?: Explanation; // filled by /api/explain
+  source?: "db" | "ai";
+  evidence?: ({ src: "wikipedia"; article; section; text } | { src: "wikidata"; prop } | { src: "curated" })[];
+  reviewed?: boolean;
 };
 
 type Story = { id; fromId; toId; nodeIds; edgeIds; verdict?; summary? };
@@ -51,6 +64,10 @@ Visual encoding: line weight (primary thickest, minor dashed) plus a 3-bar stren
 - y: each node has a persistent `row`. New neighbors fan into free rows around their anchor, then are re-sorted by year so their edges don't cross. Overlaps within a column are resolved by pushing apart and re-centering.
 - Cards have a fixed height; zooming out below 0.6 switches them to large titles only.
 - Positions tween over ~480 ms in JS so edges track the cards. New nodes spawn at their anchor and glide out.
+
+## Atlas
+
+Browse by **age → era → region → lens**. Eras are coarse in deep time and fine in modern history: millennia before 1000 BCE, then 500-, 250-, 100- and 50-year windows, then decades from 1800. Results are ranked by significance. Things that *happened* in the window outrank long-lived states and people who merely existed then; people count for the window of their career. "Map the top 12" puts a slice on the map and draws every sourced link among its events and anything already there.
 
 ## Interaction
 

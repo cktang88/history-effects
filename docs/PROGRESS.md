@@ -4,6 +4,27 @@ Running build log. Newest entry on top.
 
 ---
 
+## 2026-11-06 — curated database: lenses, Wikipedia evidence, agent review
+
+**Why:** LLM-only generation had no structure and tended to "stretch the point". History is better served by a fixed database of the most significant things and the evidenced links between them, with LLMs reviewing and enriching rather than inventing.
+
+**Pipeline (`/pipeline` → `/data`)**
+- Entities from Wikidata per lens, ranked by sitelinks (number of Wikipedias covering an item): wars, battles, revolutions, treaties and institutions, disasters, atrocities, pivotal events, eras, states, leaders, thinkers, inventions, ideas. Junk filtered by Wikidata class (stars, islands, chemicals, cities, newspapers…).
+- Expansion by following Wikipedia's own causal links: topics most cited in Background/Aftermath sections but missing from the class queries (Reformation, Meiji Restoration, Islam, nationalism…).
+- Wikipedia articles read from the multistream dump with range requests (the API rate-limits shared IPs): ~1.5 GB instead of 27 GB. The redirect table resolves link targets.
+- Candidate causal links from Wikidata causal properties plus Wikipedia section links, each with its evidence sentence. Temporal sanity checks, corroboration and significance scoring, and per-entity pruning.
+- Two waves of Haiku reviewers (16 agents) judged the 4,965 most important candidates: about 1,700 kept or reversed with a strength and mechanism, about 3,250 rejected.
+- Gap-fill agents choose missing causes and effects for thin, significant entities, but only from algorithmic shortlists of database entities. These links are labeled as curated by AI review.
+- Lead summaries rendered from wikitext, including date, dash, language and Japanese-name templates, with entities decoded.
+
+**App**
+- Server `Atlas` index: search, era × region × lens browse, entity detail (sourced causes and effects with evidence, structure), and strongest-chain path search (solid links first, optionally avoiding the direct link).
+- Web: database autocomplete, the Atlas panel (ages → eras → region → lens, "Map the top 12"), sourced nodes keyed by QID, expand/connect database-first with a labeled AI fallback, and an inspector with Wikipedia summary and link, evidence quotes, a reviewed badge, structure, and one-click "+ add" for off-map neighbors.
+
+**Not verified**
+- AI fallback paths are still untested against a real model (no key available here). Database flows were tested in a browser.
+
+
 ## 2026-11-06 — rebuilt around learning how history connects
 
 **Product direction**
