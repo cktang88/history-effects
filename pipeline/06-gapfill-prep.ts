@@ -23,6 +23,11 @@ async function main() {
   const byId = new Map(entities.map((e) => [e.id, e]));
   const links = await readJSON<CausalLink[]>("links.json");
   const reviews = await readJSON<Record<string, Review>>("reviews.json");
+  let curated: Record<string, unknown> = {};
+  try {
+    curated = await readJSON<Record<string, unknown>>("curated.json");
+  } catch {}
+  const curatedPairs = Object.keys(curated).map((k) => k.split(">") as [string, string]);
 
   // Count what the app will actually show per entity.
   const causes = new Map<string, number>();
@@ -34,10 +39,16 @@ async function main() {
     effects.set(s, (effects.get(s) ?? 0) + 1);
     causes.set(t, (causes.get(t) ?? 0) + 1);
   }
+  for (const [s, t] of curatedPairs) {
+    effects.set(s, (effects.get(s) ?? 0) + 1);
+    causes.set(t, (causes.get(t) ?? 0) + 1);
+  }
 
   const eventKinds = new Set(["war", "battle", "revolution", "treaty", "disaster", "atrocity", "event", "period", "invention", "idea", "state"]);
   const targets = entities
-    .filter((e) => eventKinds.has(e.kind) && e.start > -3500 && ((causes.get(e.id) ?? 0) < 3 || (effects.get(e.id) ?? 0) < 3))
+    // Still-existing states (no end date) are context, not lessons in causation.
+    .filter((e) => eventKinds.has(e.kind) && !(e.kind === "state" && e.end === undefined) && e.start > -3500)
+    .filter((e) => (causes.get(e.id) ?? 0) < 3 || (effects.get(e.id) ?? 0) < 3)
     .sort((a, b) => b.sig - a.sig)
     .slice(0, TARGETS);
 
@@ -67,7 +78,8 @@ async function main() {
     about: (e.summary || e.desc || "").slice(0, 300),
     alreadyLinked: links
       .filter((l) => (l.s === e.id || l.t === e.id) && reviews[`${l.s}>${l.t}`]?.verdict !== "reject")
-      .map((l) => `${byId.get(l.s)?.title} → ${byId.get(l.t)?.title}`),
+      .map((l) => `${byId.get(l.s)?.title} → ${byId.get(l.t)?.title}`)
+      .concat(curatedPairs.filter(([a, b]) => a === e.id || b === e.id).map(([a, b]) => `${byId.get(a)?.title} → ${byId.get(b)?.title}`)),
     causeCandidates: (causes.get(e.id) ?? 0) < 3 ? shortlist(e, "causes") : [],
     effectCandidates: (effects.get(e.id) ?? 0) < 3 ? shortlist(e, "effects") : [],
   }));

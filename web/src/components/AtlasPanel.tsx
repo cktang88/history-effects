@@ -87,6 +87,7 @@ export function AtlasPanel({ open, onClose }: { open: boolean; onClose: () => vo
         {items.map((e, i) => (
           <button key={e.id} className={`atlas-row${onMapSet.has(e.id) ? " on-map" : ""}`} onClick={() => openEntity(e.id)}>
             <span className="atlas-rank">{i + 1}</span>
+            <span className="atlas-thumb">{e.img && <img src={atlas.imageUrl(e.img, 80)} alt="" loading="lazy" />}</span>
             <span className="atlas-main">
               <span className="atlas-name">{e.title}</span>
               <span className="atlas-meta">

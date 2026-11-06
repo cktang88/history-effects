@@ -16,7 +16,7 @@ import {
 } from "../graph/actions";
 import { incoming, outgoing, yearsBetween, type CausalEdgeType, type EventNodeType } from "../graph/model";
 import { addNeighbor, KIND_LABEL, openEntity } from "../graph/atlasActions";
-import type * as atlas from "../atlas/api";
+import * as atlas from "../atlas/api";
 
 export function Inspector() {
   const selection = useGraph((s) => s.selection);
@@ -75,8 +75,15 @@ function NodePanel({
   const aiCauses = causes.filter((e) => e.data?.source !== "db");
   const aiEffects = effects.filter((e) => e.data?.source !== "db");
 
+  const img = detail?.entity.img;
+
   return (
     <div className="panel">
+      {img && (
+        <figure className="hero">
+          <img src={atlas.imageUrl(img)} alt="" loading="lazy" onError={(e) => (e.currentTarget.parentElement!.style.display = "none")} />
+        </figure>
+      )}
       <div className="panel-meta">
         {sourced && d.kind ? (
           <span className={`chip domain-${d.domain}`}>{KIND_LABEL[d.kind] ?? d.kind}</span>

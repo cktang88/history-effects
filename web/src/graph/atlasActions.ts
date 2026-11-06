@@ -76,6 +76,8 @@ function nodeFor(e: atlas.EntitySummary, row: number, spawn?: { x: number; y: nu
       sig: e.sig,
       region: e.region,
       country: e.country,
+      nCauses: e.nCauses,
+      nEffects: e.nEffects,
     },
   };
 }

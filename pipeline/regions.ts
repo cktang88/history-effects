@@ -42,6 +42,10 @@ export function regionFromCoord(lat: number, lon: number): Region {
   // North of ~36°N and west of the Caucasus is Europe, except eastern
   // Anatolia (east of ~36°E), which goes with the Middle East.
   if (lat >= 36 && lon < 45) return lat < 42 && lon >= 36 ? "Middle East & North Africa" : "Europe";
+  // West Africa south of ~18°N (Timbuktu, Gao), and the Horn and Sahel south
+  // of ~15.5°N (but not Yemen), are Sub-Saharan.
+  if (lat < 18 && lon >= -20 && lon < 25) return "Sub-Saharan Africa";
+  if (lat < 15.5 && lon >= -20 && lon < 52 && !(lon >= 42.5 && lat >= 12)) return "Sub-Saharan Africa";
   if (lat >= 12 && lat < 42 && lon >= 25 && lon < 63) return "Middle East & North Africa";
   if (lat >= 15 && lat < 38 && lon >= -18 && lon < 25) return "Middle East & North Africa";
   if (lat < 15 && lon >= -20 && lon < 55) return "Sub-Saharan Africa";
@@ -52,11 +56,32 @@ export function regionFromCoord(lat: number, lon: number): Region {
   return "Europe";
 }
 
+// Which continents each coordinate-derived region can belong to.
+const REGION_CONTINENTS: Record<Region, string[]> = {
+  Europe: ["Q46", "Q5401"],
+  "Middle East & North Africa": ["Q48", "Q15", "Q5401"],
+  "Sub-Saharan Africa": ["Q15"],
+  "Russia & Central Asia": ["Q46", "Q48", "Q5401"],
+  "South Asia": ["Q48"],
+  "East Asia": ["Q48"],
+  "Southeast Asia": ["Q48", "Q538", "Q55643"],
+  "North America": ["Q49"],
+  "Latin America": ["Q18", "Q49", "Q27611"],
+  Oceania: ["Q538", "Q55643", "Q3960"],
+  Global: [],
+};
+
 export function regionOf(coord: [number, number] | undefined, continents: string[]): Region {
   // World wars and the like: a single coordinate would misplace them.
   const distinct = new Set(continents.map((c) => CONTINENT_REGION[c]).filter(Boolean));
   if (distinct.size >= 3) return "Global";
-  if (coord) return regionFromCoord(coord[0], coord[1]);
+  if (coord) {
+    const fromCoord = regionFromCoord(coord[0], coord[1]);
+    // A sampled coordinate can come from an odd related place; if it
+    // contradicts every one of the entity's countries, trust the countries.
+    const known = continents.filter((c) => CONTINENT_REGION[c]);
+    if (known.length === 0 || known.some((c) => REGION_CONTINENTS[fromCoord].includes(c))) return fromCoord;
+  }
   for (const c of continents) if (CONTINENT_REGION[c]) return CONTINENT_REGION[c]!;
   return "Global";
 }

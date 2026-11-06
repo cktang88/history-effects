@@ -42,8 +42,10 @@ describe("Atlas", () => {
   });
 
   it("browses an era/region/lens slice by significance", () => {
-    expect(atlas.browse({ from: 1910, to: 1940 }).items.map((x) => x.id)).toEqual(["Q4", "Q1", "Q3", "Q2"]);
+    expect(atlas.browse({ from: 1910, to: 1940 }).items.map((x) => x.id)).toEqual(["Q4", "Q3", "Q1", "Q2"]);
     expect(atlas.browse({ from: 1860, to: 1870, region: "East Asia" }).items.map((x) => x.id)).toEqual(["Q6"]);
+    const global = new Atlas([...entities, e("Q9", "Pandemic", 1865, { region: "Global", sig: 300 })], [], []);
+    expect(global.browse({ from: 1860, to: 1870, region: "East Asia" }).items.map((x) => x.id)).toEqual(["Q9", "Q6"]);
     expect(atlas.browse({ from: 1860, to: 1870, lens: "leader" }).items.map((x) => x.id)).toEqual(["Q7"]);
   });
 
@@ -79,6 +81,13 @@ describe("Atlas", () => {
     });
     expect(withCurated.link("Q5", "Q1")).toMatchObject({ reasoning: "Signed in the Hall of Mirrors.", reviewed: true, evidence: [{ src: "curated" }] });
     expect(withCurated.link("Q1", "Q2")!.reasoning).toBe("reparations");
+  });
+
+  it("keeps one link when a reversal duplicates the opposite candidate", () => {
+    const dup = new Atlas(entities, [...links, { s: "Q2", t: "Q1", score: 1, ev: [] }], [], {
+      "Q2>Q1": { verdict: "reverse", strength: "primary", mechanism: "m" },
+    });
+    expect(dup.effectsOf("Q1").filter((l) => l.target === "Q2")).toHaveLength(1);
   });
 
   it("finds no path backwards in time", () => {

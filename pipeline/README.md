@@ -10,6 +10,8 @@ History doesn't change much, so the output is committed and rebuilt only occasio
 
 **Following Wikipedia's own causal links.** [`01b-expand.ts`](01b-expand.ts) adds topics that many of our articles cite in their *Background/Causes* or *Aftermath/Legacy* sections but that the class queries missed, such as the Reformation, the Meiji Restoration, Islam and nationalism. Places, organizations and languages are filtered out by Wikidata class, since they're settings, not causes.
 
+**Balancing the world: era × region coverage.** Ranking by Wikipedia coverage favors European history. The first build had 301 European entries for 1000–1500 against 7 for Sub-Saharan Africa. [`07-coverage-prep.ts`](07-coverage-prep.ts) lists what each region × era cell already holds. One agent per region names the most significant *missing* items as exact Wikipedia titles. [`07-coverage-merge.ts`](07-coverage-merge.ts) then **verifies every title in code**: it must exist (redirects resolved by [`07b-redirects.py`](07b-redirects.py) from the dump), map to a Wikidata item with enough coverage, start inside its era, and not be a place or organization. Historical polities (kingdoms, empires, caliphates, cultures) are exempt from that last check, since Wikidata models many of them as countries. Survivors go into the committed [`seeds.json`](seeds.json), which [`01c-seeds.ts`](01c-seeds.ts) folds in on every build. In the first pass, 46 proposed titles turned out not to exist and were dropped automatically.
+
 **Two independent sources of causal claims.**
 - Wikidata properties: *has cause*, *has effect*, *has immediate cause*, *contributing factor of*, and so on. These are sparse and noisy.
 - Wikipedia section links: a link to B inside the *Background/Causes/Prelude* sections of A's article suggests B → A, and inside *Aftermath/Legacy/Impact/Consequences* suggests A → B. The sentence it appears in is kept as evidence.
@@ -27,7 +29,9 @@ History doesn't change much, so the output is committed and rebuilt only occasio
 ```bash
 bun run data:entities     # 01: Wikidata entities per lens (≈10 min, cached)
 cd pipeline && bun run 01b-expand.ts   # after a first 03 run: add frequently cited missing topics
+cd pipeline && bun run 01c-seeds.ts     # add the committed seed list
 bun run data:relations    # 02: Wikidata relations + countries/continents
+cd pipeline && bun run 02b-images.ts    # representative image per entity (Commons filename)
 bun run data:wikipedia    # 03a: article wikitext from the dumps (≈1.5 GB of range requests), 03b: parse
 bun run data:build        # 04: data/entities.json, links.json, structure.json, lenses.json
 bun run data:review-prep  # 05a: batches of the most important unreviewed links
@@ -36,6 +40,7 @@ bun run data:review-merge # 05b: validate and merge into data/reviews.json
 bun run data:gapfill-prep # 06a: shortlists for thin entities
 # …run agents over pipeline/out/gapfill/batch-*.json → result-*.json…
 bun run data:gapfill-merge # 06b: validate and merge into data/curated.json
+# coverage pass (occasionally): 07-coverage-prep → agents → `07-coverage-merge.ts titles` → 07b-redirects.py → 07-coverage-merge.ts
 ```
 
 HTTP responses are cached in `pipeline/.cache/` (git-ignored), so reruns are cheap. Intermediate files go to `pipeline/out/`.
@@ -46,7 +51,7 @@ HTTP responses are cached in `pipeline/.cache/` (git-ignored), so reruns are che
 
 | File | Contents |
 |------|----------|
-| `entities.json` | `{id (Wikidata QID), title (Wikipedia title), kind, lenses, sig (sitelinks), start, end, region, country, desc, summary (Wikipedia lead), wiki}` |
+| `entities.json` | `{id (Wikidata QID), title (Wikipedia title), kind, lenses, sig (sitelinks), start, end, region, country, desc, summary (Wikipedia lead), wiki, img (Commons file)}` |
 | `links.json` | candidate causal links `{s, t, score, ev: [evidence]}`; evidence is a Wikidata property or a Wikipedia sentence with article and section |
 | `reviews.json` | `"s>t": {verdict, strength, mechanism}` from the review pass |
 | `curated.json` | `"s>t": {strength, mechanism}` gap-fill links, chosen from vetted shortlists, no source passage |

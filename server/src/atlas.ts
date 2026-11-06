@@ -18,6 +18,7 @@ export type Entity = {
   desc?: string;
   summary?: string;
   wiki?: string;
+  img?: string;
 };
 
 export type Evidence =
@@ -45,7 +46,10 @@ export type LinkView = {
   reviewed: boolean;
 };
 
-export type EntitySummary = Pick<Entity, "id" | "title" | "kind" | "sig" | "start" | "end" | "region" | "country" | "desc">;
+export type EntitySummary = Pick<Entity, "id" | "title" | "kind" | "sig" | "start" | "end" | "region" | "country" | "desc" | "img"> & {
+  nCauses: number;
+  nEffects: number;
+};
 
 const DATA_DIR = new URL("../../data/", import.meta.url);
 
@@ -103,12 +107,17 @@ export class Atlas {
         const [s, t] = key.split(">") as [string, string];
         return { s, t, score: 2, ev: [{ src: "curated" as const }], review: { verdict: "keep" as const, ...c } };
       });
+    const seen = new Set<string>();
     for (const raw of [...links, ...curatedLinks]) {
       const review = raw.review ?? reviews[`${raw.s}>${raw.t}`];
       if (review?.verdict === "reject") continue;
       if (!review && raw.score < minUnreviewedScore) continue;
       const link = review?.verdict === "reverse" ? { ...raw, s: raw.t, t: raw.s, review } : { ...raw, review };
       if (!this.entities.has(link.s) || !this.entities.has(link.t)) continue;
+      // A reversed candidate can coincide with the opposite candidate; keep one.
+      const pair = `${link.s}>${link.t}`;
+      if (seen.has(pair)) continue;
+      seen.add(pair);
       this.push(this.causes, link.t, link);
       this.push(this.effects, link.s, link);
     }
@@ -152,8 +161,12 @@ export class Atlas {
   }
 
   summary(e: Entity): EntitySummary {
-    const { id, title, kind, sig, start, end, region, country, desc } = e;
-    return { id, title, kind, sig, start, end, region, country, desc };
+    const { id, title, kind, sig, start, end, region, country, desc, img } = e;
+    return {
+      id, title, kind, sig, start, end, region, country, desc, img,
+      nCauses: Math.min(12, this.causes.get(id)?.length ?? 0),
+      nEffects: Math.min(12, this.effects.get(id)?.length ?? 0),
+    };
   }
 
   view(link: CausalLink): LinkView {
@@ -195,7 +208,9 @@ export class Atlas {
     const lensFilter = opts.lens && opts.lens !== "all" ? opts.lens : null;
     const scored: { e: Entity; score: number }[] = [];
     for (const e of this.entities.values()) {
-      if (opts.region && opts.region !== "all" && e.region !== opts.region) continue;
+      // Global events (world wars, pandemics) belong in every region's view.
+      const regionFilter = opts.region && opts.region !== "all" ? opts.region : null;
+      if (regionFilter && e.region !== regionFilter && e.region !== "Global") continue;
       if (lensFilter && !e.lenses.includes(lensFilter)) continue;
       const person = e.kind === "leader" || e.kind === "thinker";
       // People belong to the window of their career, not their whole life.
@@ -206,7 +221,8 @@ export class Atlas {
       const enduring = person || e.kind === "state" || e.kind === "period" || e.kind === "idea";
       // What *happened* in a window outranks what merely existed during it.
       if (!startsHere && enduring && !lensFilter) continue;
-      scored.push({ e, score: Math.log2(e.sig + 1) + (startsHere ? 3 : 0) - (person && !lensFilter ? 1 : 0) });
+      const globalInRegion = regionFilter && e.region === "Global" ? -1.5 : 0;
+      scored.push({ e, score: Math.log2(e.sig + 1) + (startsHere ? 3 : 0) + (lensFilter ? 0 : (KIND_WEIGHT[e.kind] ?? 0)) + globalInRegion });
     }
     scored.sort((a, b) => b.score - a.score);
     return { total: scored.length, items: scored.slice(0, opts.limit ?? 40).map((x) => this.summary(x.e)) };
@@ -290,6 +306,23 @@ export class Atlas {
     return chain.map((l) => this.view(l));
   }
 }
+
+// In mixed views, what happened leads; people and discoveries follow.
+const KIND_WEIGHT: Record<string, number> = {
+  war: 2,
+  revolution: 2,
+  event: 2,
+  treaty: 1.5,
+  disaster: 1.5,
+  atrocity: 1,
+  battle: 1,
+  state: 1,
+  period: 1,
+  idea: 1,
+  invention: -1,
+  leader: -2,
+  thinker: -2,
+};
 
 function rank(l: CausalLink): number {
   const strengthBonus = l.review ? { primary: 3, contributing: 1, minor: 0 }[l.review.strength] : 0;

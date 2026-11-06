@@ -4,6 +4,24 @@ Running build log. Newest entry on top.
 
 ---
 
+## 2026-11-06 — balancing coverage across the world; images; exploration cues
+
+**Coverage (era × region)**
+- Measured coverage per region and period: the significance ranking was heavily Eurocentric. Europe had 301 entries for 1000–1500 against 7 for Sub-Saharan Africa.
+- New coverage pass ([`07-coverage-*`](../pipeline/README.md)): one Haiku agent per region named missing items for every era cell as exact Wikipedia titles. Code verifies each one: it must exist (redirects resolved from the dump), map to Wikidata, have enough coverage, overlap its era, and not be a place or organization. 906 verified seeds, committed in `pipeline/seeds.json`. 46 proposed titles didn't exist and were dropped automatically.
+- Found and fixed a systematic bias: Wikidata models many historical states as "countries", so the place filter was discarding Aksum, Kush, Makuria, Songhai, Kanem and the Mamluk Sultanate. Historical polities and cultures are now exempt.
+- Region fixes: when a sampled coordinate contradicts an entity's countries, the countries win. The Horn of Africa and the West African Sahel now count as Sub-Saharan.
+- Two more review waves (≈720 links) and a second gap-fill wave. Totals: 5,686 reviews (1,996 kept or reversed) and 874 curated links. Duplicate pairs from reversals are deduplicated.
+
+**App**
+- Wikimedia Commons images for ~80% of entities (inspector hero image, Atlas thumbnails).
+- Cards show how many sourced causes and effects remain unexplored ("+4").
+- Atlas "Everything" view ranks events ahead of people and discoveries. Global events (world wars, pandemics) appear in every region's slice.
+
+**Still thin**
+- Pre-1500 history outside Europe, the Middle East and East Asia, and some major nodes (the Black Death has one sourced cause). More coverage passes and gap-fill waves would continue to help.
+
+
 ## 2026-11-06 — curated database: lenses, Wikipedia evidence, agent review
 
 **Why:** LLM-only generation had no structure and tended to "stretch the point". History is better served by a fixed database of the most significant things and the evidenced links between them, with LLMs reviewing and enriching rather than inventing.

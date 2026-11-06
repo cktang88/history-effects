@@ -9,6 +9,10 @@ const cases: [string, number, number, string][] = [
   ["Carthage", 36.85, 10.32, "Europe"],
   ["Marrakesh", 31.63, -8.0, "Middle East & North Africa"],
   ["Lagos", 6.52, 3.38, "Sub-Saharan Africa"],
+  ["Aksum", 14.13, 38.72, "Sub-Saharan Africa"],
+  ["Timbuktu", 16.77, -3.0, "Sub-Saharan Africa"],
+  ["Sanaa", 15.37, 44.19, "Middle East & North Africa"],
+  ["Khartoum", 15.5, 32.56, "Middle East & North Africa"],
   ["Moscow", 55.75, 37.62, "Europe"],
   ["Samarkand", 39.65, 66.96, "Russia & Central Asia"],
   ["Novosibirsk", 55.0, 82.9, "Russia & Central Asia"],
@@ -34,6 +38,11 @@ describe("regionFromCoord", () => {
 });
 
 describe("regionOf", () => {
+  it("trusts countries over a coordinate on another continent", () => {
+    expect(regionOf([28.1, -15.4], ["Q46"])).toBe("Europe"); // Canary Islands coordinate, Spanish war
+    expect(regionOf([28.6, 77.2], ["Q48"])).toBe("South Asia");
+  });
+
   it("falls back to continents, and calls multi-continent entities global", () => {
     expect(regionOf(undefined, ["Q46"])).toBe("Europe");
     expect(regionOf(undefined, ["Q46", "Q48", "Q49"])).toBe("Global");

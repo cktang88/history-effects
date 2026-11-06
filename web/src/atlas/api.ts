@@ -10,7 +10,14 @@ export type EntitySummary = {
   region: string;
   country?: string;
   desc?: string;
+  nCauses?: number;
+  nEffects?: number;
+  img?: string;
 };
+
+// Sized thumbnail served by Wikimedia Commons.
+export const imageUrl = (file: string, width = 480) =>
+  `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}?width=${width}`;
 
 export type Entity = EntitySummary & { lenses: string[]; summary?: string; wiki?: string };
 

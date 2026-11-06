@@ -33,6 +33,7 @@ export type Entity = {
   desc?: string;
   summary?: string;
   wiki?: string;
+  img?: string;
 };
 
 export type Evidence =
@@ -95,6 +96,10 @@ async function main() {
   const relations = await readPipeline<RawRelation[]>("relations.raw.json");
   const countries = new Map((await readPipeline<RawCountry[]>("countries.raw.json")).map((c) => [c.id, c]));
   const wiki = JSON.parse(await readFile(new URL("./out/wiki.json", import.meta.url), "utf8")) as WikiArticle[];
+  let images: Record<string, string> = {};
+  try {
+    images = await readPipeline<Record<string, string>>("images.json");
+  } catch {}
   const articleOf = new Map(wiki.map((a) => [a.title, a]));
 
   // Keep the top invention-lens items after type filtering.
@@ -121,6 +126,7 @@ async function main() {
       desc: e.description,
       summary: article?.summary || undefined,
       wiki: e.article,
+      img: images[e.id],
     });
   }
   log(`entities: ${raw.length} raw → ${entities.size} kept`);

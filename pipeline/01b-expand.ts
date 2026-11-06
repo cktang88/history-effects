@@ -24,10 +24,36 @@ export const SETTING_TYPES =
 // settlement, country, sovereign state, river, mountain, island, newspaper,
 // periodical, website, language, chemical element, business, university,
 // political party, military unit, armed forces, body of water, territorial entity
-const SETTING_CLASSES = [
+export const SETTING_CLASSES = [
   "Q486972", "Q6256", "Q3624078", "Q4022", "Q8502", "Q23442", "Q11032", "Q1002697", "Q35127",
   "Q34770", "Q11344", "Q4830453", "Q3918", "Q7278", "Q176799", "Q1752346", "Q15324", "Q56061",
 ];
+
+// Historical polities and cultures are often modeled as subclasses of
+// "country", so they're exempt from the settings filter: historical country,
+// empire, kingdom, dynasty, archaeological culture, civilization, caliphate,
+// sultanate, khaganate.
+const POLITY_CLASSES = ["Q3024240", "Q48349", "Q417175", "Q164950", "Q465299", "Q8432", "Q12560", "Q849866", "Q1371288"];
+
+// Items that are places, organizations, languages… (but not historical polities).
+export async function settingIds(ids: string[]): Promise<Set<string>> {
+  const match = async (classes: string[]) => {
+    const found = new Set<string>();
+    for (const batch of chunk(ids, 200)) {
+      const rows = await sparql(`
+SELECT DISTINCT ?item WHERE {
+  VALUES ?item { ${batch.map((i) => `wd:${i}`).join(" ")} }
+  VALUES ?cls { ${classes.map((c) => `wd:${c}`).join(" ")} }
+  ?item wdt:P31/wdt:P279* ?cls .
+}`);
+      for (const r of rows) found.add(qid(r.item!.value));
+    }
+    return found;
+  };
+  const bad = await match(SETTING_CLASSES);
+  const polities = await match(POLITY_CLASSES);
+  return new Set([...bad].filter((id) => !polities.has(id)));
+}
 
 export function lensFromType(type: string | undefined, isHuman: boolean): LensId {
   const t = (type ?? "").toLowerCase();
@@ -42,7 +68,7 @@ export function lensFromType(type: string | undefined, isHuman: boolean): LensId
   if (/religion|ideology|philosophy|doctrine|belief|school of thought|political movement|religious movement|theology|denomination/.test(t)) return "idea";
   if (/pandemic|epidemic|famine|earthquake|eruption|disaster|outbreak/.test(t)) return "disaster";
   if (/genocide|massacre|pogrom|ethnic cleansing/.test(t)) return "atrocity";
-  if (/period|era|age|movement|dynasty/.test(t)) return "period";
+  if (/period|era|age|movement|dynasty|culture|civilization/.test(t)) return "period";
   if (/invention|technology|machine|device|engine|process|technique|tool/.test(t)) return "invention";
   return "event";
 }
@@ -91,16 +117,7 @@ SELECT ?item ?name ?human WHERE {
 
   const existing = new Set(entities.map((e) => e.id));
   const candidates = [...ids.keys()].filter((id) => !existing.has(id));
-  const settings = new Set<string>();
-  for (const batch of chunk(candidates, 200)) {
-    const rows = await sparql(`
-SELECT DISTINCT ?item WHERE {
-  VALUES ?item { ${batch.map((i) => `wd:${i}`).join(" ")} }
-  VALUES ?bad { ${SETTING_CLASSES.map((c) => `wd:${c}`).join(" ")} }
-  ?item wdt:P31/wdt:P279* ?bad .
-}`);
-    for (const r of rows) settings.add(qid(r.item!.value));
-  }
+  const settings = await settingIds(candidates);
   const fresh = candidates.filter((id) => !settings.has(id) || humans.has(id));
   log(`${settings.size} places/organizations/languages filtered out`);
   // People: rulers/politicians/commanders → leader, everyone else → thinker.

@@ -59,6 +59,9 @@ export type EventNodeData = HistoricalEvent & {
   sig?: number;
   region?: string;
   country?: string;
+  // How many sourced causes/effects the database has for this entity.
+  nCauses?: number;
+  nEffects?: number;
 };
 
 export type Source = "db" | "ai";

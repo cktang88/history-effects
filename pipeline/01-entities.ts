@@ -20,10 +20,10 @@ export type RawEntity = {
 
 // astronomical object, geographic location, chemical element, chemical entity,
 // letter, SI prefix, archaeological site, volcano, cave, disease, constellation,
-// taxon, sports discipline, game
+// taxon, sports discipline, game, atoll
 const NOT_INVENTIONS = [
   "Q6999", "Q2221906", "Q11344", "Q113145171", "Q9788", "Q491081", "Q839954", "Q8072", "Q35509",
-  "Q12136", "Q8928", "Q16521", "Q2312410", "Q11410",
+  "Q12136", "Q8928", "Q16521", "Q2312410", "Q11410", "Q42523",
 ];
 
 const EXCLUDED_INVENTION_TYPES = ["Q11344", "Q3863", "Q634", "Q2537", "Q523", "Q16521", "Q5", "Q318", "Q83373"];

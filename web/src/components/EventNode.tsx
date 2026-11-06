@@ -33,9 +33,7 @@ export function EventNode({ id, data }: NodeProps<EventNodeType>) {
       className={`card domain-${data.domain ?? "none"} focus-${focus}${selected ? " is-selected" : ""}${job ? " is-busy" : ""}`}
     >
       <Handle type="target" position={Position.Left} className="handle handle-in" />
-      <button className="grow grow-in" title="What caused this? (C)" onClick={grow("causes")} disabled={!!job}>
-        {countIn > 0 ? <span className="grow-count">{countIn}</span> : "+"}
-      </button>
+      <GrowButton side="in" onMap={countIn} available={data.nCauses} busy={!!job} onClick={grow("causes")} />
 
       <div className="card-meta">
         <span className="card-dot" />
@@ -61,10 +59,26 @@ export function EventNode({ id, data }: NodeProps<EventNodeType>) {
         </div>
       )}
 
-      <button className="grow grow-out" title="What did this lead to? (E)" onClick={grow("effects")} disabled={!!job}>
-        {countOut > 0 ? <span className="grow-count">{countOut}</span> : "+"}
-      </button>
+      <GrowButton side="out" onMap={countOut} available={data.nEffects} busy={!!job} onClick={grow("effects")} />
       <Handle type="source" position={Position.Right} className="handle handle-out" />
     </div>
+  );
+}
+
+// Shows how many sourced links are still unexplored ("+3"), or how many are
+// already on the map once everything is out.
+function GrowButton(props: { side: "in" | "out"; onMap: number; available?: number; busy: boolean; onClick: (e: React.MouseEvent) => void }) {
+  const remaining = Math.max(0, (props.available ?? 0) - props.onMap);
+  const what = props.side === "in" ? "causes" : "effects";
+  const title =
+    remaining > 0
+      ? `${remaining} more sourced ${what} (${props.side === "in" ? "C" : "E"})`
+      : props.side === "in"
+        ? "What caused this? (C)"
+        : "What did this lead to? (E)";
+  return (
+    <button className={`grow grow-${props.side}${remaining > 0 ? " has-more" : ""}`} title={title} onClick={props.onClick} disabled={props.busy}>
+      {remaining > 0 ? <span className="grow-count">+{remaining}</span> : props.onMap > 0 ? <span className="grow-count">{props.onMap}</span> : "+"}
+    </button>
   );
 }
