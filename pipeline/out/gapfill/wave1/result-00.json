@@ -1,0 +1,548 @@
+[
+ {
+  "cause": "Q29",
+  "effect": "Q128168",
+  "strength": "contributing",
+  "mechanism": "Habsburg Spain under Philip II became the main military patron of the Catholic Counter-Reformation, enforcing Tridentine reform across its territories."
+ },
+ {
+  "cause": "Q29",
+  "effect": "Q2487",
+  "strength": "contributing",
+  "mechanism": "Spain's Habsburg monarchy financed and armed its Austrian cousins, drawing Madrid into the Thirty Years' War after 1618."
+ },
+ {
+  "cause": "Q29",
+  "effect": "Q164432",
+  "strength": "contributing",
+  "mechanism": "Philip II's centralization, Catholic repression and heavy taxation in the Netherlands provoked the Dutch Revolt against Spanish rule."
+ },
+ {
+  "cause": "Q664",
+  "effect": "Q1545405",
+  "strength": "contributing",
+  "mechanism": "British colonial expansion after the 1840 Treaty of Waitangi brought land seizures that triggered the New Zealand Wars against Maori iwi."
+ },
+ {
+  "cause": "Q9458",
+  "effect": "Q432",
+  "strength": "primary",
+  "mechanism": "Muhammad's preaching and revelations in Mecca and Medina founded Islam, establishing its scripture, community and law."
+ },
+ {
+  "cause": "Q432",
+  "effect": "Q428",
+  "strength": "primary",
+  "mechanism": "Muhammad's revelations, recited and compiled after his death, formed the Quran, Islam's central scripture."
+ },
+ {
+  "cause": "Q432",
+  "effect": "Q12490507",
+  "strength": "contributing",
+  "mechanism": "After Muhammad's death, the Muslim community's caliphs built the Rashidun Caliphate, extending Islamic rule across Arabia and the Levant."
+ },
+ {
+  "cause": "Q432",
+  "effect": "Q123559",
+  "strength": "contributing",
+  "mechanism": "Umayyad-led Muslim armies crossed into Iberia in 711 and conquered the Visigothic kingdom, establishing Al-Andalus."
+ },
+ {
+  "cause": "Q432",
+  "effect": "Q12536",
+  "strength": "contributing",
+  "mechanism": "The Abbasid revolution overthrew the Umayyads in 750 and founded an Islamic caliphate centred on Baghdad, claiming religious legitimacy."
+ },
+ {
+  "cause": "Q362",
+  "effect": "Q424",
+  "strength": "contributing",
+  "mechanism": "Japanese occupation during World War II weakened French colonial control of Indochina, enabling Cambodian demands for independence."
+ },
+ {
+  "cause": "Q302",
+  "effect": "Q5043",
+  "strength": "primary",
+  "mechanism": "Jesus's teaching and crucifixion gave rise to the early Christian movement, which developed into a distinct religion."
+ },
+ {
+  "cause": "Q2277",
+  "effect": "Q5043",
+  "strength": "contributing",
+  "mechanism": "Roman roads, a common administration and Constantine's 313 toleration enabled Christianity's spread and its eventual official acceptance."
+ },
+ {
+  "cause": "Q75207",
+  "effect": "Q5043",
+  "strength": "minor",
+  "mechanism": "Pax Romana's secure roads and sea routes eased missionary travel, helping early Christian communities spread across the empire."
+ },
+ {
+  "cause": "Q5043",
+  "effect": "Q18813",
+  "strength": "contributing",
+  "mechanism": "Early Christian communities produced the gospels and epistles that were later canonized as the New Testament."
+ },
+ {
+  "cause": "Q5043",
+  "effect": "Q83922",
+  "strength": "minor",
+  "mechanism": "Disputes over the nature of Christ within the church produced Arianism, a major doctrinal controversy."
+ },
+ {
+  "cause": "Q5043",
+  "effect": "Q1265674",
+  "strength": "minor",
+  "mechanism": "Christians' refusal to honor Roman gods and their growing numbers prompted Diocletian's persecution of Christians."
+ },
+ {
+  "cause": "Q1775277",
+  "effect": "Q917",
+  "strength": "contributing",
+  "mechanism": "India's independence in 1947 led to the 1949 Indo-Bhutanese treaty, which placed Bhutan's external relations under Indian guidance."
+ },
+ {
+  "cause": "Q362",
+  "effect": "Q68",
+  "strength": "contributing",
+  "mechanism": "Wartime demands for codebreaking and ballistics calculation drove governments to build the first electronic computers, such as Colossus and ENIAC."
+ },
+ {
+  "cause": "Q8683",
+  "effect": "Q68",
+  "strength": "minor",
+  "mechanism": "Cold War military funding for defense research accelerated computer development in the United States and Soviet Union."
+ },
+ {
+  "cause": "Q68",
+  "effect": "Q466",
+  "strength": "contributing",
+  "mechanism": "Networked computers developed for research laid the technical basis on which Tim Berners-Lee built the World Wide Web in 1989."
+ },
+ {
+  "cause": "Q68",
+  "effect": "Q16338",
+  "strength": "contributing",
+  "mechanism": "Miniaturized, affordable computing hardware and software made possible the personal computers marketed from the late 1950s onward."
+ },
+ {
+  "cause": "Q68",
+  "effect": "Q9158",
+  "strength": "minor",
+  "mechanism": "Computer networks developed on time-sharing systems allowed the first electronic mail messages to be sent between users in 1971."
+ },
+ {
+  "cause": "Q42976",
+  "effect": "Q15180",
+  "strength": "primary",
+  "mechanism": "The Bolshevik seizure of power in the October Revolution created the Soviet state, which was formally proclaimed in 1922."
+ },
+ {
+  "cause": "Q15180",
+  "effect": "Q165058",
+  "strength": "contributing",
+  "mechanism": "Stalin's forced collectivization and grain requisitions in Soviet Ukraine caused the 1932-1933 Holodomor famine."
+ },
+ {
+  "cause": "Q15180",
+  "effect": "Q130796",
+  "strength": "contributing",
+  "mechanism": "Soviet diplomacy produced the 1939 Molotov-Ribbentrop Pact with Nazi Germany, dividing Eastern Europe into spheres of influence."
+ },
+ {
+  "cause": "Q15180",
+  "effect": "Q187650",
+  "strength": "contributing",
+  "mechanism": "Stalin's consolidation of power led to the Great Purge of 1936-1938, which executed or imprisoned much of the Communist leadership."
+ },
+ {
+  "cause": "Q362",
+  "effect": "Q766",
+  "strength": "minor",
+  "mechanism": "World War II weakened British imperial power and fuelled Caribbean demands for self-government, leading to Jamaican independence in 1962."
+ },
+ {
+  "cause": "Q9458",
+  "effect": "Q428",
+  "strength": "primary",
+  "mechanism": "Muhammad's oral revelations were memorized and recorded by his followers, forming the basis of the Quranic text."
+ },
+ {
+  "cause": "Q37731",
+  "effect": "Q428",
+  "strength": "contributing",
+  "mechanism": "Caliph Uthman ordered the copying of a single standard text of the Quran, which became the authoritative codex."
+ },
+ {
+  "cause": "Q334923",
+  "effect": "Q428",
+  "strength": "minor",
+  "mechanism": "Abu Bakr ordered the first collection of Muhammad's revelations into written form after the battle of Yamama."
+ },
+ {
+  "cause": "Q8680",
+  "effect": "Q244",
+  "strength": "contributing",
+  "mechanism": "English colonial expansion sent settlers to Barbados in the 1620s, establishing a plantation colony under the English crown."
+ },
+ {
+  "cause": "Q7322",
+  "effect": "Q769",
+  "strength": "contributing",
+  "mechanism": "Christopher Columbus sighted and named Grenada on his third voyage in 1498, bringing the island into Spanish colonial claims."
+ },
+ {
+  "cause": "Q184716",
+  "effect": "Q769",
+  "strength": "contributing",
+  "mechanism": "Spanish colonization of the Americas, launched after Columbus's voyages, brought Grenada into Spanish imperial claims in the Caribbean."
+ },
+ {
+  "cause": "Q191801",
+  "effect": "Q1420",
+  "strength": "primary",
+  "mechanism": "The four-stroke internal combustion engine supplied the power unit that made practical self-propelled road vehicles possible."
+ },
+ {
+  "cause": "Q11427",
+  "effect": "Q1420",
+  "strength": "minor",
+  "mechanism": "Cheap steel production from the Bessemer process gave automobile makers strong, light chassis and engine materials."
+ },
+ {
+  "cause": "Q161227",
+  "effect": "Q7184",
+  "strength": "minor",
+  "mechanism": "The Yalta Conference divided postwar Europe into Soviet and Western spheres, setting the division that NATO later institutionalized."
+ },
+ {
+  "cause": "Q131192",
+  "effect": "Q641",
+  "strength": "contributing",
+  "mechanism": "Migration Period invasions drove refugees from the Veneto mainland into the Venetian lagoon, where they founded settlements."
+ },
+ {
+  "cause": "Q42834",
+  "effect": "Q641",
+  "strength": "minor",
+  "mechanism": "The decline of Roman authority in northern Italy left the lagoon communities to govern themselves."
+ },
+ {
+  "cause": "Q12725",
+  "effect": "Q11035",
+  "strength": "contributing",
+  "mechanism": "Electrical science, including the electric battery and telegraph current, provided the principles on which Bell's 1876 telephone transmitted speech."
+ },
+ {
+  "cause": "Q11035",
+  "effect": "Q17517",
+  "strength": "contributing",
+  "mechanism": "Telephony's wireless transmission principles and switching networks were developed into the cellular mobile phones deployed from the 1970s."
+ },
+ {
+  "cause": "Q267298",
+  "effect": "Q12725",
+  "strength": "contributing",
+  "mechanism": "Volta's 1800 electric battery gave researchers a steady current source, enabling the experiments that established electricity as a field."
+ },
+ {
+  "cause": "Q12725",
+  "effect": "Q11658",
+  "strength": "contributing",
+  "mechanism": "Faraday's electromagnetic induction research of the early 1830s, building on electrical experiments, led to the first transformers."
+ },
+ {
+  "cause": "Q12725",
+  "effect": "Q72313",
+  "strength": "contributing",
+  "mechanism": "Faraday's 1821 electromagnetic rotation experiments grew into the electric motors demonstrated in the 1830s."
+ },
+ {
+  "cause": "Q12725",
+  "effect": "Q872",
+  "strength": "contributing",
+  "mechanism": "Electromagnetic theory and spark-gap experiments gave Marconi and others the means to transmit radio signals in 1894-1901."
+ },
+ {
+  "cause": "Q12557",
+  "effect": "Q12560",
+  "strength": "contributing",
+  "mechanism": "Mongol conquests destroyed the Seljuk sultanate and fragmented Anatolia into beyliks, letting Osman's successors expand."
+ },
+ {
+  "cause": "Q12546",
+  "effect": "Q12560",
+  "strength": "minor",
+  "mechanism": "The Crusades weakened Byzantine power in the eastern Mediterranean, creating space for Turkish principalities to expand."
+ },
+ {
+  "cause": "Q12560",
+  "effect": "Q32832",
+  "strength": "minor",
+  "mechanism": "Ottoman forces under Murad II defeated the Hungarian-led Crusade at Varna in 1444, consolidating Ottoman control of the Balkans."
+ },
+ {
+  "cause": "Q12560",
+  "effect": "Q133641",
+  "strength": "minor",
+  "mechanism": "Ottoman control of Levantine and Egyptian trade routes raised costs for Europeans, pushing Portugal to seek sea routes to Asia."
+ },
+ {
+  "cause": "Q160387",
+  "effect": "Q2277",
+  "strength": "primary",
+  "mechanism": "Octavian's victory at Actium in 31 BC gave him sole command of Rome's armies, ending the Republic and founding the Principate."
+ },
+ {
+  "cause": "Q1048",
+  "effect": "Q2277",
+  "strength": "contributing",
+  "mechanism": "Julius Caesar's dictatorship and the civil wars after his assassination broke the Republic's institutions and paved the way for imperial rule."
+ },
+ {
+  "cause": "Q124988",
+  "effect": "Q2277",
+  "strength": "contributing",
+  "mechanism": "Rome's victories over Carthage in the Punic Wars gave it control of the western Mediterranean and the resources to expand into an empire."
+ },
+ {
+  "cause": "Q2277",
+  "effect": "Q1258062",
+  "strength": "minor",
+  "mechanism": "Roman imperial expansion under Claudius invaded Britain in 43 CE, bringing the southern island into the empire."
+ },
+ {
+  "cause": "Q51644",
+  "effect": "Q9592",
+  "strength": "primary",
+  "mechanism": "Early Christian communities organized around bishops and presbyters, and this structure developed into the institutional Catholic Church."
+ },
+ {
+  "cause": "Q2277",
+  "effect": "Q9592",
+  "strength": "contributing",
+  "mechanism": "Roman administrative structure and the prestige of the Roman bishopric in Rome gave the early church its hierarchy and central see."
+ },
+ {
+  "cause": "Q608613",
+  "effect": "Q12554",
+  "strength": "primary",
+  "mechanism": "The deposition of the last Western emperor in 476 ended unified imperial rule in the West, leaving Germanic kingdoms to shape medieval Europe."
+ },
+ {
+  "cause": "Q131192",
+  "effect": "Q12554",
+  "strength": "contributing",
+  "mechanism": "Germanic and Hunnic migrations across the Roman frontiers reshaped the political map, founding the early medieval kingdoms."
+ },
+ {
+  "cause": "Q12562",
+  "effect": "Q11032",
+  "strength": "contributing",
+  "mechanism": "Reformation pamphlet wars created a mass demand for printed polemic, encouraging the early periodical press."
+ },
+ {
+  "cause": "Q11032",
+  "effect": "Q12539",
+  "strength": "minor",
+  "mechanism": "Newspapers and periodicals spread Enlightenment ideas to a wide literate public, shaping eighteenth-century debate."
+ },
+ {
+  "cause": "Q11427",
+  "effect": "Q11442",
+  "strength": "minor",
+  "mechanism": "Cheap steel tubing and improved steel production made lightweight bicycle frames practical in the 1880s."
+ },
+ {
+  "cause": "Q11442",
+  "effect": "Q197",
+  "strength": "minor",
+  "mechanism": "Bicycle engineering, including chain drive and wire-spoked wheels, taught the Wright brothers the balance and control principles they applied to their aircraft."
+ },
+ {
+  "cause": "Q5043",
+  "effect": "Q19546",
+  "strength": "contributing",
+  "mechanism": "Christian belief in Peter as the first bishop of Rome gave the Roman see a special primacy that developed into the papal office."
+ },
+ {
+  "cause": "Q2277",
+  "effect": "Q19546",
+  "strength": "minor",
+  "mechanism": "The Roman bishop's central position in the capital of the Roman Empire helped establish the see's prestige among western churches."
+ },
+ {
+  "cause": "Q302",
+  "effect": "Q18813",
+  "strength": "primary",
+  "mechanism": "Jesus's teaching and crucifixion were the subject of the early Gospels, which were written down and became the core of the New Testament."
+ },
+ {
+  "cause": "Q1420",
+  "effect": "Q197",
+  "strength": "minor",
+  "mechanism": "Automobile engine development gave aviation pioneers lightweight internal combustion engines suited to powering early aircraft."
+ },
+ {
+  "cause": "Q6534",
+  "effect": "Q6235",
+  "strength": "primary",
+  "mechanism": "The French Revolution proclaimed popular sovereignty in the name of the nation, and Napoleon's conquests carried national identity across Europe."
+ },
+ {
+  "cause": "Q37068",
+  "effect": "Q6235",
+  "strength": "contributing",
+  "mechanism": "Romantic writers and historians celebrated folk language, history and national culture, giving nationalist movements their emotional vocabulary."
+ },
+ {
+  "cause": "Q152006",
+  "effect": "Q6235",
+  "strength": "minor",
+  "mechanism": "The partitions of Poland erased the Polish state, and the loss of sovereignty fuelled a Polish national movement seeking independence."
+ },
+ {
+  "cause": "Q12969754",
+  "effect": "Q872",
+  "strength": "primary",
+  "mechanism": "Hertz's 1886-1888 experiments demonstrated electromagnetic waves, which Marconi and others then adapted into radio signalling."
+ },
+ {
+  "cause": "Q42005",
+  "effect": "Q4692",
+  "strength": "minor",
+  "mechanism": "The Black Death's mass mortality disrupted feudal labor and wealth, loosening traditional structures that Italian city-states then exploited for new patronage and learning."
+ },
+ {
+  "cause": "Q1067",
+  "effect": "Q4692",
+  "strength": "minor",
+  "mechanism": "Dante's vernacular Divine Comedy and classical learning set the literary models that Italian humanists later extended."
+ },
+ {
+  "cause": "Q4692",
+  "effect": "Q12562",
+  "strength": "contributing",
+  "mechanism": "Erasmus and other humanists returned to Greek and Latin sources, providing the scholarly tools Luther used to challenge Church doctrine."
+ },
+ {
+  "cause": "Q4692",
+  "effect": "Q1344",
+  "strength": "minor",
+  "mechanism": "Late Renaissance humanists in Florence revived Greek drama ideals, leading the Camerata to create opera around 1600."
+ },
+ {
+  "cause": "Q26540",
+  "effect": "Q23548",
+  "strength": "primary",
+  "mechanism": "The Soviet launch of Sputnik in 1957 triggered the US space race, and Congress created NASA in 1958 in response."
+ },
+ {
+  "cause": "Q361",
+  "effect": "Q36704",
+  "strength": "primary",
+  "mechanism": "The collapse of Austria-Hungary at the end of World War I let Serbs, Croats and Slovenes proclaim a common South Slav state in 1918."
+ },
+ {
+  "cause": "Q165725",
+  "effect": "Q36704",
+  "strength": "minor",
+  "mechanism": "The Balkan Wars enlarged Serbia and encouraged South Slav unification projects that culminated in the Yugoslav state."
+ },
+ {
+  "cause": "Q8736",
+  "effect": "Q36704",
+  "strength": "minor",
+  "mechanism": "The postwar settlement at Versailles and its partner treaties recognized the Yugoslav kingdom and fixed its borders."
+ },
+ {
+  "cause": "Q9554",
+  "effect": "Q23540",
+  "strength": "primary",
+  "mechanism": "Martin Luther's 1517 Ninety-five Theses and his later refusal to recant launched the Protestant break with Rome."
+ },
+ {
+  "cause": "Q144334",
+  "effect": "Q23540",
+  "strength": "contributing",
+  "mechanism": "Gutenberg-style printing let Luther's pamphlets and vernacular Bibles circulate widely, spreading reformed doctrine across Europe."
+ },
+ {
+  "cause": "Q352",
+  "effect": "Q7318",
+  "strength": "primary",
+  "mechanism": "Adolf Hitler, as NSDAP leader and then chancellor in 1933, dismantled democratic institutions and directed the Nazi state."
+ },
+ {
+  "cause": "Q8736",
+  "effect": "Q7318",
+  "strength": "contributing",
+  "mechanism": "The Versailles settlement's territorial losses and reparations fuelled German resentment that the Nazis exploited."
+ },
+ {
+  "cause": "Q8698",
+  "effect": "Q7318",
+  "strength": "contributing",
+  "mechanism": "The Great Depression's mass unemployment collapsed support for the Weimar parties and carried the NSDAP to power in 1933."
+ },
+ {
+  "cause": "Q41304",
+  "effect": "Q7318",
+  "strength": "contributing",
+  "mechanism": "The weaknesses of the Weimar constitution, including emergency decree powers, allowed Hitler to become chancellor and then end the republic."
+ },
+ {
+  "cause": "Q7318",
+  "effect": "Q362",
+  "strength": "primary",
+  "mechanism": "Hitler's invasion of Poland in September 1939 triggered Britain and France's declarations of war, starting World War II."
+ },
+ {
+  "cause": "Q7318",
+  "effect": "Q2763",
+  "strength": "primary",
+  "mechanism": "The Nazi regime's racial policies and state-run mass murder produced the Holocaust, killing six million European Jews."
+ },
+ {
+  "cause": "Q7318",
+  "effect": "Q69808",
+  "strength": "contributing",
+  "mechanism": "German military defeat of France in 1940 and the armistice terms established the Vichy regime under German occupation."
+ },
+ {
+  "cause": "Q153080",
+  "effect": "Q12548",
+  "strength": "primary",
+  "mechanism": "The East Frankish kingdom, which Otto I ruled, became the core of the empire when he was crowned emperor in 962."
+ },
+ {
+  "cause": "Q31929",
+  "effect": "Q12548",
+  "strength": "contributing",
+  "mechanism": "Charlemagne's imperial coronation in 800 gave the later German kings a claim to Carolingian imperial title and legitimacy."
+ },
+ {
+  "cause": "Q273069",
+  "effect": "Q12548",
+  "strength": "contributing",
+  "mechanism": "Otto I's decisive defeat of the Magyars at Lechfeld in 955 enhanced his authority, leading to his imperial coronation in 962."
+ },
+ {
+  "cause": "Q134840",
+  "effect": "Q12548",
+  "strength": "minor",
+  "mechanism": "The Treaty of Verdun divided the Carolingian realm, creating the East Frankish kingdom from which the empire later grew."
+ },
+ {
+  "cause": "Q68",
+  "effect": "Q17517",
+  "strength": "minor",
+  "mechanism": "Advances in computing and microelectronics supplied the processors and software that made handheld cellular phones practical."
+ },
+ {
+  "cause": "Q26540",
+  "effect": "Q17517",
+  "strength": "minor",
+  "mechanism": "Satellite communication research supported the wide-area radio links and network concepts used by early cellular systems."
+ }
+]

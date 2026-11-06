@@ -1,0 +1,867 @@
+{
+ "region": "Middle East & North Africa",
+ "cells": [
+  {
+   "cell": "pre|Middle East & North Africa",
+   "era": "Before 3000 BCE",
+   "from": -12000,
+   "to": -3000,
+   "have": [
+    "Ancient Egypt",
+    "Minoan civilization",
+    "Ugarit",
+    "Ubaid period",
+    "Narmer Palette",
+    "Uruk period",
+    "Halaf culture"
+   ],
+   "count": 7
+  },
+  {
+   "cell": "-3000_-2000|Middle East & North Africa",
+   "era": "3000–2000 BCE",
+   "from": -3000,
+   "to": -2000,
+   "have": [
+    "Assyria",
+    "Phoenicia",
+    "Elam",
+    "Meroë",
+    "Kingdom of Kush",
+    "Lagash",
+    "Ebla",
+    "Third Dynasty of Ur",
+    "Tenth Dynasty of Egypt",
+    "Dilmun"
+   ],
+   "count": 10
+  },
+  {
+   "cell": "-2000_-1000|Middle East & North Africa",
+   "era": "2000–1000 BCE",
+   "from": -2000,
+   "to": -1000,
+   "have": [
+    "Babylonia",
+    "Mitanni",
+    "New Kingdom of Egypt",
+    "Kingdom of Israel (united monarchy)",
+    "Edom",
+    "Moab",
+    "Battle of Kadesh",
+    "Second Intermediate Period of Egypt",
+    "Carchemish",
+    "Phaistos Disc",
+    "Salamis, Cyprus",
+    "Old Babylonian Empire",
+    "Battle of Megiddo (15th century BC)",
+    "Battle of the Delta"
+   ],
+   "count": 14
+  },
+  {
+   "cell": "-1000_-500|Middle East & North Africa",
+   "era": "1000–500 BCE",
+   "from": -1000,
+   "to": -500,
+   "have": [
+    "Kingdom of Judah",
+    "Persian Empire",
+    "Urartu",
+    "Medes",
+    "Kingdom of Israel (Samaria)",
+    "Neo-Assyrian Empire",
+    "Chaldea",
+    "Kingdom of Armenia (antiquity)",
+    "Neo-Babylonian Empire",
+    "Second Temple",
+    "Library of Ashurbanipal",
+    "Sheba",
+    "Median kingdom",
+    "Battle of Megiddo (609 BC)",
+    "Battle of Carchemish",
+    "Battle of Qarqar",
+    "Siege of Jerusalem (587 BC)",
+    "Battle of Pelusium",
+    "Fall of Nineveh",
+    "Siege of Jerusalem (597 BC)",
+    "Assyrian siege of Jerusalem",
+    "Syro-Ephraimite War"
+   ],
+   "count": 22
+  },
+  {
+   "cell": "-500_0|Middle East & North Africa",
+   "era": "500–0 BCE",
+   "from": -500,
+   "to": 0,
+   "have": [
+    "Seleucid Empire",
+    "Kingdom of Aksum",
+    "Kingdom of Iberia",
+    "Third Punic War",
+    "Caucasian Albania",
+    "Ptolemaic Kingdom",
+    "Battle of Issus",
+    "Atropatene",
+    "Caesar's civil war",
+    "Battle of Carrhae",
+    "Himyar",
+    "Osroene",
+    "Maccabean Revolt",
+    "Commagene",
+    "Nabataean Kingdom",
+    "Jugurthine War",
+    "Syrian Wars",
+    "Siege of Tyre (332 BC)",
+    "Battle of Cunaxa",
+    "Battle of Thapsus",
+    "Roman–Parthian Wars",
+    "Peace of Antalcidas",
+    "Treaty of Apamea",
+    "Battle of Raphia",
+    "Battle of Tigranocerta"
+   ],
+   "count": 33
+  },
+  {
+   "cell": "0_250|Middle East & North Africa",
+   "era": "0–250",
+   "from": 0,
+   "to": 250,
+   "have": [
+    "Sasanian Empire",
+    "Ghana Empire",
+    "First Jewish–Roman War",
+    "Bar Kokhba Revolt",
+    "Ghassanids",
+    "Siege of Jerusalem (70 CE)",
+    "Battle of Nisibis (217)",
+    "Roman–Parthian War of 58–63",
+    "Roman–Parthian War of 161–166"
+   ],
+   "count": 9
+  },
+  {
+   "cell": "250_500|Middle East & North Africa",
+   "era": "250–500",
+   "from": 250,
+   "to": 500,
+   "have": [
+    "Palmyrene Empire",
+    "Shirvan",
+    "Battle of Edessa",
+    "Battle of Avarayr",
+    "365 Crete earthquake",
+    "Battle of Samarra (363)",
+    "Basus War"
+   ],
+   "count": 7
+  },
+  {
+   "cell": "500_750|Middle East & North Africa",
+   "era": "500–750",
+   "from": 500,
+   "to": 750,
+   "have": [
+    "Reconquista",
+    "Umayyad Caliphate",
+    "Battle of Badr",
+    "Rashidun Caliphate",
+    "Battle of Uhud",
+    "Battle of Karbala",
+    "Battle of the Yarmuk",
+    "Battle of the Trench",
+    "Treaty of al-Hudaybiya",
+    "Jahiliyyah",
+    "Battle of Mu'tah",
+    "Battle of al-Qadisiyyah",
+    "Battle of the Camel",
+    "First Fitna",
+    "Battle of Khaybar",
+    "Makuria",
+    "Battle of Siffin",
+    "Battle of Hunayn",
+    "Arab conquest of Egypt",
+    "Muslim conquest of Syria",
+    "Ridda Wars",
+    "Vandalic War",
+    "Battle of Nineveh (627)",
+    "Muslim conquest of the Maghreb",
+    "Battle of Nahavand"
+   ],
+   "count": 50
+  },
+  {
+   "cell": "750_1000|Middle East & North Africa",
+   "era": "750–1000",
+   "from": 750,
+   "to": 1000,
+   "have": [
+    "Abbasid Caliphate",
+    "Islamic Golden Age",
+    "Fatimid Caliphate",
+    "Aghlabid dynasty",
+    "Idrisid dynasty",
+    "Buyid dynasty",
+    "Ikhshidid dynasty",
+    "Bagratid Armenia",
+    "Zirid dynasty",
+    "Zanj Rebellion",
+    "Battle of the Zab",
+    "Fourth Fitna",
+    "Alid revolt of 762–763"
+   ],
+   "count": 13
+  },
+  {
+   "cell": "1000_1100|Middle East & North Africa",
+   "era": "1000–1100",
+   "from": 1000,
+   "to": 1100,
+   "have": [
+    "First Crusade",
+    "Seljuk Empire",
+    "Seljuk dynasty",
+    "Kingdom of Jerusalem",
+    "Almoravid dynasty",
+    "Battle of Manzikert",
+    "County of Edessa",
+    "Principality of Antioch",
+    "Siege of Jerusalem (1099)",
+    "Danishmendids",
+    "Siege of Antioch",
+    "Siege of Ma'arra"
+   ],
+   "count": 12
+  },
+  {
+   "cell": "1100_1200|Middle East & North Africa",
+   "era": "1100–1200",
+   "from": 1100,
+   "to": 1200,
+   "have": [
+    "Ayyubid dynasty",
+    "Third Crusade",
+    "Battle of Hattin",
+    "Kingdom of Cyprus",
+    "County of Tripoli",
+    "Zengid dynasty",
+    "Almohad Caliphate",
+    "Siege of Jerusalem (1187)",
+    "Battle of Montgisard",
+    "Battle of Arsuf",
+    "Siege of Acre (1189–1191)",
+    "Battle of Harran",
+    "Battle of Didgori",
+    "Battle of the Field of Blood",
+    "Crusade of 1197",
+    "Siege of Damascus (1148)",
+    "Siege of Edessa (1144)",
+    "Battle of Marj Ayyun",
+    "Battle of Jaffa (1192)",
+    "Battle of Azaz (1125)",
+    "Battle of Cresson",
+    "Battle of Inab",
+    "Siege of Ascalon",
+    "Siege of Tyre (1187)",
+    "Venetian Crusade"
+   ],
+   "count": 25
+  },
+  {
+   "cell": "1200_1300|Middle East & North Africa",
+   "era": "1200–1300",
+   "from": 1200,
+   "to": 1300,
+   "have": [
+    "Ilkhanate",
+    "Mamluk Sultanate",
+    "Ethiopian Empire",
+    "Empire of Trebizond",
+    "Fifth Crusade",
+    "Seventh Crusade",
+    "Siege of Baghdad",
+    "Sixth Crusade",
+    "Marinid dynasty",
+    "Battle of Ain Jalut",
+    "Lord Edward's crusade",
+    "Siege of Acre (1291)",
+    "Battle of Köse Dağ",
+    "Siege of Jerusalem (1244)",
+    "Siege of Damietta (1218–1219)",
+    "Barons' Crusade",
+    "Battle of Fariskur (1250)",
+    "Second Battle of Homs",
+    "Battle of Forbie",
+    "Battle of Wadi al-Khaznadar",
+    "Battle of Mansurah (1250)",
+    "War of Saint Sabas"
+   ],
+   "count": 22
+  },
+  {
+   "cell": "1300_1400|Middle East & North Africa",
+   "era": "1300–1400",
+   "from": 1300,
+   "to": 1400,
+   "have": [
+    "Timurid Empire",
+    "Qara Qoyunlu",
+    "Aq Qoyunlu",
+    "Jalayirid Sultanate",
+    "Battle of Marj al-Saffar (1303)",
+    "Alexandrian Crusade",
+    "Barbary Crusade"
+   ],
+   "count": 7
+  },
+  {
+   "cell": "1400_1500|Middle East & North Africa",
+   "era": "1400–1500",
+   "from": 1400,
+   "to": 1500,
+   "have": [
+    "Songhai Empire",
+    "Wattasid dynasty",
+    "Portuguese conquest of Ceuta",
+    "Ottoman–Mamluk War (1485–1491)"
+   ],
+   "count": 4
+  },
+  {
+   "cell": "1500_1550|Middle East & North Africa",
+   "era": "1500–1550",
+   "from": 1500,
+   "to": 1550,
+   "have": [
+    "Safavid Iran",
+    "Battle of Chaldiran",
+    "Saadi Sultanate",
+    "Funj Sultanate",
+    "Ottoman–Safavid War (1532–1555)",
+    "Battle of Marj Dabiq"
+   ],
+   "count": 6
+  },
+  {
+   "cell": "1550_1600|Middle East & North Africa",
+   "era": "1550–1600",
+   "from": 1550,
+   "to": 1600,
+   "have": [
+    "Great Siege of Malta",
+    "Ottoman–Venetian War (1570–1573)",
+    "Battle of Alcácer Quibir",
+    "Battle of Djerba",
+    "Siege of Famagusta"
+   ],
+   "count": 5
+  },
+  {
+   "cell": "1600_1650|Middle East & North Africa",
+   "era": "1600–1650",
+   "from": 1600,
+   "to": 1650,
+   "have": [
+    "Treaty of Zuhab",
+    "Ottoman–Safavid War (1623–1639)",
+    "Siege of Candia",
+    "Ottoman–Safavid war (1603–1612)"
+   ],
+   "count": 4
+  },
+  {
+   "cell": "1650_1700|Middle East & North Africa",
+   "era": "1650–1700",
+   "from": 1650,
+   "to": 1700,
+   "have": [
+    "Russo-Persian War (1651–1653)"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1700_1750|Middle East & North Africa",
+   "era": "1700–1750",
+   "from": 1700,
+   "to": 1750,
+   "have": [
+    "Saudi Arabia",
+    "Ottoman–Persian War (1743–1746)"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1750_1800|Middle East & North Africa",
+   "era": "1750–1800",
+   "from": 1750,
+   "to": 1800,
+   "have": [
+    "Zand Iran",
+    "Battle of the Nile",
+    "Battle of the Pyramids",
+    "Battle of Abukir (1799)",
+    "Siege of Acre (1799)",
+    "Battle of Mount Tabor (1799)",
+    "Ottoman–Persian War (1776–1779)"
+   ],
+   "count": 7
+  },
+  {
+   "cell": "1800_1810|Middle East & North Africa",
+   "era": "1800s",
+   "from": 1800,
+   "to": 1810,
+   "have": [
+    "Battle of Abukir (1801)"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1810_1820|Middle East & North Africa",
+   "era": "1810s",
+   "from": 1810,
+   "to": 1820,
+   "have": [
+    "Ottoman–Wahhabi war"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1820_1830|Middle East & North Africa",
+   "era": "1820s",
+   "from": 1820,
+   "to": 1830,
+   "have": [
+    "Treaty of Turkmenchay",
+    "Russo-Persian War (1826–1828)"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1830_1840|Middle East & North Africa",
+   "era": "1830s",
+   "from": 1830,
+   "to": 1840,
+   "have": [
+    "Egyptian–Ottoman War (1839–1841)"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1840_1850|Middle East & North Africa",
+   "era": "1840s",
+   "from": 1840,
+   "to": 1850,
+   "have": [
+    "Franco-Moroccan War"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1850_1860|Middle East & North Africa",
+   "era": "1850s",
+   "from": 1850,
+   "to": 1860,
+   "have": [
+    "Hispano-Moroccan War (1859–1860)"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1860_1870|Middle East & North Africa",
+   "era": "1860s",
+   "from": 1860,
+   "to": 1870,
+   "have": [
+    "Khedivate of Egypt"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1870_1880|Middle East & North Africa",
+   "era": "1870s",
+   "from": 1870,
+   "to": 1880,
+   "have": [
+    "Qatar"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1880_1890|Middle East & North Africa",
+   "era": "1880s",
+   "from": 1880,
+   "to": 1890,
+   "have": [
+    "Spanish Sahara",
+    "Mahdist War",
+    "Anglo-Egyptian War",
+    "Italo-Ethiopian War of 1887–1889"
+   ],
+   "count": 4
+  },
+  {
+   "cell": "1890_1900|Middle East & North Africa",
+   "era": "1890s",
+   "from": 1890,
+   "to": 1900,
+   "have": [
+    "First Italo-Ethiopian War",
+    "Battle of Adwa",
+    "Anglo-Egyptian Sudan",
+    "Cretan State",
+    "Battle of Omdurman",
+    "Tobacco Protest",
+    "1894 Sasun rebellion"
+   ],
+   "count": 7
+  },
+  {
+   "cell": "1900_1910|Middle East & North Africa",
+   "era": "1900s",
+   "from": 1900,
+   "to": 1910,
+   "have": [
+    "Constitutionalization attempts in Iran",
+    "French conquest of Morocco",
+    "Second Melillan campaign"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "1910_1920|Middle East & North Africa",
+   "era": "1910s",
+   "from": 1910,
+   "to": 1920,
+   "have": [
+    "Azerbaijan Democratic Republic",
+    "Democratic Republic of Georgia",
+    "First Republic of Armenia",
+    "Transcaucasian Democratic Federative Republic",
+    "Kingdom of Hejaz",
+    "Kingdom of Yemen",
+    "Rif War",
+    "Sultanate of Egypt",
+    "Mountainous Republic of the Northern Caucasus",
+    "Battle of Sarikamish",
+    "Treaty of Fes",
+    "Battle of Sardarabad",
+    "Treaty of Batum",
+    "1919 Egyptian revolution",
+    "Armeno-Georgian War",
+    "Siege of Kut",
+    "Battle of Baku",
+    "Battle of Jerusalem",
+    "Battle of Abaran",
+    "Armenian–Azerbaijani war (1918–1920)",
+    "First Battle of Gaza",
+    "Battle of Beersheba (1917)",
+    "Battle of Romani",
+    "September Days",
+    "Jungle Movement of Gilan"
+   ],
+   "count": 26
+  },
+  {
+   "cell": "1920_1930|Middle East & North Africa",
+   "era": "1920s",
+   "from": 1920,
+   "to": 1930,
+   "have": [
+    "Azerbaijan Soviet Socialist Republic",
+    "Armenian Soviet Socialist Republic",
+    "Georgian Soviet Socialist Republic",
+    "Transcaucasian Socialist Federative Soviet Republic",
+    "Pahlavi dynasty",
+    "Republic of the Rif",
+    "Kingdom of Egypt",
+    "Kingdom of Iraq",
+    "Arab Kingdom of Syria",
+    "Mandate for Syria and the Lebanon",
+    "Pahlavi Iran",
+    "Turkish invasion of Armenia",
+    "Franco-Syrian War",
+    "Battle of Maysalun",
+    "August Uprising",
+    "Operation Nemesis",
+    "Sheikh Said rebellion",
+    "Kurdish–Turkish conflict",
+    "Battle of Annual",
+    "Shusha massacre",
+    "1921 Persian coup d'état",
+    "Ararat rebellion"
+   ],
+   "count": 22
+  },
+  {
+   "cell": "1930_1940|Middle East & North Africa",
+   "era": "1930s",
+   "from": 1930,
+   "to": 1940,
+   "have": [
+    "Second Italo-Ethiopian War",
+    "1936–1939 Arab revolt in Palestine",
+    "1939 Erzincan earthquake",
+    "Simele massacre",
+    "Saudi–Yemeni war (1934)"
+   ],
+   "count": 5
+  },
+  {
+   "cell": "1940_1950|Middle East & North Africa",
+   "era": "1940s",
+   "from": 1940,
+   "to": 1950,
+   "have": [
+    "West Bank",
+    "Tehran Conference",
+    "1948 Palestine war",
+    "Nakba",
+    "Operation Torch",
+    "1948 Arab–Israeli War",
+    "Second Battle of El Alamein",
+    "Battle of Crete",
+    "First Battle of El Alamein",
+    "Anglo-Iraqi War",
+    "Battle of Gazala",
+    "Battle of Kasserine Pass",
+    "Siege of Tobruk",
+    "Siege of Malta (World War II)",
+    "Attack on Mers-el-Kébir",
+    "Battle of Bir Hakeim",
+    "Battle of Alam el Halfa",
+    "1947–1948 civil war in Mandatory Palestine",
+    "Operation Sonnenblume",
+    "Sétif and Guelma massacre",
+    "1941 Iraqi coup d'état",
+    "1940–1944 insurgency in Chechnya",
+    "Hadassah medical convoy massacre"
+   ],
+   "count": 23
+  },
+  {
+   "cell": "1950_1960|Middle East & North Africa",
+   "era": "1950s",
+   "from": 1950,
+   "to": 1960,
+   "have": [
+    "United Arab Republic",
+    "1953 Iranian coup d'état",
+    "Egyptian revolution of 1952",
+    "Kingdom of Libya",
+    "14 July Revolution",
+    "Ifni War",
+    "1958 Lebanon crisis",
+    "1956 Georgian demonstrations",
+    "Qibya massacre"
+   ],
+   "count": 9
+  },
+  {
+   "cell": "1960_1970|Middle East & North Africa",
+   "era": "1960s",
+   "from": 1960,
+   "to": 1970,
+   "have": [
+    "South Yemen",
+    "Yemen Arab Republic",
+    "War of Attrition",
+    "Eritrean War of Independence",
+    "North Yemen civil war",
+    "Sand War",
+    "1963 Syrian coup d'état",
+    "1960 Turkish coup d'état",
+    "Battle of Karameh",
+    "Ramadan Revolution",
+    "Dhofar rebellion",
+    "1966 Syrian coup d'état",
+    "Aden Emergency",
+    "17 July Revolution",
+    "1969 Libyan revolution",
+    "Chadian Civil War (1965–1979)"
+   ],
+   "count": 16
+  },
+  {
+   "cell": "1970_1980|Middle East & North Africa",
+   "era": "1970s",
+   "from": 1970,
+   "to": 1980,
+   "have": [
+    "Oman",
+    "Iranian Revolution",
+    "Yom Kippur War",
+    "Ramsar Convention",
+    "Lebanese Civil War",
+    "Black September",
+    "Federation of Arab Republics",
+    "Mozambican Civil War",
+    "Chadian–Libyan War",
+    "Lod Airport massacre",
+    "Cinema Rex fire",
+    "Western Sahara War",
+    "Ma'alot massacre",
+    "Damour massacre",
+    "Black Friday (1978)",
+    "1974 Cypriot coup d'état",
+    "1970 Syrian coup d'etat",
+    "Maratha, Santalaris and Aloda massacre",
+    "1971 Turkish military memorandum",
+    "Kiryat Shmona massacre"
+   ],
+   "count": 20
+  },
+  {
+   "cell": "1980_1990|Middle East & North Africa",
+   "era": "1980s",
+   "from": 1980,
+   "to": 1990,
+   "have": [
+    "Iran–Iraq War",
+    "First Nagorno-Karabakh War",
+    "1982 Lebanon War",
+    "First Intifada",
+    "Sabra and Shatila massacre",
+    "Halabja massacre",
+    "1982 Hama massacre",
+    "Toyota War",
+    "South Lebanon conflict (1985–2000)",
+    "Operation Praying Mantis"
+   ],
+   "count": 10
+  },
+  {
+   "cell": "1990_2000|Middle East & North Africa",
+   "era": "1990s",
+   "from": 1990,
+   "to": 2000,
+   "have": [
+    "Islamic State",
+    "Republic of Artsakh",
+    "Gulf War",
+    "First Chechen War",
+    "Chechen Republic of Ichkeria",
+    "Second Chechen War",
+    "Black January",
+    "Eritrean–Ethiopian War",
+    "Algerian Civil War",
+    "1999 war in Dagestan",
+    "Israel–Jordan peace treaty",
+    "Yemeni civil war (1994)",
+    "Battle of Grozny (1994–1995)",
+    "Sivas massacre",
+    "1991 Iraqi uprisings",
+    "Operation Grapes of Wrath",
+    "Battle of Khafji",
+    "Maraga massacre",
+    "1995 Azerbaijani coup attempt",
+    "Qana massacre",
+    "Iraqi Kurdish Civil War",
+    "1991–1992 Georgian coup d'état"
+   ],
+   "count": 22
+  },
+  {
+   "cell": "2000_2010|Middle East & North Africa",
+   "era": "2000s",
+   "from": 2000,
+   "to": 2010,
+   "have": [
+    "Iraq War",
+    "2006 Lebanon War",
+    "Gaza War (2008–2009)",
+    "War in Darfur",
+    "Second Intifada",
+    "2003 invasion of Iraq",
+    "Iraqi invasion of Kuwait",
+    "Houthi insurgency",
+    "Battle of Gaza (2007)",
+    "Iraqi insurgency (2003–2011)",
+    "First Battle of Fallujah",
+    "Second Battle of Fallujah",
+    "Haditha massacre",
+    "Insurgency in the Maghreb (2002–present)",
+    "Battle of Baghdad (2003)",
+    "Djiboutian–Eritrean border conflict",
+    "Battle of Basra (2003)",
+    "Chadian Civil War (2005–2010)",
+    "Battle of Nasiriyah",
+    "Insurgency in Ingushetia",
+    "Iraqi conflict",
+    "Nisour Square massacre",
+    "South Yemen insurgency"
+   ],
+   "count": 23
+  },
+  {
+   "cell": "2010_2020|Middle East & North Africa",
+   "era": "2010s",
+   "from": 2010,
+   "to": 2020,
+   "have": [
+    "Syrian civil war",
+    "Libyan civil war (2011)",
+    "Yemeni civil war (2014–present)",
+    "Mali War",
+    "Yemeni revolution",
+    "Libyan civil war (2014–2020)",
+    "2013 Egyptian coup d'état",
+    "Battle of Mosul (2016–2017)",
+    "Operation Olive Branch",
+    "2011 Bahraini uprising",
+    "2017 Iran–Iraq earthquake",
+    "War in Iraq (2013–2017)",
+    "Battle of Aleppo (2012–2016)",
+    "Siege of Kobanî",
+    "Rojava Revolution",
+    "Yazidi genocide",
+    "Ghouta chemical attack",
+    "2013 Saravan earthquake",
+    "2019 Sudanese coup d'état",
+    "Battle of Raqqa (2017)",
+    "Iraqi insurgency (2011–2013)",
+    "Houla massacre",
+    "Battle of Tripoli (2011)",
+    "21 Coptic Christian Martyrs of Libya",
+    "Sinai insurgency"
+   ],
+   "count": 34
+  },
+  {
+   "cell": "2020_2030|Middle East & North Africa",
+   "era": "2020s",
+   "from": 2020,
+   "to": 2030,
+   "have": [
+    "Gaza war",
+    "Gaza genocide",
+    "Second Nagorno-Karabakh War",
+    "Sudanese civil war (2023–present)",
+    "2025–2026 Iranian protests",
+    "October 7 attacks",
+    "Mahsa Amini protests",
+    "June 2025 Israeli strikes on Iran",
+    "Assassination of Qasem Soleimani",
+    "Assassination of Ali Khamenei",
+    "Assassination of Ismail Haniyeh",
+    "2020 Nagorno-Karabakh ceasefire agreement",
+    "Nova music festival massacre",
+    "COVID-19 pandemic in Iran",
+    "2022 United Nations Climate Change Conference",
+    "COVID-19 pandemic in Turkey",
+    "2025–2026 Iran massacres",
+    "2026 Minab school attack",
+    "COVID-19 pandemic in Israel",
+    "2023 United Nations Climate Change Conference",
+    "2021 Sudanese coup d'état",
+    "Killing of Hind Rajab",
+    "United States–Taliban deal",
+    "2024 Lebanon war",
+    "COVID-19 pandemic in Saudi Arabia"
+   ],
+   "count": 50
+  }
+ ]
+}

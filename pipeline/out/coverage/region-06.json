@@ -1,0 +1,461 @@
+{
+ "region": "Southeast Asia",
+ "cells": [
+  {
+   "cell": "pre|Southeast Asia",
+   "era": "Before 3000 BCE",
+   "from": -12000,
+   "to": -3000,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "-3000_-2000|Southeast Asia",
+   "era": "3000–2000 BCE",
+   "from": -3000,
+   "to": -2000,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "-2000_-1000|Southeast Asia",
+   "era": "2000–1000 BCE",
+   "from": -2000,
+   "to": -1000,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "-1000_-500|Southeast Asia",
+   "era": "1000–500 BCE",
+   "from": -1000,
+   "to": -500,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "-500_0|Southeast Asia",
+   "era": "500–0 BCE",
+   "from": -500,
+   "to": 0,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "0_250|Southeast Asia",
+   "era": "0–250",
+   "from": 0,
+   "to": 250,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "250_500|Southeast Asia",
+   "era": "250–500",
+   "from": 250,
+   "to": 500,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "500_750|Southeast Asia",
+   "era": "500–750",
+   "from": 500,
+   "to": 750,
+   "have": [
+    "Srivijaya"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "750_1000|Southeast Asia",
+   "era": "750–1000",
+   "from": 750,
+   "to": 1000,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1000_1100|Southeast Asia",
+   "era": "1000–1100",
+   "from": 1000,
+   "to": 1100,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1100_1200|Southeast Asia",
+   "era": "1100–1200",
+   "from": 1100,
+   "to": 1200,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1200_1300|Southeast Asia",
+   "era": "1200–1300",
+   "from": 1200,
+   "to": 1300,
+   "have": [
+    "Majapahit"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1300_1400|Southeast Asia",
+   "era": "1300–1400",
+   "from": 1300,
+   "to": 1400,
+   "have": [
+    "Brunei",
+    "Ayutthaya Kingdom"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1400_1500|Southeast Asia",
+   "era": "1400–1500",
+   "from": 1400,
+   "to": 1500,
+   "have": [
+    "Malacca Sultanate",
+    "Aceh Sultanate",
+    "Sultanate of Sulu"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "1500_1550|Southeast Asia",
+   "era": "1500–1550",
+   "from": 1500,
+   "to": 1550,
+   "have": [
+    "Battle of Mactan"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1550_1600|Southeast Asia",
+   "era": "1550–1600",
+   "from": 1550,
+   "to": 1600,
+   "have": [
+    "Castilian War"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1600_1650|Southeast Asia",
+   "era": "1600–1650",
+   "from": 1600,
+   "to": 1650,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1650_1700|Southeast Asia",
+   "era": "1650–1700",
+   "from": 1650,
+   "to": 1700,
+   "have": [
+    "Bruneian Civil War of 1660"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1700_1750|Southeast Asia",
+   "era": "1700–1750",
+   "from": 1700,
+   "to": 1750,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1750_1800|Southeast Asia",
+   "era": "1750–1800",
+   "from": 1750,
+   "to": 1800,
+   "have": [
+    "Burmese–Siamese War (1765–1767)"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1800_1810|Southeast Asia",
+   "era": "1800s",
+   "from": 1800,
+   "to": 1810,
+   "have": [
+    "Dutch East Indies",
+    "Nguyễn dynasty",
+    "Padri Wars"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "1810_1820|Southeast Asia",
+   "era": "1810s",
+   "from": 1810,
+   "to": 1820,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1820_1830|Southeast Asia",
+   "era": "1820s",
+   "from": 1820,
+   "to": 1830,
+   "have": [
+    "British Malaya"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1830_1840|Southeast Asia",
+   "era": "1830s",
+   "from": 1830,
+   "to": 1840,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1840_1850|Southeast Asia",
+   "era": "1840s",
+   "from": 1840,
+   "to": 1850,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1850_1860|Southeast Asia",
+   "era": "1850s",
+   "from": 1850,
+   "to": 1860,
+   "have": [
+    "Second Anglo-Burmese War"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1860_1870|Southeast Asia",
+   "era": "1860s",
+   "from": 1860,
+   "to": 1870,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1870_1880|Southeast Asia",
+   "era": "1870s",
+   "from": 1870,
+   "to": 1880,
+   "have": [
+    "Aceh War"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1880_1890|Southeast Asia",
+   "era": "1880s",
+   "from": 1880,
+   "to": 1890,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1890_1900|Southeast Asia",
+   "era": "1890s",
+   "from": 1890,
+   "to": 1900,
+   "have": [
+    "Philippine Revolution",
+    "Battle of Manila Bay"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1900_1910|Southeast Asia",
+   "era": "1900s",
+   "from": 1900,
+   "to": 1910,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1910_1920|Southeast Asia",
+   "era": "1910s",
+   "from": 1910,
+   "to": 1920,
+   "have": [
+    "1915 Singapore Mutiny"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1920_1930|Southeast Asia",
+   "era": "1920s",
+   "from": 1920,
+   "to": 1930,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1930_1940|Southeast Asia",
+   "era": "1930s",
+   "from": 1930,
+   "to": 1940,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1940_1950|Southeast Asia",
+   "era": "1940s",
+   "from": 1940,
+   "to": 1950,
+   "have": [
+    "Indonesian National Revolution",
+    "Battle of Leyte Gulf",
+    "Fall of Singapore",
+    "Federation of Malaya",
+    "Malayan Emergency",
+    "Battle of Peleliu",
+    "Battle of Saipan",
+    "Battle of Guam (1944)",
+    "Battle of Manila (1945)",
+    "Battle of the Java Sea",
+    "Battle of the Bismarck Sea",
+    "Battle of Guam (1941)",
+    "August Revolution",
+    "Battle of Tinian",
+    "New Guinea campaign",
+    "Battle of Leyte",
+    "Battle of Angaur",
+    "Sinking of Prince of Wales and Repulse",
+    "Manila massacre",
+    "Battle of Luzon",
+    "Battle of Sunda Strait",
+    "Battle of Timor",
+    "Battle of Bataan",
+    "Battle of Corregidor",
+    "Battle of Christmas Island"
+   ],
+   "count": 27
+  },
+  {
+   "cell": "1950_1960|Southeast Asia",
+   "era": "1950s",
+   "from": 1950,
+   "to": 1960,
+   "have": [
+    "Cambodia",
+    "Vietnam War",
+    "South Vietnam",
+    "Laotian Civil War"
+   ],
+   "count": 4
+  },
+  {
+   "cell": "1960_1970|Southeast Asia",
+   "era": "1960s",
+   "from": 1960,
+   "to": 1970,
+   "have": [
+    "My Lai massacre",
+    "Cambodian Civil War",
+    "Siege of Khe Sanh",
+    "Indonesian mass killings of 1965–66",
+    "Battle of Ia Drang",
+    "Konfrontasi",
+    "Moro conflict",
+    "Battle of Huế",
+    "Battle of Hamburger Hill",
+    "Battle of Ap Bac",
+    "Brunei revolt",
+    "1962 Burmese coup d'état",
+    "Massacre at Huế",
+    "1963 South Vietnamese coup d'état",
+    "1960 South Vietnamese coup attempt",
+    "Communist insurgency in Malaysia (1968–1989)"
+   ],
+   "count": 16
+  },
+  {
+   "cell": "1970_1980|Southeast Asia",
+   "era": "1970s",
+   "from": 1970,
+   "to": 1980,
+   "have": [
+    "Papua New Guinea",
+    "Cambodian genocide",
+    "Cambodian–Vietnamese War",
+    "Democratic Kampuchea",
+    "People's Republic of Kampuchea",
+    "Fall of Saigon",
+    "6 October 1976 massacre",
+    "Ba Chúc massacre"
+   ],
+   "count": 8
+  },
+  {
+   "cell": "1980_1990|Southeast Asia",
+   "era": "1980s",
+   "from": 1980,
+   "to": 1990,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1990_2000|Southeast Asia",
+   "era": "1990s",
+   "from": 1990,
+   "to": 2000,
+   "have": [
+    "Black May (Thailand)"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "2000_2010|Southeast Asia",
+   "era": "2000s",
+   "from": 2000,
+   "to": 2010,
+   "have": [
+    "2006 Yogyakarta earthquake",
+    "Maguindanao massacre"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "2010_2020|Southeast Asia",
+   "era": "2010s",
+   "from": 2010,
+   "to": 2020,
+   "have": [
+    "2018 Sulawesi earthquake and tsunami",
+    "2018 Sunda Strait tsunami",
+    "2012 Indian Ocean earthquakes",
+    "2014 Thai coup d'état",
+    "Siege of Marawi"
+   ],
+   "count": 5
+  },
+  {
+   "cell": "2020_2030|Southeast Asia",
+   "era": "2020s",
+   "from": 2020,
+   "to": 2030,
+   "have": [
+    "2022 West Java earthquake",
+    "COVID-19 pandemic in Vietnam",
+    "COVID-19 pandemic in Thailand",
+    "COVID-19 pandemic in the Philippines",
+    "COVID-19 pandemic in Indonesia",
+    "COVID-19 pandemic in Singapore",
+    "COVID-19 pandemic in Malaysia",
+    "COVID-19 pandemic in Cambodia",
+    "COVID-19 pandemic in Papua New Guinea"
+   ],
+   "count": 9
+  }
+ ]
+}

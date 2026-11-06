@@ -1,0 +1,572 @@
+{
+ "region": "North America",
+ "cells": [
+  {
+   "cell": "pre|North America",
+   "era": "Before 3000 BCE",
+   "from": -12000,
+   "to": -3000,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "-3000_-2000|North America",
+   "era": "3000–2000 BCE",
+   "from": -3000,
+   "to": -2000,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "-2000_-1000|North America",
+   "era": "2000–1000 BCE",
+   "from": -2000,
+   "to": -1000,
+   "have": [
+    "Zoroastrianism"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "-1000_-500|North America",
+   "era": "1000–500 BCE",
+   "from": -1000,
+   "to": -500,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "-500_0|North America",
+   "era": "500–0 BCE",
+   "from": -500,
+   "to": 0,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "0_250|North America",
+   "era": "0–250",
+   "from": 0,
+   "to": 250,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "250_500|North America",
+   "era": "250–500",
+   "from": 250,
+   "to": 500,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "500_750|North America",
+   "era": "500–750",
+   "from": 500,
+   "to": 750,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "750_1000|North America",
+   "era": "750–1000",
+   "from": 750,
+   "to": 1000,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1000_1100|North America",
+   "era": "1000–1100",
+   "from": 1000,
+   "to": 1100,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1100_1200|North America",
+   "era": "1100–1200",
+   "from": 1100,
+   "to": 1200,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1200_1300|North America",
+   "era": "1200–1300",
+   "from": 1200,
+   "to": 1300,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1300_1400|North America",
+   "era": "1300–1400",
+   "from": 1300,
+   "to": 1400,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1400_1500|North America",
+   "era": "1400–1500",
+   "from": 1400,
+   "to": 1500,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1500_1550|North America",
+   "era": "1500–1550",
+   "from": 1500,
+   "to": 1550,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1550_1600|North America",
+   "era": "1550–1600",
+   "from": 1550,
+   "to": 1600,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1600_1650|North America",
+   "era": "1600–1650",
+   "from": 1600,
+   "to": 1650,
+   "have": [
+    "New Netherland",
+    "American Indian Wars",
+    "Beaver Wars",
+    "Pequot War",
+    "Kieft's War",
+    "Anglo-Powhatan Wars"
+   ],
+   "count": 6
+  },
+  {
+   "cell": "1650_1700|North America",
+   "era": "1650–1700",
+   "from": 1650,
+   "to": 1700,
+   "have": [
+    "King Philip's War",
+    "King William's War",
+    "1689 Boston revolt"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "1700_1750|North America",
+   "era": "1700–1750",
+   "from": 1700,
+   "to": 1750,
+   "have": [
+    "War of the Spanish Succession",
+    "War of Jenkins' Ear",
+    "Queen Anne's War",
+    "King George's War",
+    "Dummer's War",
+    "Yamasee War",
+    "Tuscarora War"
+   ],
+   "count": 7
+  },
+  {
+   "cell": "1750_1800|North America",
+   "era": "1750–1800",
+   "from": 1750,
+   "to": 1800,
+   "have": [
+    "President of the United States",
+    "United States Declaration of Independence",
+    "Encyclopædia Britannica",
+    "American Revolution",
+    "Supreme Court of the United States",
+    "United States Capitol",
+    "United States Secretary of State",
+    "Federal government of the United States",
+    "French and Indian War",
+    "Siege of Yorktown",
+    "Slavery in the United States",
+    "Boston Massacre",
+    "Battles of Lexington and Concord",
+    "Battle of Bunker Hill",
+    "Battles of Saratoga",
+    "Battle of Long Island",
+    "Battle of Trenton",
+    "Great Hurricane of 1780",
+    "Battle of the Plains of Abraham",
+    "Battle of the Chesapeake",
+    "Battle of Princeton",
+    "Battle of Brandywine",
+    "Siege of Boston",
+    "Pontiac's War",
+    "Battle of Monmouth"
+   ],
+   "count": 39
+  },
+  {
+   "cell": "1800_1810|North America",
+   "era": "1800s",
+   "from": 1800,
+   "to": 1810,
+   "have": [
+    "White House",
+    "Mexican War of Independence"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1810_1820|North America",
+   "era": "1810s",
+   "from": 1810,
+   "to": 1820,
+   "have": [
+    "Battle of New Orleans",
+    "Seminole Wars",
+    "Battle of Tippecanoe",
+    "Creek War",
+    "Battle of Queenston Heights",
+    "Battle of the Thames",
+    "Tecumseh's War"
+   ],
+   "count": 7
+  },
+  {
+   "cell": "1820_1830|North America",
+   "era": "1820s",
+   "from": 1820,
+   "to": 1830,
+   "have": [
+    "Monroe Doctrine",
+    "Adams–Onís Treaty"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1830_1840|North America",
+   "era": "1830s",
+   "from": 1830,
+   "to": 1840,
+   "have": [
+    "Republic of Texas",
+    "Texas Revolution",
+    "Battle of the Alamo",
+    "Battle of San Jacinto",
+    "Pastry War",
+    "Black Hawk War",
+    "Battle of Gonzales",
+    "Toledo War",
+    "Aroostook War",
+    "Second Seminole War",
+    "Rebellions of 1837–1838",
+    "Kenesary's Rebellion"
+   ],
+   "count": 12
+  },
+  {
+   "cell": "1840_1850|North America",
+   "era": "1840s",
+   "from": 1840,
+   "to": 1850,
+   "have": [
+    "Oregon Treaty",
+    "California genocide",
+    "Apache Wars"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "1850_1860|North America",
+   "era": "1850s",
+   "from": 1850,
+   "to": 1860,
+   "have": [
+    "Gadsden Purchase",
+    "Pig War (1859)",
+    "John Brown's raid on Harpers Ferry"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "1860_1870|North America",
+   "era": "1860s",
+   "from": 1860,
+   "to": 1870,
+   "have": [
+    "American Civil War",
+    "Confederate States of America",
+    "Battle of Gettysburg",
+    "Alaska Purchase",
+    "Medal of Honor",
+    "Union (American Civil War)",
+    "Assassination of Abraham Lincoln",
+    "Battle of Fort Sumter",
+    "Battle of Antietam",
+    "Battle of Chancellorsville",
+    "First Battle of Bull Run",
+    "Battle of Fredericksburg",
+    "Second Battle of Bull Run",
+    "Battle of Shiloh",
+    "Battle of Cold Harbor",
+    "Battle of Hampton Roads",
+    "Battle of Chickamauga",
+    "Seven Days Battles",
+    "Siege of Vicksburg",
+    "Battle of Appomattox Court House",
+    "Battle of the Wilderness",
+    "Sand Creek massacre",
+    "Dakota War of 1862",
+    "Battle of Spotsylvania Court House",
+    "Battle of Seven Pines"
+   ],
+   "count": 38
+  },
+  {
+   "cell": "1870_1880|North America",
+   "era": "1870s",
+   "from": 1870,
+   "to": 1880,
+   "have": [
+    "Telephone",
+    "Battle of the Little Bighorn",
+    "Gilded Age",
+    "Great Sioux War of 1876",
+    "Little War (Cuba)",
+    "Nez Perce War"
+   ],
+   "count": 6
+  },
+  {
+   "cell": "1880_1890|North America",
+   "era": "1880s",
+   "from": 1880,
+   "to": 1890,
+   "have": [
+    "Haymarket affair",
+    "1889–1890 pandemic",
+    "North-West Rebellion"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "1890_1900|North America",
+   "era": "1890s",
+   "from": 1890,
+   "to": 1900,
+   "have": [
+    "Basketball",
+    "Wounded Knee Massacre",
+    "Progressive Era"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "1900_1910|North America",
+   "era": "1900s",
+   "from": 1900,
+   "to": 1910,
+   "have": [
+    "Treaty of Portsmouth",
+    "Coup of June 1907"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1910_1920|North America",
+   "era": "1910s",
+   "from": 1910,
+   "to": 1920,
+   "have": [
+    "Spanish flu",
+    "Suprematism",
+    "White movement",
+    "Ludlow Massacre",
+    "Mexican Border War"
+   ],
+   "count": 5
+  },
+  {
+   "cell": "1920_1930|North America",
+   "era": "1920s",
+   "from": 1920,
+   "to": 1930,
+   "have": [
+    "Time Person of the Year",
+    "Saint Valentine's Day Massacre",
+    "Washington Naval Treaty",
+    "Bath School disaster",
+    "Rosewood massacre"
+   ],
+   "count": 5
+  },
+  {
+   "cell": "1930_1940|North America",
+   "era": "1930s",
+   "from": 1930,
+   "to": 1940,
+   "have": [
+    "New Deal",
+    "Castellammarese War"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1940_1950|North America",
+   "era": "1940s",
+   "from": 1940,
+   "to": 1950,
+   "have": [
+    "International Monetary Fund",
+    "UNICEF",
+    "Charter of the United Nations",
+    "Organization of American States",
+    "Marshall Plan",
+    "Atlantic Charter",
+    "North Atlantic Treaty",
+    "Bretton Woods system",
+    "Nachos",
+    "Objectivism",
+    "Declaration by United Nations",
+    "Convention on International Civil Aviation",
+    "United Nations Conference on International Organization",
+    "Bretton Woods Conference",
+    "Battle of Los Angeles",
+    "Guatemalan Revolution"
+   ],
+   "count": 16
+  },
+  {
+   "cell": "1950_1960|North America",
+   "era": "1950s",
+   "from": 1950,
+   "to": 1960,
+   "have": [
+    "NASA",
+    "Hollywood Walk of Fame",
+    "Thermonuclear weapon",
+    "Treaty of San Francisco",
+    "ANZUS",
+    "Chicken nugget"
+   ],
+   "count": 6
+  },
+  {
+   "cell": "1960_1970|North America",
+   "era": "1960s",
+   "from": 1960,
+   "to": 1970,
+   "have": [
+    "International Covenant on Civil and Political Rights",
+    "Assassination of John F. Kennedy",
+    "United States Agency for International Development",
+    "National Register of Historic Places",
+    "Assassination of Robert F. Kennedy",
+    "Assassination of Martin Luther King Jr."
+   ],
+   "count": 6
+  },
+  {
+   "cell": "1970_1980|North America",
+   "era": "1970s",
+   "from": 1970,
+   "to": 1980,
+   "have": [
+    "The Bahamas",
+    "Mobile phone",
+    "Convention on the Elimination of All Forms of Discrimination Against Women",
+    "Camp David Accords",
+    "Wow! signal",
+    "Moon Treaty",
+    "Federal Emergency Management Agency",
+    "C-SPAN",
+    "Kent State shootings"
+   ],
+   "count": 9
+  },
+  {
+   "cell": "1980_1990|North America",
+   "era": "1980s",
+   "from": 1980,
+   "to": 1990,
+   "have": [
+    "Convention on the Rights of the Child",
+    "Montreal Protocol",
+    "1989 Loma Prieta earthquake"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "1990_2000|North America",
+   "era": "1990s",
+   "from": 1990,
+   "to": 2000,
+   "have": [
+    "Dayton Agreement",
+    "Ottawa Treaty",
+    "Comprehensive Nuclear-Test-Ban Treaty",
+    "Voluntary Human Extinction Movement",
+    "Waco siege",
+    "Hurricane Mitch",
+    "Washington Agreement"
+   ],
+   "count": 7
+  },
+  {
+   "cell": "2000_2010|North America",
+   "era": "2000s",
+   "from": 2000,
+   "to": 2010,
+   "have": [
+    "September 11 attacks",
+    "2009 swine flu pandemic",
+    "Hurricane Ike",
+    "Hurricane Felix",
+    "Hurricane Hanna (2008)",
+    "2005 Belize unrest",
+    "2009 Honduran coup d'état"
+   ],
+   "count": 7
+  },
+  {
+   "cell": "2010_2020|North America",
+   "era": "2010s",
+   "from": 2010,
+   "to": 2020,
+   "have": [
+    "Panama Papers",
+    "Hurricane Sandy",
+    "2017 Las Vegas shooting",
+    "Treaty on the Prohibition of Nuclear Weapons",
+    "Hurricane Irma",
+    "Hurricane Irene",
+    "Arms Trade Treaty",
+    "Hurricane Harvey",
+    "Hurricane Maria",
+    "Hurricane Michael",
+    "2011 Virginia earthquake"
+   ],
+   "count": 11
+  },
+  {
+   "cell": "2020_2030|North America",
+   "era": "2020s",
+   "from": 2020,
+   "to": 2030,
+   "have": [
+    "January 6 United States Capitol attack",
+    "January 2025 Southern California wildfires",
+    "Assassination of Charlie Kirk",
+    "COVID-19 pandemic in Canada",
+    "Hurricane Milton",
+    "2022 Buffalo shooting",
+    "COVID-19 pandemic in New York City",
+    "Hurricane Ida"
+   ],
+   "count": 8
+  }
+ ]
+}

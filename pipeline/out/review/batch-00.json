@@ -1,0 +1,1093 @@
+[
+ {
+  "key": "Q11812>Q4917",
+  "cause": {
+   "title": "Thomas Jefferson",
+   "kind": "leader",
+   "date": "1743–1826",
+   "about": "Thomas Jefferson (1743 – July 4, 1826) was a Founding Father and the third president of the United States, serving from 1801 to 1809. A prolific writer and philosopher, Jefferson was the primary author of the Declaration of Independence. His political philosophy formed the basis "
+  },
+  "effect": {
+   "title": "United States dollar",
+   "kind": "event",
+   "date": "1792",
+   "about": "The United States dollar (symbol: $; currency code: USD) is the official currency of the United States (U.S.) and several other countries. The U.S. Coinage Act of 1792 established the dollar as the base unit, with each dollar divided into 100 cents (symbol: ¢). U.S. banknotes are"
+  },
+  "evidence": [
+   "Wikipedia, Thomas Jefferson › Memorials and honors: \"Jefferson has been memorialized with buildings, sculptures, postage, and currency.\""
+  ]
+ },
+ {
+  "key": "Q11772>Q745799",
+  "cause": {
+   "title": "Ancient Greece",
+   "kind": "period",
+   "date": "-1200–600",
+   "about": "Ancient Greece (Hellás) was an ancient civilization existing from the Greek Dark Ages of the 12th–9th centuries BC to the end of classical antiquity (c. 600 AD), comprising a loose collection of culturally and linguistically related city-states and regions, primarily centered in "
+  },
+  "effect": {
+   "title": "Islamic Golden Age",
+   "kind": "period",
+   "date": "800–1258",
+   "about": "The Islamic Golden Age was a period of cultural flourishing in the history of Islam, dated from the 8th century CE to the 14th century. The period is understood to have begun during the reign of the Abbasid caliph Harun al-Rashid (786–809), with the establishment of the House of "
+  },
+  "evidence": [
+   "Wikipedia, Islamic Golden Age › Openness to diverse influences: \"Many classic works of antiquity that might otherwise have been lost were translated from Greek, Syriac, Middle Persian, and Sanskrit into Syriac and Arabic, some of which were later in turn translated into other languages like Hebrew and Latin.\"",
+   "Wikipedia, Ancient Greece › Legacy: \"The Byzantine Empire inherited Classical Greek-Hellenistic culture directly, without Latin intermediation, and the preservation of Classical Greek learning in medieval Byzantine tradition further exerted a strong influence on the Slavs and later on the Islamic Golden Age and the Western European Renaissance.\""
+  ]
+ },
+ {
+  "key": "Q41984>Q545449",
+  "cause": {
+   "title": "International Atomic Energy Agency",
+   "kind": "event",
+   "date": "1957",
+   "about": "The International Atomic Energy Agency (IAEA) is an intergovernmental organization that seeks to promote the peaceful use of nuclear energy and to inhibit its use for any military purpose, including nuclear weapons. It was established in 1957 as an autonomous organization within "
+  },
+  "effect": {
+   "title": "Iraq War",
+   "kind": "war",
+   "date": "2003–2011",
+   "about": "The Iraq War (ḥarb al-ʿirāq), also referred to as the Second Gulf War (Gulf War II), was a protracted armed conflict in Iraq from 2003 to 2011. It began with the invasion by a United States–led coalition, which resulted in the overthrow of the Ba'athist government of Saddam Husse"
+  },
+  "evidence": [
+   "Wikipedia, Iraq War › Pre-war events: \"Resolution 1441 set up inspections by the United Nations Monitoring, Verification and Inspection Commission (UNMOVIC) and the International Atomic Energy Agency.\""
+  ]
+ },
+ {
+  "key": "Q4917>Q81545",
+  "cause": {
+   "title": "United States dollar",
+   "kind": "event",
+   "date": "1792",
+   "about": "The United States dollar (symbol: $; currency code: USD) is the official currency of the United States (U.S.) and several other countries. The U.S. Coinage Act of 1792 established the dollar as the base unit, with each dollar divided into 100 cents (symbol: ¢). U.S. banknotes are"
+  },
+  "effect": {
+   "title": "Libyan civil war (2011)",
+   "kind": "war",
+   "date": "2011",
+   "about": "The Libyan Civil War, also known as the First Libyan Civil War and Libyan Revolution, was an armed conflict fought in 2011 in the North African country of Libya between forces loyal to Colonel Muammar Gaddafi and rebel groups attempting to oust his government. The war was ignited"
+  },
+  "evidence": [
+   "Wikipedia, Libyan civil war (2011) › Development and corruption: \"Additionally, the country's sovereign wealth fund, the Libyan Investment Authority, was one of the largest in the world, controlling assets worth approximately US$56 billion, including over 100 tons of gold reserves in the Central Bank of Libya.\""
+  ]
+ },
+ {
+  "key": "Q4917>Q11264",
+  "cause": {
+   "title": "United States dollar",
+   "kind": "event",
+   "date": "1792",
+   "about": "The United States dollar (symbol: $; currency code: USD) is the official currency of the United States (U.S.) and several other countries. The U.S. Coinage Act of 1792 established the dollar as the base unit, with each dollar divided into 100 cents (symbol: ¢). U.S. banknotes are"
+  },
+  "effect": {
+   "title": "Cuban Revolution",
+   "kind": "revolution",
+   "date": "1953–1959",
+   "about": "The Cuban Revolution (Revolución cubana) was the military and political movement that overthrew the dictatorship of Fulgencio Batista, who had ruled Cuba from 1952 to 1959. The revolution began after the 1952 Cuban coup d'état, in which Batista overthrew the emerging Cuban democr"
+  },
+  "evidence": [
+   "Wikipedia, Cuban Revolution › Corruption in Cuba: \"He was responsible for creating the Cuban Peso; until his presidency Cuba used both the Spanish Real and US Dollar.\""
+  ]
+ },
+ {
+  "key": "Q41984>Q134900605",
+  "cause": {
+   "title": "International Atomic Energy Agency",
+   "kind": "event",
+   "date": "1957",
+   "about": "The International Atomic Energy Agency (IAEA) is an intergovernmental organization that seeks to promote the peaceful use of nuclear energy and to inhibit its use for any military purpose, including nuclear weapons. It was established in 1957 as an autonomous organization within "
+  },
+  "effect": {
+   "title": "Twelve-Day War",
+   "kind": "war",
+   "date": "2025",
+   "about": "The Twelve-Day War was an armed conflict between Iran and Israel which lasted from 13 to 24 June 2025. It began when Israel bombed military and nuclear facilities in Iran in a surprise attack, assassinating prominent military leaders, nuclear scientists, and politicians, killing "
+  },
+  "evidence": [
+   "Wikipedia, Twelve-Day War › Iranian nuclear program: \"In 2018, after being briefed on evidence that Iran sought to resume its nuclear weapons development, U.S. president Donald Trump unilaterally withdrew from and voided the deal – despite the report by the International Atomic Energy Agency (IAEA) that Iran was keeping to the deal.\""
+  ]
+ },
+ {
+  "key": "Q58792>Q120843",
+  "cause": {
+   "title": "Federal Security Service",
+   "kind": "event",
+   "date": "1995",
+   "about": "The Federal Security Service of the Russian Federation (FSB) is the principal security agency of Russia and the main successor agency to the Soviet Union's KGB; its immediate predecessor was the Federal Counterintelligence Service (FSK), which was reorganized into the FSB in 1995"
+  },
+  "effect": {
+   "title": "Second Chechen War",
+   "kind": "war",
+   "date": "1999–2009",
+   "about": "war in Chechnya"
+  },
+  "evidence": [
+   "Wikipedia, Second Chechen War › Instability in Chechnya: \"The authority of the government in Grozny was opposed by extremist warlords like Arbi Barayev, who, according to some sources, was in cooperation with the FSB.\"",
+   "Wikipedia, Second Chechen War › Instability in Chechnya: \"Russian special services were accused of being involved in kidnappings.\""
+  ]
+ },
+ {
+  "key": "Q58792>Q119860532",
+  "cause": {
+   "title": "Federal Security Service",
+   "kind": "event",
+   "date": "1995",
+   "about": "The Federal Security Service of the Russian Federation (FSB) is the principal security agency of Russia and the main successor agency to the Soviet Union's KGB; its immediate predecessor was the Federal Counterintelligence Service (FSK), which was reorganized into the FSB in 1995"
+  },
+  "effect": {
+   "title": "Wagner Group rebellion",
+   "kind": "revolution",
+   "date": "2023",
+   "about": "On 23 June 2023, the Wagner Group, a Russian private military company, staged an uprising against the Russian government. It marked the climax of the Wagner Group–Ministry of Defense conflict, which had begun about six months earlier. Russian oligarch Yevgeny Prigozhin, who had b"
+  },
+  "evidence": [
+   "Wikipedia, Wagner Group rebellion › Planning the rebellion: \"According to disclosures by Western officials to The Wall Street Journal, the Russian Federal Security Service discovered the plan two days before it was scheduled to be executed.\""
+  ]
+ },
+ {
+  "key": "Q4917>Q137612545",
+  "cause": {
+   "title": "United States dollar",
+   "kind": "event",
+   "date": "1792",
+   "about": "The United States dollar (symbol: $; currency code: USD) is the official currency of the United States (U.S.) and several other countries. The U.S. Coinage Act of 1792 established the dollar as the base unit, with each dollar divided into 100 cents (symbol: ¢). U.S. banknotes are"
+  },
+  "effect": {
+   "title": "2025–2026 Iranian protests",
+   "kind": "revolution",
+   "date": "2020–2026",
+   "about": "The 2025–2026 Iranian protests were a series of nationwide demonstrations against the government of Iran that began on 28 December 2025 amid a deepening economic crisis. The unrest followed a sharp depreciation of the Iranian rial, rising inflation, and widespread shortages linke"
+  },
+  "evidence": [
+   "Wikipedia, 2025–2026 Iranian protests › Economic crisis in Iran: \"In the final months of 2025, Iran's economy experienced a sharp depreciation of the Iranian rial, with the US dollar reaching approximately 145,000 Iranian tomans.\""
+  ]
+ },
+ {
+  "key": "Q824489>Q193245",
+  "cause": {
+   "title": "Estado Novo (Portugal)",
+   "kind": "state",
+   "date": "1933–1974",
+   "about": "The Estado Novo  was the corporatist Portuguese state installed in 1933. It evolved from the Ditadura Nacional (\"National Dictatorship\") formed after the coup d'état of 28 May 1926 against the unstable First Republic. Together, the Ditadura Nacional and the Estado Novo are recogn"
+  },
+  "effect": {
+   "title": "Carnation Revolution",
+   "kind": "revolution",
+   "date": "1974",
+   "about": "The Carnation Revolution (Portuguese: Revolução dos Cravos), code-named Operation Historic Turn, also known as the 25 April, and Portuguese Revolution (Portuguese: Revolução Portuguesa) was a military coup in Portugal by officers that on 25 April 1974 overthrew Marcelo Caetano an"
+  },
+  "evidence": [
+   "Wikidata: \"has cause\"",
+   "Wikipedia, Carnation Revolution › Background: \"Tomás won the election amidst claims of widespread electoral fraud, and the Salazar government abandoned the practice of popularly electing the president and gave the task to the National Assembly.\"",
+   "Wikipedia, Estado Novo (Portugal) › Aftermath: \"The Portuguese celebrate Freedom Day on 25 April every year, and the day is a national holiday in Portugal.\"",
+   "Wikipedia, Estado Novo (Portugal) › Aftermath: \"After the Carnation Revolution in 1974 and the fall of the incumbent Portuguese authoritarian regime, almost all the Portugal-ruled territories outside Europe became independent.\""
+  ]
+ },
+ {
+  "key": "Q7521>Q369560",
+  "cause": {
+   "title": "Möngke Khan",
+   "kind": "thinker",
+   "date": "1209–1259",
+   "about": "Möngke Khan (also Möngke Khagan or Möngke; 11 January 1209 – 11 August 1259) was the fourth khagan of the Mongol Empire, ruling from 1 July 1251 to 11 August 1259. He was the first Khagan from the Toluid line, and made significant reforms to improve the administration of the Empi"
+  },
+  "effect": {
+   "title": "Siege of Baghdad",
+   "kind": "battle",
+   "date": "1258",
+   "about": "The Siege of Baghdad, also known as the Sack of Baghdad, took place in early 1258. A large army commanded by Hulegu, a prince of the Mongol Empire, attacked the historic capital of the Abbasid Caliphate after a series of provocations from its ruler, caliph al-Musta'sim. Within a "
+  },
+  "evidence": [
+   "Wikipedia, Siege of Baghdad › Campaign against the Assassins: \"Möngke Khan was proclaimed khan in 1251 as part of the Toluid Revolution, which established the family of Genghis' youngest son Tolui as the most powerful figures in the Mongol Empire.\"",
+   "Wikipedia, Siege of Baghdad › Campaign against the Assassins: \"Möngke Khan was proclaimed khan in 1251 as part of the Toluid Revolution, which established the family of Genghis' youngest son Tolui as the most powerful figures in the Mongol Empire.\""
+  ]
+ },
+ {
+  "key": "Q4917>Q188532",
+  "cause": {
+   "title": "United States dollar",
+   "kind": "event",
+   "date": "1792",
+   "about": "The United States dollar (symbol: $; currency code: USD) is the official currency of the United States (U.S.) and several other countries. The U.S. Coinage Act of 1792 established the dollar as the base unit, with each dollar divided into 100 cents (symbol: ¢). U.S. banknotes are"
+  },
+  "effect": {
+   "title": "Bretton Woods system",
+   "kind": "treaty",
+   "date": "1944",
+   "about": "The Bretton Woods system of monetary management established the rules for commercial relations among 44 countries, including the United States, Canada, European countries, and Australia, after the 1944 Bretton Woods Agreement until the Jamaica Accords in 1976. The Bretton Woods s"
+  },
+  "evidence": [
+   "Wikipedia, Bretton Woods system › Post-war negotiations: \"In 1944 at Bretton Woods, as a result of the collective conventional wisdom of the time, representatives from all the leading allied states collectively favored a regulated system of fixed exchange rates, indirectly disciplined by a US dollar tied to gold—a system that relied on a regulated market economy with tight controls on the values of currencies.\""
+  ]
+ },
+ {
+  "key": "Q203023>Q58792",
+  "cause": {
+   "title": "Cheka",
+   "kind": "event",
+   "date": "1917–1922",
+   "about": "The All-Russian Extraordinary Commission, abbreviated as VChK (ВЧК ), and commonly known as the Cheka (ЧК ), was the first Soviet secret police organization. It was established on by the Council of People's Commissars of the Russian SFSR, and was led by Felix Dzerzhinsky. By the "
+  },
+  "effect": {
+   "title": "Federal Security Service",
+   "kind": "event",
+   "date": "1995",
+   "about": "The Federal Security Service of the Russian Federation (FSB) is the principal security agency of Russia and the main successor agency to the Soviet Union's KGB; its immediate predecessor was the Federal Counterintelligence Service (FSK), which was reorganized into the FSB in 1995"
+  },
+  "evidence": [
+   "Wikipedia, Cheka › Legacy: \"(Vladimir Putin, former KGB officer, chose not to change the date to another): \"The successors of the KGB still haven't renounced anything; they even celebrate their professional holiday the same day, as during repression, on the 20th of December.\""
+  ]
+ },
+ {
+  "key": "Q173282>Q682597",
+  "cause": {
+   "title": "Khazars",
+   "kind": "event",
+   "date": "618–1048",
+   "about": "The Khazars  were a semi-nomadic Turkic people who established a major commercial empire in the late 6th century CE spanning the south of modern European Russia, southern Ukraine, and western Kazakhstan. It was the most powerful polity to emerge from the break-up of the Western T"
+  },
+  "effect": {
+   "title": "Kipchaks",
+   "kind": "event",
+   "date": "900–1220",
+   "about": "The Kipchaks, also spelled Qipchaqs, known as Polovtsians (Polovtsy) in Russian sources, were Turkic nomads and then a confederation that existed in the Middle Ages inhabiting parts of the Eurasian Steppe. First mentioned in the eighth century as part of the Second Turkic Khagana"
+  },
+  "evidence": [
+   "Wikipedia, Khazars › Aftermath: impact, decline and dispersion: \"A Kievian prince named Oleg, grandson of Jaroslav was reportedly kidnapped by \"Khazars\" in 1079 and shipped off to Constantinople, although most scholars believe that this is a reference to the Cumans-Kipchaks or other steppe peoples then dominant in the Pontic region.\"",
+   "Wikipedia, Khazars › Aftermath: impact, decline and dispersion: \"By 1043, Kimeks and Qipchaqs, thrusting westwards, pressured the Oğuz, who in turn pushed the Pechenegs west towards Byzantium's Balkan provinces.\""
+  ]
+ },
+ {
+  "key": "Q391358>Q48537",
+  "cause": {
+   "title": "Emancipation Proclamation",
+   "kind": "event",
+   "date": "1862",
+   "about": "The Emancipation Proclamation, officially Proclamation 95, was a presidential proclamation and executive order issued by United States president Abraham Lincoln on January 1, 1863, during the American Civil War. The Proclamation changed the legal status of more than 3.5 million e"
+  },
+  "effect": {
+   "title": "Civil rights movement",
+   "kind": "period",
+   "date": "1954–1968",
+   "about": "The civil rights movement was a social movement in the United States from 1954 to 1968 which aimed to abolish legalized racial segregation, discrimination, and disenfranchisement in the country, which most commonly affected African Americans. The movement had origins in the Recon"
+  },
+  "evidence": [
+   "Wikipedia, Emancipation Proclamation › Dr. Martin Luther King Jr.: \"Martin Luther King Jr. made many references to the Emancipation Proclamation during the civil rights movement.\"",
+   "Wikipedia, Emancipation Proclamation › President Lyndon B. Johnson: \"During the civil rights movement of the 1960s, Lyndon B.\""
+  ]
+ },
+ {
+  "key": "Q11201>Q391358",
+  "cause": {
+   "title": "Supreme Court of the United States",
+   "kind": "event",
+   "date": "1789",
+   "about": "The Supreme Court of the United States (SCOTUS) is the highest court in the federal judiciary of the United States. It has ultimate appellate jurisdiction over all U.S. federal court cases, and over state court cases that turn on questions of U.S. constitutional or federal law. I"
+  },
+  "effect": {
+   "title": "Emancipation Proclamation",
+   "kind": "event",
+   "date": "1862",
+   "about": "The Emancipation Proclamation, officially Proclamation 95, was a presidential proclamation and executive order issued by United States president Abraham Lincoln on January 1, 1863, during the American Civil War. The Proclamation changed the legal status of more than 3.5 million e"
+  },
+  "evidence": [
+   "Wikipedia, Emancipation Proclamation › Governmental action toward emancipation: \"This act effectively repudiated the 1857 opinion of the Supreme Court of the United States in the Dred Scott case that Congress was powerless to regulate slavery in U.S. territories.\""
+  ]
+ },
+ {
+  "key": "Q35525>Q391358",
+  "cause": {
+   "title": "White House",
+   "kind": "event",
+   "date": "1800",
+   "about": "The White House is the official residence and workplace of the president of the United States. Located at 1600 Pennsylvania Avenue NW in Washington, D.C., it has served as the residence of every U.S. president since John Adams in 1800 when the national capital was moved from Phil"
+  },
+  "effect": {
+   "title": "Emancipation Proclamation",
+   "kind": "event",
+   "date": "1862",
+   "about": "The Emancipation Proclamation, officially Proclamation 95, was a presidential proclamation and executive order issued by United States president Abraham Lincoln on January 1, 1863, during the American Civil War. The Proclamation changed the legal status of more than 3.5 million e"
+  },
+  "evidence": [
+   "Wikipedia, Emancipation Proclamation › Public opinion of emancipation: \"Patton met the president at the White House on September 13.\""
+  ]
+ },
+ {
+  "key": "Q4917>Q2885072",
+  "cause": {
+   "title": "United States dollar",
+   "kind": "event",
+   "date": "1792",
+   "about": "The United States dollar (symbol: $; currency code: USD) is the official currency of the United States (U.S.) and several other countries. The U.S. Coinage Act of 1792 established the dollar as the base unit, with each dollar divided into 100 cents (symbol: ¢). U.S. banknotes are"
+  },
+  "effect": {
+   "title": "Cambodian genocide",
+   "kind": "atrocity",
+   "date": "1970–1979",
+   "about": "The Cambodian genocide was the systematic persecution and killing of Cambodian citizens by the Khmer Rouge under the general secretaryship of Pol Pot. It resulted in the deaths of approximately 2 million people from 1975 to 1979, around 25% of Cambodia's population in 1975 (c. 7."
+  },
+  "evidence": [
+   "Wikipedia, Cambodian genocide › Mao era: \"It is estimated that at least 90% of foreign aid to Khmer Rouge came from China, with 1975 alone seeing US$1 billion in interest-free economic and military aid, \"the biggest aid ever given to any one country by China\".\""
+  ]
+ },
+ {
+  "key": "Q58792>Q111017791",
+  "cause": {
+   "title": "Federal Security Service",
+   "kind": "event",
+   "date": "1995",
+   "about": "The Federal Security Service of the Russian Federation (FSB) is the principal security agency of Russia and the main successor agency to the Soviet Union's KGB; its immediate predecessor was the Federal Counterintelligence Service (FSK), which was reorganized into the FSB in 1995"
+  },
+  "effect": {
+   "title": "Siege of Mariupol",
+   "kind": "battle",
+   "date": "2022",
+   "about": "The siege of Mariupol began on 24 February 2022, as part of the Russian invasion of Ukraine, and lasted until 20 May. It saw fighting between the Russian Armed Forces (alongside the Donetsk People's Republic People's Militia) and the Ukrainian Armed Forces for control over the ci"
+  },
+  "evidence": [
+   "Wikipedia, Siege of Mariupol › Background: \"2018 saw renewed tension in the region around Mariupol, as the Russian Federal Security Service (FSB) coast guard fired upon and captured three Ukrainian Navy vessels after they attempted to transit from the Black Sea into the Sea of Azov through the Kerch Strait on their way to the port of Mariupol.\""
+  ]
+ },
+ {
+  "key": "Q4917>Q204213",
+  "cause": {
+   "title": "United States dollar",
+   "kind": "event",
+   "date": "1792",
+   "about": "The United States dollar (symbol: $; currency code: USD) is the official currency of the United States (U.S.) and several other countries. The U.S. Coinage Act of 1792 established the dollar as the base unit, with each dollar divided into 100 cents (symbol: ¢). U.S. banknotes are"
+  },
+  "effect": {
+   "title": "Romanian revolution",
+   "kind": "revolution",
+   "date": "1989",
+   "about": "The Romanian revolution (Revoluția română) was a period of violent civil unrest in the Socialist Republic of Romania during December 1989 as a part of the revolutions of 1989 that occurred in several countries around the world, primarily within the Eastern Bloc. The Romanian revo"
+  },
+  "evidence": [
+   "Wikipedia, Romanian revolution › Background: \"In 1981, Ceaușescu began an austerity programme designed to enable Romania to liquidate its entire national debt (US$10,000,000,000).\""
+  ]
+ },
+ {
+  "key": "Q203563>Q212220",
+  "cause": {
+   "title": "Boyar",
+   "kind": "event",
+   "date": "901",
+   "about": "A boyar or bolyar was a member of the highest rank of the feudal nobility in many Eastern European states, including Bulgaria, Kievan Rus' (and later Russia), Moldavia and Wallachia (and later Romania), Lithuania and among Baltic Germans. Comparable to Dukes/Grand Dukes, Boyars w"
+  },
+  "effect": {
+   "title": "Battle of Nicopolis",
+   "kind": "battle",
+   "date": "1396",
+   "about": "The Battle of Nicopolis took place on 25 September 1396 and resulted in the rout of an allied Crusader army, assisted by the Venetian navy, at the hands of an Ottoman force, raising the siege of the Danubian fortress of Nicopolis and leading to the end of the Second Bulgarian Emp"
+  },
+  "evidence": [
+   "Wikipedia, Battle of Nicopolis › Background: \"In the eyes of the Bulgarian boyars, despots, and other independent Balkan rulers, the crusade was a great chance to reverse the course of the Ottoman conquest and take back the Balkans from Islamic rule.\""
+  ]
+ },
+ {
+  "key": "Q186581>Q1134220",
+  "cause": {
+   "title": "Jochi",
+   "kind": "leader",
+   "date": "1182–1228",
+   "about": "Jochi (c. 1182), also spelled Jüchi, was a prince of the early Mongol Empire. His life was marked by controversy over the circumstances of his birth and culminated in his estrangement from his family. He was nevertheless a prominent military commander and the progenitor of the fa"
+  },
+  "effect": {
+   "title": "Mongol invasion of Kievan Rus'",
+   "kind": "war",
+   "date": "1223–1240",
+   "about": "The Mongol Empire invaded and conquered much of the Kievan Rus' in the mid-13th century, sacking numerous cities such as Ryazan, Yaroslavl, Pereyaslavl and Vladimir, including the largest: Kiev (50,000 inhabitants) and Chernigov (30,000 inhabitants). The siege of Kiev in 1240 by "
+  },
+  "evidence": [
+   "Wikipedia, Mongol invasion of Kievan Rus' › Background: \"In 1207, Genghis Khan sent his eldest son Jochi to conquer the tribes north of the Selenga River and in the Irtysh valley, which included the lands of Eastern Europe in the Jochi Ulus.\"",
+   "Wikipedia, Mongol invasion of Kievan Rus' › Background: \"In addition to Batu, other Chingizids who participated in the campaign included the sons of Jochi, Orda, Shiban, Tangkut and Berke; the son of Chagatai, Baidar, and the grandson of Chagatai, Büri; the sons of Ögedei, Güyük and Kadan; the sons of Tolui, Möngke and Ariq Böke; the son of Genghis Khan, Külkhan, and the grandson of Genghis Khan's brother, Argasun.\""
+  ]
+ },
+ {
+  "key": "Q391358>Q623429",
+  "cause": {
+   "title": "Emancipation Proclamation",
+   "kind": "event",
+   "date": "1862",
+   "about": "The Emancipation Proclamation, officially Proclamation 95, was a presidential proclamation and executive order issued by United States president Abraham Lincoln on January 1, 1863, during the American Civil War. The Proclamation changed the legal status of more than 3.5 million e"
+  },
+  "effect": {
+   "title": "Reconstruction era",
+   "kind": "event",
+   "date": "1863–1877",
+   "about": "The Reconstruction era, often simply called Reconstruction, was a period in United States history that followed the American Civil War (1861–1865) and was dominated by the legal, social, and political challenges of the abolition of slavery and federal control over, and reintegrat"
+  },
+  "evidence": [
+   "Wikipedia, Emancipation Proclamation › Immediate impact: \"An early program of Reconstruction was set up for the former slaves, including schools and training.\""
+  ]
+ },
+ {
+  "key": "Q4917>Q856650",
+  "cause": {
+   "title": "United States dollar",
+   "kind": "event",
+   "date": "1792",
+   "about": "The United States dollar (symbol: $; currency code: USD) is the official currency of the United States (U.S.) and several other countries. The U.S. Coinage Act of 1792 established the dollar as the base unit, with each dollar divided into 100 cents (symbol: ¢). U.S. banknotes are"
+  },
+  "effect": {
+   "title": "Iraqi invasion of Kuwait",
+   "kind": "battle",
+   "date": "2009",
+   "about": "The Iraqi invasion of Kuwait, codenamed Project 17, began on 2 August 1990 and marked the beginning of the Gulf War. After defeating the State of Kuwait on 4 August 1990, Iraq went on to militarily occupy the country for the next seven months. The invasion was condemned internati"
+  },
+  "evidence": [
+   "Wikipedia, Iraqi invasion of Kuwait › Iran–Iraq War and Iraqi debt to Kuwait: \"By the time the Iran–Iraq War ended, Iraq was not in a financial position to repay the US$14 billion it had borrowed from Kuwait to finance its war and requested that Kuwait forgive the debt.\""
+  ]
+ },
+ {
+  "key": "Q192769>Q308439",
+  "cause": {
+   "title": "American Revolution",
+   "kind": "revolution",
+   "date": "1763–1783",
+   "about": "The American Revolution (1765–1789) was a political movement in the Thirteen Colonies of Great Britain. It began as a rebellion and turned into a revolution eventually creating the sovereign United States, which was the outcome of the associated American Revolutionary War (1775–1"
+  },
+  "effect": {
+   "title": "National Park Service",
+   "kind": "event",
+   "date": "1916",
+   "about": "The National Park Service (NPS) is an agency of the United States Department of the Interior. The service manages all national parks; most national monuments; and other natural, historical, and recreational properties, with various title designations. The United States Congress c"
+  },
+  "evidence": [
+   "Wikipedia, American Revolution › Commemorations: \"The National Park Service alone manages and maintains more than 50 battlefield parks and many other sites such as Independence Hall that are related to the Revolution.\""
+  ]
+ },
+ {
+  "key": "Q631489>Q308439",
+  "cause": {
+   "title": "Klondike Gold Rush",
+   "kind": "event",
+   "date": "1896–1899",
+   "about": "The Klondike Gold Rush was a migration by an estimated 100,000 prospectors to the Klondike region of Yukon in northwestern Canada, between 1896 and 1898. Gold was discovered there by local miners on August 16, 1896; when news reached Seattle and San Francisco the following year, "
+  },
+  "effect": {
+   "title": "National Park Service",
+   "kind": "event",
+   "date": "1916",
+   "about": "The National Park Service (NPS) is an agency of the United States Department of the Interior. The service manages all national parks; most national monuments; and other natural, historical, and recreational properties, with various title designations. The United States Congress c"
+  },
+  "evidence": [
+   "Wikipedia, Klondike Gold Rush › Places: \"The National Park Service restored Jeff Smith's Parlor, from which the famous con man \"Soapy\" Smith once operated, during 2010–2016.\""
+  ]
+ },
+ {
+  "key": "Q203563>Q1044829",
+  "cause": {
+   "title": "Boyar",
+   "kind": "event",
+   "date": "901",
+   "about": "A boyar or bolyar was a member of the highest rank of the feudal nobility in many Eastern European states, including Bulgaria, Kievan Rus' (and later Russia), Moldavia and Wallachia (and later Romania), Lithuania and among Baltic Germans. Comparable to Dukes/Grand Dukes, Boyars w"
+  },
+  "effect": {
+   "title": "Polish–Russian War (1609–1618)",
+   "kind": "war",
+   "date": "1605–1618",
+   "about": "The Polish–Russian War was a conflict fought between the Polish–Lithuanian Commonwealth and the Tsardom of Russia from 1609 to 1618. Russia had been experiencing the Time of Troubles since the death of Tsar Feodor I in 1598, which caused political instability and a violent succes"
+  },
+  "evidence": [
+   "Wikipedia, Polish–Russian War (1609–1618) › Prelude to invasions: \"This proved easy, as in the meantime many Russian boyars, disgruntled by the ongoing civil war, tried to entice various neighbors, including the Polish–Lithuanian Commonwealth, into intervening.\"",
+   "Wikipedia, Polish–Russian War (1609–1618) › Polish invasion (1604–1606): \"Some of the Russian boyars also claimed to accept Dmitry as such support gave them legitimate reasons not to pay taxes to Godunov.\""
+  ]
+ },
+ {
+  "key": "Q41984>Q53479",
+  "cause": {
+   "title": "International Atomic Energy Agency",
+   "kind": "event",
+   "date": "1957",
+   "about": "The International Atomic Energy Agency (IAEA) is an intergovernmental organization that seeks to promote the peaceful use of nuclear energy and to inhibit its use for any military purpose, including nuclear weapons. It was established in 1957 as an autonomous organization within "
+  },
+  "effect": {
+   "title": "Stuxnet",
+   "kind": "invention",
+   "date": "2010",
+   "about": "Stuxnet is a malicious computer worm first uncovered on 17 June 2010 and thought to have been in development since at least 2005. Stuxnet targets supervisory control and data acquisition (SCADA) systems and is believed to be responsible for causing substantial damage to the Iran "
+  },
+  "evidence": [
+   "Wikipedia, Stuxnet › Natanz nuclear facilities: \"According to The Washington Post, International Atomic Energy Agency (IAEA) cameras installed in the Natanz facility recorded the sudden dismantling and removal of approximately 900–1,000 centrifuges during the time the Stuxnet worm was reportedly active at the plant.\""
+  ]
+ },
+ {
+  "key": "Q128168>Q641479",
+  "cause": {
+   "title": "Counter-Reformation",
+   "kind": "idea",
+   "date": "1545–1648",
+   "about": "The Counter-Reformation (Contrareformatio), also sometimes called the Catholic Revival or the Catholic Reformation, was the period of Catholic resurgence that was initiated in response to and as an alternative to, or from similar insights as, the Protestant Reformation. It was a "
+  },
+  "effect": {
+   "title": "Khmelnytsky Uprising",
+   "kind": "revolution",
+   "date": "1648–1657",
+   "about": "The Khmelnytsky Uprising, also known as the Cossack–Polish War, Khmelnytsky insurrection, Cossack Revolution, or, in Ukraine, as the National Liberation War, was a successful Cossack rebellion with elements of a religious war that took place between 1648 and 1657 in the eastern t"
+  },
+  "evidence": [
+   "Wikipedia, Khmelnytsky Uprising › Background: \"This szlachta, along with upper-class Polish magnates, oppressed the lower-class Ruthenians, with the introduction of Counter-Reformation missionary practices and the use of Jewish arendators to manage their estates.\""
+  ]
+ },
+ {
+  "key": "Q1029847>Q228911",
+  "cause": {
+   "title": "Natalia Republic",
+   "kind": "state",
+   "date": "1839–1843",
+   "about": "The Natalia Republic was a short-lived Boer republic founded in 1839 after a Voortrekker victory against the Zulus at the Battle of Blood River. The area was previously named Natália by Portuguese sailors, due to its discovery on Christmas (\"Natal\" is the Portuguese word for Chri"
+  },
+  "effect": {
+   "title": "Anglo-Zulu War",
+   "kind": "war",
+   "date": "1879",
+   "about": "The Anglo-Zulu War, or simply the Zulu War, was fought in present-day South Africa from January to early July 1879 between forces of the British Empire and the Zulu Kingdom. Two famous battles of the war were the Zulu victory at Isandlwana and the British defence at Rorke's Drift"
+  },
+  "evidence": [
+   "Wikipedia, Anglo-Zulu War › British Empire: \"Natal, in south-eastern Africa, was claimed by the British as a colony on 4 May 1843, after the British government had annexed the Boer Republic of Natalia.\"",
+   "Wikipedia, Anglo-Zulu War › Zulu Kingdom: \"In 1839, the Boer Voortrekkers, under Pretorius, formed the Boer Republic of Natalia, south of the Tugela, and west of the British settlement of Port Natal (now Durban).\"",
+   "Wikipedia, Natalia Republic › Aftermath: \"After the Anglo-Zulu War of 1879, the British defeated the Zulu army, and annexed Zululand to Natal in 1897.\""
+  ]
+ },
+ {
+  "key": "Q719252>Q391358",
+  "cause": {
+   "title": "Battle of Antietam",
+   "kind": "battle",
+   "date": "1862",
+   "about": "The Battle of Antietam, also called the Battle of Sharpsburg (particularly in the Southern United States) took place during the American Civil War on September 17, 1862, near Antietam Creek and Sharpsburg, Maryland, between the Army of Northern Virginia, led by Confederate Genera"
+  },
+  "effect": {
+   "title": "Emancipation Proclamation",
+   "kind": "event",
+   "date": "1862",
+   "about": "The Emancipation Proclamation, officially Proclamation 95, was a presidential proclamation and executive order issued by United States president Abraham Lincoln on January 1, 1863, during the American Civil War. The Proclamation changed the legal status of more than 3.5 million e"
+  },
+  "evidence": [
+   "Wikipedia, Battle of Antietam › Reactions and significance: \"The results of Antietam were also politically magnified since the battle's outcome allowed President Lincoln to issue the preliminary Emancipation Proclamation on September 22, which gave Confederate states until January 1, 1863, to end their rebellion or else lose their slaves.\""
+  ]
+ },
+ {
+  "key": "Q391358>Q719252",
+  "cause": {
+   "title": "Emancipation Proclamation",
+   "kind": "event",
+   "date": "1862",
+   "about": "The Emancipation Proclamation, officially Proclamation 95, was a presidential proclamation and executive order issued by United States president Abraham Lincoln on January 1, 1863, during the American Civil War. The Proclamation changed the legal status of more than 3.5 million e"
+  },
+  "effect": {
+   "title": "Battle of Antietam",
+   "kind": "battle",
+   "date": "1862",
+   "about": "The Battle of Antietam, also called the Battle of Sharpsburg (particularly in the Southern United States) took place during the American Civil War on September 17, 1862, near Antietam Creek and Sharpsburg, Maryland, between the Army of Northern Virginia, led by Confederate Genera"
+  },
+  "evidence": [
+   "Wikipedia, Emancipation Proclamation › International impact: \"Mayor Abel Haywood, a representative for workers from Manchester, England, wrote to Lincoln saying, \"We joyfully honor you for many decisive steps toward practically exemplifying your belief in the words of your great founders: 'All men are created free and equal.'\" The Emancipation Proclamation served to ease tensions with Europe over the North's conduct of the war, and combined with the recent f…\""
+  ]
+ },
+ {
+  "key": "Q31066>Q726798",
+  "cause": {
+   "title": "Al-Mansur",
+   "kind": "leader",
+   "date": "713–775",
+   "about": "Abū Jaʿfar ʿAbd Allāh ibn Muḥammad al-Manṣūr (أبو جعفر عبد الله بن محمد المنصور&lrm;; 714 – 6 October 775) usually known simply as by his laqab al-Manṣūr (المنصور) was the second Abbasid caliph, reigning from 754 to 775, succeeding his brother al-Saffah. He founded the 'Round Cit"
+  },
+  "effect": {
+   "title": "Tulunids",
+   "kind": "state",
+   "date": "868–905",
+   "about": "The Tulunid State, also known as the Tulunid Emirate or the State of Banu Tulun, and popularly referred to as the Tulunids (الطولونيون) was a Mamluk dynasty of Turkic origin who ruled Egypt on behalf of the Abbasid Caliphate. They were autonomous from 868 until 905, when the Abba"
+  },
+  "evidence": [
+   "Wikipedia, Tulunids › Emergence of Shu'ubiyya in the Abbasid State: \"For example, Abū Jaʿfar al-Manṣūr killed his minister Abu Muslim al-Khurasani, and Harun al-Rashid executed his minister Jaʽfar ibn Yahya Barmaki and persecuted his family.\"",
+   "Wikipedia, Tulunids › Utilizing Turkic in the Abbasid state apparatus: \"Following the collapse of the Umayyad Caliphate and the ascendance of the Abbasid Caliphate, which was consolidated under the leadership of Abu Ja'far al-Mansur, several Turkic individuals began to assume prominent roles within the Abbasid court, as their numbers increased.\"",
+   "Wikipedia, Tulunids › Utilizing Turkic in the Abbasid state apparatus: \"Abu Ja'far al-Mansur was the first Abbasid caliph to integrate the Turks as intimate associates and officials, placing his confidence in Hamad al-Turki, who subsequently became one of his most trusted confidants and aides.\""
+  ]
+ },
+ {
+  "key": "Q1065854>Q170682",
+  "cause": {
+   "title": "United Nations Office for the Coordination of Humanitarian Affairs",
+   "kind": "event",
+   "date": "1991",
+   "about": "The United Nations Office for the Coordination of Humanitarian Affairs (OCHA) is a United Nations (UN) body established in December 1991 by the General Assembly to strengthen the international response to complex emergencies and natural disasters. It is the successor to the Offic"
+  },
+  "effect": {
+   "title": "Gaza War (2008–2009)",
+   "kind": "war",
+   "date": "2008–2009",
+   "about": "The Gaza War, also known as the First Gaza War, Operation Cast Lead, or the Gaza Massacre, and referred to as the Battle of al-Furqan by Hamas, was a three-week armed conflict between Gaza Strip Palestinian paramilitary groups and the Israel Defense Forces (IDF) that began on 27 "
+  },
+  "evidence": [
+   "Wikipedia, Gaza War (2008–2009) › Background: \"According to the Office for the Coordination of Humanitarian Affairs, between 2005 and 2008, 116 Israelis, including civilians and Israeli security forces, which includes Israeli police, Israeli Border Police and members of the armed services, were killed in both Israel and the Palestinian Territories in \"direct conflict related incidents\" and 1,509 were injured.\""
+  ]
+ },
+ {
+  "key": "Q221469>Q308439",
+  "cause": {
+   "title": "First Battle of Bull Run",
+   "kind": "battle",
+   "date": "1861",
+   "about": "The First Battle of Bull Run, called the Battle of First Manassas by Confederate forces, was the first major battle of the American Civil War. The battle was fought on July 21, 1861, in Prince William County, Virginia, just north of what is now the city of Manassas and about thir"
+  },
+  "effect": {
+   "title": "National Park Service",
+   "kind": "event",
+   "date": "1916",
+   "about": "The National Park Service (NPS) is an agency of the United States Department of the Interior. The service manages all national parks; most national monuments; and other natural, historical, and recreational properties, with various title designations. The United States Congress c"
+  },
+  "evidence": [
+   "Wikipedia, First Battle of Bull Run › \"Bull Run\" vs. \"Manassas\": \"The U.S.\""
+  ]
+ },
+ {
+  "key": "Q846674>Q308439",
+  "cause": {
+   "title": "Battles of Saratoga",
+   "kind": "battle",
+   "date": "1777",
+   "about": "The Battles of Saratoga were fought September 19 and October 7, 1777 over the same ground by the American Continental Army and the British Army near Saratoga, New York during the American Revolutionary War. The second battle ended with a decisive American victory, and the surrend"
+  },
+  "effect": {
+   "title": "National Park Service",
+   "kind": "event",
+   "date": "1916",
+   "about": "The National Park Service (NPS) is an agency of the United States Department of the Interior. The service manages all national parks; most national monuments; and other natural, historical, and recreational properties, with various title designations. The United States Congress c"
+  },
+  "evidence": [
+   "Wikipedia, Battles of Saratoga › Legacy: \"The battlefield and the site of Burgoyne's surrender have been preserved, and are now administered by the National Park Service as the Saratoga National Historical Park, which was listed on the National Register of Historic Places in 1966.\""
+  ]
+ },
+ {
+  "key": "Q465627>Q128168",
+  "cause": {
+   "title": "Sack of Rome (1527)",
+   "kind": "battle",
+   "date": "1527",
+   "about": "The Sack of Rome, then part of the Papal States, followed the capture of Rome on 6 May 1527 by the mutinous troops of Charles V, Holy Roman Emperor, during the War of the League of Cognac. Charles V only intended to threaten military action to make Pope Clement VII accept his ter"
+  },
+  "effect": {
+   "title": "Counter-Reformation",
+   "kind": "idea",
+   "date": "1545–1648",
+   "about": "The Counter-Reformation (Contrareformatio), also sometimes called the Catholic Revival or the Catholic Reformation, was the period of Catholic resurgence that was initiated in response to and as an alternative to, or from similar insights as, the Protestant Reformation. It was a "
+  },
+  "evidence": [
+   "Wikipedia, Sack of Rome (1527) › Aftermath and effects: \"Cumulatively, these actions changed the complexion of the Catholic Church, steering it away from Renaissance freethought personified by the Medici Popes, toward the religious orthodoxy exemplified by the Counter-Reformation.\""
+  ]
+ },
+ {
+  "key": "Q4917>Q139821980",
+  "cause": {
+   "title": "United States dollar",
+   "kind": "event",
+   "date": "1792",
+   "about": "The United States dollar (symbol: $; currency code: USD) is the official currency of the United States (U.S.) and several other countries. The U.S. Coinage Act of 1792 established the dollar as the base unit, with each dollar divided into 100 cents (symbol: ¢). U.S. banknotes are"
+  },
+  "effect": {
+   "title": "2026 Ebola epidemic",
+   "kind": "disaster",
+   "date": "2026",
+   "about": "The 2026 Ebola epidemic is an outbreak of the Ebola virus disease (EVD) mainly in the eastern Democratic Republic of the Congo (DRC) and neighbouring countries, including Uganda. Initial cases were reported on 14 May 2026 in the Ituri Province. It is the 17th Ebola outbreak in th"
+  },
+  "evidence": [
+   "Wikipedia, 2026 Ebola epidemic › M23 capitalises on Ebola outbreak to exercise its governance capabilities: \"These operations were supported by the Rwandan government through thousands of US dollars worth of equipment and medicine from Rwandan medical facilities.\""
+  ]
+ },
+ {
+  "key": "Q9957>Q112524",
+  "cause": {
+   "title": "Hongwu Emperor",
+   "kind": "thinker",
+   "date": "1328–1398",
+   "about": "The Hongwu Emperor (21 October 1328– 24 June 1398), personal name Zhu Yuanzhang, was the founding emperor of the Ming dynasty of China, reigning from 1368 to 1398. Born in 1328 into a peasant family in Anhui, Zhu Yuanzhang grew up during a period of epidemics, famines, and widesp"
+  },
+  "effect": {
+   "title": "Red Turban Rebellions",
+   "kind": "revolution",
+   "date": "1351–1368",
+   "about": "The Red Turban Rebellions  were uprisings against the Yuan dynasty between 1351 and 1368, eventually leading to its collapse. Remnants of the Yuan imperial court retreated northwards and is thereafter known as the Northern Yuan in historiography."
+  },
+  "evidence": [
+   "Wikipedia, Red Turban Rebellions › Origin: \"Zhu Yuanzhang, who would later become the Hongwu Emperor, was born on 21 October 1328 at Zhongli village in Haozhou (modern Fengyang County, Anhui).\"",
+   "Wikipedia, Red Turban Rebellions › Origin: \"Zhu Yuanzhang, who would later become the Hongwu Emperor, was born on 21 October 1328 at Zhongli village in Haozhou (modern Fengyang County, Anhui).\""
+  ]
+ },
+ {
+  "key": "Q4917>Q15353665",
+  "cause": {
+   "title": "United States dollar",
+   "kind": "event",
+   "date": "1792",
+   "about": "The United States dollar (symbol: $; currency code: USD) is the official currency of the United States (U.S.) and several other countries. The U.S. Coinage Act of 1792 established the dollar as the base unit, with each dollar divided into 100 cents (symbol: ¢). U.S. banknotes are"
+  },
+  "effect": {
+   "title": "South Sudanese Civil War",
+   "kind": "war",
+   "date": "2013–2020",
+   "about": "The South Sudanese Civil War was a multi-sided civil war in South Sudan fought from 2013 to 2018 between government and opposition forces. The civil war caused rampant human rights abuses, including forced displacement, ethnic massacres, and killings of journalists by various par"
+  },
+  "evidence": [
+   "Wikipedia, South Sudanese Civil War › Previous rebellions: \"Between 2006 and 2009, sales of oil brought in an annual average of US$2.1 billion to the Southern Sudan Autonomous Region.\""
+  ]
+ },
+ {
+  "key": "Q58792>Q1142572",
+  "cause": {
+   "title": "Federal Security Service",
+   "kind": "event",
+   "date": "1995",
+   "about": "The Federal Security Service of the Russian Federation (FSB) is the principal security agency of Russia and the main successor agency to the Soviet Union's KGB; its immediate predecessor was the Federal Counterintelligence Service (FSK), which was reorganized into the FSB in 1995"
+  },
+  "effect": {
+   "title": "1998 Russian financial crisis",
+   "kind": "event",
+   "date": "1998",
+   "about": "The Russian financial crisis (also called the ruble crisis or the Russian flu) began in Russia on 17 August 1998. It resulted in the Russian government and the Russian Central Bank devaluing the ruble and defaulting on its debt. The crisis had severe impacts on the economies of m"
+  },
+  "evidence": [
+   "Wikipedia, 1998 Russian financial crisis › Background and course of events: \"On 29 July, Yeltsin interrupted his vacation at Dolgiye Borody residence and flew to Moscow, prompting fears of a Cabinet reshuffle, but he only replaced Federal Security Service Chief Nikolay Kovalyov with Vladimir Putin.\""
+  ]
+ },
+ {
+  "key": "Q2001966>Q617772",
+  "cause": {
+   "title": "Company rule in India",
+   "kind": "event",
+   "date": "1757–1858",
+   "about": "Company rule in India (sometimes also Company Raj, from Hindi rāj, ) was the rule of the British East India Company on the Indian subcontinent. This is variously taken to have commenced in 1757, after the Battle of Plassey, when the Nawab of Bengal Siraj-ud-Daulah was defeated an"
+  },
+  "effect": {
+   "title": "Anglo-Persian War",
+   "kind": "war",
+   "date": "1856–1857",
+   "about": "The Anglo-Persian War, also known as the Anglo-Iranian War (جنگ ایران و انگلستان), was a war fought between the United Kingdom and Iran, which was ruled by the Qajar dynasty. In the war, the British opposed an attempt by Iran to press its claim on the city of Herat. Though Herat "
+  },
+  "evidence": [
+   "Wikipedia, Anglo-Persian War › Background: \"In the context of the Great Game—the Anglo-Russian contest for influence in Central Asia—the British wished Afghanistan to remain an independent country with friendly relation as a buffer state against Russian expansion towards India.\"",
+   "Wikipedia, Anglo-Persian War › Background: \"In response, the British governor-general in India, acting on orders from London, declared war on 1 November.\""
+  ]
+ },
+ {
+  "key": "Q2001966>Q78994",
+  "cause": {
+   "title": "Company rule in India",
+   "kind": "event",
+   "date": "1757–1858",
+   "about": "Company rule in India (sometimes also Company Raj, from Hindi rāj, ) was the rule of the British East India Company on the Indian subcontinent. This is variously taken to have commenced in 1757, after the Battle of Plassey, when the Nawab of Bengal Siraj-ud-Daulah was defeated an"
+  },
+  "effect": {
+   "title": "Napoleonic Wars",
+   "kind": "war",
+   "date": "1803–1815",
+   "about": "The Napoleonic Wars (1803–1815) were a global series of conflicts fought by a fluctuating array of European coalitions against the French First Republic (1803–1804) under the First Consul followed by the First French Empire (1804–1815) under the Emperor of the French, Napoleon. T"
+  },
+  "evidence": [
+   "Wikipedia, Napoleonic Wars › Background: \"Napoleon Bonaparte, commander of the in the latter stages of the First Coalition, had launched a campaign in Egypt, intending to disrupt the British control of India.\""
+  ]
+ },
+ {
+  "key": "Q2001966>Q191282",
+  "cause": {
+   "title": "Company rule in India",
+   "kind": "event",
+   "date": "1757–1858",
+   "about": "Company rule in India (sometimes also Company Raj, from Hindi rāj, ) was the rule of the British East India Company on the Indian subcontinent. This is variously taken to have commenced in 1757, after the Battle of Plassey, when the Nawab of Bengal Siraj-ud-Daulah was defeated an"
+  },
+  "effect": {
+   "title": "First Opium War",
+   "kind": "war",
+   "date": "1839–1842",
+   "about": "The First Opium War, also known as the Anglo-Chinese War, was a series of military engagements fought between the British Empire and Qing China between 1839 and 1842. The immediate issue was the Chinese enforcement of their ban on the opium trade by seizing private opium stocks f"
+  },
+  "evidence": [
+   "Wikipedia, First Opium War › Opium trade: \"The British realised they could reduce their trade deficit with Chinese manufactories by counter-trading in narcotic opium, and therefore efforts were made to produce more opium in Company-controlled India.\""
+  ]
+ },
+ {
+  "key": "Q2001966>Q989092",
+  "cause": {
+   "title": "Company rule in India",
+   "kind": "event",
+   "date": "1757–1858",
+   "about": "Company rule in India (sometimes also Company Raj, from Hindi rāj, ) was the rule of the British East India Company on the Indian subcontinent. This is variously taken to have commenced in 1757, after the Battle of Plassey, when the Nawab of Bengal Siraj-ud-Daulah was defeated an"
+  },
+  "effect": {
+   "title": "First Anglo-Afghan War",
+   "kind": "war",
+   "date": "1839–1842",
+   "about": "The First Anglo-Afghan War was fought between the Durranis backed by the British Empire and the Sikh Empire, and the Barakzais of Kabul and Kandahar, alongside their regional allies, from 1838 to 1842. The British intervened in a succession dispute stemming from the Durrani succe"
+  },
+  "evidence": [
+   "Wikipedia, First Anglo-Afghan War › Causes: \"In 1837, Lord Palmerston and John Hobhouse, fearing the instability of Afghanistan, the Sindh, and the increasing power of the Sikh kingdom to the northwest, raised the spectre of a possible Russian invasion of British India through Afghanistan.\""
+  ]
+ },
+ {
+  "key": "Q221357>Q1501724",
+  "cause": {
+   "title": "Dutch Brazil",
+   "kind": "event",
+   "date": "1630–1654",
+   "about": "Dutch Brazil (Nederlands-Brazilië; Brasil Holandês), also known as New Holland (Nieuw-Holland), was a colony of the Dutch Republic in the northeastern portion of modern-day Brazil, controlled from 1630 to 1654 during Dutch colonization of the Americas. The main cities of the colo"
+  },
+  "effect": {
+   "title": "Portuguese Restoration War",
+   "kind": "war",
+   "date": "1640–1668",
+   "about": "The Restoration War between Portugal and Spain began in 1641 and ended with the Treaty of Lisbon in 1668, bringing a formal end to the Iberian Union. The period from 1640 to 1668 was marked by periodic skirmishes between Portugal and Spain, as well as short episodes of more serio"
+  },
+  "evidence": [
+   "Wikipedia, Portuguese Restoration War › Relations between Portugal and the Dutch Republic: \"The Dutch seized half of Brazil, Elmina (in Ghana), and some Portuguese colonies in the East Indies.\""
+  ]
+ },
+ {
+  "key": "Q58792>Q643925",
+  "cause": {
+   "title": "Federal Security Service",
+   "kind": "event",
+   "date": "1995",
+   "about": "The Federal Security Service of the Russian Federation (FSB) is the principal security agency of Russia and the main successor agency to the Soviet Union's KGB; its immediate predecessor was the Federal Counterintelligence Service (FSK), which was reorganized into the FSB in 1995"
+  },
+  "effect": {
+   "title": "1999 war in Dagestan",
+   "kind": "war",
+   "date": "1999",
+   "about": "The 1999 war in Dagestan, also known as the Dagestan incursions (Война в Дагестане), was an armed conflict that began when the Ichkerian-based Islamic International Peacekeeping Brigade (IIPB), an Islamist group led by Shamil Basayev, Ibn al-Khattab, Ramzan Akhmadov and Arbi Bara"
+  },
+  "evidence": [
+   "Wikipedia, 1999 war in Dagestan › Background: \"Chechen separatist government official Turpal-Ali Atgeriyev claimed that he alerted the Federal Security Service of the Russian Federation (FSB) Director Vladimir Putin, in the summer of 1999, of the imminent invasion of Dagestan.\""
+  ]
+ },
+ {
+  "key": "Q2001966>Q243979",
+  "cause": {
+   "title": "Company rule in India",
+   "kind": "event",
+   "date": "1757–1858",
+   "about": "Company rule in India (sometimes also Company Raj, from Hindi rāj, ) was the rule of the British East India Company on the Indian subcontinent. This is variously taken to have commenced in 1757, after the Battle of Plassey, when the Nawab of Bengal Siraj-ud-Daulah was defeated an"
+  },
+  "effect": {
+   "title": "Battle of the Nile",
+   "kind": "battle",
+   "date": "1798",
+   "about": "The Battle of the Nile (also known as the Battle of Aboukir Bay; Bataille d'Aboukir) was fought between the Royal Navy and the French Navy at Aboukir Bay in Egypt between 1 and 3 August 1798. It was the climax of the Mediterranean campaign of 1798, which had started three months "
+  },
+  "evidence": [
+   "Wikipedia, Battle of the Nile › Background: \"Bonaparte believed that, by establishing a permanent presence in Egypt (nominally part of the neutral Ottoman Empire), the French would obtain a staging point for future operations against British India, possibly by means of an alliance with the Tipu Sultan of Seringapatam, that might successfully drive the British out of the war.\""
+  ]
+ },
+ {
+  "key": "Q2001966>Q238262",
+  "cause": {
+   "title": "Company rule in India",
+   "kind": "event",
+   "date": "1757–1858",
+   "about": "Company rule in India (sometimes also Company Raj, from Hindi rāj, ) was the rule of the British East India Company on the Indian subcontinent. This is variously taken to have commenced in 1757, after the Battle of Plassey, when the Nawab of Bengal Siraj-ud-Daulah was defeated an"
+  },
+  "effect": {
+   "title": "Treaty of Nanking",
+   "kind": "treaty",
+   "date": "1842",
+   "about": "The Treaty of Nanjing was the peace treaty which ended the First Opium War (1839–1842) between Great Britain and the Qing dynasty of China on 29 August 1842. It was the second of what the Chinese later termed the unequal treaties, after the rejected 1841 Convention of Chuenpi, si"
+  },
+  "evidence": [
+   "Wikipedia, Treaty of Nanking › Background: \"During Company rule in India, opium was grown on plantations and auctioned to merchants, who then sold it to Chinese who smuggled it into China (Chinese law forbade the importation and sale of opium).\""
+  ]
+ },
+ {
+  "key": "Q2001966>Q12444025",
+  "cause": {
+   "title": "Company rule in India",
+   "kind": "event",
+   "date": "1757–1858",
+   "about": "Company rule in India (sometimes also Company Raj, from Hindi rāj, ) was the rule of the British East India Company on the Indian subcontinent. This is variously taken to have commenced in 1757, after the Battle of Plassey, when the Nawab of Bengal Siraj-ud-Daulah was defeated an"
+  },
+  "effect": {
+   "title": "Indian independence movement",
+   "kind": "event",
+   "date": "1757–1947",
+   "about": "The Indian independence movement was a series of political efforts from the mid-1880s to 1947 that took place in the Indian subcontinent with the aim of ending British colonial rule. The first nationalistic movement took root when the Indian National Congress (INC) was formed in "
+  },
+  "evidence": [
+   "Wikipedia, Indian independence movement › Background: \"Mir Jafar's betrayal of the Nawab Siraj-ud-Daulah of Bengal in Plassey made the battle one of the main factors of British supremacy in the sub-continent.\""
+  ]
+ },
+ {
+  "key": "Q46652>Q1150344",
+  "cause": {
+   "title": "Malacca Sultanate",
+   "kind": "state",
+   "date": "1400–1511",
+   "about": "The Malacca Sultanate (Kesultanan Melaka; Jawi script: ) was a Malay sultanate based in the modern-day state of Malacca, Malaysia. Conventional historical thesis marks c. 1400 as the founding year of the sultanate by King of Singapura, Parameswara, also known as Iskandar Shah, al"
+  },
+  "effect": {
+   "title": "Johor Sultanate",
+   "kind": "state",
+   "date": "1528–1946",
+   "about": "The Johor Sultanate (Kesultanan Johor or کسلطانن جوهر; also called the Sultanate of Johor, Johor-Pahang-Riau-Lingga, or the Johor Empire) was founded by Sultan of Malacca Mahmud Shah's son, Alauddin Riayat Shah II in 1528. Prior to being a sultanate of its own right, Johor had be"
+  },
+  "evidence": [
+   "Wikipedia, Malacca Sultanate › Portuguese Malacca: \"Despite numerous attacks, the fort was only breached once, when the Dutch and Johor defeated the Portuguese in 1641.\"",
+   "Wikipedia, Malacca Sultanate › Portuguese Malacca: \"Competition from other regional ports such as Johor which was founded by the exiled Sultan of Malacca, saw Asian traders bypass Malacca and the city began to decline as a trading port.\"",
+   "Wikipedia, Malacca Sultanate › Chinese retaliation: \"The Malay Sultanate of Johor also improved relations with the Portuguese.\""
+  ]
+ },
+ {
+  "key": "Q2060657>Q2672432",
+  "cause": {
+   "title": "Singhasari",
+   "kind": "event",
+   "date": "1222–1292",
+   "about": "Singhasari (ꦏꦫꦠꦺꦴꦤ꧀ꦱꦶꦔ꧀ꦲꦱꦫꦶ or Karaton Singosari, Kerajaan Singasari), also known as Tumapel, was a Javanese Hindu-Buddhist kingdom located in east Java between 1222 and 1292. The kingdom succeeded the Kingdom of Kediri as the dominant kingdom in eastern Java. The kingdom's name "
+  },
+  "effect": {
+   "title": "Mongol invasion of Java",
+   "kind": "war",
+   "date": "1293",
+   "about": "The Yuan dynasty under Kublai Khan attempted in 1293 to invade Java, an island in modern Indonesia, with 20,000 to 30,000 soldiers. This was intended as a punitive expedition against Kertanegara of Singhasari, who had refused to pay tribute to the Yuan and maimed one of their emi"
+  },
+  "evidence": [
+   "Wikipedia, Mongol invasion of Java › Background: \"Men-shi or Meng-qi (孟琪), one of his ministers, was sent to Java (Singhasari) but was not well received there.\"",
+   "Wikipedia, Mongol invasion of Java › Background: \"The king of Singhasari, Kertanegara, was offended by Men-shi's proposal and branded his face with a hot iron as was done to common thieves, cut his ears, and scornfully sent him on his way.\"",
+   "Wikipedia, Mongol invasion of Java › Background: \"Jayakatwang usurped and killed Kertanegara during the Tantra sacred ceremony while drinking palm wine, thus bringing an end to the Singhasari Kingdom.\""
+  ]
+ },
+ {
+  "key": "Q1619120>Q622774",
+  "cause": {
+   "title": "Reform Act 1832",
+   "kind": "event",
+   "date": "1832",
+   "about": "The Representation of the People Act 1832 (2 & 3 Will. 4. c. 45), also known as the Reform Act 1832, Great Reform Act or First Reform Act, was an act of the Parliament of the United Kingdom to reform the electoral system in England and Wales and to expand the male franchise, but "
+  },
+  "effect": {
+   "title": "French Revolution of 1848",
+   "kind": "revolution",
+   "date": "1848",
+   "about": "The French Revolution of 1848 (Révolution française de 1848), also known as the February Revolution (Révolution de février), was a period of civil unrest in France, in February 1848, that led to the collapse of the July Monarchy and the foundation of the French Second Republic. I"
+  },
+  "evidence": [
+   "Wikipedia, French Revolution of 1848 › Background: \"A reform movement developed in France which urged the government to expand the electoral franchise, just as Great Britain had done with the Reform Act 1832.\"",
+   "Wikipedia, French Revolution of 1848 › Economic and international influences: \"When Britain's Reform Act 1832 extended enfranchisement to any man paying taxes of £10 or more per year (, previously the vote was restricted to landholders), France's free press took interest.\""
+  ]
+ },
+ {
+  "key": "Q1139080>Q1065854",
+  "cause": {
+   "title": "Hurricane Gilbert",
+   "kind": "disaster",
+   "date": "1988",
+   "about": "Hurricane Gilbert was a large and extremely powerful tropical cyclone that formed during the 1988 Atlantic hurricane season, which peaked as a Category 5 hurricane. The storm brought widespread destruction to the Caribbean and the Gulf of Mexico, and is tied with 1969's Hurricane"
+  },
+  "effect": {
+   "title": "United Nations Office for the Coordination of Humanitarian Affairs",
+   "kind": "event",
+   "date": "1991",
+   "about": "The United Nations Office for the Coordination of Humanitarian Affairs (OCHA) is a United Nations (UN) body established in December 1991 by the General Assembly to strengthen the international response to complex emergencies and natural disasters. It is the successor to the Offic"
+  },
+  "evidence": [
+   "Wikipedia, Hurricane Gilbert › Jamaica: \"A breakdown of the $818&nbsp;million damage estimate, reported to the Office of the United Nations Disaster Relief Coordinator (UNDRO) by October&nbsp;11, included $260&nbsp;million incurred to low income dwellings, $179&nbsp;million to agriculture and farming, $106&nbsp;million to electrical utilities, $89&nbsp;million to educational institutes, $60&nbsp;million to fishing and forestry industries…\"",
+   "Wikipedia, Hurricane Gilbert › Relief efforts: \"The government of Haiti requested that the Office of the United Nations Disaster Relief Coordinator issue an appeal for international aid due to heavy damage in the southern parts of the country.\""
+  ]
+ },
+ {
+  "key": "Q4917>Q6500827",
+  "cause": {
+   "title": "United States dollar",
+   "kind": "event",
+   "date": "1792",
+   "about": "The United States dollar (symbol: $; currency code: USD) is the official currency of the United States (U.S.) and several other countries. The U.S. Coinage Act of 1792 established the dollar as the base unit, with each dollar divided into 100 cents (symbol: ¢). U.S. banknotes are"
+  },
+  "effect": {
+   "title": "Japanese asset price bubble",
+   "kind": "event",
+   "date": "1986–1991",
+   "about": "The Japanese asset price bubble was an economic bubble in Japan from 1986 to 1991 in which real estate and stock market prices were greatly inflated. In early 1992, this price bubble burst and the country's economy stagnated. The bubble was characterized by rapid acceleration of "
+  },
+  "evidence": [
+   "Wikipedia, Japanese asset price bubble › Background: \"The table below demonstrates the monthly average of the U.S. dollar/Yen spot rate (Yen per USD) at 17:00 JST.\"",
+   "Wikipedia, Japanese asset price bubble › Plaza Accord: \"At that time, Japan had a huge trade surplus, as the Japanese yen was weaker against U.S. dollar, while the United States suffered from a consistent trade deficit.\""
+  ]
+ },
+ {
+  "key": "Q2018662>Q250515",
+  "cause": {
+   "title": "Western Ganga dynasty",
+   "kind": "state",
+   "date": "350–1000",
+   "about": "Western Ganga was an important ruling dynasty of ancient Karnataka in India which lasted from about 350 to 1004 CE. They are known as \"Western Gangas\" to distinguish them from the Eastern Gangas who in later centuries ruled over Kalinga (modern Odisha and northern Andhra Pradesh)"
+  },
+  "effect": {
+   "title": "Eastern Ganga dynasty",
+   "kind": "state",
+   "date": "1078–1434",
+   "about": "The Eastern Ganga dynasty (also known as Purba Gangas, Rudhi Gangas or Prachya Gangas) were a large medieval era dynasty that reigned from Kalinga from as early as the 5th century to the mid 20th century. They are known as \"Eastern Gangas\" to distinguish them from the Western Gan"
+  },
+  "evidence": [
+   "Wikipedia, Eastern Ganga dynasty › Origin: \"All these indicate a strong proof for the Eastern Gangas having originated from the earlier Western Gangas (established c. 350 CE) of Karnataka.\"",
+   "Wikipedia, Eastern Ganga dynasty › Origin: \"The Kendupatna copper plate of Narasimhadeva II and the Puri copper plate of Narasimhadeva IV also state that Kamarnava came from Gangawadi province, now in Karnataka.\"",
+   "Wikipedia, Eastern Ganga dynasty › Origin: \"It also states that Kamarnava I, the eldest son of Virasimha, had left Kolahalapura (Kuvalalapura or Kolar), the capital of Gangawadivisaya (Western Ganga kingdom in southern Karnataka) after giving up his rightful throne to his paternal uncle.\""
+  ]
+ },
+ {
+  "key": "Q1346632>Q3269746",
+  "cause": {
+   "title": "Jebe",
+   "kind": "thinker",
+   "date": "1181–1225",
+   "about": "Jebe (or Jebei, Зэв, pronounced as Zev; birth name: Jirqo'adai (Modern Mongolian: Zurgaadai), Зургаадай, ) (died approximately 1224) was one of the most prominent Noyans (generals) of Genghis Khan. He belonged to the Mongol Besüd tribe, and fought among the Tayichi'ut before ente"
+  },
+  "effect": {
+   "title": "Battle of Parwan",
+   "kind": "battle",
+   "date": "1221",
+   "about": "The Battle of Parwan was fought between Sultan Jalal al-Din Mangburni of the Khwarazmian Empire and the Mongols ruled by Genghis Khan in September 1221 AD during the Mongol invasion of the Khwarazmian Empire at Parwan, north of Kabul, in present-day Afghanistan. Jalal ad-Din had "
+  },
+  "evidence": [
+   "Wikipedia, Battle of Parwan › Background: \"He was also served by generals like Jebe and Subutai, adept in employing flexible and innovative tactics.\"",
+   "Wikipedia, Battle of Parwan › Background: \"Genghis Khan sent a 30,000–40,000 man army led by Jebe and Subutai and his own son-in-law Toghachar to hunt down the Shah.\"",
+   "Wikipedia, Battle of Parwan › Background: \"He had halted for a while at Nishapur, but when the Mongol army under Jebe and Subutai crossed the Amu Darya, the Shah moved across Persia, then eluded the Mongols by pretending to make for Baghdad, and eventually found refuge on an island in the Caspian Sea, where he died in December 1220, naming Jalal ad-Din his heir.\""
+  ]
+ },
+ {
+  "key": "Q1787448>Q1987351",
+  "cause": {
+   "title": "Pride's Purge",
+   "kind": "revolution",
+   "date": "1648",
+   "about": "Pride's Purge is the name commonly given to an event that took place on 6 December 1648, when soldiers prevented members of Parliament considered hostile to the New Model Army from entering the House of Commons of England. Despite defeat in the First English Civil War, Charles I "
+  },
+  "effect": {
+   "title": "The Protectorate",
+   "kind": "event",
+   "date": "1653–1659",
+   "about": "The Protectorate, officially the Commonwealth of England, Scotland and Ireland, was the British republic that lasted from 16 December 1653 to 25 May 1659. The kingdoms of England, Scotland, and Ireland, with their associated territories were joined together in the Commonwealth of"
+  },
+  "evidence": [
+   "Wikipedia, Pride's Purge › Aftermath: \"He was later appointed to the tribunal that tried Charles for treason, and signed his death warrant; he became wealthy under the Protectorate, and died in 1658.\"",
+   "Wikipedia, Pride's Purge › Aftermath: \"Charles was executed on 30 January, but in a society that placed enormous emphasis on the rule of law, the circumstances of his death, and the military coup that preceded it, tainted the subsequent Protectorate from its inception.\""
+  ]
+ },
+ {
+  "key": "Q82006>Q1318051",
+  "cause": {
+   "title": "Benjamin Disraeli",
+   "kind": "leader",
+   "date": "1804–1881",
+   "about": "Benjamin Disraeli, 1st Earl of Beaconsfield (born Benjamin D'Israeli; 21 December 1804 – 19 April 1881), was a British statesman, Conservative politician and writer who twice served as Prime Minister of the United Kingdom. He played a central role in the creation of the modern Co"
+  },
+  "effect": {
+   "title": "Reform Act 1867",
+   "kind": "event",
+   "date": "1867",
+   "about": "The Representation of the People Act 1867 (30 & 31 Vict. c. 102), known as the Reform Act 1867 or the Second Reform Act, is an act of the Parliament of the United Kingdom that enfranchised part of the urban male working class in England and Wales for the first time, extending the"
+  },
+  "evidence": [
+   "Wikipedia, Reform Act 1867 › Background: \"Following an unsuccessful attempt by Benjamin Disraeli to introduce a reform bill in 1859, Lord John Russell, who had played a major role in passing the Reform Act 1832, attempted this in 1860; but the Prime Minister, Lord Palmerston, a fellow Liberal, was against any further electoral reform.\"",
+   "Wikipedia, Reform Act 1867 › Background: \"When it came to the vote, however, this bill split the Liberal Party: a split partly engineered by Benjamin Disraeli, who incited those threatened by the bill to rise up against it.\""
+  ]
+ }
+]

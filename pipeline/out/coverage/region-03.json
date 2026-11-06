@@ -1,0 +1,470 @@
+{
+ "region": "Russia & Central Asia",
+ "cells": [
+  {
+   "cell": "pre|Russia & Central Asia",
+   "era": "Before 3000 BCE",
+   "from": -12000,
+   "to": -3000,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "-3000_-2000|Russia & Central Asia",
+   "era": "3000–2000 BCE",
+   "from": -3000,
+   "to": -2000,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "-2000_-1000|Russia & Central Asia",
+   "era": "2000–1000 BCE",
+   "from": -2000,
+   "to": -1000,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "-1000_-500|Russia & Central Asia",
+   "era": "1000–500 BCE",
+   "from": -1000,
+   "to": -500,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "-500_0|Russia & Central Asia",
+   "era": "500–0 BCE",
+   "from": -500,
+   "to": 0,
+   "have": [
+    "Parthian Empire",
+    "Xiongnu",
+    "Greco-Bactrian Kingdom",
+    "Qin's wars of unification",
+    "Siege of the Sogdian Rock",
+    "Battle of Jaxartes",
+    "Han–Xiongnu wars",
+    "War of the Heavenly Horses"
+   ],
+   "count": 8
+  },
+  {
+   "cell": "0_250|Russia & Central Asia",
+   "era": "0–250",
+   "from": 0,
+   "to": 250,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "250_500|Russia & Central Asia",
+   "era": "250–500",
+   "from": 250,
+   "to": 500,
+   "have": [
+    "Hephthalites",
+    "Rouran Khaganate"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "500_750|Russia & Central Asia",
+   "era": "500–750",
+   "from": 500,
+   "to": 750,
+   "have": [
+    "Volga Bulgaria",
+    "Göktürks",
+    "Uyghur Khaganate",
+    "First Turkic Khaganate",
+    "Muslim conquest of Transoxiana",
+    "Goguryeo–Sui War",
+    "Hephthalite–Göktürk raids of 614–616"
+   ],
+   "count": 7
+  },
+  {
+   "cell": "750_1000|Russia & Central Asia",
+   "era": "750–1000",
+   "from": 750,
+   "to": 1000,
+   "have": [
+    "Kara-Khanid Khanate",
+    "Battle of Talas"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1000_1100|Russia & Central Asia",
+   "era": "1000–1100",
+   "from": 1000,
+   "to": 1100,
+   "have": [
+    "Khwarazmian Empire",
+    "Battle of Dandanaqan"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1100_1200|Russia & Central Asia",
+   "era": "1100–1200",
+   "from": 1100,
+   "to": 1200,
+   "have": [
+    "Qara Khitai"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1200_1300|Russia & Central Asia",
+   "era": "1200–1300",
+   "from": 1200,
+   "to": 1300,
+   "have": [
+    "Golden Horde",
+    "Mongol conquests",
+    "Mongol invasion of the Khwarazmian Empire",
+    "Mongol campaigns in Central Asia",
+    "Toluid Civil War",
+    "Siege of Bukhara",
+    "Battle of Parwan",
+    "Berke–Hulegu war"
+   ],
+   "count": 8
+  },
+  {
+   "cell": "1300_1400|Russia & Central Asia",
+   "era": "1300–1400",
+   "from": 1300,
+   "to": 1400,
+   "have": [
+    "Battle of the Kondurcha River"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1400_1500|Russia & Central Asia",
+   "era": "1400–1500",
+   "from": 1400,
+   "to": 1500,
+   "have": [
+    "Khanate of Kazan",
+    "Khanate of Sibir",
+    "Kazakh Khanate",
+    "Astrakhan Khanate",
+    "Nogai Horde"
+   ],
+   "count": 5
+  },
+  {
+   "cell": "1500_1550|Russia & Central Asia",
+   "era": "1500–1550",
+   "from": 1500,
+   "to": 1550,
+   "have": [
+    "Khanate of Bukhara",
+    "Khanate of Khiva",
+    "Russo-Crimean Wars",
+    "Persian–Uzbek wars"
+   ],
+   "count": 4
+  },
+  {
+   "cell": "1550_1600|Russia & Central Asia",
+   "era": "1550–1600",
+   "from": 1550,
+   "to": 1600,
+   "have": [
+    "Baroque",
+    "Russian conquest of Siberia",
+    "Russo-Turkish War (1568–1570)"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "1600_1650|Russia & Central Asia",
+   "era": "1600–1650",
+   "from": 1600,
+   "to": 1650,
+   "have": [
+    "Ingrian War"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1650_1700|Russia & Central Asia",
+   "era": "1650–1700",
+   "from": 1650,
+   "to": 1700,
+   "have": [
+    "Treaty of Nerchinsk",
+    "Dzungar–Qing Wars"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1700_1750|Russia & Central Asia",
+   "era": "1700–1750",
+   "from": 1700,
+   "to": 1750,
+   "have": [
+    "Khanate of Kokand"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1750_1800|Russia & Central Asia",
+   "era": "1750–1800",
+   "from": 1750,
+   "to": 1800,
+   "have": [
+    "Emirate of Bukhara"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1800_1810|Russia & Central Asia",
+   "era": "1800s",
+   "from": 1800,
+   "to": 1810,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1810_1820|Russia & Central Asia",
+   "era": "1810s",
+   "from": 1810,
+   "to": 1820,
+   "have": [
+    "French invasion of Russia"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1820_1830|Russia & Central Asia",
+   "era": "1820s",
+   "from": 1820,
+   "to": 1830,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1830_1840|Russia & Central Asia",
+   "era": "1830s",
+   "from": 1830,
+   "to": 1840,
+   "have": [
+    "Great Game",
+    "Russian conquest of Central Asia"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1840_1850|Russia & Central Asia",
+   "era": "1840s",
+   "from": 1840,
+   "to": 1850,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1850_1860|Russia & Central Asia",
+   "era": "1850s",
+   "from": 1850,
+   "to": 1860,
+   "have": [
+    "Treaty of Aigun"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1860_1870|Russia & Central Asia",
+   "era": "1860s",
+   "from": 1860,
+   "to": 1870,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1870_1880|Russia & Central Asia",
+   "era": "1870s",
+   "from": 1870,
+   "to": 1880,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1880_1890|Russia & Central Asia",
+   "era": "1880s",
+   "from": 1880,
+   "to": 1890,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1890_1900|Russia & Central Asia",
+   "era": "1890s",
+   "from": 1890,
+   "to": 1900,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1900_1910|Russia & Central Asia",
+   "era": "1900s",
+   "from": 1900,
+   "to": 1910,
+   "have": [
+    "Russo-Japanese War",
+    "Revolution in the Kingdom of Poland"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1910_1920|Russia & Central Asia",
+   "era": "1910s",
+   "from": 1910,
+   "to": 1920,
+   "have": [
+    "Russian Revolution",
+    "Turkestan Autonomous Soviet Socialist Republic",
+    "Murder of the Romanov family"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "1920_1930|Russia & Central Asia",
+   "era": "1920s",
+   "from": 1920,
+   "to": 1930,
+   "have": [
+    "Uzbek Soviet Socialist Republic",
+    "Mongolian People's Republic",
+    "Tuvan People's Republic",
+    "Far Eastern Republic",
+    "Khorezm People's Soviet Republic",
+    "Bukharan People's Soviet Republic",
+    "Russian famine of 1921–1922",
+    "Mongolian Revolution of 1921",
+    "Nikolayevsk incident"
+   ],
+   "count": 9
+  },
+  {
+   "cell": "1930_1940|Russia & Central Asia",
+   "era": "1930s",
+   "from": 1930,
+   "to": 1940,
+   "have": [
+    "Kazakh Soviet Socialist Republic",
+    "Battles of Khalkhin Gol",
+    "Population transfer in the Soviet Union",
+    "Japanese invasion of Manchuria",
+    "Soviet–Japanese border conflicts"
+   ],
+   "count": 5
+  },
+  {
+   "cell": "1940_1950|Russia & Central Asia",
+   "era": "1940s",
+   "from": 1940,
+   "to": 1950,
+   "have": [
+    "1948 Ashgabat earthquake",
+    "NKVD prisoner massacres"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1950_1960|Russia & Central Asia",
+   "era": "1950s",
+   "from": 1950,
+   "to": 1960,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1960_1970|Russia & Central Asia",
+   "era": "1960s",
+   "from": 1960,
+   "to": 1970,
+   "have": [
+    "Sino-Indian War",
+    "Sino-Soviet border conflict",
+    "Tashkent Declaration"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "1970_1980|Russia & Central Asia",
+   "era": "1970s",
+   "from": 1970,
+   "to": 1980,
+   "have": [
+    "India–Pakistan war of 1971"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1980_1990|Russia & Central Asia",
+   "era": "1980s",
+   "from": 1980,
+   "to": 1990,
+   "have": [
+    "Jeltoqsan",
+    "Battle for Hill 3234"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1990_2000|Russia & Central Asia",
+   "era": "1990s",
+   "from": 1990,
+   "to": 2000,
+   "have": [
+    "Tajikistani Civil War",
+    "Mongolian Revolution of 1990",
+    "1990 Osh clashes"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "2000_2010|Russia & Central Asia",
+   "era": "2000s",
+   "from": 2000,
+   "to": 2010,
+   "have": [
+    "Tulip Revolution",
+    "Andijan massacre",
+    "Insurgency in the North Caucasus"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "2010_2020|Russia & Central Asia",
+   "era": "2010s",
+   "from": 2010,
+   "to": 2020,
+   "have": [
+    "October 2015 Hindu Kush earthquake"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "2020_2030|Russia & Central Asia",
+   "era": "2020s",
+   "from": 2020,
+   "to": 2030,
+   "have": [
+    "Wagner Group rebellion",
+    "2021 Kyrgyzstan–Tajikistan clashes",
+    "Republican insurgency in Afghanistan",
+    "COVID-19 pandemic in Kazakhstan",
+    "COVID-19 pandemic in Mongolia"
+   ],
+   "count": 5
+  }
+ ]
+}

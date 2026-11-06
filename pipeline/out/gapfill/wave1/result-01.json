@@ -1,0 +1,518 @@
+[
+ {
+  "cause": "Q7747",
+  "effect": "Q110999040",
+  "strength": "primary",
+  "mechanism": "Vladimir Putin ordered the full-scale invasion of Ukraine on 24 February 2022, launching the war."
+ },
+ {
+  "cause": "Q68",
+  "effect": "Q9158",
+  "strength": "contributing",
+  "mechanism": "Electronic computers provided the hardware platform on which networked messaging programs such as early email were built."
+ },
+ {
+  "cause": "Q8676",
+  "effect": "Q1025404",
+  "strength": "minor",
+  "mechanism": "Booth, a Confederate sympathizer embittered by the Union victory, assassinated Lincoln days after Lee's surrender."
+ },
+ {
+  "cause": "Q7207",
+  "effect": "Q8680",
+  "strength": "contributing",
+  "mechanism": "Elizabeth I sanctioned privateering and granted the first patents for colonies in Virginia and Newfoundland, starting England's overseas expansion."
+ },
+ {
+  "cause": "Q36517",
+  "effect": "Q8680",
+  "strength": "minor",
+  "mechanism": "Francis Drake's privateering voyages against Spanish shipping built English naval and maritime enterprise that later underpinned empire."
+ },
+ {
+  "cause": "Q8680",
+  "effect": "Q755170",
+  "strength": "contributing",
+  "mechanism": "Navigation Acts and British commercial expansion pushed the Dutch Republic into rival trade wars, such as the First Anglo-Dutch War."
+ },
+ {
+  "cause": "Q3708094",
+  "effect": "Q12546",
+  "strength": "contributing",
+  "mechanism": "Seljuk expansion into Anatolia after Manzikert prompted Byzantine appeals to Western Europe, helping trigger the First Crusade."
+ },
+ {
+  "cause": "Q12546",
+  "effect": "Q55502",
+  "strength": "primary",
+  "mechanism": "The First Crusade conquered Jerusalem in 1099, establishing the Latin Kingdom of Jerusalem."
+ },
+ {
+  "cause": "Q12546",
+  "effect": "Q235030",
+  "strength": "contributing",
+  "mechanism": "Crusaders seized Antioch in 1098 and founded the Principality of Antioch as a Latin crusader state."
+ },
+ {
+  "cause": "Q12546",
+  "effect": "Q41300",
+  "strength": "contributing",
+  "mechanism": "Crusader rulers of Jerusalem needed protection for pilgrims, leading to the founding of the Knights Templar as a military order."
+ },
+ {
+  "cause": "Q12546",
+  "effect": "Q187549",
+  "strength": "contributing",
+  "mechanism": "Hospitaller care for pilgrims in Jerusalem was militarized during the crusading era, producing the Knights Hospitaller."
+ },
+ {
+  "cause": "Q199820",
+  "effect": "Q33946",
+  "strength": "primary",
+  "mechanism": "The Allied powers at the Paris Peace Conference recognized Czechoslovakia as a successor state of Austria-Hungary in 1919."
+ },
+ {
+  "cause": "Q11427",
+  "effect": "Q1420",
+  "strength": "minor",
+  "mechanism": "Cheap Bessemer steel supplied lighter, stronger chassis and body parts that let automakers build cars at scale."
+ },
+ {
+  "cause": "Q189508",
+  "effect": "Q2269",
+  "strength": "contributing",
+  "mechanism": "The 1688 Glorious Revolution established parliamentary supremacy and secure property rights that encouraged investment in British industry."
+ },
+ {
+  "cause": "Q161885",
+  "effect": "Q2269",
+  "strength": "minor",
+  "mechanism": "The 1707 Acts of Union created a single British market and state within which industrial expansion took place."
+ },
+ {
+  "cause": "Q1317",
+  "effect": "Q2429253",
+  "strength": "contributing",
+  "mechanism": "Bin Laden's al-Qaeda network and jihadist ideology spawned al-Qaeda in Iraq, the organizational ancestor of the Islamic State."
+ },
+ {
+  "cause": "Q44329",
+  "effect": "Q2429253",
+  "strength": "minor",
+  "mechanism": "Assad's brutal repression of the 2011 uprising created the Syrian war space in which the Islamic State expanded."
+ },
+ {
+  "cause": "Q2429253",
+  "effect": "Q27429856",
+  "strength": "contributing",
+  "mechanism": "The Islamic State seized Mosul in June 2014, prompting the 2016 to 2017 Iraqi offensive to retake the city."
+ },
+ {
+  "cause": "Q935",
+  "effect": "Q12539",
+  "strength": "contributing",
+  "mechanism": "Newton's Principia showed that natural laws could be derived mathematically, inspiring Enlightenment confidence in reason."
+ },
+ {
+  "cause": "Q9353",
+  "effect": "Q12539",
+  "strength": "contributing",
+  "mechanism": "John Locke's empiricism and natural rights theory supplied the epistemic and political foundations that Enlightenment thinkers built upon."
+ },
+ {
+  "cause": "Q9191",
+  "effect": "Q12539",
+  "strength": "minor",
+  "mechanism": "Descartes' rationalism made methodical doubt and reason the starting point of seventeenth-century philosophy."
+ },
+ {
+  "cause": "Q12539",
+  "effect": "Q6534",
+  "strength": "contributing",
+  "mechanism": "Philosophes such as Voltaire and Rousseau popularized critiques of absolutism and the Church, shaping the ideas behind the French Revolution."
+ },
+ {
+  "cause": "Q12567",
+  "effect": "Q179876",
+  "strength": "contributing",
+  "mechanism": "Viking invasions of the ninth century destroyed rival kingdoms and pushed Wessex to unify England under Alfred and his successors."
+ },
+ {
+  "cause": "Q12567",
+  "effect": "Q31929",
+  "strength": "minor",
+  "mechanism": "Repeated Viking raids on the Carolingian coasts and rivers weakened royal authority and contributed to the empire's fragmentation after 887."
+ },
+ {
+  "cause": "Q16957",
+  "effect": "Q157682",
+  "strength": "minor",
+  "mechanism": "Party-mandated production increases imposed by the East German government sparked the June 1953 workers' uprising."
+ },
+ {
+  "cause": "Q68",
+  "effect": "Q466",
+  "strength": "contributing",
+  "mechanism": "Computer hardware and networking made Berners-Lee's invention of the Web practical, which he first ran on a NeXT computer at CERN."
+ },
+ {
+  "cause": "Q16338",
+  "effect": "Q466",
+  "strength": "minor",
+  "mechanism": "Cheap personal computers spread widely in the 1980s, creating the mass user base the Web needed."
+ },
+ {
+  "cause": "Q466",
+  "effect": "Q15718485",
+  "strength": "minor",
+  "mechanism": "The Web's protocols and browser ecosystem provided the platform on which Twitter was built as a public social messaging service."
+ },
+ {
+  "cause": "Q361",
+  "effect": "Q12876",
+  "strength": "primary",
+  "mechanism": "Trench stalemate on the Western Front led British engineers to develop the armoured tank, first used at the Somme in 1916."
+ },
+ {
+  "cause": "Q361",
+  "effect": "Q7785",
+  "strength": "contributing",
+  "mechanism": "Dominion contributions to the Great War strengthened demands for autonomy, culminating in the Balfour Declaration and the 1931 Statute of Westminster."
+ },
+ {
+  "cause": "Q8479",
+  "effect": "Q34266",
+  "strength": "primary",
+  "mechanism": "Peter the Great drove Russia's expansion to the Baltic and proclaimed the Russian Empire in 1721."
+ },
+ {
+  "cause": "Q151616",
+  "effect": "Q34266",
+  "strength": "primary",
+  "mechanism": "Victory in the Great Northern War against Sweden gave Russia Baltic territory and established it as a major European power."
+ },
+ {
+  "cause": "Q153286",
+  "effect": "Q34266",
+  "strength": "contributing",
+  "mechanism": "Sweden ceded its Baltic provinces at Nystad, formally recognizing Russia's new status as an empire."
+ },
+ {
+  "cause": "Q34266",
+  "effect": "Q254106",
+  "strength": "contributing",
+  "mechanism": "Russian Empire expansion into Ottoman Balkan and Black Sea territory provoked the Crimean War against Britain, France and the Ottomans."
+ },
+ {
+  "cause": "Q34266",
+  "effect": "Q382116",
+  "strength": "contributing",
+  "mechanism": "Russian conquest of the North Caucasus provoked prolonged resistance, culminating in the Caucasian War that ended in 1864."
+ },
+ {
+  "cause": "Q34266",
+  "effect": "Q78994",
+  "strength": "minor",
+  "mechanism": "Russia's refusal to enforce the Continental System led Napoleon to invade in 1812, drawing Russia into the Napoleonic Wars."
+ },
+ {
+  "cause": "Q34266",
+  "effect": "Q1418582",
+  "strength": "minor",
+  "mechanism": "Peter the Great's Caspian campaign against Persia's Caspian provinces triggered the Russo-Persian War of 1722 to 1723."
+ },
+ {
+  "cause": "Q162665",
+  "effect": "Q12506",
+  "strength": "primary",
+  "mechanism": "The Nika riots of 532 burned the earlier basilica on this site, destroying the church and creating the need for a new one."
+ },
+ {
+  "cause": "Q41866",
+  "effect": "Q12506",
+  "strength": "primary",
+  "mechanism": "Justinian I commissioned Anthemius and Isidore to rebuild the church after the riots, completing the present building in 537."
+ },
+ {
+  "cause": "Q26683",
+  "effect": "Q38799",
+  "strength": "contributing",
+  "mechanism": "The secular PLO's approach to Israel prompted Muslim Brotherhood activists to found Hamas in 1987 as an Islamist rival."
+ },
+ {
+  "cause": "Q153650",
+  "effect": "Q28513",
+  "strength": "primary",
+  "mechanism": "Prussia's victory at Königgrätz in 1866 expelled Austria from German affairs and forced the 1867 Ausgleich creating the dual monarchy."
+ },
+ {
+  "cause": "Q3588",
+  "effect": "Q28513",
+  "strength": "contributing",
+  "mechanism": "The Revolutions of 1848 forced Habsburg concessions and reform, paving the way for the 1867 compromise that created the dual monarchy."
+ },
+ {
+  "cause": "Q540978",
+  "effect": "Q28513",
+  "strength": "minor",
+  "mechanism": "Defeat in the Second Italian War of Independence cost Austria Lombardy in 1859, weakening its position in Italy and in the empire."
+ },
+ {
+  "cause": "Q28513",
+  "effect": "Q361",
+  "strength": "primary",
+  "mechanism": "Austria-Hungary's July 1914 ultimatum to Serbia, backed by Germany, set off the chain of declarations that began the First World War."
+ },
+ {
+  "cause": "Q28513",
+  "effect": "Q36704",
+  "strength": "contributing",
+  "mechanism": "The dissolution of Austria-Hungary in 1918 allowed South Slav lands to unite with Serbia as the Kingdom of Serbs, Croats and Slovenes."
+ },
+ {
+  "cause": "Q11104",
+  "effect": "Q37501",
+  "strength": "minor",
+  "mechanism": "Ibn al-Haytham's optical treatise on refraction and lenses, translated into Latin, gave European craftsmen the theory behind magnifying and corrective lenses."
+ },
+ {
+  "cause": "Q6534",
+  "effect": "Q37068",
+  "strength": "contributing",
+  "mechanism": "Revolutionary upheaval and the Terror pushed Romantic writers to reject Enlightenment rationalism in favour of feeling, nation and the individual."
+ },
+ {
+  "cause": "Q5879",
+  "effect": "Q37068",
+  "strength": "minor",
+  "mechanism": "Goethe's Sturm und Drang works of the 1770s, including The Sorrows of Young Werther, gave early Romanticism its emotional style and models."
+ },
+ {
+  "cause": "Q37068",
+  "effect": "Q6235",
+  "strength": "contributing",
+  "mechanism": "Romantic writers and folklorists celebrated vernacular languages and national histories, giving nineteenth-century nationalist movements their cultural foundations."
+ },
+ {
+  "cause": "Q177045",
+  "effect": "Q37828",
+  "strength": "contributing",
+  "mechanism": "Carnot's second-law theory of heat engines supplied the thermodynamic principles on which vapour-compression refrigeration machines were designed."
+ },
+ {
+  "cause": "Q12725",
+  "effect": "Q37828",
+  "strength": "minor",
+  "mechanism": "Electrical power and electric motors later made domestic refrigerators practical, replacing earlier steam and gas-based machines."
+ },
+ {
+  "cause": "Q192769",
+  "effect": "Q11696",
+  "strength": "primary",
+  "mechanism": "The American Revolution rejected monarchy, and wartime experience led delegates in 1787 to create an elected executive, the presidency."
+ },
+ {
+  "cause": "Q392601",
+  "effect": "Q11696",
+  "strength": "contributing",
+  "mechanism": "Shays' Rebellion of 1786 to 1787 alarmed leaders about weak central government, prompting the Constitutional Convention that created the presidency."
+ },
+ {
+  "cause": "Q23",
+  "effect": "Q11696",
+  "strength": "minor",
+  "mechanism": "Washington's voluntary surrender of command and refusal of a crown set the republican precedent for the executive office."
+ },
+ {
+  "cause": "Q11696",
+  "effect": "Q81931",
+  "strength": "contributing",
+  "mechanism": "After Lincoln's 1860 election, seven slave states seceded and formed the Confederate States of America."
+ },
+ {
+  "cause": "Q42418",
+  "effect": "Q309368",
+  "strength": "contributing",
+  "mechanism": "The Taliban's conquest of Kabul in 1996 prompted rival commanders to form the Northern Alliance in opposition to its rule."
+ },
+ {
+  "cause": "Q720",
+  "effect": "Q12557",
+  "strength": "primary",
+  "mechanism": "Genghis Khan unified the Mongol tribes around 1206 and launched the conquests that built the empire."
+ },
+ {
+  "cause": "Q12557",
+  "effect": "Q7313",
+  "strength": "contributing",
+  "mechanism": "Kublai Khan, a Mongol emperor, founded the Yuan dynasty in China in 1271 as the empire's eastern successor state."
+ },
+ {
+  "cause": "Q12557",
+  "effect": "Q79965",
+  "strength": "contributing",
+  "mechanism": "Batu Khan's Jochid line established the Golden Horde, which ruled the Russian principalities for centuries."
+ },
+ {
+  "cause": "Q12557",
+  "effect": "Q487829",
+  "strength": "contributing",
+  "mechanism": "Genghis Khan's son Chagatai received Central Asian territories that became the Chagatai Khanate."
+ },
+ {
+  "cause": "Q362",
+  "effect": "Q26540",
+  "strength": "contributing",
+  "mechanism": "Wartime rocket development, including German V-2 engineering, supplied the launch technology that made orbiting satellites possible."
+ },
+ {
+  "cause": "Q26540",
+  "effect": "Q23548",
+  "strength": "contributing",
+  "mechanism": "The 1957 launch of Sputnik spurred the United States to create NASA in 1958 to compete in space."
+ },
+ {
+  "cause": "Q26540",
+  "effect": "Q188533",
+  "strength": "minor",
+  "mechanism": "Instruments aboard the Explorer 1 satellite detected the Van Allen radiation belts in 1958."
+ },
+ {
+  "cause": "Q48525",
+  "effect": "Q35525",
+  "strength": "contributing",
+  "mechanism": "The federal government funded and directed construction of the executive mansion in the new federal capital."
+ },
+ {
+  "cause": "Q23",
+  "effect": "Q35525",
+  "strength": "minor",
+  "mechanism": "George Washington selected the site and approved the design of the executive mansion in the new capital."
+ },
+ {
+  "cause": "Q187181",
+  "effect": "Q11364",
+  "strength": "minor",
+  "mechanism": "Sherrington's synapse concept shaped early twentieth-century views of chemical signalling, which Bayliss and Starling used to discover secretin in 1902."
+ },
+ {
+  "cause": "Q8669",
+  "effect": "Q36678",
+  "strength": "minor",
+  "mechanism": "The Arab-Israeli conflict's 1948 war left the West Bank under Jordanian control, the territory Israel occupied after 1967."
+ },
+ {
+  "cause": "Q362",
+  "effect": "Q5339",
+  "strength": "contributing",
+  "mechanism": "Wartime radar and semiconductor research on germanium and silicon crystal detectors gave Bell Labs the knowledge that produced the transistor."
+ },
+ {
+  "cause": "Q8683",
+  "effect": "Q5339",
+  "strength": "minor",
+  "mechanism": "Cold War military funding for electronics research supported the semiconductor work that led to the transistor."
+ },
+ {
+  "cause": "Q5339",
+  "effect": "Q80831",
+  "strength": "primary",
+  "mechanism": "Transistors were the building blocks of integrated circuits, which placed many transistors on one silicon chip from 1958."
+ },
+ {
+  "cause": "Q5339",
+  "effect": "Q5297",
+  "strength": "contributing",
+  "mechanism": "Integrated circuits built from transistors led to the microprocessor, which Intel introduced in 1971."
+ },
+ {
+  "cause": "Q7313",
+  "effect": "Q9903",
+  "strength": "primary",
+  "mechanism": "Zhu Yuanzhang's rebel forces overthrew the Mongol-led Yuan dynasty in 1368, founding the Ming dynasty in its place."
+ },
+ {
+  "cause": "Q28573",
+  "effect": "Q636771",
+  "strength": "contributing",
+  "mechanism": "The Inca civil war of 1529 to 1532 split the empire, weakening it and enabling Pizarro's small Spanish force to conquer it."
+ },
+ {
+  "cause": "Q12562",
+  "effect": "Q38872",
+  "strength": "contributing",
+  "mechanism": "The Reformation led Duke Albert of Prussia to secularize the Teutonic Order's Prussian lands into a Lutheran duchy in 1525."
+ },
+ {
+  "cause": "Q9554",
+  "effect": "Q38872",
+  "strength": "minor",
+  "mechanism": "Martin Luther urged Duke Albert to secularize the Teutonic Order's Prussian lands and adopt Lutheranism, which he did in 1525."
+ },
+ {
+  "cause": "Q203859",
+  "effect": "Q37110",
+  "strength": "contributing",
+  "mechanism": "Narmer's unification of Egypt under the First Dynasty established the kingship that later rulers styled as pharaohs."
+ },
+ {
+  "cause": "Q362",
+  "effect": "Q25227",
+  "strength": "minor",
+  "mechanism": "Postwar Dutch decolonization pressures led to the 1954 Charter of the Kingdom, which created the Netherlands Antilles as a semi-autonomous territory."
+ },
+ {
+  "cause": "Q381375",
+  "effect": "Q244165",
+  "strength": "primary",
+  "mechanism": "The First Nagorno-Karabakh War ended in a 1994 ceasefire with Armenian forces holding the territory, establishing the de facto Republic of Artsakh."
+ },
+ {
+  "cause": "Q362",
+  "effect": "Q7801",
+  "strength": "contributing",
+  "mechanism": "Allied victory in World War II produced the 1945 UN Charter, which established the International Court of Justice as the UN's principal judicial organ."
+ },
+ {
+  "cause": "Q68",
+  "effect": "Q4439",
+  "strength": "contributing",
+  "mechanism": "Electronic computers created demand for mass storage, which IBM engineers met with the RAMAC disk drive in 1956."
+ },
+ {
+  "cause": "Q4439",
+  "effect": "Q16338",
+  "strength": "minor",
+  "mechanism": "Affordable hard disk drives gave personal computers the mass storage they needed for software and data."
+ },
+ {
+  "cause": "Q9438",
+  "effect": "Q40185",
+  "strength": "contributing",
+  "mechanism": "Thomas Aquinas's synthesis of Aristotelian philosophy and Christian theology shaped the scholastic worldview that structures Dante's cosmology and ethics."
+ },
+ {
+  "cause": "Q12725",
+  "effect": "Q12969754",
+  "strength": "contributing",
+  "mechanism": "Advances in electrical science and electromagnetic induction gave Hertz the apparatus and theory needed to generate and detect electromagnetic waves."
+ },
+ {
+  "cause": "Q83152",
+  "effect": "Q12969754",
+  "strength": "minor",
+  "mechanism": "Coulomb's inverse-square law of electrostatics formed one of the foundations of the electromagnetic theory that Maxwell later unified."
+ },
+ {
+  "cause": "Q12969754",
+  "effect": "Q872",
+  "strength": "primary",
+  "mechanism": "Hertz's 1887 demonstration of electromagnetic waves led Marconi to develop wireless telegraphy, the basis of radio broadcasting."
+ },
+ {
+  "cause": "Q872",
+  "effect": "Q11656",
+  "strength": "contributing",
+  "mechanism": "Marconi's wireless telegraphy created demand for radio detectors, which Fleming's diode valve was developed to meet."
+ }
+]

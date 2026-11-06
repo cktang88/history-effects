@@ -1,0 +1,458 @@
+[
+ {
+  "cause": "Q12562",
+  "effect": "Q37853",
+  "strength": "minor",
+  "mechanism": "Reformation's Protestant challenge provoked the Catholic Counter-Reformation, whose patronage and propaganda drove the dramatic, emotive Baroque style."
+ },
+ {
+  "cause": "Q131808",
+  "effect": "Q37853",
+  "strength": "minor",
+  "mechanism": "Late Mannerist painters' artificial, elongated forms evolved into the Baroque's dynamic naturalism and theatrical drama in Italy around 1600."
+ },
+ {
+  "cause": "Q37853",
+  "effect": "Q170292",
+  "strength": "minor",
+  "mechanism": "Critics in France promoted Classicism's order and restraint as a reaction against the excesses of Baroque ornament."
+ },
+ {
+  "cause": "Q178038",
+  "effect": "Q10859",
+  "strength": "contributing",
+  "mechanism": "Polarization and clashes over the Second Spanish Republic's reforms pushed the military rebels under Franco to launch the 1936 coup."
+ },
+ {
+  "cause": "Q8698",
+  "effect": "Q10859",
+  "strength": "minor",
+  "mechanism": "Depression-era unemployment and economic hardship deepened class conflict and radicalized Spanish politics before the war."
+ },
+ {
+  "cause": "Q10859",
+  "effect": "Q13474305",
+  "strength": "primary",
+  "mechanism": "Franco's Nationalist victory in 1939 installed a dictatorship that governed Spain as Francoist Spain until 1975."
+ },
+ {
+  "cause": "Q7405",
+  "effect": "Q9683",
+  "strength": "primary",
+  "mechanism": "The Sui dynasty's collapse after failed Korean campaigns and rebellions let the Li family found the Tang dynasty in 618."
+ },
+ {
+  "cause": "Q9683",
+  "effect": "Q242115",
+  "strength": "primary",
+  "mechanism": "Tang's collapse after 907 fragmented China into the Five Dynasties and Ten Kingdoms period of rival regional regimes."
+ },
+ {
+  "cause": "Q1238338",
+  "effect": "Q11184",
+  "strength": "minor",
+  "mechanism": "Caesar's victory in the civil war gave him the dictatorial authority to overhaul the Roman calendar, producing the Julian reform of 46 BC."
+ },
+ {
+  "cause": "Q361",
+  "effect": "Q8736",
+  "strength": "primary",
+  "mechanism": "Germany's defeat and the Allied victory in World War I forced the Paris Peace Conference to impose the 1919 treaty on Germany."
+ },
+ {
+  "cause": "Q9683",
+  "effect": "Q12861",
+  "strength": "minor",
+  "mechanism": "Taoist alchemists under Tang patronage experimented with saltpeter, sulfur and charcoal, producing the earliest gunpowder formulas."
+ },
+ {
+  "cause": "Q12861",
+  "effect": "Q127197",
+  "strength": "minor",
+  "mechanism": "Song-era Chinese engineers packed gunpowder into projectiles, producing early explosive bombs that spread the military use of the powder."
+ },
+ {
+  "cause": "Q5933860",
+  "effect": "Q12536",
+  "strength": "primary",
+  "mechanism": "Abbasid propagandists and Khurasani armies overthrew the Umayyads in the 746-750 revolt, establishing Abbasid rule in Baghdad."
+ },
+ {
+  "cause": "Q8575586",
+  "effect": "Q12536",
+  "strength": "contributing",
+  "mechanism": "Umayyad rule had become unpopular with non-Arab Muslims and Shia, and its defeat at the Zab in 750 ended the dynasty."
+ },
+ {
+  "cause": "Q12536",
+  "effect": "Q745799",
+  "strength": "primary",
+  "mechanism": "Abbasid patronage at Baghdad, including the House of Wisdom, drove translation and scholarship that defined the Islamic Golden Age."
+ },
+ {
+  "cause": "Q605321",
+  "effect": "Q33296",
+  "strength": "primary",
+  "mechanism": "Babur defeated the Lodi sultan at the First Battle of Panipat in 1526, founding Mughal rule over northern India."
+ },
+ {
+  "cause": "Q33296",
+  "effect": "Q83618",
+  "strength": "minor",
+  "mechanism": "Mughal decline after Aurangzeb's Deccan wars let Maratha leaders build a rival state that contested Mughal power across India."
+ },
+ {
+  "cause": "Q33296",
+  "effect": "Q8680",
+  "strength": "minor",
+  "mechanism": "After Mughal authority fragmented in the eighteenth century, the East India Company used rival successor states to extend British control over India."
+ },
+ {
+  "cause": "Q988780",
+  "effect": "Q11658",
+  "strength": "primary",
+  "mechanism": "Faraday's 1831 discovery of electromagnetic induction showed that a changing current in one coil induces current in another, the principle of the transformer."
+ },
+ {
+  "cause": "Q178032",
+  "effect": "Q11658",
+  "strength": "minor",
+  "mechanism": "Electromagnets developed in 1825 gave experimenters a controllable magnetic field, which Faraday and Henry used in their induction apparatus."
+ },
+ {
+  "cause": "Q127912",
+  "effect": "Q48525",
+  "strength": "minor",
+  "mechanism": "Declaring independence from Britain in 1776 led the states to write the 1787 Constitution, which created the federal government in 1789."
+ },
+ {
+  "cause": "Q15860072",
+  "effect": "Q18001626",
+  "strength": "primary",
+  "mechanism": "Fighting in Donbas during 2014 led Ukraine, Russia and separatist representatives to sign the Minsk Protocol ceasefire in September 2014."
+ },
+ {
+  "cause": "Q242352",
+  "effect": "Q37024",
+  "strength": "primary",
+  "mechanism": "The Yugoslav Wars dissolved the federation, leaving Serbia and Montenegro as the rump Yugoslav state formed in 1992."
+ },
+ {
+  "cause": "Q190029",
+  "effect": "Q37024",
+  "strength": "minor",
+  "mechanism": "NATO's 1999 bombing campaign over Kosovo weakened Milosevic's regime and pushed the rump federation toward the 2003 restructuring under EU mediation."
+ },
+ {
+  "cause": "Q209440",
+  "effect": "Q267298",
+  "strength": "primary",
+  "mechanism": "Luigi Galvani's 1786 experiments on animal electricity led Alessandro Volta to build the voltaic pile, the first true electric battery, in 1800."
+ },
+ {
+  "cause": "Q267298",
+  "effect": "Q12725",
+  "strength": "contributing",
+  "mechanism": "Steady currents from voltaic cells let Oersted and later researchers study electricity and magnetism, opening the field of electrical science."
+ },
+ {
+  "cause": "Q267298",
+  "effect": "Q72313",
+  "strength": "minor",
+  "mechanism": "Early electric motors of the 1830s were powered by battery cells, so their practical operation depended on batteries."
+ },
+ {
+  "cause": "Q6034",
+  "effect": "Q39427",
+  "strength": "primary",
+  "mechanism": "Surrealism grew directly out of Dada's anti-art revolt in Zurich and Paris, and Andre Breton's circle absorbed Dada's members and methods."
+ },
+ {
+  "cause": "Q361",
+  "effect": "Q39427",
+  "strength": "contributing",
+  "mechanism": "The trauma and disillusionment of the First World War led artists like Breton and Ernst to reject rational order and explore the unconscious."
+ },
+ {
+  "cause": "Q362",
+  "effect": "Q713750",
+  "strength": "primary",
+  "mechanism": "Germany's defeat in the Second World War and the Allied occupation created the western zones that became the Federal Republic in 1949."
+ },
+ {
+  "cause": "Q151187",
+  "effect": "Q713750",
+  "strength": "contributing",
+  "mechanism": "The Potsdam Conference fixed Germany's division into Allied occupation zones, the administrative basis for the separate West German state."
+ },
+ {
+  "cause": "Q15180",
+  "effect": "Q713750",
+  "strength": "contributing",
+  "mechanism": "Soviet rejection of Western plans for a unified Germany and the emerging Cold War pushed the Western zones toward a separate state."
+ },
+ {
+  "cause": "Q713750",
+  "effect": "Q167457",
+  "strength": "minor",
+  "mechanism": "West Germany was a founding member of the European Economic Community, whose 1957 Treaty of Rome was negotiated with Adenauer's government."
+ },
+ {
+  "cause": "Q38867",
+  "effect": "Q504027",
+  "strength": "contributing",
+  "mechanism": "Shortly after the 1960 ruby laser, researchers used laser pulses to measure distances and particles in the atmosphere, creating lidar in 1961."
+ },
+ {
+  "cause": "Q545449",
+  "effect": "Q178810",
+  "strength": "minor",
+  "mechanism": "The 2003 invasion of Iraq destabilized the region, and the resulting sectarian and jihadist networks later fed Syria's armed uprising."
+ },
+ {
+  "cause": "Q178810",
+  "effect": "Q2384201",
+  "strength": "minor",
+  "mechanism": "Amid the collapse of Assad's authority in 2012, Kurdish forces in northern Syria seized territory and built the autonomous Rojava administration."
+ },
+ {
+  "cause": "Q361",
+  "effect": "Q12190",
+  "strength": "minor",
+  "mechanism": "Alexander Fleming's wartime treatment of infected wounds in 1915-18 convinced him antiseptics failed, prompting his search for natural antibacterial agents."
+ },
+ {
+  "cause": "Q362",
+  "effect": "Q740308",
+  "strength": "primary",
+  "mechanism": "The Second World War left millions of children displaced and starving, and the UN General Assembly created UNICEF in 1946 to aid them."
+ },
+ {
+  "cause": "Q740308",
+  "effect": "Q466087",
+  "strength": "contributing",
+  "mechanism": "UNICEF helped draft the 1989 Convention on the Rights of the Child and now monitors and promotes its implementation in member states."
+ },
+ {
+  "cause": "Q362",
+  "effect": "Q41644",
+  "strength": "contributing",
+  "mechanism": "Soviet domination of postwar Eastern Europe after the Second World War set up the communist states that Moscow bound into the Warsaw Pact in 1955."
+ },
+ {
+  "cause": "Q12539",
+  "effect": "Q455",
+  "strength": "contributing",
+  "mechanism": "Enlightenment thinkers' belief in disseminating useful knowledge inspired Scottish printers in 1768 to produce Britannica as a general encyclopaedia."
+ },
+ {
+  "cause": "Q751880",
+  "effect": "Q40415",
+  "strength": "contributing",
+  "mechanism": "Japanese woodblock prints imported to Paris in the 1860s showed Monet, Degas and others flat colour, cropped composition and sketch-like brushwork."
+ },
+ {
+  "cause": "Q40415",
+  "effect": "Q38166",
+  "strength": "contributing",
+  "mechanism": "Impressionism's break with academic painting and its focus on light and modern life helped launch the Post-Impressionist and modern art movements."
+ },
+ {
+  "cause": "Q361",
+  "effect": "Q41304",
+  "strength": "primary",
+  "mechanism": "Germany's defeat in the First World War and the collapse of the Kaiserreich left a discredited government and set up the republic's founding in 1918-1919."
+ },
+ {
+  "cause": "Q170306",
+  "effect": "Q41304",
+  "strength": "primary",
+  "mechanism": "The November 1918 revolution forced Kaiser Wilhelm II to abdicate and let Social Democrats proclaim a republic, which the Weimar constitution then formalized."
+ },
+ {
+  "cause": "Q8736",
+  "effect": "Q41304",
+  "strength": "contributing",
+  "mechanism": "Harsh reparations and territorial losses in the 1919 treaty fed nationalist resentment that undermined Weimar's legitimacy from the outset."
+ },
+ {
+  "cause": "Q41304",
+  "effect": "Q7318",
+  "strength": "primary",
+  "mechanism": "The Weimar Republic's collapse in economic crisis and political deadlock brought Hitler to power in January 1933, creating Nazi Germany."
+ },
+ {
+  "cause": "Q15718485",
+  "effect": "Q33761",
+  "strength": "minor",
+  "mechanism": "Activists used Twitter and Facebook to coordinate protests and circulate footage of police repression, accelerating uprisings in Tunisia and Egypt in 2011."
+ },
+ {
+  "cause": "Q171328",
+  "effect": "Q7801",
+  "strength": "primary",
+  "mechanism": "Chapter XIV of the Charter established the International Court of Justice as the principal judicial organ of the UN, which began sitting in 1946."
+ },
+ {
+  "cause": "Q171328",
+  "effect": "Q392119",
+  "strength": "contributing",
+  "mechanism": "The Charter's human-rights commitments led to the Universal Declaration of 1948 and the 1966 covenants, including the International Covenant on Civil and Political Rights."
+ },
+ {
+  "cause": "Q12539",
+  "effect": "Q41726",
+  "strength": "contributing",
+  "mechanism": "Enlightenment ideals of reason, tolerance and sociability spread through European lodges, and the 1717 London Grand Lodge set up Freemasonry as a formal institution."
+ },
+ {
+  "cause": "Q912313",
+  "effect": "Q37187",
+  "strength": "primary",
+  "mechanism": "Improved optical microscopes let Jan Swammerdam and later observers see individual blood corpuscles, allowing red blood cells to be identified in 1658."
+ },
+ {
+  "cause": "Q2269",
+  "effect": "Q49013",
+  "strength": "contributing",
+  "mechanism": "Industrial-era mechanization and precision metal production made practical needle-and-shuttle mechanisms possible, leading to the first sewing machines around 1790."
+ },
+ {
+  "cause": "Q19768",
+  "effect": "Q49013",
+  "strength": "minor",
+  "mechanism": "Precision lathes and machine tools produced the metal parts, cams and gears that early sewing machine designs required."
+ },
+ {
+  "cause": "Q42976",
+  "effect": "Q2184",
+  "strength": "primary",
+  "mechanism": "The October Revolution of 1917 put the Bolsheviks in power and created the Russian SFSR as the Soviet state's core republic."
+ },
+ {
+  "cause": "Q361",
+  "effect": "Q2184",
+  "strength": "contributing",
+  "mechanism": "Defeat and economic collapse in the First World War weakened the Russian Empire and opened the way for the 1917 revolutions that created the RSFSR."
+ },
+ {
+  "cause": "Q2184",
+  "effect": "Q15180",
+  "strength": "contributing",
+  "mechanism": "The RSFSR was the largest constituent republic of the Soviet Union formed in 1922, and it dominated the federation's politics and economy."
+ },
+ {
+  "cause": "Q80831",
+  "effect": "Q16338",
+  "strength": "contributing",
+  "mechanism": "Integrated circuits packed many transistors onto one chip, letting microprocessors be built cheaply enough for affordable personal computers in the 1970s."
+ },
+ {
+  "cause": "Q5339",
+  "effect": "Q16338",
+  "strength": "minor",
+  "mechanism": "Transistors replaced vacuum tubes in computer logic and memory, making machines smaller and more reliable, a precondition for desktop computers."
+ },
+ {
+  "cause": "Q12539",
+  "effect": "Q6373",
+  "strength": "minor",
+  "mechanism": "Enlightenment ideals of public access to knowledge and systematic collecting shaped the 1753 Act that founded the British Museum as a public institution."
+ },
+ {
+  "cause": "Q428995",
+  "effect": "Q48235",
+  "strength": "contributing",
+  "mechanism": "Zeno of Citium taught Stoicism in Athens during the Hellenistic period, when Greek philosophy had spread across the Mediterranean and the Near East."
+ },
+ {
+  "cause": "Q129864",
+  "effect": "Q129286",
+  "strength": "primary",
+  "mechanism": "After the 1857 Indian Rebellion, Parliament dissolved the East India Company's rule in 1858 and placed India directly under the British Crown."
+ },
+ {
+  "cause": "Q129286",
+  "effect": "Q129053",
+  "strength": "contributing",
+  "mechanism": "Britain's 1947 transfer of power, with its communal electoral legacy, led to the partition of British India into India and Pakistan."
+ },
+ {
+  "cause": "Q129286",
+  "effect": "Q233507",
+  "strength": "minor",
+  "mechanism": "British forward policy in Afghanistan, driven by Raj fears of Russian influence, provoked the Second Anglo-Afghan War of 1878-1880."
+ },
+ {
+  "cause": "Q1192043",
+  "effect": "Q83891",
+  "strength": "minor",
+  "mechanism": "Ardashir I exploited decades of Roman-Parthian warfare and Parthian fragmentation to overthrow the Arsacid dynasty and found the Sasanian state in 224."
+ },
+ {
+  "cause": "Q46362",
+  "effect": "Q29999",
+  "strength": "primary",
+  "mechanism": "The Congress of Vienna in 1815 merged the former Austrian Netherlands with the northern Dutch provinces under William I, creating the kingdom."
+ },
+ {
+  "cause": "Q78994",
+  "effect": "Q29999",
+  "strength": "contributing",
+  "mechanism": "The Napoleonic Wars ended French rule in the Low Countries and restored the House of Orange, which the 1815 settlement then made into a kingdom."
+ },
+ {
+  "cause": "Q42934",
+  "effect": "Q131221",
+  "strength": "minor",
+  "mechanism": "Italian Futurists adopted Cubism's fragmented planes and overlapping viewpoints to depict motion and speed in their own paintings from 1911."
+ },
+ {
+  "cause": "Q42934",
+  "effect": "Q173782",
+  "strength": "minor",
+  "mechanism": "Art Deco designers drew on Cubism's geometric simplification and angular stylization, which became central to the style's decorative vocabulary."
+ },
+ {
+  "cause": "Q9215",
+  "effect": "Q878985",
+  "strength": "contributing",
+  "mechanism": "Freud's psychoanalytic accounts of the unconscious and dream life gave modernist writers and painters a new model of subjective experience."
+ },
+ {
+  "cause": "Q878985",
+  "effect": "Q39427",
+  "strength": "minor",
+  "mechanism": "Surrealists carried modernism's experimental break with realism forward, using the unconscious and chance to dissolve conventional representation."
+ },
+ {
+  "cause": "Q878985",
+  "effect": "Q6034",
+  "strength": "minor",
+  "mechanism": "Dada's anti-art provocations in Zurich extended modernism's rejection of inherited artistic conventions into open attacks on bourgeois culture."
+ },
+ {
+  "cause": "Q178032",
+  "effect": "Q79897",
+  "strength": "primary",
+  "mechanism": "Morse's telegraph receiver worked by an electromagnet pulling a stylus, so an electromagnet was the core device that Morse's dots and dashes drove."
+ },
+ {
+  "cause": "Q267298",
+  "effect": "Q79897",
+  "strength": "contributing",
+  "mechanism": "Voltaic batteries supplied the steady current that Morse's 1830s telegraph needed to send signals over wire between stations."
+ },
+ {
+  "cause": "Q80702",
+  "effect": "Q164432",
+  "strength": "contributing",
+  "mechanism": "Philip II's centralizing Catholic policies and taxes in the Netherlands provoked the Dutch revolt that became the Eighty Years' War against Spain."
+ },
+ {
+  "cause": "Q80702",
+  "effect": "Q180897",
+  "strength": "minor",
+  "mechanism": "Spanish claims to newly discovered lands after Columbus's voyages led Spain and Portugal to divide the New World by the 1494 Treaty of Tordesillas."
+ }
+]

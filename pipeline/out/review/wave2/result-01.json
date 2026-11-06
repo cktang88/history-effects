@@ -1,0 +1,1627 @@
+{
+  "Q577559>Q2320981": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q1980081>Q309368": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q46057>Q2379101": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "British suppression of the 1936-1939 revolt killed or exiled Arab leaders and militants, leaving Palestinian Arabs militarily weak when the 1947-1948 civil war began."
+  },
+  "Q26799687>Q211395": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "Habsburg victories at Petrovaradin and Belgrade forced the Ottomans to negotiate, and the Treaty of Passarowitz ended the 1716-1718 war with Austrian territorial gains."
+  },
+  "Q855429>Q48314": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q427565>Q31900": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "Persian destruction of the Ionian fleet at Lade ended the Ionian Revolt, freeing Darius to send the expedition across the Aegean that met the Athenians at Marathon."
+  },
+  "Q757871>Q173034": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q173034>Q699669": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "Midway's loss of four fleet carriers left Japan short of carriers, so the surviving Shokaku and Zuikaku fought at Santa Cruz with depleted strength."
+  },
+  "Q639827>Q194226": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "The Rashidun capture of Damascus gave Muslim armies control of Syria's key city, and Emperor Heraclius's attempt to recover it led to the battle at Yarmouk."
+  },
+  "Q156681>Q690489": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "Napoleon III's surrender at Sedan destroyed the main French field army and opened the road to Paris, letting Prussian armies march in and begin the siege on 19 September."
+  },
+  "Q815210>Q207250": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q815210>Q271873": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q492324>Q233343": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Robert E. Lee's Seven Days victory drove McClellan away from Richmond, emboldening Lee to turn north and defeat John Pope's Army of Virginia at Second Bull Run."
+  },
+  "Q755955>Q376154": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q312212>Q1455240": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "The Imperial-Spanish victory at Nordlingen crushed the Swedish-led army, pushing Saxony and Hesse-Darmstadt to defect and make peace with the Emperor at Prague."
+  },
+  "Q690489>Q133132": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Bitter defeat, starvation and the government's capitulation after the siege left armed Parisian National Guardsmen resentful, and they seized the city in March 1871 to found the Commune."
+  },
+  "Q194132>Q691565": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "Operation Torch's Allied landings in North Africa on 8 November 1942 led Hitler to order the immediate German occupation of Vichy France under Case Anton."
+  },
+  "Q193484>Q757963": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q584617>Q361": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "The Treaty of London created Albania and enlarged Serbia and Bulgaria, feeding Austro-Serbian hostility and Balkan rivalries that fed into the July 1914 crisis."
+  },
+  "Q40949>Q459447": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q37643>Q856650": {
+    "verdict": "reverse",
+    "strength": "primary",
+    "mechanism": "Iraq's invasion of Kuwait on 2 August 1990 provoked the US-led coalition's military response, which became the Gulf War."
+  },
+  "Q1356047>Q79911": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q78994>Q1123201": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Napoleon's 1808 seizure of the Spanish throne deposed Ferdinand VII, prompting colonial juntas to assert self-rule and launch independence wars across the Spanish Empire."
+  },
+  "Q287942>Q254106": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q170314>Q163244": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q1123201>Q12583": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q184183>Q584617": {
+    "verdict": "reverse",
+    "strength": "contributing",
+    "mechanism": "The Treaty of London left Macedonia's partition unsettled, and Bulgaria's grievance over its share led Tsar Ferdinand to attack Serbian and Greek forces in June 1913."
+  },
+  "Q94916>Q322943": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q156086>Q154697": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "The 1748 treaty returned Louisbourg to France without settling Anglo-French claims in the Ohio Valley and Acadia, and those disputes erupted into war in 1754."
+  },
+  "Q122100>Q322943": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "Finland's defeat in the Continuation War forced territorial cessions under the 1944 Moscow armistice, which the 1947 Paris treaties confirmed as its final peace terms with the Soviet Union."
+  },
+  "Q989092>Q233507": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q209312>Q684324": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q78994>Q209312": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q134114>Q209312": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Russia's defeat at Austerlitz in December 1805 encouraged Sultan Selim III to depose pro-Russian Hospodar Ypsilantis in 1806, provoking the Russo-Turkish War."
+  },
+  "Q209312>Q179250": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q151423>Q233507": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "After the Congress of Berlin settled Russia's Balkan war, Russia turned to Central Asia and sent a mission to Kabul in 1878, prompting Britain to invade Afghanistan."
+  },
+  "Q164432>Q646322": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q646322>Q150701": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "Louis XIV's territorial gains from the Peace of Nijmegen, which ended the Franco-Dutch War, led to the aggressive Reunions that alienated powers and formed the Grand Alliance."
+  },
+  "Q8683>Q838695": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "After the Cold War ended, the United States withdrew support from Mobutu's Zaire, weakening his regime and enabling the 1996 Rwandan- and Ugandan-backed rebellion."
+  },
+  "Q40949>Q1123201": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q1123201>Q152499": {
+    "verdict": "reverse",
+    "strength": "contributing",
+    "mechanism": "The Peninsular War's collapse of the Spanish monarchy after Napoleon's 1808 invasion prompted colonial juntas to assert autonomy and launch independence wars across Spanish America."
+  },
+  "Q296754>Q52418": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q296754>Q173034": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q156086>Q203233": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q118382>Q33132": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q6286>Q207250": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q223604>Q153316": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Mussolini's failed invasion of Greece forced Hitler to launch the April 1941 Balkan campaign, and German paratroopers then attacked the Allied forces evacuated to Crete."
+  },
+  "Q14211>Q153316": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q83055>Q153316": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q154720>Q153316": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q219578>Q153316": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q7785>Q153316": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q151340>Q153316": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q150758>Q153316": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q153316>Q43056": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q43056>Q162250": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q459447>Q217450": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "Cornwallis's surrender at Yorktown in 1781 convinced Lord North's government to abandon the war, opening negotiations that produced the 1783 Treaty of Paris."
+  },
+  "Q459447>Q35525": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q52418>Q296754": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q219578>Q296754": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q296754>Q208529": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q296754>Q154720": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q296754>Q6540361": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q989115>Q302519": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q302519>Q38130": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q302519>Q362": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q192769>Q1123201": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q646322>Q189508": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "French aggression from the Franco-Dutch War convinced William of Orange that war with Louis XIV was inevitable, and his 1688 invasion of England mobilised English power against France."
+  },
+  "Q208300>Q1076469": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q208300>Q157682": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q83201>Q1341539": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q8683>Q157682": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q151187>Q163244": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q181902>Q322943": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q296754>Q295875": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "After Singapore fell in 1942, Prime Minister John Curtin turned Australian security toward the United States, a shift that culminated in the 1951 ANZUS treaty."
+  },
+  "Q163244>Q488": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q163244>Q161227": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q158021>Q361": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Germany's annexation of Alsace-Lorraine under the 1871 Treaty of Frankfurt fuelled French revanchism, pushing France to stand with Russia against Germany in 1914."
+  },
+  "Q158021>Q157648": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q158021>Q8736": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q8729>Q1076469": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q152283>Q1076469": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q8736>Q1076469": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q152006>Q1076469": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q42976>Q1076469": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q186284>Q1076469": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "Jozef Pilsudski's victory at Warsaw in August 1920 halted the Soviet advance, and the March 1921 Treaty of Riga drew the border that ended the Polish-Soviet War."
+  },
+  "Q1076469>Q2305266": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q8880>Q622649": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "The Commission's 1985 White Paper on completing the internal market set the agenda that the Single European Act turned into amendments to the Treaty of Rome."
+  },
+  "Q83872271>Q84104992": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q163244>Q498735": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q15715792>Q21707860": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q82708>Q113857620": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q118382>Q186356": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q33132>Q1025404": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q239543>Q1356047": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q83372>Q1356047": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "After seizing power, the Bolsheviks tightened the Romanovs' confinement, and on orders from Yakov Sverdlov the Ural Soviet executed the imperial family at Yekaterinburg in July 1918."
+  },
+  "Q42976>Q1356047": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "The October Revolution brought the Bolsheviks to power, and under their rule the Romanovs' confinement tightened until they were executed at Yekaterinburg in July 1918."
+  },
+  "Q16629185>Q1356047": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q116434>Q1356047": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q12861>Q1356047": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q1356047>Q27075": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q161227>Q163244": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q179848>Q302519": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "Italy's imperial ambitions during the Scramble for Africa drove its army into Ethiopia, where it was defeated at Adwa in March 1896."
+  },
+  "Q233507>Q129053": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q296754>Q129053": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q1123201>Q181026": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Spanish colonial independence created new Latin American states that the Holy Alliance threatened to recolonise, prompting President Monroe's 1823 declaration against European interference."
+  },
+  "Q500067>Q154573": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q154573>Q1076469": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q84263196>Q84098939": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q34490>Q16911838": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q154942>Q46083": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Prussia's defeat of Austria at Koniggratz in 1866 humiliated France and left Bismarck free to pursue unification, provoking Napoleon III's 1870 war with Prussia."
+  },
+  "Q180897>Q1147471": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "The ambiguous Tordesillas line left the Moluccas disputed, and Spain and Portugal resolved it at Zaragoza in 1529 when Spain sold its claims for 350,000 ducats."
+  },
+  "Q37731>Q1278576": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "Caliph Uthman appointed Ibn Sa'd governor of Egypt in 645, and Ibn Sa'd's naval expansion produced the Arab fleet's victory over Byzantium at the Battle of the Masts in 655."
+  },
+  "Q253774>Q242115": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "The An Lushan rebellion weakened central Tang authority, and the military governors it empowered fragmented China into the Five Dynasties and Ten Kingdoms by 907."
+  },
+  "Q101305942>Q101429497": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "Azerbaijan's capture of Shusha on 8 November 2020 forced Armenia to accept the Russian-brokered ceasefire agreement signed on 10 November."
+  },
+  "Q134817>Q2087792": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q362>Q695020": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q567712>Q361": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q361>Q160944": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q137847>Q254106": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q504172>Q79791": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "Tariq ibn Ziyad's victory at Guadalete opened Visigothic Iberia to Muslim rule, and the Christian kingdoms' resistance that followed grew into the Reconquista."
+  },
+  "Q313102>Q32929": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "Charles VI's 1713 Pragmatic Sanction guaranteed female inheritance, and when he died in 1740 Bavaria, France, Prussia and Spain contested Maria Theresa's succession, starting the war."
+  },
+  "Q426759>Q234738": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q426759>Q49097": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "The British Palestine mandate's contradictory promises to Arabs and Zionists, and Britain's 1947 withdrawal, left Jewish and Arab communities in armed conflict that became the 1948 war."
+  },
+  "Q1639459>Q29100": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q817206>Q623171": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "The Khmer Rouge's 1975 victory produced a regime whose cross-border attacks led Vietnam to invade in December 1978, prompting China's 1979 attack on Vietnam."
+  },
+  "Q828435>Q1123201": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q482407>Q817206": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q167634>Q1122110": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Gorbachev's perestroika and glasnost loosened Soviet control, letting Tajik Islamic-democratic and nationalist movements mobilise and fight the government in the 1992 civil war."
+  },
+  "Q745110>Q178510": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q32832>Q244980": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q12546>Q244980": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q244980>Q178510": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q244980>Q207576": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q244980>Q200855": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q911972>Q270517": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "Dunkirk's loss of Britain's expeditionary equipment and the need to return to the Continent led Combined Operations to plan raids, culminating in the August 1942 Dieppe Raid."
+  },
+  "Q154720>Q270517": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q189266>Q270517": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Stalin's repeated demands for a Western second front pushed Churchill and Combined Operations to mount the August 1942 Dieppe Raid as a test landing."
+  },
+  "Q194132>Q270517": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q270517>Q16470": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "Dieppe's failure taught planners to rely on heavy naval and air bombardment and to avoid frontal assaults on ports, shaping the 1944 Normandy landings."
+  },
+  "Q270517>Q217145": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q270517>Q217981": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q270517>Q8641370": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "Dieppe's failure taught planners to rely on heavy naval and air bombardment and to avoid frontal assaults on ports, shaping the 1944 Overlord operation."
+  },
+  "Q130263>Q745110": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q170306>Q160944": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q127912>Q838980": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q40949>Q838980": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q6534>Q838980": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q78994>Q838980": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Napoleon's 1808 seizure of Spain collapsed the Spanish authority that the viceroy represented, and the Buenos Aires cabildo deposed the viceroy in May 1810."
+  },
+  "Q152499>Q838980": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "The Peninsular War and the Supreme Central Junta's claim to rule in Ferdinand's name undermined the viceroy's legitimacy, prompting Buenos Aires's May 1810 revolt."
+  },
+  "Q171416>Q838980": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q849176>Q207318": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "Kosciuszko's 1794 uprising tied down Prussian troops in Poland, letting France win battles on the Rhine during the French Revolutionary Wars."
+  },
+  "Q154674>Q313102": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q1076469>Q695020": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q78994>Q156556": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Denmark-Norway's alliance with Napoleon and its defeat in the Napoleonic Wars forced King Frederick VI to cede Norway to Sweden in the 1814 Treaty of Kiel."
+  },
+  "Q154596>Q156556": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q736268>Q156556": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q179250>Q156556": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "Napoleon's catastrophic retreat from Moscow weakened French power, pushing Bernadotte's Sweden into the coalition that forced Denmark to cede Norway at Kiel."
+  },
+  "Q138107>Q156556": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "Sweden and its Sixth Coalition allies attacked Denmark in late 1813, forcing King Frederick VI to sign the Treaty of Kiel in January 1814 and cede Norway to Sweden."
+  },
+  "Q151005>Q156556": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Napoleon's defeat at Leipzig in October 1813 freed Bernadotte's Swedish army to invade Holstein, forcing Denmark to accept the Treaty of Kiel."
+  },
+  "Q187621>Q43777": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q160944>Q2763": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q817206>Q2885072": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "The Khmer Rouge's 1975 victory in the civil war gave the movement state power, which it used for the mass killings and forced labour of its 1975-1979 genocide."
+  },
+  "Q83055>Q695020": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "The German invasion of June 1941 removed Soviet control of Volhynia, creating the conditions in which the OUN-UPA carried out the 1943-1944 killings of Poles."
+  },
+  "Q43250>Q695020": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q49103>Q208199": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Israel's 1982 invasion and siege of Beirut left Lebanese Phalangist militiamen free to enter the Sabra and Shatila camps, where they massacred civilians in September 1982."
+  },
+  "Q208199>Q34490": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q199820>Q426759": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "The Paris Peace Conference divided Germany's and the Ottoman Empire's colonies, and the conference's settlement assigned them as League of Nations mandates in 1919-1920."
+  },
+  "Q160944>Q7310": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q426759>Q38130": {
+    "verdict": "reverse",
+    "strength": "primary",
+    "mechanism": "The League of Nations Covenant's Article 22 created the mandate system, placing former German and Ottoman territories under League supervision as mandates."
+  },
+  "Q567712>Q174205": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q426759>Q7801": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "South Africa's refusal to convert its South West Africa mandate into trusteeship led the ICJ to rule in 1950 that its mandate obligations remained in force."
+  },
+  "Q426759>Q11409": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q150701>Q313102": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q154573>Q160944": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q122371>Q160944": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q328499>Q160944": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q253224>Q160944": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q11696>Q160944": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q157648>Q160944": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q8736>Q160944": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q19546>Q160944": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q160944>Q43250": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q41600>Q51653": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q45785>Q174990": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q42834>Q1136575": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "The Western Roman Empire's decline let the Vandals seize North Africa in the 430s, and their kingdom's usurpation of power in 530 prompted Justinian's 533 invasion."
+  },
+  "Q1165502>Q273025": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Valerian's capture by the Sasanians at Edessa in 260 left Gaul without imperial protection, and the governor Postumus declared an independent Gallic Empire."
+  },
+  "Q196502>Q153660": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "The Cassibile armistice switched Italy's government to the Allies, prompting Hitler to rescue Mussolini and set up the Italian Social Republic in northern Italy."
+  },
+  "Q84263196>Q87070975": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q151616>Q681712": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q309204>Q1129412": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "The Camp David framework's terms, including Israeli withdrawal from Sinai in exchange for peace, were negotiated into the March 1979 Egypt-Israel peace treaty."
+  },
+  "Q84263196>Q83873580": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q1362209>Q233642": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "The first war's inconclusive Treaty of Salbai left Maratha factions divided, and British support for rival Peshwa claimants led to the Second Anglo-Maratha War."
+  },
+  "Q1352215>Q849176": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "The 1792 Russian invasion and the Second Partition of Poland convinced Tadeusz Kosciuszko's supporters to rise in revolt in March 1794."
+  },
+  "Q1481920>Q219697": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "The Almohad victory at Alarcos in 1195 humiliated Castile and prompted a papal-backed crusade whose forces won at Las Navas de Tolosa in 1212."
+  },
+  "Q389257>Q866862": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "The Athenian execution of its generals after Arginusae left Athens with inexperienced naval command, and Lysander's Spartan fleet destroyed the Athenian fleet at Aegospotami."
+  },
+  "Q223622>Q127299": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Frederick's siege of Prague after his victory at Stirboholy prompted Daun's relief army, whose Kolin victory forced Frederick to abandon the siege."
+  },
+  "Q696479>Q699669": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "Losses at the Eastern Solomons left the Japanese carrier force depleted, and the surviving carriers fought at Santa Cruz with reduced strength."
+  },
+  "Q769358>Q1137764": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "Totila's mortal wound and the destruction of his army at Taginae left Teia to face Narses alone, and Teia was killed at Mons Lactarius."
+  },
+  "Q575347>Q163780": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Romania's August 1944 defection to the Soviets collapsed the German southeastern front, encouraging Slovak officers to launch the Slovak National Uprising at the end of August."
+  },
+  "Q107802>Q926905": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "The 2003 invasion toppled Saddam Hussein's regime, and the occupation and de-Baathification policies that followed left armed Sunni and Shia groups to fight coalition forces."
+  },
+  "Q152283>Q1259237": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "German and Ottoman missions to Kabul during the First World War encouraged Amir Habibullah's Afghanistan to press for independence, leading to the 1919 war with Britain."
+  },
+  "Q19546>Q51653": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Pope Paschal II made Dagobert of Pisa his legate and sent him with a fleet to the Levant, launching the 1101 crusade."
+  },
+  "Q37470>Q52226": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "UN Security Council Resolution 837 ordered the arrest of warlord Mohamed Farrah Aidid, prompting the US Rangers and Delta Force raid that became the Battle of Mogadishu."
+  },
+  "Q123210>Q849176": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q122976243>Q128172378": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "After October 7, Israel declared a campaign against Hamas leaders, and its strike in Tehran on 31 July 2024 killed Hamas political leader Ismail Haniyeh."
+  },
+  "Q1201263>Q1073476": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "The fragmentation of China under rival warlords prompted the Nationalist army's Northern Expedition of 1926-1928, which reunified much of the country under Kuomintang control."
+  },
+  "Q54054>Q631991": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q78994>Q241108": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q238440>Q254106": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q76026>Q651008": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q1048169>Q177918": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q815161>Q51656": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "Saladin's 1187 capture of Jerusalem led Pope Innocent III to call the Fourth Crusade, which was aimed at recovering the city through an attack on Egypt."
+  },
+  "Q51654>Q815161": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q638587>Q32929": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "Russia's 1735 war with the Ottomans drew Austria in by 1737, and its losses there left Habsburg finances and army weakened when Prussia invaded Silesia in 1740."
+  },
+  "Q241108>Q684324": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q8735>Q208261": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q170305>Q208261": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "Persian satrap Artaphernes backed Aristagoras's failed Naxos expedition, and the resulting debts and fear of punishment pushed Miletus into revolt in 499 BC."
+  },
+  "Q208261>Q76026": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "Ionian cities' 499 BC revolt against Persian rule, backed by Athens and Eretria, provoked Darius I to launch the expeditions that began the Greco-Persian Wars."
+  },
+  "Q170305>Q651008": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Persian satrap Tithraustes distributed bribes to Athens, Thebes, Corinth and Argos to fight Sparta, triggering the Corinthian War in 395 BC."
+  },
+  "Q42418>Q138414208": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q108102583>Q138414208": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q2649081>Q911972": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q911972>Q170360": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q499626>Q222520": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q589318>Q222520": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q521799>Q14689": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q14689>Q521799": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q426227>Q654374": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q2649081>Q153316": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q249232>Q241108": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q134114>Q241108": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q83055>Q162284": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q428>Q1133574": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q815161>Q51655": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "Saladin's capture of Jerusalem in 1187 prompted Richard I, Philip II and Frederick Barbarossa to launch the Third Crusade, which began in 1189."
+  },
+  "Q150812>Q2649081": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q130796>Q2649081": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q361>Q2649081": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q464399>Q2649081": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q191594>Q2649081": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q177859>Q2649081": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q152283>Q2649081": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q151340>Q2649081": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q12876>Q2649081": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q304673>Q2649081": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q646322>Q2649081": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q182062>Q238440": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "The Greek revolt against Ottoman rule prompted Britain, France and Russia to send a combined fleet that destroyed the Ottoman-Egyptian fleet at Navarino in 1827."
+  },
+  "Q238440>Q287942": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "The Ottoman loss of its fleet at Navarino, and Sultan Mahmud II's refusal of Russian demands afterwards, led Russia to declare war in April 1828."
+  },
+  "Q238440>Q137847": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q221382>Q76986": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "The failed August 1991 coup discredited the Soviet centre and empowered Yeltsin, who with Kravchuk and Shushkevich signed the Belovezha Accords dissolving the USSR in December 1991."
+  },
+  "Q728428>Q7930888": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "Antiochus IV's desecration of the Jerusalem Temple in 167 BC provoked the Maccabean Revolt, which Judas Maccabeus led against Seleucid rule."
+  },
+  "Q7930888>Q334502": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q7930888>Q12546": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q130796>Q170360": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q253224>Q170360": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q241108>Q156556": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q173100>Q76986": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Gorbachev's glasnost opened space for republican nationalism, and Yeltsin, Kravchuk and Shushkevich used that momentum to dissolve the USSR at Belovezha in December 1991."
+  },
+  "Q167634>Q76986": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Perestroika's economic failures and loosened central control weakened the Soviet centre, so Yeltsin, Kravchuk and Shushkevich dissolved the USSR at Belovezha in December 1991."
+  },
+  "Q37470>Q76986": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q525758>Q152006": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q525758>Q110999040": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q211395>Q638587": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q68750>Q616109": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q319260>Q1048169": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q254106>Q1048169": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q1056439>Q189266": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q108413>Q3719": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q1048169>Q2092950": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "Article 61 of the Treaty of Berlin promised reforms for Armenians, and Abdul Hamid II's refusal to enforce them was followed by the 1894-1897 Hamidian massacres."
+  },
+  "Q1048169>Q192050": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "Berlin's 1878 mandate for Austria-Hungary to occupy Bosnia led to the 1908 annexation, which inflamed Serbian nationalism behind the 1914 Sarajevo assassination."
+  },
+  "Q37110>Q582172": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q582172>Q362": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q2763>Q53479": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q7801>Q53479": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q82708>Q84167106": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q2649081>Q80130": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q151423>Q1048169": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q154573>Q1056439": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q48253>Q151005": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q126065>Q22948406": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "The 1979 Iranian Revolution installed a clerical government that exported revolution, and its rivalry with Saudi Arabia's Sunni monarchy became the proxy conflict."
+  },
+  "Q91>Q221469": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q122962941>Q122982851": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q11696>Q221469": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q1194052>Q188532": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q78994>Q467777": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q698985>Q254106": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q641479>Q74623": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q729768>Q228911": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q331347>Q684324": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q150995>Q654006": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "The Peace of Westphalia gave Sweden Baltic territories and great-power status, and Charles X Gustav's ambitions drove his 1655 invasion of Poland-Lithuania."
+  },
+  "Q2487>Q654006": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q23540>Q654006": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q155620>Q38789": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "The German destruction of Soviet forces at Kharkov in May 1942 removed Soviet reserves and freed Army Group South to advance toward Stalingrad."
+  },
+  "Q19768>Q52418": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q486124>Q1417059": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q155726>Q152486": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "Charles XII's victory at Narva in 1700 convinced him Russia could be defeated quickly, leading him to invade Russia and face Peter the Great at Poltava."
+  },
+  "Q1417059>Q626058": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "Mu'awiya's victory in the First Fitna established Umayyad rule, and his son Yazid's succession sparked Husayn's revolt, which ended at Karbala in 680."
+  },
+  "Q301766>Q153858": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q154426>Q331347": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q273011>Q467777": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q324916>Q5987345": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Henri Dunant's experience of the wounded after Solferino led him to publish his account and campaign for neutral relief societies, which founded the ICRC in 1863."
+  },
+  "Q331347>Q154596": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q189266>Q155620": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q83055>Q155620": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q361>Q155620": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q79911>Q155620": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q38789>Q157873": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "The Soviet encirclement of the German 6th Army at Stalingrad forced Manstein to launch a counteroffensive that retook Kharkov in March 1943, producing the Third Battle of Kharkov."
+  },
+  "Q189266>Q157873": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q83055>Q157873": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q249232>Q467777": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q605977>Q467777": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q134114>Q467777": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "Austria's humiliating defeat at Austerlitz pushed it to rearm and launch the 1809 war, which was decided at Wagram."
+  },
+  "Q154102>Q467777": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "The humiliating Peace of Pressburg of December 1805 stripped Austria of territory, motivating its 1809 war that ended at Wagram."
+  },
+  "Q40949>Q543165": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q826083>Q565661": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "The Jewish tribes of Khaybar had joined the Meccan coalition at the Battle of the Trench, and Muhammad's 628 campaign against Khaybar was a punitive response."
+  },
+  "Q565661>Q432": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q306535>Q164348": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q1145682>Q4298662": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "The 1903 Ilinden uprising exposed Ottoman weakness in Macedonia and drew international reform pressure, which fed the Young Turks' 1908 revolution."
+  },
+  "Q11184>Q1145682": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q1145682>Q165725": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q1145682>Q87138": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q1145682>Q184183": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q1145682>Q269267": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q1145682>Q361": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q1145682>Q188972": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q963303>Q641479": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "The 1569 Union of Lublin transferred Ukrainian lands to Polish-Lithuanian control, and the resulting noble land and religious grievances fuelled Khmelnytsky's 1648 uprising."
+  }
+}

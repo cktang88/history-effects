@@ -1,0 +1,752 @@
+[
+  {
+    "cause": "Q362",
+    "effect": "Q132551",
+    "strength": "primary",
+    "mechanism": "Displacement from the Second World War left millions of refugees across Europe, and the UN created UNHCR in 1950 to handle them."
+  },
+  {
+    "cause": "Q2763",
+    "effect": "Q132551",
+    "strength": "contributing",
+    "mechanism": "Nazi persecution produced stateless survivors and refugees whom the new agency was mandated to protect and resettle."
+  },
+  {
+    "cause": "Q3708094",
+    "effect": "Q51649",
+    "strength": "primary",
+    "mechanism": "Seljuk conquest of Anatolia and Jerusalem threatened Byzantium and pilgrim access, prompting Byzantine appeals and Urban II's call to crusade."
+  },
+  {
+    "cause": "Q51648",
+    "effect": "Q51649",
+    "strength": "contributing",
+    "mechanism": "The 1054 schism estranged Rome and Constantinople, shaping papal willingness to answer Byzantine appeals for military help."
+  },
+  {
+    "cause": "Q160307",
+    "effect": "Q51649",
+    "strength": "minor",
+    "mechanism": "Fatimid retaking of Jerusalem from the Seljuks in 1098 changed the Holy Land's balance of power just before the crusaders arrived."
+  },
+  {
+    "cause": "Q329838",
+    "effect": "Q131192",
+    "strength": "contributing",
+    "mechanism": "Third-century civil wars and fiscal collapse weakened Rome's Rhine and Danube frontiers, opening the empire to migrating peoples."
+  },
+  {
+    "cause": "Q1366196",
+    "effect": "Q131192",
+    "strength": "contributing",
+    "mechanism": "Goths who crossed the Danube in 376 revolted against Roman mistreatment, forcing Rome to accept Gothic settlement inside the empire."
+  },
+  {
+    "cause": "Q933963",
+    "effect": "Q131192",
+    "strength": "minor",
+    "mechanism": "Marcomannic invasions of the 160s and 170s pushed Germanic groups toward the Roman frontier, an early phase of later migrations."
+  },
+  {
+    "cause": "Q131192",
+    "effect": "Q608613",
+    "strength": "primary",
+    "mechanism": "Germanic federate armies seized Italy, and Odoacer deposed Romulus Augustulus in 476, ending the Western Roman Empire."
+  },
+  {
+    "cause": "Q131192",
+    "effect": "Q126936",
+    "strength": "contributing",
+    "mechanism": "Visigoths settled in Aquitaine and Hispania under Roman federate treaties, founding a successor kingdom on former imperial land."
+  },
+  {
+    "cause": "Q131192",
+    "effect": "Q583038",
+    "strength": "contributing",
+    "mechanism": "Theoderic's Ostrogoths conquered Italy in 493 and founded a kingdom on former Roman territory."
+  },
+  {
+    "cause": "Q131192",
+    "effect": "Q10416611",
+    "strength": "contributing",
+    "mechanism": "Vandals crossed into North Africa in 429 and seized Carthage in 439, founding a kingdom in former Roman provinces."
+  },
+  {
+    "cause": "Q3185305",
+    "effect": "Q48685",
+    "strength": "contributing",
+    "mechanism": "Rehoboam's refusal of northern demands split the united monarchy around 930 BCE, creating Judah as a separate southern kingdom."
+  },
+  {
+    "cause": "Q737629",
+    "effect": "Q48685",
+    "strength": "minor",
+    "mechanism": "Shoshenq I's campaign against Judah around 925 BCE plundered Jerusalem's temple and royal treasuries, weakening the young kingdom."
+  },
+  {
+    "cause": "Q48685",
+    "effect": "Q1290590",
+    "strength": "primary",
+    "mechanism": "Zedekiah's revolt against Babylon provoked Nebuchadnezzar's siege, which destroyed Jerusalem in 587-586 BCE and ended the kingdom."
+  },
+  {
+    "cause": "Q48685",
+    "effect": "Q1252915",
+    "strength": "contributing",
+    "mechanism": "Judah's rebellion against Babylon brought Nebuchadnezzar's 597 BCE siege, which deported King Jehoiachin and the leading citizens."
+  },
+  {
+    "cause": "Q48685",
+    "effect": "Q175447",
+    "strength": "contributing",
+    "mechanism": "Babylon's deportation of Judean elites created the exile community whose experience of loss shaped Jewish religious identity."
+  },
+  {
+    "cause": "Q9158",
+    "effect": "Q1049294",
+    "strength": "contributing",
+    "mechanism": "Mobile email on NTT DoCoMo's i-mode service created demand for expressive pictograph characters, which the company's designers devised in 1999."
+  },
+  {
+    "cause": "Q12546",
+    "effect": "Q41300",
+    "strength": "primary",
+    "mechanism": "Crusader control of Jerusalem created dangerous pilgrim routes, and in 1119 nine knights founded the Templar order to protect them."
+  },
+  {
+    "cause": "Q15180",
+    "effect": "Q179975",
+    "strength": "contributing",
+    "mechanism": "Soviet aid, including Japanese arms seized in Manchuria in 1945, equipped Chinese Communist forces and shaped the war's outcome."
+  },
+  {
+    "cause": "Q188712",
+    "effect": "Q179975",
+    "strength": "minor",
+    "mechanism": "Japan's 1937-1945 invasion weakened Nationalist armies and let Communist forces expand, setting the stage for the civil war's renewal in 1946."
+  },
+  {
+    "cause": "Q78994",
+    "effect": "Q51122",
+    "strength": "contributing",
+    "mechanism": "Napoleonic rule reorganized Italian states and spread liberal and national ideas that later fueled the Risorgimento."
+  },
+  {
+    "cause": "Q6534",
+    "effect": "Q51122",
+    "strength": "contributing",
+    "mechanism": "Revolutionary French armies carried ideas of popular sovereignty into Italy, inspiring patriots to seek a unified state."
+  },
+  {
+    "cause": "Q46362",
+    "effect": "Q51122",
+    "strength": "contributing",
+    "mechanism": "The 1815 Vienna settlement restored Austrian control over northern Italy and kept the peninsula divided, creating the grievance unification addressed."
+  },
+  {
+    "cause": "Q6235",
+    "effect": "Q51122",
+    "strength": "contributing",
+    "mechanism": "Mazzini and other nationalist writers made a unified Italian nation-state the central political goal of the Risorgimento."
+  },
+  {
+    "cause": "Q51122",
+    "effect": "Q172579",
+    "strength": "primary",
+    "mechanism": "Piedmontese-led campaigns and plebiscites in 1860-61 created the Kingdom of Italy under Victor Emmanuel II."
+  },
+  {
+    "cause": "Q15180",
+    "effect": "Q168811",
+    "strength": "primary",
+    "mechanism": "Soviet authorities created the Kazakh Soviet Socialist Republic in 1936 as a constituent republic of the Soviet Union."
+  },
+  {
+    "cause": "Q8729",
+    "effect": "Q168811",
+    "strength": "contributing",
+    "mechanism": "The 1917 revolution brought the Bolsheviks to power, and their Soviet state later delimited Kazakh territory into union republics."
+  },
+  {
+    "cause": "Q79911",
+    "effect": "Q168811",
+    "strength": "minor",
+    "mechanism": "Bolshevik victory in the Russian Civil War secured Central Asian territory, allowing Soviet authorities to create the Kazakh autonomous republic in 1920."
+  },
+  {
+    "cause": "Q427941",
+    "effect": "Q182865",
+    "strength": "primary",
+    "mechanism": "The Taliban regime sheltered al-Qaeda and refused to surrender Osama bin Laden after 9/11, prompting the US-led invasion of 2001."
+  },
+  {
+    "cause": "Q83085",
+    "effect": "Q182865",
+    "strength": "contributing",
+    "mechanism": "The Soviet occupation and its 1989 withdrawal left armed networks and a fragmented Afghan state that the Taliban later exploited."
+  },
+  {
+    "cause": "Q182865",
+    "effect": "Q30747910",
+    "strength": "primary",
+    "mechanism": "The 2001 invasion overthrew the Taliban, and US-backed governance produced the Islamic Republic of Afghanistan in 2004."
+  },
+  {
+    "cause": "Q182865",
+    "effect": "Q179275",
+    "strength": "minor",
+    "mechanism": "Cross-border militancy from the Afghan war spilled into Pakistan's tribal areas, fueling insurgency in Khyber Pakhtunkhwa from 2004."
+  },
+  {
+    "cause": "Q190029",
+    "effect": "Q620735",
+    "strength": "contributing",
+    "mechanism": "NATO's 1999 Kosovo intervention and the West's later recognition of Kosovo gave Moscow a precedent it cited to justify action in Georgia."
+  },
+  {
+    "cause": "Q15180",
+    "effect": "Q620735",
+    "strength": "contributing",
+    "mechanism": "Soviet-era autonomy arrangements for South Ossetia and Abkhazia left unresolved status disputes that erupted into conflict in 2008."
+  },
+  {
+    "cause": "Q836386",
+    "effect": "Q620735",
+    "strength": "minor",
+    "mechanism": "The pro-Western Orange Revolution in Ukraine heightened Russian fears of NATO encroachment, hardening Moscow's stance toward Georgia."
+  },
+  {
+    "cause": "Q109251",
+    "effect": "Q124988",
+    "strength": "contributing",
+    "mechanism": "Rome's conquest of the Samnites extended its control across central Italy, making it a Mediterranean power that would clash with Carthage."
+  },
+  {
+    "cause": "Q737907",
+    "effect": "Q124988",
+    "strength": "minor",
+    "mechanism": "Rome's 338 BCE victory over the Latin League consolidated its hegemony over Latium, a precondition for its later overseas expansion."
+  },
+  {
+    "cause": "Q124988",
+    "effect": "Q2277",
+    "strength": "contributing",
+    "mechanism": "Victory in the Punic Wars gave Rome control of the western Mediterranean, the foundation of the expansion that produced the Roman Empire."
+  },
+  {
+    "cause": "Q124988",
+    "effect": "Q75813",
+    "strength": "contributing",
+    "mechanism": "Philip V of Macedon's alliance with Hannibal drew Rome into the Macedonian Wars, extending Roman power into Greece."
+  },
+  {
+    "cause": "Q124988",
+    "effect": "Q1132393",
+    "strength": "minor",
+    "mechanism": "Carthage's unpaid mercenaries revolted after the First Punic War's defeat, prompting a bitter three-year uprising."
+  },
+  {
+    "cause": "Q124988",
+    "effect": "Q102679",
+    "strength": "minor",
+    "mechanism": "Numidian prince Masinissa switched to Rome in the Second Punic War, gaining Roman backing that expanded Numidian power."
+  },
+  {
+    "cause": "Q42976",
+    "effect": "Q2895",
+    "strength": "contributing",
+    "mechanism": "The Bolshevik seizure of power in 1917 enabled the Soviet declaration of a Byelorussian republic in 1919."
+  },
+  {
+    "cause": "Q186284",
+    "effect": "Q2895",
+    "strength": "contributing",
+    "mechanism": "The 1919-1921 Polish-Soviet War fixed Belarus's western frontier with Poland, determining the territory the Soviet republic governed."
+  },
+  {
+    "cause": "Q20437507",
+    "effect": "Q83311",
+    "strength": "primary",
+    "mechanism": "Cyrus II of Anshan overthrew Astyages of Media around 550 BCE and absorbed the Median realm into the new Persian polity."
+  },
+  {
+    "cause": "Q624887",
+    "effect": "Q83311",
+    "strength": "contributing",
+    "mechanism": "Cyrus's conquest of Babylon in 539 BCE added the Neo-Babylonian realm and its administration to Persian rule."
+  },
+  {
+    "cause": "Q83311",
+    "effect": "Q76026",
+    "strength": "primary",
+    "mechanism": "Persian expansion into the Aegean, and Darius's and Xerxes' campaigns to punish Athens and Eretria, led to the Greco-Persian Wars."
+  },
+  {
+    "cause": "Q83311",
+    "effect": "Q728428",
+    "strength": "contributing",
+    "mechanism": "Cyrus's 538 BCE edict let exiled Judeans rebuild the Temple, which was completed under Persian sponsorship in 516 BCE."
+  },
+  {
+    "cause": "Q83311",
+    "effect": "Q170305",
+    "strength": "minor",
+    "mechanism": "Darius I organized the empire into provinces run by satraps, an administrative model later adopted by Hellenistic states."
+  },
+  {
+    "cause": "Q988780",
+    "effect": "Q131502",
+    "strength": "primary",
+    "mechanism": "Faraday's 1831 discovery that changing magnetic fields induce current made rotating electromagnetic generators possible."
+  },
+  {
+    "cause": "Q131502",
+    "effect": "Q47616",
+    "strength": "contributing",
+    "mechanism": "Dynamo-driven central power, as in Edison's 1882 Pearl Street system, supplied electric lamps and made commercial incandescent lighting practical."
+  },
+  {
+    "cause": "Q5339",
+    "effect": "Q5297",
+    "strength": "primary",
+    "mechanism": "Miniaturized transistors on integrated circuits let Intel engineers place a complete central processor on a single chip in 1971."
+  },
+  {
+    "cause": "Q68",
+    "effect": "Q5297",
+    "strength": "contributing",
+    "mechanism": "Decades of mainframe computing created the logic-design demand that microprocessors condensed onto a single chip."
+  },
+  {
+    "cause": "Q5297",
+    "effect": "Q8076",
+    "strength": "contributing",
+    "mechanism": "Affordable programmable processors made home consoles practical, beginning with Fairchild's F8-based Channel F in 1976."
+  },
+  {
+    "cause": "Q5297",
+    "effect": "Q17517",
+    "strength": "contributing",
+    "mechanism": "Microprocessors supplied the computing power that let handheld mobile phones add features and shrink from the 1980s onward."
+  },
+  {
+    "cause": "Q11455",
+    "effect": "Q35875",
+    "strength": "primary",
+    "mechanism": "Einstein's 1905 special relativity showed that a body's inertia depends on its energy content, yielding E=mc2 as a consequence."
+  },
+  {
+    "cause": "Q12969754",
+    "effect": "Q35875",
+    "strength": "minor",
+    "mechanism": "Maxwell's electromagnetic theory, confirmed by Hertz's experiments, supplied the radiation framework Einstein used for the energy-inertia argument."
+  },
+  {
+    "cause": "Q131502",
+    "effect": "Q49833",
+    "strength": "contributing",
+    "mechanism": "Electric generators let wind rotors produce electricity, as Charles Brush's 1887 turbine in Cleveland demonstrated."
+  },
+  {
+    "cause": "Q129165",
+    "effect": "Q131969",
+    "strength": "primary",
+    "mechanism": "Xerxes' 480 BCE invasion of Greece brought a Persian army to the pass, making the Greek stand at Thermopylae unavoidable."
+  },
+  {
+    "cause": "Q83311",
+    "effect": "Q131969",
+    "strength": "contributing",
+    "mechanism": "The Persian Empire's campaigns to punish Greek revolt-supporters and expand its rule drove the invasion that reached Thermopylae."
+  },
+  {
+    "cause": "Q2822795",
+    "effect": "Q193739",
+    "strength": "contributing",
+    "mechanism": "The 1997 Treaty of Amsterdam incorporated the Schengen acquis into EU law, binding member states to its border-free arrangements."
+  },
+  {
+    "cause": "Q713750",
+    "effect": "Q11146",
+    "strength": "contributing",
+    "mechanism": "German reunification in 1990 prompted France and others to bind a unified Germany into deeper integration, shaping Maastricht's terms."
+  },
+  {
+    "cause": "Q2822795",
+    "effect": "Q11146",
+    "strength": "minor",
+    "mechanism": "The Schengen project's 1985 border-free model built momentum for deeper European integration, which Maastricht codified."
+  },
+  {
+    "cause": "Q11146",
+    "effect": "Q193739",
+    "strength": "minor",
+    "mechanism": "Maastricht's institutional structure was revised at the 1997 Treaty of Amsterdam, which reorganized EU decision-making."
+  },
+  {
+    "cause": "Q43777",
+    "effect": "Q1075913",
+    "strength": "contributing",
+    "mechanism": "Earthquake-damaged sanitation let cholera, introduced through a UN peacekeeping camp, spread across Haiti from October 2010."
+  },
+  {
+    "cause": "Q12539",
+    "effect": "Q3281534",
+    "strength": "contributing",
+    "mechanism": "Enlightenment ideas of reason, science and secular government reshaped European thought, and historians date modern history from this shift."
+  },
+  {
+    "cause": "Q7313",
+    "effect": "Q28179",
+    "strength": "contributing",
+    "mechanism": "Yuan rule weakened Goryeo's independence, and the Ming overthrow of the Yuan in 1368 cleared the way for Yi Seong-gye's 1392 founding of Joseon."
+  },
+  {
+    "cause": "Q9903",
+    "effect": "Q28179",
+    "strength": "contributing",
+    "mechanism": "Ming recognition of Yi Seong-gye as Korean king in 1392 legitimized the new Joseon state and anchored its tributary foreign policy."
+  },
+  {
+    "cause": "Q70802",
+    "effect": "Q177859",
+    "strength": "contributing",
+    "mechanism": "Third Republic diplomacy built the 1892 Franco-Russian alliance, which became the core of the 1907 Triple Entente with Britain."
+  },
+  {
+    "cause": "Q748780",
+    "effect": "Q172640",
+    "strength": "primary",
+    "mechanism": "The Viet Minh's war against France ended with the 1954 Geneva Accords, which left a communist-led Democratic Republic in the North."
+  },
+  {
+    "cause": "Q362",
+    "effect": "Q172640",
+    "strength": "contributing",
+    "mechanism": "Japan's occupation and 1945 surrender let Ho Chi Minh's Viet Minh seize Hanoi and proclaim the Democratic Republic of Vietnam."
+  },
+  {
+    "cause": "Q36014",
+    "effect": "Q172640",
+    "strength": "contributing",
+    "mechanism": "Ho Chi Minh led the Viet Minh and proclaimed the Democratic Republic of Vietnam in 1945, founding the state that became North Vietnam."
+  },
+  {
+    "cause": "Q179975",
+    "effect": "Q172640",
+    "strength": "minor",
+    "mechanism": "Chinese Communist victory in 1949 gave the Viet Minh a friendly border state and military aid during the First Indochina War."
+  },
+  {
+    "cause": "Q6534",
+    "effect": "Q188161",
+    "strength": "contributing",
+    "mechanism": "Revolutionary France's client Batavian Republic took over the bankrupt VOC's territories in 1800, creating the Dutch East Indies colonial state."
+  },
+  {
+    "cause": "Q267298",
+    "effect": "Q988780",
+    "strength": "contributing",
+    "mechanism": "Volta's 1800 battery gave Faraday a steady current source, which he used in his 1831 experiments detecting induced currents."
+  },
+  {
+    "cause": "Q178032",
+    "effect": "Q988780",
+    "strength": "contributing",
+    "mechanism": "Sturgeon's 1825 electromagnet allowed strong magnetic fields to be controlled, a tool Faraday then used in his induction experiments."
+  },
+  {
+    "cause": "Q988780",
+    "effect": "Q11658",
+    "strength": "primary",
+    "mechanism": "Faraday's induction principle became the operating basis of the transformer, which Gaulard and Gibbs commercialized in the 1880s."
+  },
+  {
+    "cause": "Q988780",
+    "effect": "Q12969754",
+    "strength": "minor",
+    "mechanism": "Maxwell built his field theory on Faraday's induction law, and Hertz's 1886 experiments confirmed the electromagnetic waves it predicted."
+  },
+  {
+    "cause": "Q12562",
+    "effect": "Q128168",
+    "strength": "primary",
+    "mechanism": "Protestant challenges to papal authority from 1517 forced the Catholic Church to define doctrine and reform its institutions."
+  },
+  {
+    "cause": "Q29",
+    "effect": "Q128168",
+    "strength": "contributing",
+    "mechanism": "Spanish Habsburg rulers, especially Philip II, became the Catholic Counter-Reformation's main political sponsors across their empire."
+  },
+  {
+    "cause": "Q128168",
+    "effect": "Q2487",
+    "strength": "contributing",
+    "mechanism": "Habsburg Catholic reassertion in Bohemia and the Empire provoked the 1618 Prague revolt that grew into the Thirty Years' War."
+  },
+  {
+    "cause": "Q128168",
+    "effect": "Q164432",
+    "strength": "contributing",
+    "mechanism": "Philip II's Catholic enforcement and Inquisition in the Netherlands drove the Dutch revolt that became the Eighty Years' War."
+  },
+  {
+    "cause": "Q128168",
+    "effect": "Q673175",
+    "strength": "minor",
+    "mechanism": "Militant Catholic opposition to Huguenot toleration fueled France's religious wars from 1562 onward."
+  },
+  {
+    "cause": "Q254106",
+    "effect": "Q129864",
+    "strength": "contributing",
+    "mechanism": "The Crimean War drained British troops and money from India, weakening the East India Company's garrisons before the 1857 uprising."
+  },
+  {
+    "cause": "Q129864",
+    "effect": "Q129286",
+    "strength": "primary",
+    "mechanism": "After the uprising, Parliament transferred governance from the East India Company to the Crown in 1858, establishing direct British rule."
+  },
+  {
+    "cause": "Q15180",
+    "effect": "Q164348",
+    "strength": "contributing",
+    "mechanism": "Soviet domination through Stalinist rule and the Warsaw Pact left Hungary's communist government unpopular, sparking the 1956 uprising."
+  },
+  {
+    "cause": "Q15180",
+    "effect": "Q162401",
+    "strength": "contributing",
+    "mechanism": "Soviet-backed Stalinist rule had stalled Czechoslovakia's economy, prompting the reform program that Dubček launched in 1968."
+  },
+  {
+    "cause": "Q164348",
+    "effect": "Q162401",
+    "strength": "minor",
+    "mechanism": "The Soviet crushing of Hungary's 1956 uprising reshaped Eastern Bloc reform debates, influencing Czechoslovak leaders' cautious liberalization."
+  },
+  {
+    "cause": "Q133641",
+    "effect": "Q5308718",
+    "strength": "contributing",
+    "mechanism": "Overseas exploration and colonization linked distant economies and states, reshaping European commerce and politics in the early modern era."
+  },
+  {
+    "cause": "Q4692",
+    "effect": "Q5308718",
+    "strength": "contributing",
+    "mechanism": "Renaissance humanism revived classical learning and reshaped European culture, opening the intellectual world of the early modern era."
+  },
+  {
+    "cause": "Q144334",
+    "effect": "Q5308718",
+    "strength": "contributing",
+    "mechanism": "Gutenberg's movable-type printing spread books and ideas across Europe, accelerating religious and scientific change in the early modern era."
+  },
+  {
+    "cause": "Q42005",
+    "effect": "Q5308718",
+    "strength": "minor",
+    "mechanism": "The Black Death's population collapse raised wages and weakened feudal labour obligations, undermining medieval social structures."
+  },
+  {
+    "cause": "Q751743",
+    "effect": "Q185043",
+    "strength": "primary",
+    "mechanism": "The 184 CE Yellow Turban uprising collapsed central Han authority and empowered regional warlords, fragmenting the empire."
+  },
+  {
+    "cause": "Q830059",
+    "effect": "Q185043",
+    "strength": "contributing",
+    "mechanism": "Sun Quan and Liu Bei's 208 defeat of Cao Cao at Red Cliffs blocked his southern unification and fixed the tripartite division."
+  },
+  {
+    "cause": "Q1057910",
+    "effect": "Q185043",
+    "strength": "contributing",
+    "mechanism": "Cao Cao's 200 victory at Guandu over Yuan Shao gave him control of northern China, the base of the Wei kingdom."
+  },
+  {
+    "cause": "Q207600",
+    "effect": "Q160307",
+    "strength": "contributing",
+    "mechanism": "Fatimid-led Kutama Berber forces overthrew the Aghlabid emirate in 909, opening Ifriqiya to the new Fatimid state."
+  },
+  {
+    "cause": "Q12536",
+    "effect": "Q160307",
+    "strength": "contributing",
+    "mechanism": "Abbasid decline and fragmentation let Ismaili Shi'a missionaries build the Kutama base that founded the rival Fatimid caliphate."
+  },
+  {
+    "cause": "Q759988",
+    "effect": "Q160307",
+    "strength": "minor",
+    "mechanism": "The Zanj Rebellion of 869-883 drained Abbasid resources and exposed central weakness that rival movements exploited."
+  },
+  {
+    "cause": "Q160307",
+    "effect": "Q205718",
+    "strength": "contributing",
+    "mechanism": "Fatimid withdrawal to Egypt in 972 left Zirid governors in Ifriqiya, who became effectively independent rulers."
+  },
+  {
+    "cause": "Q160307",
+    "effect": "Q180114",
+    "strength": "minor",
+    "mechanism": "Saladin's campaign ended the Fatimid Caliphate in 1171 and established the Ayyubid dynasty in Egypt."
+  },
+  {
+    "cause": "Q164432",
+    "effect": "Q170072",
+    "strength": "primary",
+    "mechanism": "The revolt against Spanish Habsburg rule, fought as the Eighty Years' War, produced the Republic when the northern provinces declared independence in 1581."
+  },
+  {
+    "cause": "Q216165",
+    "effect": "Q170072",
+    "strength": "contributing",
+    "mechanism": "The 1579 Union of Utrecht bound the northern provinces together, providing the political foundation for the Republic's independence."
+  },
+  {
+    "cause": "Q12562",
+    "effect": "Q170072",
+    "strength": "contributing",
+    "mechanism": "Calvinist Protestantism gave the northern revolt religious cohesion and shaped the Republic's Reformed church and political culture."
+  },
+  {
+    "cause": "Q170072",
+    "effect": "Q130654",
+    "strength": "contributing",
+    "mechanism": "The Dutch Republic's maritime commerce and the 1602 founding of the Dutch East India Company built the overseas Dutch colonial empire."
+  },
+  {
+    "cause": "Q170072",
+    "effect": "Q755170",
+    "strength": "contributing",
+    "mechanism": "Commercial rivalry with England over trade routes and fisheries led to the Anglo-Dutch Wars of the 1650s to 1670s."
+  },
+  {
+    "cause": "Q170072",
+    "effect": "Q2352880",
+    "strength": "minor",
+    "mechanism": "Commercial prosperity of the Dutch Republic created a large market for paintings that defined the Dutch Golden Age."
+  },
+  {
+    "cause": "Q131192",
+    "effect": "Q146246",
+    "strength": "contributing",
+    "mechanism": "Germanic migrations into Gaul in the fifth century brought Frankish groups into Roman territory, creating the settlements that became Francia."
+  },
+  {
+    "cause": "Q608613",
+    "effect": "Q146246",
+    "strength": "contributing",
+    "mechanism": "The collapse of Roman authority in northern Gaul after 476 left space for Clovis's Frankish kingdom to expand."
+  },
+  {
+    "cause": "Q1247508",
+    "effect": "Q146246",
+    "strength": "minor",
+    "mechanism": "Clovis's 486 conquest of the Roman-ruled Soissons realm gave the Franks control of northern Gaul, the nucleus of Francia."
+  },
+  {
+    "cause": "Q146246",
+    "effect": "Q31929",
+    "strength": "primary",
+    "mechanism": "Pepin the Short's 751 coup replaced the Merovingian kings, and Carolingian rule grew into the Carolingian Empire by 800."
+  },
+  {
+    "cause": "Q146246",
+    "effect": "Q46370",
+    "strength": "contributing",
+    "mechanism": "The 843 Treaty of Verdun split Francia, creating West Francia, which became the basis of the later kingdom of France."
+  },
+  {
+    "cause": "Q146246",
+    "effect": "Q153080",
+    "strength": "contributing",
+    "mechanism": "The 843 Treaty of Verdun split Francia, creating East Francia, the core of the later German kingdom."
+  },
+  {
+    "cause": "Q8462",
+    "effect": "Q484195",
+    "strength": "primary",
+    "mechanism": "Timur's conquests from the 1370s built the Transoxanian and Iranian realm that his descendants ruled as the Timurid state."
+  },
+  {
+    "cause": "Q178084",
+    "effect": "Q484195",
+    "strength": "contributing",
+    "mechanism": "The Ilkhanate's collapse in 1335 fragmented Iran and Central Asia, creating the power vacuum Timur exploited."
+  },
+  {
+    "cause": "Q720",
+    "effect": "Q484195",
+    "strength": "contributing",
+    "mechanism": "Genghis Khan's Mongol conquests reshaped Central Asia and gave Chinggisid legitimacy that Timur later claimed."
+  },
+  {
+    "cause": "Q132560",
+    "effect": "Q527628",
+    "strength": "contributing",
+    "mechanism": "Dennis Gabor invented holography in 1947 while trying to correct lens aberrations in electron microscopes."
+  },
+  {
+    "cause": "Q68",
+    "effect": "Q8076",
+    "strength": "contributing",
+    "mechanism": "Spacewar! on university computers inspired Nolan Bushnell's 1971 Computer Space, the first commercial video game, and the console designers who followed."
+  },
+  {
+    "cause": "Q51655",
+    "effect": "Q48189",
+    "strength": "primary",
+    "mechanism": "Germans besieging Acre in 1190 founded a hospital brotherhood during the Third Crusade, which became the Teutonic Order."
+  },
+  {
+    "cause": "Q12546",
+    "effect": "Q48189",
+    "strength": "contributing",
+    "mechanism": "The Crusading movement's papal legitimacy and demand for religious knightly service shaped the Order's military and charitable mission."
+  },
+  {
+    "cause": "Q41300",
+    "effect": "Q48189",
+    "strength": "minor",
+    "mechanism": "The Knights Templar's combination of monastic vows and military service provided the model that the Teutonic Knights adopted."
+  },
+  {
+    "cause": "Q48189",
+    "effect": "Q2665664",
+    "strength": "primary",
+    "mechanism": "The Teutonic Knights' Prussian Crusade from the 1230s conquered and Christianized the Baltic Prussians, creating the Order's state."
+  },
+  {
+    "cause": "Q12536",
+    "effect": "Q947784",
+    "strength": "primary",
+    "mechanism": "Abbasid caliphs such as al-Mu'tasim built military forces from enslaved Turkic soldiers, creating the mamluk institution."
+  },
+  {
+    "cause": "Q37594",
+    "effect": "Q83224",
+    "strength": "primary",
+    "mechanism": "William's claim to the English throne and his invasion force led Harold's army to confront him at Hastings in 1066."
+  },
+  {
+    "cause": "Q9458",
+    "effect": "Q486124",
+    "strength": "contributing",
+    "mechanism": "Muhammad led the Muslim community against the Meccan army at Badr, making it the first major battle between the two sides."
+  },
+  {
+    "cause": "Q486124",
+    "effect": "Q1647162",
+    "strength": "minor",
+    "mechanism": "Badr's victory raised the Muslim community's standing in Arabia, strengthening its position in the 628 Treaty of al-Hudaybiya."
+  }
+]

@@ -1,0 +1,332 @@
+[
+  {
+    "cause": "Q608613",
+    "effect": "Q105313",
+    "strength": "minor",
+    "mechanism": "Withdrawal of Roman authority from Britain left a power vacuum that Anglo-Saxon groups filled with small kingdoms such as Wessex."
+  },
+  {
+    "cause": "Q273069",
+    "effect": "Q171150",
+    "strength": "contributing",
+    "mechanism": "The Magyar defeat at Lechfeld in 955 ended their raids and pushed them toward settlement and Christianization under Stephen."
+  },
+  {
+    "cause": "Q189545",
+    "effect": "Q180114",
+    "strength": "primary",
+    "mechanism": "Saladin, a Zengid officer, seized Egypt in 1171 and built the Ayyubid state out of Zengid Syria and Egypt."
+  },
+  {
+    "cause": "Q12546",
+    "effect": "Q180114",
+    "strength": "contributing",
+    "mechanism": "Crusader states prompted Saladin's campaigns to unify Muslim Syria and Egypt against the Franks."
+  },
+  {
+    "cause": "Q180114",
+    "effect": "Q233568",
+    "strength": "primary",
+    "mechanism": "Saladin's army annihilated the Crusader force at Hattin, opening the way for the Ayyubids to take Jerusalem."
+  },
+  {
+    "cause": "Q180114",
+    "effect": "Q51655",
+    "strength": "contributing",
+    "mechanism": "Saladin's 1187 recapture of Jerusalem provoked the Third Crusade."
+  },
+  {
+    "cause": "Q180114",
+    "effect": "Q282428",
+    "strength": "primary",
+    "mechanism": "After the Ayyubid collapse in Egypt, its Mamluk military officers seized power and founded the Mamluk Sultanate in 1250."
+  },
+  {
+    "cause": "Q874357",
+    "effect": "Q185488",
+    "strength": "contributing",
+    "mechanism": "Collapse of Turkic khaganate authority in the Pontic-Caspian steppe let Bulgar groups form independent polities."
+  },
+  {
+    "cause": "Q74011",
+    "effect": "Q188586",
+    "strength": "primary",
+    "mechanism": "Norman conquest of southern Italy and Sicily created the Norman royal state that became the Kingdom of Sicily in 1130."
+  },
+  {
+    "cause": "Q188586",
+    "effect": "Q173065",
+    "strength": "minor",
+    "mechanism": "The 1282 Sicilian Vespers split the realm, leaving the mainland as the Kingdom of Naples under Angevin rule."
+  },
+  {
+    "cause": "Q1123201",
+    "effect": "Q199821",
+    "strength": "primary",
+    "mechanism": "Spanish American wars of independence removed Spanish rule from northern South America, creating the space for Gran Colombia's founding."
+  },
+  {
+    "cause": "Q1150410",
+    "effect": "Q199821",
+    "strength": "contributing",
+    "mechanism": "Bolivar's 1819 victory at Boyaca secured New Granada, enabling the Congress of Cucuta to proclaim Gran Colombia."
+  },
+  {
+    "cause": "Q200032",
+    "effect": "Q975405",
+    "strength": "primary",
+    "mechanism": "The Byzantine defeat at Manzikert in 1071 opened Anatolia to Seljuk Turkish rule, enabling the Sultanate of Rum."
+  },
+  {
+    "cause": "Q975405",
+    "effect": "Q12546",
+    "strength": "contributing",
+    "mechanism": "Seljuk control of Anatolia and Nicaea prompted Byzantine appeals to the West that helped launch the First Crusade."
+  },
+  {
+    "cause": "Q975405",
+    "effect": "Q12560",
+    "strength": "contributing",
+    "mechanism": "After the Sultanate of Rum fragmented in 1307, its successor Turkish beyliks, including the Ottomans, emerged in Anatolia."
+  },
+  {
+    "cause": "Q15920546",
+    "effect": "Q15860072",
+    "strength": "contributing",
+    "mechanism": "The 2014 annexation and the Donbas uprising that followed opened the wider Russo-Ukrainian war, fought from 2014 onward."
+  },
+  {
+    "cause": "Q15920546",
+    "effect": "Q18001626",
+    "strength": "minor",
+    "mechanism": "Fighting in eastern Ukraine after the annexation produced the Minsk ceasefire negotiations and protocol of 2014."
+  },
+  {
+    "cause": "Q20857240",
+    "effect": "Q7888194",
+    "strength": "contributing",
+    "mechanism": "Public anxiety over the surge of migrants fueled the Leave campaign and the 2016 referendum that led to Brexit."
+  },
+  {
+    "cause": "Q36704",
+    "effect": "Q190029",
+    "strength": "contributing",
+    "mechanism": "Yugoslavia's breakup and Serbian nationalism left Kosovo's Albanian majority under Belgrade's rule, fueling armed secessionist conflict."
+  },
+  {
+    "cause": "Q51655",
+    "effect": "Q213638",
+    "strength": "contributing",
+    "mechanism": "Richard I's conquest of Cyprus during the Third Crusade led to its sale to the Templars and the later Lusignan kingdom."
+  },
+  {
+    "cause": "Q7318",
+    "effect": "Q151860",
+    "strength": "primary",
+    "mechanism": "Nazi Germany's 1941 invasion of the USSR sent Army Group North to Leningrad, starting the siege."
+  },
+  {
+    "cause": "Q362",
+    "effect": "Q167457",
+    "strength": "contributing",
+    "mechanism": "The devastation of the Second World War drove Western European states toward economic integration, leading to the Treaty of Rome."
+  },
+  {
+    "cause": "Q167457",
+    "effect": "Q11146",
+    "strength": "contributing",
+    "mechanism": "The Treaty of Rome's European Economic Community was transformed into the European Union by the 1992 Maastricht Treaty."
+  },
+  {
+    "cause": "Q170314",
+    "effect": "Q192055",
+    "strength": "contributing",
+    "mechanism": "The Second Sino-Japanese War brought Japanese armies to Nanjing after the Battle of Shanghai, where atrocities followed its fall."
+  },
+  {
+    "cause": "Q12562",
+    "effect": "Q131808",
+    "strength": "contributing",
+    "mechanism": "Reformation and Counter-Reformation religious conflict shaped the anxious, unstable style of Mannerist art."
+  },
+  {
+    "cause": "Q2269",
+    "effect": "Q182688",
+    "strength": "primary",
+    "mechanism": "Industrialization transformed Britain's economy, cities and class structure, defining the social and economic character of the Victorian era."
+  },
+  {
+    "cause": "Q234188",
+    "effect": "Q205662",
+    "strength": "primary",
+    "mechanism": "Tokugawa Ieyasu's victory at Sekigahara in 1600 gave him the dominance that led to his founding of the Tokugawa shogunate in 1603."
+  },
+  {
+    "cause": "Q204023",
+    "effect": "Q205662",
+    "strength": "contributing",
+    "mechanism": "The Sengoku civil wars produced the military unification that Tokugawa Ieyasu inherited and formalized as the shogunate."
+  },
+  {
+    "cause": "Q205662",
+    "effect": "Q332075",
+    "strength": "primary",
+    "mechanism": "Tokugawa shogunate policies restricted foreign contact and trade, producing the sakoku system of national isolation."
+  },
+  {
+    "cause": "Q205662",
+    "effect": "Q696217",
+    "strength": "contributing",
+    "mechanism": "Tokugawa persecution of Christians and heavy taxation in Shimabara provoked the 1637-1638 uprising."
+  },
+  {
+    "cause": "Q46362",
+    "effect": "Q3588",
+    "strength": "contributing",
+    "mechanism": "The Congress of Vienna restored conservative monarchies and suppressed national aspirations, fueling the liberal and nationalist revolts of 1848."
+  },
+  {
+    "cause": "Q2269",
+    "effect": "Q3588",
+    "strength": "contributing",
+    "mechanism": "Urbanization and economic distress from industrialization produced a restive urban working class that joined the 1848 revolts."
+  },
+  {
+    "cause": "Q3588",
+    "effect": "Q172579",
+    "strength": "minor",
+    "mechanism": "The 1848 revolts drew Piedmont into the First Italian War of Independence, a step on the road to a unified Kingdom of Italy."
+  },
+  {
+    "cause": "Q200790",
+    "effect": "Q1587677",
+    "strength": "contributing",
+    "mechanism": "The 1958 crisis over Algeria brought de Gaulle back to power and the constitution of the Fifth Republic, which created the office of prime minister."
+  },
+  {
+    "cause": "Q961430",
+    "effect": "Q165425",
+    "strength": "contributing",
+    "mechanism": "The Ottoman-Venetian war over Cyprus prompted the Holy League that assembled the fleet which fought at Lepanto."
+  },
+  {
+    "cause": "Q6534",
+    "effect": "Q58296",
+    "strength": "primary",
+    "mechanism": "The French Revolution overthrew the monarchy, and the National Convention proclaimed the republic in September 1792."
+  },
+  {
+    "cause": "Q207318",
+    "effect": "Q58296",
+    "strength": "contributing",
+    "mechanism": "Austrian and Prussian invasion threats in 1792 radicalized revolutionary politics and hardened the move to a republic."
+  },
+  {
+    "cause": "Q58296",
+    "effect": "Q188553",
+    "strength": "primary",
+    "mechanism": "French armies overthrew the Dutch Republic in 1795 and imposed the Batavian Republic as a client state."
+  },
+  {
+    "cause": "Q58296",
+    "effect": "Q206696",
+    "strength": "contributing",
+    "mechanism": "French military intervention in Switzerland in 1798 imposed the Helvetic Republic as a dependent client state."
+  },
+  {
+    "cause": "Q58296",
+    "effect": "Q620965",
+    "strength": "contributing",
+    "mechanism": "Instability under the Directory let Napoleon seize power in the 18 Brumaire coup of 1799, ending the republican regime."
+  },
+  {
+    "cause": "Q51661",
+    "effect": "Q282428",
+    "strength": "contributing",
+    "mechanism": "Louis IX's defeat in Egypt during the Seventh Crusade let Mamluk commanders consolidate power, which they seized in 1250."
+  },
+  {
+    "cause": "Q282428",
+    "effect": "Q244356",
+    "strength": "primary",
+    "mechanism": "The Mamluk victory at Ain Jalut in 1260 halted the Mongol advance into Egypt and Syria."
+  },
+  {
+    "cause": "Q282428",
+    "effect": "Q12560",
+    "strength": "contributing",
+    "mechanism": "Mamluk decline and internal rivalry in the early 1500s left Syria and Egypt open to Ottoman conquest in 1516-1517."
+  },
+  {
+    "cause": "Q2277",
+    "effect": "Q3333484",
+    "strength": "contributing",
+    "mechanism": "The division of the Roman Empire into eastern and western halves let the eastern church develop into the Orthodox tradition."
+  },
+  {
+    "cause": "Q2763",
+    "effect": "Q392119",
+    "strength": "contributing",
+    "mechanism": "Nazi atrocities of the Holocaust motivated the postwar push to codify human rights in binding international covenants."
+  },
+  {
+    "cause": "Q329618",
+    "effect": "Q13582",
+    "strength": "contributing",
+    "mechanism": "Germany's colonial push under Bismarck led him to summon the 1884-1885 conference that set the rules for partitioning Africa."
+  },
+  {
+    "cause": "Q12560",
+    "effect": "Q184716",
+    "strength": "contributing",
+    "mechanism": "Ottoman control of eastern trade routes after 1453 motivated Iberian searches for a westward sea route to Asia."
+  },
+  {
+    "cause": "Q234188",
+    "effect": "Q184963",
+    "strength": "primary",
+    "mechanism": "Tokugawa Ieyasu's victory at Sekigahara in 1600 established the hegemony from which the Edo period began in 1603."
+  },
+  {
+    "cause": "Q184963",
+    "effect": "Q185905",
+    "strength": "contributing",
+    "mechanism": "The prosperous merchant culture of Edo sustained the ukiyo-e woodblock print tradition."
+  },
+  {
+    "cause": "Q79791",
+    "effect": "Q199442",
+    "strength": "primary",
+    "mechanism": "The Christian Reconquista of the Iberian Peninsula created the frontier kingdom of Aragon in the Pyrenees."
+  },
+  {
+    "cause": "Q199442",
+    "effect": "Q80702",
+    "strength": "contributing",
+    "mechanism": "The 1479 dynastic union of Aragon and Castile under Ferdinand and Isabella laid the basis for the Spanish monarchy and empire."
+  },
+  {
+    "cause": "Q199442",
+    "effect": "Q173065",
+    "strength": "minor",
+    "mechanism": "Alfonso V of Aragon took Naples in 1442, bringing the kingdom under Aragonese rule."
+  },
+  {
+    "cause": "Q1773926",
+    "effect": "Q6500954",
+    "strength": "contributing",
+    "mechanism": "The Congo Crisis of 1960-1966 produced the instability in which Mobutu seized power and built the Zaire state."
+  },
+  {
+    "cause": "Q6500954",
+    "effect": "Q838695",
+    "strength": "contributing",
+    "mechanism": "Zaire's decayed state, unable to control its eastern provinces, provoked the 1996-1997 rebellion known as the First Congo War."
+  },
+  {
+    "cause": "Q203233",
+    "effect": "Q12444025",
+    "strength": "contributing",
+    "mechanism": "The Battle of Plassey gave the British East India Company political control in Bengal, an early step in the colonial rule that nationalism later resisted."
+  }
+]

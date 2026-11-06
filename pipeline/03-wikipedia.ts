@@ -2,10 +2,10 @@
 // Keep its lead summary, and every link that appears in a "before" section (Background,
 // Causes, Prelude…) or an "after" section (Aftermath, Legacy, Impact…),
 // together with the sentence it appears in, as evidence for causal links.
-// Output: pipeline/out/wiki.json
+// Output: pipeline/out/wiki.json.gz
 
-import { mkdir, readFile, writeFile } from "node:fs/promises";
-import { log } from "./lib.ts";
+import { readFile } from "node:fs/promises";
+import { log, writeWiki } from "./lib.ts";
 
 export type SectionKind = "before" | "after";
 export type WikiLink = { target: string; kind: SectionKind; heading: string; sentence: string };
@@ -14,8 +14,6 @@ export type WikiArticle = { title: string; summary: string; links: WikiLink[]; r
 const BEFORE = /\b(background|causes?|prelude|origins?|antecedents?|road to|lead[- ]up|events leading|precursors?|context|build[- ]up|outbreak)\b/i;
 const AFTER = /\b(aftermath|consequences?|legacy|impact|effects?|outcome|significance|results?|influence|repercussions?|after the|later history|reception|commemoration)\b/i;
 const SKIP = /\b(popular culture|see also|references|notes|further reading|external links|bibliography|sources|citations|gallery|footnotes|in fiction|in film)\b/i;
-
-const OUT_DIR = new URL("./out/wiki/", import.meta.url);
 
 // --- wikitext → plain text with link spans ----------------------------------------
 
@@ -203,8 +201,7 @@ async function main() {
     if (/^#redirect/i.test(wikitext.trim())) continue;
     articles.push({ title, summary: leadSummary(wikitext), links: extractSectionLinks(wikitext), redirects: redirects[title] ?? [] });
   }
-  await mkdir(OUT_DIR, { recursive: true });
-  await writeFile(new URL("../wiki.json", OUT_DIR), JSON.stringify(articles));
+  await writeWiki(articles);
   log(`extracted ${articles.length} articles, ${articles.reduce((n, a) => n + a.links.length, 0)} section links`);
 }
 

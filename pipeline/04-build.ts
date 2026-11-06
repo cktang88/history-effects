@@ -10,12 +10,11 @@
 // significance, and pruned to each entity's strongest causes and effects —
 // the "high-order bits", not every conceivable influence.
 
-import { readFile } from "node:fs/promises";
 import type { RawEntity } from "./01-entities.ts";
 import type { RawCountry, RawRelation } from "./02-relations.ts";
 import type { WikiArticle } from "./03-wikipedia.ts";
 import { LENSES, type LensId } from "./lenses.ts";
-import { log, readPipeline, writeJSONLines } from "./lib.ts";
+import { log, readPipeline, writeJSONLines, readWiki } from "./lib.ts";
 import { regionOf } from "./regions.ts";
 
 export type Kind = LensId;
@@ -95,7 +94,7 @@ async function main() {
   const raw = await readPipeline<RawEntity[]>("entities.raw.json");
   const relations = await readPipeline<RawRelation[]>("relations.raw.json");
   const countries = new Map((await readPipeline<RawCountry[]>("countries.raw.json")).map((c) => [c.id, c]));
-  const wiki = JSON.parse(await readFile(new URL("./out/wiki.json", import.meta.url), "utf8")) as WikiArticle[];
+  const wiki = await readWiki<WikiArticle[]>();
   let images: Record<string, string> = {};
   try {
     images = await readPipeline<Record<string, string>>("images.json");

@@ -1,0 +1,1502 @@
+{
+ "Q399999>Q475678": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Prohibition-era bootlegging syndicates and US-Mexico smuggling routes evolved after 1933 into the cross-border drug trade that later fed the Mexican cartels."
+ },
+ "Q156017>Q475678": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q253684>Q243979": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q243979>Q208127": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q15733401>Q15920546": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Yanukovych's ouster after the Maidan protests prompted Russian forces to seize Crimea in February 2014 and annex it in March."
+ },
+ "Q1048744>Q5167679": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q4298662>Q187152": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q181026>Q156017": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q181026>Q273659": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q42970>Q309368": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q206752>Q253684": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The Peace of Campo Formio ended the war with Austria, freeing Napoleon's army and prompting him to propose invading Egypt as an alternative to attacking Britain."
+ },
+ "Q1048744>Q58715": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1048744>Q128160": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q8683>Q156017": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Cold War anticommunist doctrine and US backing for Southern Cone regimes led to the coordinated intelligence and repression network of Operation Condor."
+ },
+ "Q856670>Q156017": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Pinochet's junta, installed by the 1973 coup, became the main organizer of Operation Condor, founded in 1975 with Argentina, Uruguay, Paraguay, Bolivia, Brazil."
+ },
+ "Q126065>Q273659": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "After the 1979 revolution, the US arms embargo and hostage crisis created Iranian demand for covert weapons channels that became the 1985-86 arms-for-hostages deals."
+ },
+ "Q82664>Q273659": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Iran's wartime shortage of weapons and spare parts drove its 1985-86 secret purchases from US-linked intermediaries, the core of the Iran-Contra arms sales."
+ },
+ "Q12536>Q726798": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Abbasid governor Ahmad ibn Tulun exploited the caliphate's weakness and Turkish military dominance to establish semi-independent Tulunid rule in Egypt."
+ },
+ "Q58715>Q244932": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q486>Q595321": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Chernobyl's fallout and Soviet cover-up eroded trust in Moscow and fueled environmental protest that fed Estonia's mass-singing independence movement."
+ },
+ "Q85125>Q5167679": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Stalin's deportations were remembered in 1987 Baltic commemorations and protests, feeding the nationalist independence movements that contributed to the USSR's breakup."
+ },
+ "Q623429>Q46525": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1785022>Q2487": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "The Bohemian estates' 1618 revolt against Habsburg rule, including the Defenestration of Prague, triggered the Habsburg-Protestant war that became the Thirty Years' War."
+ },
+ "Q8698>Q726501": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q17013132>Q99495661": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q36678>Q99495661": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q99495661>Q122962941": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7408>Q7462": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7436908>Q108556886": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q5167679>Q1980081": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The Soviet Union's dissolution ended Moscow's aid to Najibullah's government, whose collapse in April 1992 opened the civil war among Afghan factions."
+ },
+ "Q1987713>Q3504310": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Operation Blue Star's assault on the Golden Temple angered Sikhs, and Sikh bodyguards assassinated Indira Gandhi in October 1984, triggering anti-Sikh pogroms."
+ },
+ "Q309029>Q631489": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q322943>Q5167679": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1076469>Q5167679": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q486>Q83872271": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q26749>Q155707": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q155707>Q153650": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "A Prussian-led Zollverein excluded Austria and tied most German states' economies to Prussia, strengthening Prussia's position in the rivalry that produced the 1866 war."
+ },
+ "Q1059758>Q608613": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q727413>Q717798": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q157682>Q58715": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q622649>Q7888194": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1986 Single European Act created the single market and majority voting, deepening EU powers that later fed the sovereignty grievances behind Brexit."
+ },
+ "Q2691960>Q323888": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q49077>Q196122": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q917709>Q190517": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1898 reform's suppression by Cixi's coup radicalized reformers and students, who turned to revolutionary anti-Qing groups that led the 1911 revolution."
+ },
+ "Q714843>Q46333": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Chiang Kai-shek's National Revolutionary Army encirclement campaigns in Jiangxi forced the Red Army to abandon its base and break out in October 1934."
+ },
+ "Q933996>Q470867": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q482525>Q279790": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The March First protests against Japanese rule publicized anti-imperial nationalism, and organizers of China's May Fourth protests cited them as an example."
+ },
+ "Q5816>Q1205521": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1134220>Q186284": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q748042>Q719883": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1059758>Q208261": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q192660>Q6165880": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q173282>Q836844": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1773668>Q204213": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q541191>Q719883": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1921 Anglo-Irish Treaty made the Irish Free State a dominion, and its push for full autonomy at Imperial Conferences helped drive the 1931 Statute of Westminster."
+ },
+ "Q525758>Q5167679": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q154640>Q1048169": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q570204>Q1134220": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q622766>Q7888194": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q525758>Q15920546": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q159950>Q6165880": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Japan's 1905 victory and seizure of Port Arthur and southern Sakhalin gave Stalin grievances and goals that he sought to reverse in the 1945 Manchurian invasion."
+ },
+ "Q548067>Q6165880": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The Treaty of Portsmouth ceded Russia's Liaodong lease and southern Sakhalin to Japan, creating the territorial losses Stalin sought to reverse in the 1945 Soviet invasion of Manchuria."
+ },
+ "Q242099>Q6165880": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Japan's staged Mukden incident launched its conquest of Manchuria, and the Japanese Kwantung Army occupying Manchukuo became the target of the 1945 Soviet offensive."
+ },
+ "Q188925>Q6165880": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q189266>Q6165880": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Soviet victories on the Eastern Front against Germany freed Stalin to commit forces to Asia, and his changed stance after Stalingrad led to the August 1945 invasion of Manchuria."
+ },
+ "Q38789>Q6165880": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Stalingrad's success made German defeat certain and changed Soviet policy toward Japan, leading Stalin to plan the August 1945 invasion of Manchuria."
+ },
+ "Q151187>Q6165880": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "At Potsdam in July 1945, Stalin reaffirmed the Yalta commitment to enter the war against Japan, and the Soviets then timed the Manchurian offensive for August."
+ },
+ "Q170541>Q1773668": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q362>Q1773668": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q41644>Q1773668": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7184>Q1773668": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q162401>Q1773668": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Dubcek's Prague Spring liberalization alarmed Moscow and its Warsaw Pact partners, who invaded Czechoslovakia in August 1968 to end the reforms."
+ },
+ "Q173282>Q1134220": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2357324>Q58715": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Mao's 1957 Anti-Rightist Campaign purged critics and silenced officials who warned of excesses, enabling the radical targets and famine of the Great Leap Forward."
+ },
+ "Q7408>Q5066": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7408>Q9683": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q254106>Q167246": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q12583>Q722699": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q167246>Q165725": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Austria-Hungary's 1908 annexation of Bosnia frustrated Serbian ambitions and pushed Serbia and Bulgaria into the 1912 Balkan League that launched the Balkan Wars."
+ },
+ "Q167246>Q177918": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q332075>Q178687": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q332075>Q309184": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The forced opening of Japan after 1854 and unequal treaties angered samurai and shogunal opponents, fueling the anti-shogunate movement that won the 1868-69 Boshin War."
+ },
+ "Q4298662>Q167246": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The Young Turk upheaval of 1908 weakened Ottoman control, and Austria-Hungary seized the moment to annex Bosnia-Herzegovina in October 1908."
+ },
+ "Q5167679>Q862099": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The Soviet collapse left Russia with a new presidential system and a Soviet-era legislature, producing the Yeltsin-Khasbulatov standoff that became the 1993 constitutional crisis."
+ },
+ "Q167246>Q192050": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Austria's 1908 annexation of Bosnia inflamed Serbian nationalism, motivating Black Hand-linked youths in Sarajevo who assassinated Archduke Franz Ferdinand in 1914."
+ },
+ "Q167246>Q154573": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q192769>Q502073": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q78994>Q502073": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q26013>Q502073": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q361>Q502073": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Wartime convoys turned Halifax Harbour into a crowded munitions route, and the Mont-Blanc, loaded with explosives for the war effort, collided with the Imo in December 1917."
+ },
+ "Q502073>Q488": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q543165>Q623429": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q179848>Q722699": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q302519>Q722699": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q722699>Q215112": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q722699>Q829875": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q174205>Q167246": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q194113>Q167246": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1048169>Q167246": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1878 Congress of Berlin gave Austria-Hungary the right to occupy and administer Bosnia-Herzegovina, which it converted into outright annexation in 1908."
+ },
+ "Q567712>Q167246": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1881 renewal of the Three Emperors' League gave Austria-Hungary tacit Russian and German acceptance of its claim to annex Bosnia-Herzegovina."
+ },
+ "Q159950>Q167246": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Russia's humiliating 1905 defeat by Japan left it too weak to back Serbia, emboldening Austria-Hungary's 1908 annexation of Bosnia-Herzegovina."
+ },
+ "Q184928>Q167246": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Internal unrest from the 1905 Revolution weakened Russia's capacity to support Serbia, emboldening Austria-Hungary's 1908 annexation of Bosnia-Herzegovina."
+ },
+ "Q14213>Q108556886": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1443926>Q5167679": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1922 Union Treaty created a federation of nominally sovereign republics with secession rights, which the late-1980s independence drives exploited to dissolve the USSR."
+ },
+ "Q179975>Q2421268": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The KMT's retreat to Taiwan at the end of the Chinese Civil War left two rival Chinese governments facing off, leading to the PRC's 1954 shelling of Kinmen."
+ },
+ "Q163780>Q1773668": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q844886>Q187702": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7408>Q6534": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q257724>Q101231200": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The TPLF-led EPRDF that won the 1991 civil war built a Tigray-dominated federal order, whose 2018 breakdown with Abiy's government led to the 2020 Tigray war."
+ },
+ "Q512443>Q189508": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Louis XIV's 1685 revocation drove Huguenot exiles and English Protestant alarm, shaping William of Orange's decision to prepare the 1688 invasion that deposed James II."
+ },
+ "Q642342>Q8683": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q8575586>Q726798": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1205521>Q623171": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q65997>Q253774": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2454958>Q1205521": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1959-61 famine discredited collectivization and pushed rural leaders toward household farming, which Deng's 1978 reform program expanded nationally."
+ },
+ "Q1205521>Q99717": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Deng's reforms unleashed inflation, corruption and intellectual ferment, and student and worker grievances over these produced the 1989 Tiananmen protests."
+ },
+ "Q17001802>Q80754846": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q750567>Q187152": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q45745>Q1205521": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q42761>Q482456": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Watergate weakened Nixon and a post-scandal Congress cut military aid to South Vietnam, leaving Saigon unable to resist the 1975 North Vietnamese offensive."
+ },
+ "Q58715>Q1205521": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The Great Leap Forward's famine and failed central planning discredited Maoist economics and pushed leaders including Deng toward market reforms launched in 1978."
+ },
+ "Q840847>Q486": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q186444>Q17001802": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q126065>Q17001802": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1979 revolution's hostility to the West and the Islamic Republic's security needs shaped the enrichment program whose disputes with Western powers produced the 2015 JCPOA."
+ },
+ "Q37470>Q17001802": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q171328>Q17001802": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q49106>Q99495661": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q17001802>Q99495661": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q99495661>Q122976243": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1413732>Q134379167": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The unresolved Kashmir dispute underlies India-Pakistan hostility, and the April 2025 Pahalgam attack in Kashmir triggered India's strikes that started the 2025 conflict."
+ },
+ "Q12444025>Q1992677": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1070342>Q219698": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Frontier raids and refugee anxieties during King William's War heightened fear of enemies in Massachusetts, feeding the 1692 Salem witchcraft accusations."
+ },
+ "Q131002>Q726798": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7747>Q21032720": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1233944>Q129864": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Dalhousie's doctrine of lapse annexed princely states such as Jhansi, angering rulers and nobles who joined the 1857 uprising against the East India Company."
+ },
+ "Q2366025>Q182865": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q110613097>Q133574091": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q778010>Q217528": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q8676>Q1824714": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q11201>Q1824714": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q361>Q1824714": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Black World War I veterans returning to Tulsa with expectations of equality provoked white backlash that erupted in the 1921 Tulsa race massacre."
+ },
+ "Q7795>Q16911838": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q832273>Q101231200": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The unresolved Badme border dispute from the 1998-2000 war and Tigrayan grievances over its handling later fed tensions that led to the 2020 Tigray war."
+ },
+ "Q811250>Q45745": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Peasant revolts including the Tambov uprising exposed the failure of grain requisitioning, prompting Lenin to introduce the market concessions of the NEP in 1921."
+ },
+ "Q26013>Q727854": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q15920546>Q21032720": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q15860072>Q21032720": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7804>Q1142572": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1661917>Q134379167": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "India's suspension of the Indus Waters Treaty after Pahalgam, which Pakistan treated as an act of war, escalated tensions into the 2025 India-Pakistan strikes."
+ },
+ "Q195378>Q2003866": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q208855>Q1259237": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Amritsar's unrest in India, which Afghanistan's Amir Amanullah saw as an opening, prompted Afghanistan's 1919 invasion of British India's frontier."
+ },
+ "Q187702>Q51653": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q42970>Q52226": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1073476>Q46333": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Chiang Kai-shek's 1927 Shanghai purge of communists during the Northern Expedition drove the CCP into rural bases that Nationalist encirclement later forced it to abandon in the Long March."
+ },
+ "Q167455>Q361": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Germany's 1905 challenge to France over Morocco pushed Britain and France closer, hardening the Entente against the Triple Alliance before the 1914 war."
+ },
+ "Q167455>Q464399": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q201684>Q868261": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1259237>Q208855": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1073476>Q242099": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The Northern Expedition's Nationalist reunification and push to reassert authority over Manchuria alarmed Kwantung Army officers, who staged the 1931 Mukden incident."
+ },
+ "Q128160>Q278960": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The near-nuclear confrontation of October 1962 convinced Kennedy and Khrushchev to negotiate, producing the 1963 Partial Test Ban Treaty."
+ },
+ "Q645986>Q156017": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Argentina's 1976 junta became the most active member of Operation Condor, expanding the network's cross-border abductions and killings."
+ },
+ "Q210137>Q21201293": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q159950>Q109878": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Russia's humiliating defeats in the Russo-Japanese War fueled the 1905 revolution, forcing Nicholas II to issue the October Manifesto granting a Duma."
+ },
+ "Q187702>Q827472": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q486>Q111012383": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q5167679>Q111012383": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q109878>Q8729": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The October Manifesto's limited concessions satisfied neither liberals nor socialists, and the Duma's failure left the political opposition that fed the 1917 revolutions."
+ },
+ "Q164348>Q517371": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Mao cited Hungary's 1956 uprising as a warning and launched the Hundred Flowers invitation to criticism to avoid a similar revolt in China."
+ },
+ "Q696217>Q332075": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1637-38 Shimabara Christian uprising convinced the shogunate to expel the Portuguese in 1639 and tighten the seclusion policies of sakoku."
+ },
+ "Q42970>Q688993": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q579179>Q529723": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q853976>Q164983": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The Western Front stalemate after First Ypres led British planners to seek an eastern alternative, producing the 1915 Gallipoli campaign."
+ },
+ "Q1551794>Q242099": {
+  "verdict": "reverse",
+  "strength": "primary",
+  "mechanism": "The Kwantung Army's staged Mukden incident of September 1931 served as the pretext that launched the full Japanese invasion and occupation of Manchuria."
+ },
+ "Q185642>Q109878": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "The Bloody Sunday massacre of peaceful petitioners in January 1905 provoked nationwide strikes and unrest that forced Nicholas II to issue the October Manifesto."
+ },
+ "Q8736>Q156528": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The Versailles reparations schedule caused a German payment crisis, and the Dawes Plan of 1924 was devised to restructure those reparations payments."
+ },
+ "Q253224>Q156528": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q156528>Q152925": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1924 Dawes Plan restored German reparations payments and foreign loans, creating the financial stability that let Stresemann negotiate the 1925 Locarno Treaties."
+ },
+ "Q517371>Q58715": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Mao's 1957 Hundred Flowers invitation drew out critics, whom the Anti-Rightist purge then silenced, clearing the way for the Great Leap Forward's radical policies."
+ },
+ "Q76421>Q19085": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1551794>Q6165880": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Japan's 1931 occupation of Manchuria built up the Kwantung Army and Manchukuo, which the Soviet Union attacked in August 1945 to reverse Japanese gains."
+ },
+ "Q44329>Q21032720": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q79791>Q18578423": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Ferdinand and Isabella's conquest of Granada in January 1492 freed Castilian resources and prestige, enabling them to finance Columbus's first transatlantic voyage."
+ },
+ "Q207165>Q2299343": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "After the Battle of the Coral Sea halted the seaborne Operation MO, Japanese planners shifted to an overland assault along the Kokoda Track toward Port Moresby from July 1942."
+ },
+ "Q2006357>Q208855": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The Rowlatt Act's passage sparked nationwide protests and arrests in Punjab, and the unrest over these measures led to the April 1919 Jallianwala Bagh massacre."
+ },
+ "Q673175>Q512443": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q943191>Q248984": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q65997>Q248984": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q696664>Q52418": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q696664>Q173034": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q696664>Q207165": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q852171>Q159512": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q512443>Q644960": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q42970>Q242864": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7795>Q122053772": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q15920546>Q15871713": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q6691>Q911233": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q42970>Q28136551": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q512443>Q212983": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q164983>Q250309": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q43478>Q642342": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Darwin's theory of natural selection fueled fundamentalist opposition that won Tennessee's 1925 Butler Act banning evolution teaching, which prompted the Scopes trial."
+ },
+ "Q11696>Q642342": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q14213>Q642342": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q722699>Q426722": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q170314>Q696664": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Japan's stalled war in China pushed its leaders to seize Malaya and its resources in December 1941 to sustain the war effort."
+ },
+ "Q12876>Q696664": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q52418>Q696664": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q18578423>Q184716": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Columbus's 1492 voyage opened the Atlantic route, and its news set off Spanish and other European expeditions and colonization of the Americas."
+ },
+ "Q2497254>Q58715": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1773926>Q2444955": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q193155>Q41894": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q242099>Q697579": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q68962>Q755966": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1192212>Q8729": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Redemption payments and land shortages left by the 1861 emancipation fueled peasant grievances that contributed to the revolutionary upheavals culminating in 1917."
+ },
+ "Q1192212>Q184928": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Redemption payments and land shortages left by the 1861 emancipation fueled peasant unrest that was central to the agrarian grievances of the 1905 revolution."
+ },
+ "Q399999>Q1164263": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Prohibition created the illegal liquor trade over which Chicago gangs fought for territory, and the North Side gang's rivalry produced the 1929 Saint Valentine's Day Massacre."
+ },
+ "Q1992677>Q129053": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Congress leaders were jailed after the Quit India Movement's 1942 arrests, letting Jinnah's Muslim League consolidate and pushing the subcontinent toward Partition."
+ },
+ "Q3588>Q1192212": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q181978>Q1992677": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The Atlantic Charter's self-determination pledge raised Indian expectations, and Churchill's insistence that it excluded India fueled Congress's 1942 Quit India demand."
+ },
+ "Q164983>Q1262377": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Gallipoli's failure left the Allies without a route to relieve Russia and Serbia, and the Salonika front was opened in 1915 to support Serbia."
+ },
+ "Q1192212>Q185642": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1192212>Q109878": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1861 emancipation left agrarian problems that peasant unrest in the 1905 revolution exposed, and these grievances helped force Nicholas II's October Manifesto."
+ },
+ "Q11201>Q249367": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q697579>Q6165880": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q696256>Q6165880": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1941 Neutrality Pact freed Soviet forces for the war against Germany, and Moscow's April 1945 denunciation of it cleared the legal path for the August invasion of Manchuria."
+ },
+ "Q1062771>Q570140": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Nakatomi no Kamatari and Prince Naka no Oe's 645 coup killed Soga no Iruka, clearing the way for Emperor Kotoku to proclaim the Taika Reforms."
+ },
+ "Q545068>Q8567": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q68962>Q4218": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The Avar khaganate's collapse under Frankish and Bulgar attacks left the Carpathian Basin without a dominant power, which Magyar tribes entered around 895-900."
+ },
+ "Q46083>Q1417847": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1871 Frankfurt indemnity paid by France flooded Germany with capital that fueled a speculative boom whose 1873 collapse helped trigger the Long Depression."
+ },
+ "Q8676>Q1417847": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q362>Q696192": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q727854>Q8676": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1820 Missouri line restricted slavery's expansion, and its 1854 repeal by the Kansas-Nebraska Act reignited the sectional conflict that led to the 1861 Civil War."
+ },
+ "Q727854>Q6683": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q696192>Q748780": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Japan's wartime occupation of Indochina dismantled French colonial authority, letting the Viet Minh seize power in 1945 and setting up the French Indochina War."
+ },
+ "Q52418>Q696192": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q21032720>Q119860532": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q508258>Q58715": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q862054>Q42761": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q5167679>Q1142572": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The Soviet collapse left Russia with inherited debts and an unfinished market transition, whose weak tax revenues and short-term debt produced the 1998 default."
+ },
+ "Q876417>Q187152": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1142572>Q896666": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q193155>Q727854": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1803 Louisiana Purchase added vast western territory, and Missouri's 1819 bid for statehood as a slave state forced the 1820 compromise."
+ },
+ "Q40949>Q727854": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q875738>Q249367": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1954 Brown ruling against school segregation emboldened Montgomery's Black leaders, who launched the December 1955 bus boycott to challenge segregation."
+ },
+ "Q26195>Q389646": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q32993>Q517371": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q11201>Q875738": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7809>Q875738": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q8683>Q875738": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Cold War concerns that segregation damaged US credibility abroad led officials to press the Court, a pressure that shaped the Brown v. Board decision."
+ },
+ "Q178810>Q21032720": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Threats to Bashar al-Assad's government in 2015 led Moscow to launch its 2015 airstrike campaign in the Syrian civil war to save the regime."
+ },
+ "Q659717>Q21032720": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q81545>Q21032720": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q15733401>Q21032720": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q29269>Q1142572": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q164983>Q2722527": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The Allied evacuation from Gallipoli freed Anzac and British mounted units that reinforced the Suez Canal defences which repulsed the Ottoman attack at Romani in August 1916."
+ },
+ "Q379850>Q521199": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q217172>Q22948406": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q258873>Q217528": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Timothy McVeigh cited the 1993 Waco siege and the deaths of Branch Davidians as his main motive for the 1995 Oklahoma City federal building bombing."
+ },
+ "Q268218>Q339291": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q193155>Q351722": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Ambiguous borders in the 1803 Louisiana Purchase, disputed between the Sabine and Rio Grande, led Adams and Onis to negotiate the 1819 boundary treaty."
+ },
+ "Q45745>Q1443926": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q19830062>Q21201293": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q128160>Q1187550": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q164983>Q714777": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1443926>Q389646": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q961430>Q1050999": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q46333>Q244941": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The Long March relocated the Red Army to northern Shaanxi, where Zhang Xueliang's contacts with the CCP enabled the December 1936 Xi'an Incident that forced Chiang into a united front."
+ },
+ "Q170541>Q1230874": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q221519>Q8663": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q208127>Q696389": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q296754>Q221519": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q221519>Q696448": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q15053704>Q253684": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q476634>Q46333": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q976887>Q42761": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q620988>Q17013132": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1519107>Q20857240": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Decades of Afghan war and Taliban resurgence drove large numbers of Afghan refugees, who made up a major share of the 2015 surge of migrants into Europe."
+ },
+ "Q221519>Q696664": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q696389>Q6165880": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q702377>Q208127": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1572785>Q2299343": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q917709>Q339291": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q200464>Q2583734": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Portugal's 1974 decolonization left East Timor in a power vacuum, which Indonesia exploited with its December 1975 invasion."
+ },
+ "Q49101>Q1542222": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1956 Suez Crisis boosted Nasserist Arab nationalism and Soviet influence, fueling the 1958 Lebanese conflict between pro-Western and pro-Nasser factions."
+ },
+ "Q835539>Q1542222": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Chamoun's 1957 endorsement of the Eisenhower Doctrine alienated Nasserist and Muslim opposition, which rose against him in 1958 and prompted the US Marine landing."
+ },
+ "Q1470998>Q2000527": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1972 Simla Agreement left the Siachen Glacier boundary undefined, and this ambiguity enabled India's 1984 Operation Meghdoot occupation that started the Siachen conflict."
+ },
+ "Q110999040>Q114071665": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Russia's battlefield losses after its 2022 invasion of Ukraine led Putin to declare partial mobilization of reservists in September 2022."
+ },
+ "Q605321>Q4166578": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Babur's victory at the First Battle of Panipat left Rana Sanga's Rajput confederacy determined to resist, leading to the Mughal-Rajput clash at Khanwa in 1527."
+ },
+ "Q61732241>Q61881326": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "The February 2019 Pulwama suicide bombing that killed Indian paramilitaries prompted India's airstrike on Balakot on 26 February 2019."
+ },
+ "Q220984>Q15251": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Britain's Opium War victories forced Qing cessions of Hong Kong Island and Kowloon, and the 1898 lease of the New Territories whose expiry led to the 1997 handover."
+ },
+ "Q28485502>Q65072493": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q16574>Q2421268": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1308854>Q2888038": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2985554>Q371394": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "The Pakistan Army's Operation Searchlight crackdown in Dhaka on 25 March 1971 massacred civilians and triggered the Bangladesh Liberation War."
+ },
+ "Q1572785>Q2917077": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2143253>Q1780431": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q217145>Q2917077": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Japanese troops and shipping committed to Guadalcanal were diverted from New Guinea, weakening the Buna-Gona defense and helping Allied forces win there in early 1943."
+ },
+ "Q657494>Q889358": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Riots after the 1992 Babri Masjid demolition fueled retaliation, and the 1993 Bombay bombings were carried out as retribution for the communal violence."
+ },
+ "Q329618>Q705571": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Raids from German East Africa threatened British territories, prompting the Allied invasion of German East Africa that began the 1914 East African campaign."
+ },
+ "Q39392>Q1501025": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1850 Compromise created Utah Territory under popular sovereignty, and disputes over Mormon self-rule with federal appointees led to the 1857 Utah War."
+ },
+ "Q1501025>Q8676": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ }
+}

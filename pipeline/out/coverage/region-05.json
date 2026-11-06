@@ -1,0 +1,728 @@
+{
+ "region": "East Asia",
+ "cells": [
+  {
+   "cell": "pre|East Asia",
+   "era": "Before 3000 BCE",
+   "from": -12000,
+   "to": -3000,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "-3000_-2000|East Asia",
+   "era": "3000–2000 BCE",
+   "from": -3000,
+   "to": -2000,
+   "have": [
+    "Xia dynasty",
+    "Old Chosŏn"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "-2000_-1000|East Asia",
+   "era": "2000–1000 BCE",
+   "from": -2000,
+   "to": -1000,
+   "have": [
+    "Zhou dynasty",
+    "Shang dynasty",
+    "Vedic period",
+    "Sabaeans",
+    "Western Zhou",
+    "Battle of Muye"
+   ],
+   "count": 6
+  },
+  {
+   "cell": "-1000_-500|East Asia",
+   "era": "1000–500 BCE",
+   "from": -1000,
+   "to": -500,
+   "have": [
+    "Spring and Autumn period",
+    "Babylonian captivity",
+    "Chu (state)",
+    "Qin (state)",
+    "Eastern Zhou"
+   ],
+   "count": 5
+  },
+  {
+   "cell": "-500_0|East Asia",
+   "era": "500–0 BCE",
+   "from": -500,
+   "to": 0,
+   "have": [
+    "Qin dynasty",
+    "Acupuncture",
+    "Three Kingdoms of Korea",
+    "Warring States period",
+    "Silla",
+    "Goguryeo",
+    "Paekche",
+    "Yayoi period",
+    "Pyu city-states",
+    "Battle of Changping",
+    "Battle of Gaixia",
+    "Rebellion of the Seven States"
+   ],
+   "count": 12
+  },
+  {
+   "cell": "0_250|East Asia",
+   "era": "0–250",
+   "from": 0,
+   "to": 250,
+   "have": [
+    "Three Kingdoms",
+    "Xin dynasty",
+    "Cao Wei",
+    "Eastern Wu",
+    "Shu Han",
+    "Yellow Turban Rebellion",
+    "Kaya confederacy",
+    "Battle of Red Cliffs",
+    "Red Eyebrows",
+    "Battle of Guandu"
+   ],
+   "count": 10
+  },
+  {
+   "cell": "250_500|East Asia",
+   "era": "250–500",
+   "from": 250,
+   "to": 500,
+   "have": [
+    "Jin dynasty (266–420)",
+    "Sixteen Kingdoms",
+    "Kofun period",
+    "Liu Song dynasty",
+    "Southern Qi",
+    "War of the Eight Princes",
+    "Battle of Fei River"
+   ],
+   "count": 7
+  },
+  {
+   "cell": "500_750|East Asia",
+   "era": "500–750",
+   "from": 500,
+   "to": 750,
+   "have": [
+    "Tang dynasty",
+    "Sui dynasty",
+    "Nara period",
+    "Parhae",
+    "Asuka period",
+    "Liang dynasty",
+    "Western Wei",
+    "Jinshin War",
+    "Battle of Salsu",
+    "Goguryeo–Tang War",
+    "Battle of Baekgang",
+    "Isshi incident",
+    "Xuanwu Gate Incident",
+    "Silla–Tang War"
+   ],
+   "count": 14
+  },
+  {
+   "cell": "750_1000|East Asia",
+   "era": "750–1000",
+   "from": 750,
+   "to": 1000,
+   "have": [
+    "Song dynasty",
+    "Mamluk",
+    "Heian period",
+    "Five Dynasties and Ten Kingdoms period",
+    "Goryeo",
+    "Liao dynasty",
+    "Pagan Kingdom",
+    "An Lushan rebellion",
+    "Dali Kingdom",
+    "Later Tang",
+    "Later Liang (Five Dynasties)",
+    "Later Zhou",
+    "Anarchy at Samarra",
+    "Goryeo–Khitan War",
+    "Anarchy of the 12 Warlords"
+   ],
+   "count": 15
+  },
+  {
+   "cell": "1000_1100|East Asia",
+   "era": "1000–1100",
+   "from": 1000,
+   "to": 1100,
+   "have": [
+    "Western Xia",
+    "Former Nine Years' War",
+    "Gosannen War",
+    "Second conflict in the Goryeo–Khitan War"
+   ],
+   "count": 4
+  },
+  {
+   "cell": "1100_1200|East Asia",
+   "era": "1100–1200",
+   "from": 1100,
+   "to": 1200,
+   "have": [
+    "Jin dynasty (1115–1234)",
+    "Kamakura period",
+    "Genpei War",
+    "Hōgen rebellion",
+    "Battle of Dan-no-ura",
+    "Heiji rebellion",
+    "Jin–Song wars"
+   ],
+   "count": 7
+  },
+  {
+   "cell": "1200_1300|East Asia",
+   "era": "1200–1300",
+   "from": 1200,
+   "to": 1300,
+   "have": [
+    "Mongol Empire",
+    "Yuan dynasty",
+    "Battle of Yamen",
+    "Jōkyū War",
+    "Mongol conquest of the Jin dynasty",
+    "Mongol conquest of China"
+   ],
+   "count": 6
+  },
+  {
+   "cell": "1300_1400|East Asia",
+   "era": "1300–1400",
+   "from": 1300,
+   "to": 1400,
+   "have": [
+    "Ming dynasty",
+    "Joseon",
+    "Muromachi period",
+    "Lan Xang",
+    "Ashikaga shogunate",
+    "Kenmu Restoration",
+    "Nanboku-chō period",
+    "Northern Yuan",
+    "Battle of Lake Poyang",
+    "Genkō War",
+    "Jingnan campaign"
+   ],
+   "count": 11
+  },
+  {
+   "cell": "1400_1500|East Asia",
+   "era": "1400–1500",
+   "from": 1400,
+   "to": 1500,
+   "have": [
+    "Sengoku period",
+    "Ryukyu Kingdom",
+    "Ōnin War",
+    "Tumu Crisis"
+   ],
+   "count": 4
+  },
+  {
+   "cell": "1500_1550|East Asia",
+   "era": "1500–1550",
+   "from": 1500,
+   "to": 1550,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1550_1600|East Asia",
+   "era": "1550–1600",
+   "from": 1550,
+   "to": 1600,
+   "have": [
+    "Azuchi–Momoyama period",
+    "Imjin War",
+    "Battle of Nagashino",
+    "Battle of Okehazama",
+    "Battle of Mikatagahara",
+    "Honnō-ji Incident",
+    "Battle of Anegawa",
+    "Battles of Kawanakajima",
+    "Battle of Yamazaki",
+    "Siege of Odawara (1590)",
+    "Battle of Shizugatake",
+    "Battle of Myeongnyang"
+   ],
+   "count": 12
+  },
+  {
+   "cell": "1600_1650|East Asia",
+   "era": "1600–1650",
+   "from": 1600,
+   "to": 1650,
+   "have": [
+    "Tokugawa shogunate",
+    "Edo period",
+    "Battle of Sekigahara",
+    "Shimabara Rebellion",
+    "Siege of Osaka",
+    "Transition from Ming to Qing",
+    "Invasion of Ryukyu"
+   ],
+   "count": 7
+  },
+  {
+   "cell": "1650_1700|East Asia",
+   "era": "1650–1700",
+   "from": 1650,
+   "to": 1700,
+   "have": [
+    "Siege of Fort Zeelandia"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1700_1750|East Asia",
+   "era": "1700–1750",
+   "from": 1700,
+   "to": 1750,
+   "have": [
+    "Ukiyo-e",
+    "1707 Hōei earthquake"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1750_1800|East Asia",
+   "era": "1750–1800",
+   "from": 1750,
+   "to": 1800,
+   "have": [
+    "Qajar dynasty",
+    "Indian independence movement",
+    "Konbaung dynasty",
+    "Sino-Burmese War",
+    "White Lotus Rebellion"
+   ],
+   "count": 5
+  },
+  {
+   "cell": "1800_1810|East Asia",
+   "era": "1800s",
+   "from": 1800,
+   "to": 1810,
+   "have": [
+    "Second Anglo-Maratha War"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1810_1820|East Asia",
+   "era": "1810s",
+   "from": 1810,
+   "to": 1820,
+   "have": [
+    "1817–1824 cholera pandemic"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1820_1830|East Asia",
+   "era": "1820s",
+   "from": 1820,
+   "to": 1830,
+   "have": [
+    "First Anglo-Burmese War",
+    "Anglo-Burmese Wars",
+    "1826–1837 cholera pandemic"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "1830_1840|East Asia",
+   "era": "1830s",
+   "from": 1830,
+   "to": 1840,
+   "have": [
+    "First Opium War",
+    "Opium Wars",
+    "Century of humiliation"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "1840_1850|East Asia",
+   "era": "1840s",
+   "from": 1840,
+   "to": 1850,
+   "have": [
+    "Treaty of Nanking"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1850_1860|East Asia",
+   "era": "1850s",
+   "from": 1850,
+   "to": 1860,
+   "have": [
+    "Indian Rebellion of 1857",
+    "Second Opium War",
+    "Taiping Rebellion",
+    "Bakumatsu",
+    "Anglo-Persian War",
+    "Treaty of Shimoda",
+    "Third plague pandemic",
+    "Battle of Canton (1857)"
+   ],
+   "count": 8
+  },
+  {
+   "cell": "1860_1870|East Asia",
+   "era": "1860s",
+   "from": 1860,
+   "to": 1870,
+   "have": [
+    "Meiji Restoration",
+    "Empire of Japan",
+    "Meiji era",
+    "Boshin War",
+    "Convention of Kanagawa",
+    "Republic of Ezo",
+    "Dungan Revolt (1862–1877)",
+    "Battle of Toba–Fushimi",
+    "Bombardment of Kagoshima"
+   ],
+   "count": 9
+  },
+  {
+   "cell": "1870_1880|East Asia",
+   "era": "1870s",
+   "from": 1870,
+   "to": 1880,
+   "have": [
+    "Japan–Korea Treaty of 1876",
+    "Battle of Shiroyama",
+    "Great Famine of 1876–1878",
+    "Saga Rebellion"
+   ],
+   "count": 4
+  },
+  {
+   "cell": "1880_1890|East Asia",
+   "era": "1880s",
+   "from": 1880,
+   "to": 1890,
+   "have": [
+    "Hepburn romanization",
+    "Sino-French War",
+    "Third Anglo-Burmese War",
+    "Kapsin Coup",
+    "Imo Incident"
+   ],
+   "count": 5
+  },
+  {
+   "cell": "1890_1900|East Asia",
+   "era": "1890s",
+   "from": 1890,
+   "to": 1900,
+   "have": [
+    "First Sino-Japanese War",
+    "Boxer Rebellion",
+    "Korean Empire",
+    "Philippine–American War",
+    "Treaty of Shimonoseki",
+    "Republic of Formosa",
+    "Taiwan under Japanese rule",
+    "Tonghak Peasant Revolution",
+    "Battle of the Yalu River (1894)",
+    "1895 Japanese invasion of Taiwan",
+    "1893 Franco-Siamese crisis",
+    "Battle of Pyongyang (1894)",
+    "Port Arthur massacre (China)"
+   ],
+   "count": 13
+  },
+  {
+   "cell": "1900_1910|East Asia",
+   "era": "1900s",
+   "from": 1900,
+   "to": 1910,
+   "have": [
+    "Battle of Mukden",
+    "Japan–Korea Treaty of 1905",
+    "Battle of the Yellow Sea",
+    "Battle of Port Arthur",
+    "Siege of Port Arthur",
+    "Battle of Liaoyang",
+    "Battle of the Yalu River (1904)",
+    "Battle of Chemulpo Bay"
+   ],
+   "count": 8
+  },
+  {
+   "cell": "1910_1920|East Asia",
+   "era": "1910s",
+   "from": 1910,
+   "to": 1920,
+   "have": [
+    "1911 Revolution",
+    "Taishō era",
+    "Third Anglo-Afghan War",
+    "Japan–Korea Treaty of 1910",
+    "Wuchang Uprising",
+    "Treaty of friendship and alliance between the Government of Mongolia and Tibet",
+    "Rice riots of 1918",
+    "Siege of Tsingtao",
+    "Warlord Era",
+    "National Protection War",
+    "Manchu Restoration"
+   ],
+   "count": 11
+  },
+  {
+   "cell": "1920_1930|East Asia",
+   "era": "1920s",
+   "from": 1920,
+   "to": 1930,
+   "have": [
+    "Chinese Civil War",
+    "Reiki",
+    "Great Kantō Earthquake",
+    "National Revolutionary Army",
+    "Shōwa era",
+    "Northern Expedition",
+    "Chinese Communist Revolution",
+    "Nanchang Uprising",
+    "Shanghai massacre",
+    "1920 Haiyuan earthquake",
+    "Central Plains War",
+    "Autumn Harvest Uprising",
+    "Canton Coup"
+   ],
+   "count": 13
+  },
+  {
+   "cell": "1930_1940|East Asia",
+   "era": "1930s",
+   "from": 1930,
+   "to": 1940,
+   "have": [
+    "Second Sino-Japanese War",
+    "Manchukuo",
+    "Nanjing Massacre",
+    "Marco Polo Bridge incident",
+    "Chinese Soviet Republic",
+    "Takoyaki",
+    "Battle of Shanghai",
+    "Battle of Lake Khasan",
+    "Kazakh famine of 1930–1933",
+    "February 26 incident",
+    "Siamese revolution of 1932",
+    "Xi'an Incident",
+    "Battle of Nanking",
+    "Battle of Changsha (1939)",
+    "Battle of Wuhan",
+    "Battle of Taierzhuang",
+    "Battle of Beiping–Tianjin",
+    "May 15 incident",
+    "Battle of Xuzhou",
+    "Defense of the Great Wall",
+    "Musha Incident",
+    "Tsuyama massacre"
+   ],
+   "count": 22
+  },
+  {
+   "cell": "1940_1950|East Asia",
+   "era": "1940s",
+   "from": 1940,
+   "to": 1950,
+   "have": [
+    "Atomic bombings of Hiroshima and Nagasaki",
+    "North Vietnam",
+    "First Indochina War",
+    "Battle of Iwo Jima",
+    "Battle of Okinawa",
+    "Surrender of Japan",
+    "Division of Korea",
+    "Kingdom of Laos",
+    "Inter-Services Intelligence",
+    "February 28 incident",
+    "Operation Downfall",
+    "Franco-Thai War",
+    "Operation Ichi-Go",
+    "Battle of Kohima",
+    "Battle of Hong Kong",
+    "Myanmar conflict",
+    "Battle of Imphal",
+    "Jeju uprising",
+    "Japanese coup d'état in French Indochina",
+    "Hundred Regiments Offensive",
+    "Battle of Ramree Island",
+    "Kyūjō incident",
+    "Battle of Changsha (1941)",
+    "Battle of Changde",
+    "Rohingya conflict"
+   ],
+   "count": 26
+  },
+  {
+   "cell": "1950_1960|East Asia",
+   "era": "1950s",
+   "from": 1950,
+   "to": 1960,
+   "have": [
+    "Korean War",
+    "Battle of Dien Bien Phu",
+    "Great Chinese Famine",
+    "1957–1958 influenza pandemic",
+    "Battle of Inchon",
+    "Korean Armistice Agreement",
+    "No Gun Ri massacre",
+    "Battle of Chosin Reservoir",
+    "Battle of the Pusan Perimeter",
+    "Bodo League massacre",
+    "Insurgency in Northeast India"
+   ],
+   "count": 11
+  },
+  {
+   "cell": "1960_1970|East Asia",
+   "era": "1960s",
+   "from": 1960,
+   "to": 1970,
+   "have": [
+    "Cultural Revolution",
+    "Palestine Liberation Organization",
+    "White Revolution",
+    "Gulf of Tonkin incident",
+    "Indus Waters Treaty",
+    "Hong Kong flu",
+    "April Revolution",
+    "30 September Movement",
+    "Red August",
+    "May 16 coup",
+    "Kachin conflict"
+   ],
+   "count": 11
+  },
+  {
+   "cell": "1970_1980|East Asia",
+   "era": "1970s",
+   "from": 1970,
+   "to": 1980,
+   "have": [
+    "Sino-Vietnamese War",
+    "1972 visit by Richard Nixon to China",
+    "Operation Linebacker II",
+    "Operation Lam Son 719",
+    "1970 Cambodian coup d'état",
+    "Tel al-Zaatar massacre",
+    "Insurgency in Laos",
+    "1979 South Korean coup d'état",
+    "1973 Thai popular uprising"
+   ],
+   "count": 9
+  },
+  {
+   "cell": "1980_1990|East Asia",
+   "era": "1980s",
+   "from": 1980,
+   "to": 1990,
+   "have": [
+    "Hamas",
+    "Al-Qaeda",
+    "1989 Tiananmen Square protests and massacre",
+    "Heisei era",
+    "Original video animation",
+    "People Power Revolution",
+    "Gwangju Uprising"
+   ],
+   "count": 7
+  },
+  {
+   "cell": "1990_2000|East Asia",
+   "era": "1990s",
+   "from": 1990,
+   "to": 2000,
+   "have": [
+    "Taliban",
+    "K-pop",
+    "Emoji",
+    "Kobe earthquake",
+    "Northern Alliance",
+    "Juche calendar",
+    "1990s North Korean famine",
+    "1990 Nepalese revolution",
+    "May 1998 Indonesia riots"
+   ],
+   "count": 9
+  },
+  {
+   "cell": "2000_2010|East Asia",
+   "era": "2000s",
+   "from": 2000,
+   "to": 2010,
+   "have": [
+    "Maneki-neko",
+    "Satsuma Rebellion",
+    "2006 Thai coup d'état",
+    "Cedar Revolution",
+    "2002–2004 SARS outbreak",
+    "Taliban insurgency"
+   ],
+   "count": 6
+  },
+  {
+   "cell": "2010_2020|East Asia",
+   "era": "2010s",
+   "from": 2010,
+   "to": 2020,
+   "have": [
+    "2011 Tōhoku earthquake and tsunami",
+    "Reiwa era",
+    "COVID-19 pandemic in mainland China",
+    "2010 Kyrgyz Revolution",
+    "Rohingya genocide",
+    "2016 southern Taiwan earthquake",
+    "Nagoya Protocol",
+    "COVID-19 pandemic in Asia",
+    "2010 Yushu earthquake",
+    "2011 Shan earthquake",
+    "2013 Lushan earthquake"
+   ],
+   "count": 11
+  },
+  {
+   "cell": "2020_2030|East Asia",
+   "era": "2020s",
+   "from": 2020,
+   "to": 2030,
+   "have": [
+    "2021 Myanmar coup d'état",
+    "Assassination of Shinzo Abe",
+    "2026 Afghanistan–Pakistan war",
+    "Myanmar civil war (2021–present)",
+    "2020–2021 China–India skirmishes",
+    "COVID-19 pandemic in South Korea",
+    "COVID-19 pandemic in Taiwan",
+    "COVID-19 pandemic in North Korea",
+    "2022 Pakistan floods",
+    "2022 Fukushima earthquake",
+    "COVID-19 pandemic in Hong Kong",
+    "COVID-19 pandemic in Macau",
+    "COVID-19 pandemic in Myanmar",
+    "Israeli blockade of the Gaza Strip (2023–present)",
+    "2021 Henan floods",
+    "2026 Yemen offensives",
+    "Pazigyi massacre"
+   ],
+   "count": 17
+  }
+ ]
+}

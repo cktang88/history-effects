@@ -1,0 +1,530 @@
+[
+  {
+    "cause": "Q362",
+    "effect": "Q151187",
+    "strength": "primary",
+    "mechanism": "The Allied victory in World War II made the Big Three the arbiters of Germany's postwar fate, which the Potsdam conference settled."
+  },
+  {
+    "cause": "Q7318",
+    "effect": "Q151187",
+    "strength": "contributing",
+    "mechanism": "Nazi Germany's aggression and unconditional surrender created the defeated state whose occupation, reparations and borders Potsdam set."
+  },
+  {
+    "cause": "Q161227",
+    "effect": "Q151187",
+    "strength": "contributing",
+    "mechanism": "Yalta fixed occupation zones, reparations principles and Polish questions that Truman, Stalin and Attlee then refined at Potsdam."
+  },
+  {
+    "cause": "Q151187",
+    "effect": "Q2415901",
+    "strength": "primary",
+    "mechanism": "Potsdam agreements set four-power occupation zones and joint governing principles for Germany, structuring Allied rule from 1945 to 1949."
+  },
+  {
+    "cause": "Q151187",
+    "effect": "Q16957",
+    "strength": "contributing",
+    "mechanism": "Soviet occupation zone fixed at Potsdam became the base of the German Democratic Republic, founded in East Germany in 1949."
+  },
+  {
+    "cause": "Q151187",
+    "effect": "Q713750",
+    "strength": "contributing",
+    "mechanism": "Western occupation zones fixed at Potsdam were merged into the Federal Republic of Germany, founded in West Germany in 1949."
+  },
+  {
+    "cause": "Q151187",
+    "effect": "Q8683",
+    "strength": "minor",
+    "mechanism": "Potsdam deadlock over reparations and Poland's borders deepened Soviet-Western mistrust that hardened into the Cold War."
+  },
+  {
+    "cause": "Q51649",
+    "effect": "Q55502",
+    "strength": "primary",
+    "mechanism": "Crusaders of the First Crusade captured Jerusalem in 1099 and established the Latin kingdom there under Godfrey of Bouillon."
+  },
+  {
+    "cause": "Q3708094",
+    "effect": "Q55502",
+    "strength": "contributing",
+    "mechanism": "Seljuk conquest of Syria and Palestine after Manzikert seized Jerusalem and prompted the Byzantine appeal to Pope Urban II."
+  },
+  {
+    "cause": "Q200032",
+    "effect": "Q55502",
+    "strength": "minor",
+    "mechanism": "Seljuk victory at Manzikert in 1071 crippled Byzantine power and led Alexios I to seek Western military aid."
+  },
+  {
+    "cause": "Q55502",
+    "effect": "Q51655",
+    "strength": "primary",
+    "mechanism": "Saladin's conquest of Jerusalem in 1187, after the kingdom's army was destroyed at Hattin, prompted the Third Crusade to recover it."
+  },
+  {
+    "cause": "Q55502",
+    "effect": "Q41300",
+    "strength": "minor",
+    "mechanism": "Knights Templar were founded in Jerusalem around 1119 with royal backing to protect pilgrims on the kingdom's roads."
+  },
+  {
+    "cause": "Q79791",
+    "effect": "Q75613",
+    "strength": "contributing",
+    "mechanism": "Alfonso VI's Christian advances in Iberia, including the capture of Toledo in 1085, prompted Andalusi taifa rulers to summon Almoravid forces."
+  },
+  {
+    "cause": "Q75613",
+    "effect": "Q199688",
+    "strength": "contributing",
+    "mechanism": "Rigid Almoravid rule provoked Ibn Tumart's movement, which launched the Almohad revolt that overthrew the dynasty in Morocco and Iberia."
+  },
+  {
+    "cause": "Q174306",
+    "effect": "Q178897",
+    "strength": "contributing",
+    "mechanism": "Genoese fleet support under the 1261 Treaty of Nymphaeum let Nicaean forces retake Constantinople, ending the Latin Empire."
+  },
+  {
+    "cause": "Q432",
+    "effect": "Q12490507",
+    "strength": "primary",
+    "mechanism": "Muhammad's prophetic movement unified the Arabian tribes into a single Muslim community, which the caliphate inherited after his death in 632."
+  },
+  {
+    "cause": "Q1348630",
+    "effect": "Q12490507",
+    "strength": "contributing",
+    "mechanism": "Abu Bakr's Ridda Wars forced rebellious Arabian tribes back under Medinan authority, securing the caliphate's core territory."
+  },
+  {
+    "cause": "Q12490507",
+    "effect": "Q887684",
+    "strength": "primary",
+    "mechanism": "Rashidun armies under Umar defeated the Sasanian Empire at al-Qadisiyyah and Nahavand, conquering Persia by 654."
+  },
+  {
+    "cause": "Q12490507",
+    "effect": "Q248984",
+    "strength": "primary",
+    "mechanism": "Rashidun forces defeated Byzantine armies at Yarmuk in 636 and went on to conquer Syria."
+  },
+  {
+    "cause": "Q12490507",
+    "effect": "Q317519",
+    "strength": "contributing",
+    "mechanism": "Amr ibn al-As led a Rashidun army that invaded and conquered Byzantine Egypt between 639 and 642."
+  },
+  {
+    "cause": "Q12490507",
+    "effect": "Q8575586",
+    "strength": "contributing",
+    "mechanism": "After the First Fitna civil wars, Muawiya founded the Umayyad Caliphate in 661, ending the Rashidun succession."
+  },
+  {
+    "cause": "Q29",
+    "effect": "Q164432",
+    "strength": "primary",
+    "mechanism": "Philip II's centralizing policies, heavy taxation and Spanish troops in the Netherlands provoked the Dutch revolt that began the war in 1568."
+  },
+  {
+    "cause": "Q12562",
+    "effect": "Q164432",
+    "strength": "contributing",
+    "mechanism": "Protestant spread through the Low Countries gave Dutch rebels religious grievances and sustained the revolt against Spanish Catholic rule."
+  },
+  {
+    "cause": "Q128168",
+    "effect": "Q164432",
+    "strength": "contributing",
+    "mechanism": "Counter-Reformation enforcement under Philip II, including heresy persecution and the Inquisition, intensified Dutch resistance and rebellion."
+  },
+  {
+    "cause": "Q4692",
+    "effect": "Q214078",
+    "strength": "contributing",
+    "mechanism": "Renaissance humanism revived ancient texts and mathematics and encouraged direct empirical study, providing methods used by early scientists."
+  },
+  {
+    "cause": "Q133641",
+    "effect": "Q214078",
+    "strength": "contributing",
+    "mechanism": "Overseas voyages of the Age of Discovery brought new botanical, astronomical and geographical data that challenged classical authorities."
+  },
+  {
+    "cause": "Q12557",
+    "effect": "Q178084",
+    "strength": "primary",
+    "mechanism": "Hulagu, a grandson of Genghis Khan, established the Ilkhanate in Persia in 1256 as a subordinate khanate of the Mongol Empire."
+  },
+  {
+    "cause": "Q178084",
+    "effect": "Q369560",
+    "strength": "contributing",
+    "mechanism": "Hulagu's Ilkhanate army sacked Baghdad in 1258, ending the Abbasid Caliphate and bringing Iraq under Mongol rule."
+  },
+  {
+    "cause": "Q178084",
+    "effect": "Q244356",
+    "strength": "minor",
+    "mechanism": "Ilkhanate expansion into Syria under Hulagu led to the Mamluk victory at Ain Jalut in 1260 that halted Mongol westward advance."
+  },
+  {
+    "cause": "Q178084",
+    "effect": "Q866716",
+    "strength": "contributing",
+    "mechanism": "After the Ilkhanate collapsed in 1335, its Iraqi and Persian territories fragmented, and the Jalayirid Sultanate emerged from the succession struggles."
+  },
+  {
+    "cause": "Q212658",
+    "effect": "Q180393",
+    "strength": "primary",
+    "mechanism": "During the War of the Polish Succession, Spanish Bourbon forces under Charles of Bourbon seized Naples and Sicily from Austria in 1734, creating the kingdom."
+  },
+  {
+    "cause": "Q139377",
+    "effect": "Q289577",
+    "strength": "minor",
+    "mechanism": "Aksumite armies under King Kaleb invaded Himyar in the early sixth century, ending its independence and bringing Yemen under Aksumite control."
+  },
+  {
+    "cause": "Q15180",
+    "effect": "Q484578",
+    "strength": "primary",
+    "mechanism": "The Soviet Union's 1924 national delimitation created the Uzbek Soviet Socialist Republic as one of its constituent republics."
+  },
+  {
+    "cause": "Q75903",
+    "effect": "Q484578",
+    "strength": "contributing",
+    "mechanism": "Turkestan ASSR's territory and Soviet-run administration were reorganized in 1924 to form the core of the Uzbek SSR."
+  },
+  {
+    "cause": "Q68682",
+    "effect": "Q484578",
+    "strength": "contributing",
+    "mechanism": "Bukharan People's Soviet Republic, a Soviet client state, was absorbed into the Uzbek SSR when it was founded in 1924."
+  },
+  {
+    "cause": "Q61291",
+    "effect": "Q484578",
+    "strength": "minor",
+    "mechanism": "Khorezm People's Soviet Republic was merged into the Uzbek SSR in 1924 after Soviet forces had established control over it."
+  },
+  {
+    "cause": "Q144334",
+    "effect": "Q104394",
+    "strength": "contributing",
+    "mechanism": "Printing presses standardized punctuation across printed books, and Aldus Manutius introduced the semicolon in Venice in 1494."
+  },
+  {
+    "cause": "Q4692",
+    "effect": "Q104394",
+    "strength": "minor",
+    "mechanism": "Renaissance humanist interest in classical Greek and Latin grammar encouraged printers to adopt new punctuation marks like the semicolon."
+  },
+  {
+    "cause": "Q12861",
+    "effect": "Q178795",
+    "strength": "contributing",
+    "mechanism": "Chinese gunpowder technology in the thirteenth century enabled explosive devices that were buried or placed in siege and field warfare."
+  },
+  {
+    "cause": "Q127197",
+    "effect": "Q178795",
+    "strength": "minor",
+    "mechanism": "Early gunpowder bombs developed in China around 1221 gave military engineers the explosive principle later used in buried land mines."
+  },
+  {
+    "cause": "Q38867",
+    "effect": "Q190035",
+    "strength": "contributing",
+    "mechanism": "Laser interferometry, developed after 1960, gave LIGO the precision needed to detect the tiny strain of a gravitational wave in 2015."
+  },
+  {
+    "cause": "Q68",
+    "effect": "Q190035",
+    "strength": "contributing",
+    "mechanism": "Digital computers allowed LIGO scientists to filter noise and run matched-filter searches that identified the 2015 gravitational wave signal."
+  },
+  {
+    "cause": "Q12560",
+    "effect": "Q130263",
+    "strength": "primary",
+    "mechanism": "Ottoman sultans created the Janissary corps from conscripted Christian boys, making it the standing infantry of the Ottoman state."
+  },
+  {
+    "cause": "Q188411",
+    "effect": "Q51654",
+    "strength": "primary",
+    "mechanism": "Bernard of Clairvaux's preaching at Vezelay in 1146 persuaded Louis VII and many nobles to take the cross for the Second Crusade."
+  },
+  {
+    "cause": "Q517",
+    "effect": "Q134114",
+    "strength": "primary",
+    "mechanism": "Napoleon chose to seek a decisive battle against the Austro-Russian armies in Moravia in 1805, and his deception and maneuvers forced them to attack at Austerlitz."
+  },
+  {
+    "cause": "Q7318",
+    "effect": "Q151340",
+    "strength": "primary",
+    "mechanism": "Hitler's Wehrmacht launched the offensive of May 1940 through the Ardennes, breaking French and British defenses and forcing France to surrender."
+  },
+  {
+    "cause": "Q40415",
+    "effect": "Q166713",
+    "strength": "primary",
+    "mechanism": "Post-Impressionist painters such as Cezanne, Gauguin and Van Gogh extended Impressionist color and light while rejecting its naturalism."
+  },
+  {
+    "cause": "Q166713",
+    "effect": "Q878985",
+    "strength": "contributing",
+    "mechanism": "Post-Impressionist experiments with form and color by Cezanne and Gauguin provided a foundation for the modernist break with academic representation."
+  },
+  {
+    "cause": "Q166713",
+    "effect": "Q80113",
+    "strength": "contributing",
+    "mechanism": "Van Gogh's emotionally charged color and distortion directly inspired German Expressionist painters in the early 1900s."
+  },
+  {
+    "cause": "Q35032",
+    "effect": "Q170770",
+    "strength": "minor",
+    "mechanism": "The Russian Orthodox metropolitan moved his seat to Moscow in the 1320s, giving the princes of Moscow religious prestige that aided their rise."
+  },
+  {
+    "cause": "Q178510",
+    "effect": "Q153136",
+    "strength": "primary",
+    "mechanism": "The death of King Louis II at Mohacs in 1526 left Hungary and Bohemia vacant, and the Habsburgs claimed both crowns through Ferdinand I."
+  },
+  {
+    "cause": "Q153136",
+    "effect": "Q2487",
+    "strength": "contributing",
+    "mechanism": "Ferdinand II's Catholic recatholicization policies in Bohemia and the Habsburg claim to Bohemia triggered the Thirty Years' War."
+  },
+  {
+    "cause": "Q153136",
+    "effect": "Q786171",
+    "strength": "contributing",
+    "mechanism": "Habsburg claims to Hungary after Mohacs drew the Ottoman Empire into prolonged wars along the Danube frontier."
+  },
+  {
+    "cause": "Q12567",
+    "effect": "Q230791",
+    "strength": "contributing",
+    "mechanism": "Viking raids and settlement destroyed the Pictish and Northumbrian power structures, letting Kenneth MacAlpin unite Picts and Scots around 843."
+  },
+  {
+    "cause": "Q184190",
+    "effect": "Q878985",
+    "strength": "minor",
+    "mechanism": "Reinforced concrete allowed modernist architects to build long spans and thin cantilevers, shaping the modern architectural style."
+  },
+  {
+    "cause": "Q872",
+    "effect": "Q3574371",
+    "strength": "contributing",
+    "mechanism": "Radio wireless telegraphy created the need for detectors and amplifiers, which Fleming and De Forest met with the early vacuum tube in 1904-1906."
+  },
+  {
+    "cause": "Q3574371",
+    "effect": "Q68",
+    "strength": "contributing",
+    "mechanism": "Vacuum tubes provided the switching elements of the first electronic digital computers, such as ENIAC in 1945."
+  },
+  {
+    "cause": "Q3574371",
+    "effect": "Q5339",
+    "strength": "minor",
+    "mechanism": "Limitations of vacuum tubes in size, power and reliability motivated Bell Labs to develop the transistor as their replacement."
+  },
+  {
+    "cause": "Q83311",
+    "effect": "Q170305",
+    "strength": "primary",
+    "mechanism": "The Achaemenid Persian Empire created the satrapy system, dividing its territory into provinces ruled by satraps appointed by the king."
+  },
+  {
+    "cause": "Q10914393",
+    "effect": "Q8735",
+    "strength": "minor",
+    "mechanism": "Assyrian imperial pressure on the Zagros peoples pushed the Median tribes to unite under a single kingship in the seventh century BC."
+  },
+  {
+    "cause": "Q8735",
+    "effect": "Q612286",
+    "strength": "primary",
+    "mechanism": "Medes allied with Babylonians under Nabopolassar and sacked Nineveh in 612 BC, ending the Neo-Assyrian Empire."
+  },
+  {
+    "cause": "Q8735",
+    "effect": "Q624887",
+    "strength": "contributing",
+    "mechanism": "The Median-Babylonian alliance that toppled Assyria let Nabopolassar establish the Neo-Babylonian Empire over the old Assyrian lands."
+  },
+  {
+    "cause": "Q7318",
+    "effect": "Q130861",
+    "strength": "primary",
+    "mechanism": "Hitler ordered Operation Citadel in July 1943, with Nazi Germany's panzer divisions attacking the Kursk salient to regain the initiative in the East."
+  },
+  {
+    "cause": "Q38789",
+    "effect": "Q130861",
+    "strength": "contributing",
+    "mechanism": "After the German defeat at Stalingrad, the Wehrmacht lacked the strength of earlier years and sought a decisive summer offensive at Kursk."
+  },
+  {
+    "cause": "Q130861",
+    "effect": "Q16470",
+    "strength": "contributing",
+    "mechanism": "The Soviet defensive victory at Kursk destroyed much of Germany's remaining offensive armour, reducing forces available to defend France in 1944."
+  },
+  {
+    "cause": "Q15180",
+    "effect": "Q154182",
+    "strength": "primary",
+    "mechanism": "Soviet forces under Zhukov and Konev launched the April 1945 offensive that encircled and captured Berlin."
+  },
+  {
+    "cause": "Q7318",
+    "effect": "Q154182",
+    "strength": "contributing",
+    "mechanism": "Hitler refused to surrender and ordered the defense of Berlin, making the city the site of the final battle in Europe."
+  },
+  {
+    "cause": "Q154182",
+    "effect": "Q2415901",
+    "strength": "minor",
+    "mechanism": "Soviet capture of Berlin placed the city inside the Soviet zone, which later shaped the four-power occupation of Germany."
+  },
+  {
+    "cause": "Q23540",
+    "effect": "Q163891",
+    "strength": "contributing",
+    "mechanism": "Growth of Huguenot Protestantism in France after 1555 created the confessional tensions that the Catholic royal court and Parisian mobs turned into massacre in 1572."
+  },
+  {
+    "cause": "Q51628",
+    "effect": "Q5043",
+    "strength": "primary",
+    "mechanism": "The birth of Jesus in Bethlehem began the life and ministry from which the Christian movement emerged in the first century."
+  },
+  {
+    "cause": "Q8698",
+    "effect": "Q178038",
+    "strength": "contributing",
+    "mechanism": "The Great Depression after 1929 deepened unemployment and social conflict in Spain, weakening the moderate coalitions that had founded the 1931 Republic."
+  },
+  {
+    "cause": "Q178038",
+    "effect": "Q10859",
+    "strength": "contributing",
+    "mechanism": "Polarization over the Republic's reforms and the political violence of 1934-1936 led conservative generals to rise against it, starting the Spanish Civil War."
+  },
+  {
+    "cause": "Q642301",
+    "effect": "Q180568",
+    "strength": "contributing",
+    "mechanism": "Theban rulers of the Seventeenth Dynasty waged war against the Hyksos, and Ahmose I completed their expulsion to found the New Kingdom."
+  },
+  {
+    "cause": "Q185063",
+    "effect": "Q7183",
+    "strength": "contributing",
+    "mechanism": "Rivalries and military reforms among the Warring States produced the Qin state that conquered the rest and unified China in 221 BC."
+  },
+  {
+    "cause": "Q58326",
+    "effect": "Q71092",
+    "strength": "primary",
+    "mechanism": "Louis-Napoleon's coup of December 1851 and plebiscite ended the French Second Republic and proclaimed the Second Empire in 1852."
+  },
+  {
+    "cause": "Q3588",
+    "effect": "Q71092",
+    "strength": "contributing",
+    "mechanism": "The 1848 revolutions and fear of socialism convinced many French voters to back Louis-Napoleon as a strong order-restoring leader."
+  },
+  {
+    "cause": "Q71092",
+    "effect": "Q254106",
+    "strength": "contributing",
+    "mechanism": "Napoleon III joined Britain against Russia in the Crimean War to win diplomatic prestige and assert French leadership in Europe."
+  },
+  {
+    "cause": "Q71092",
+    "effect": "Q46083",
+    "strength": "contributing",
+    "mechanism": "Napoleon III's rivalry with Prussia and his declaration of war in July 1870 led to the Franco-Prussian War and the Sedan defeat."
+  },
+  {
+    "cause": "Q71092",
+    "effect": "Q70802",
+    "strength": "primary",
+    "mechanism": "The capture of Napoleon III at Sedan in September 1870 collapsed the Second Empire and led to the proclamation of the French Third Republic."
+  },
+  {
+    "cause": "Q11035",
+    "effect": "Q116434",
+    "strength": "contributing",
+    "mechanism": "Edison's telegraph and telephone transmitter work in 1877 led directly to the tinfoil phonograph that recorded and played back sound."
+  },
+  {
+    "cause": "Q116434",
+    "effect": "Q16629185",
+    "strength": "minor",
+    "mechanism": "The phonograph's cylinder and disc recording lineage fed directly into the commercial phonograph record introduced around 1887."
+  },
+  {
+    "cause": "Q48525",
+    "effect": "Q54109",
+    "strength": "primary",
+    "mechanism": "The 1789 federal government created Congress, which required a permanent Capitol building, and the 1790 Residence Act set the seat in Washington."
+  },
+  {
+    "cause": "Q192769",
+    "effect": "Q54109",
+    "strength": "minor",
+    "mechanism": "Independence from Britain created a new national government that needed a federal legislative building and capital."
+  },
+  {
+    "cause": "Q2763",
+    "effect": "Q183191",
+    "strength": "contributing",
+    "mechanism": "The Holocaust revealed the consequences of unchecked state power, prompting Europeans to draft a binding charter of individual rights."
+  },
+  {
+    "cause": "Q80130",
+    "effect": "Q183191",
+    "strength": "contributing",
+    "mechanism": "Nuremberg trials established principles of crimes against humanity that the Council of Europe drew on when drafting the convention."
+  },
+  {
+    "cause": "Q200056",
+    "effect": "Q102679",
+    "strength": "contributing",
+    "mechanism": "Rome's victory at Zama in 201 BC rewarded Masinissa with rule over Numidia, creating the Numidian kingdom under Roman favor."
+  },
+  {
+    "cause": "Q6271",
+    "effect": "Q102679",
+    "strength": "minor",
+    "mechanism": "During the Second Punic War, Masinissa switched sides to Rome, which secured the Numidian kingdom's emergence from the Massylian and Masaesylian tribes."
+  },
+  {
+    "cause": "Q131192",
+    "effect": "Q105313",
+    "strength": "contributing",
+    "mechanism": "Saxon migrations into southern Britain during the Migration Period created the settlements from which the kingdom of Wessex grew."
+  }
+]

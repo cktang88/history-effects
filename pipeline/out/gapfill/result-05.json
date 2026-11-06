@@ -1,0 +1,140 @@
+[
+ {
+  "cause": "Q362",
+  "effect": "Q204344",
+  "strength": "minor",
+  "mechanism": "Postwar famine relief after World War II, through bodies such as UNRRA and FAO, shaped the international food-aid approach WFP institutionalized."
+ },
+ {
+  "cause": "Q8683",
+  "effect": "Q8411",
+  "strength": "minor",
+  "mechanism": "Cold War rivalry politicized the Games; Hungary's crisis and Western reactions prompted boycotts that shrank Melbourne's field."
+ },
+ {
+  "cause": "Q150995",
+  "effect": "Q682318",
+  "strength": "contributing",
+  "mechanism": "The treaty granted Swedish Pomerania and other German territories to Sweden, giving it a German foothold lasting into the 19th century."
+ },
+ {
+  "cause": "Q49101",
+  "effect": "Q170468",
+  "strength": "contributing",
+  "mechanism": "Nasser's prestige after the 1956 Suez crisis boosted pan-Arab nationalism, making union with Syria politically attractive."
+ },
+ {
+  "cause": "Q180897",
+  "effect": "Q179023",
+  "strength": "contributing",
+  "mechanism": "Francis I rejected the Spanish-Portuguese division of the Americas under Tordesillas, motivating French voyages and claims in North America."
+ },
+ {
+  "cause": "Q245160",
+  "effect": "Q130229",
+  "strength": "primary",
+  "mechanism": "Soviet Russia's 1921 invasion and overthrow of the Democratic Republic of Georgia established Soviet rule and the Georgian SSR."
+ },
+ {
+  "cause": "Q361",
+  "effect": "Q130229",
+  "strength": "contributing",
+  "mechanism": "World War I and the Russian Empire's collapse created the power vacuum that let Transcaucasian states declare independence before Soviet conquest."
+ },
+ {
+  "cause": "Q7405",
+  "effect": "Q7408",
+  "strength": "primary",
+  "mechanism": "The Sui established a state examination system in 605 to recruit officials by merit, the origin of the later imperial examinations."
+ },
+ {
+  "cause": "Q896666",
+  "effect": "Q33761",
+  "strength": "minor",
+  "mechanism": "Post-2008 economic stagnation and rising food prices fed unemployment and anger that fueled the 2010–2011 Arab uprisings."
+ },
+ {
+  "cause": "Q30623",
+  "effect": "Q184425",
+  "strength": "contributing",
+  "mechanism": "Manchukuo became a base for Japanese expansion into China, and that escalating war eventually merged into the Pacific War."
+ },
+ {
+  "cause": "Q1134220",
+  "effect": "Q49683",
+  "strength": "contributing",
+  "mechanism": "Mongol devastation of the Rus' principalities weakened their defenses, letting Lithuanian rulers absorb much of western Rus' territory."
+ },
+ {
+  "cause": "Q6534",
+  "effect": "Q174193",
+  "strength": "contributing",
+  "mechanism": "Revolutionary France's threat and the 1798 Irish rebellion it inspired pushed Britain to unite Ireland with Great Britain in 1801."
+ },
+ {
+  "cause": "Q2890128",
+  "effect": "Q229411",
+  "strength": "primary",
+  "mechanism": "Muhammad of Ghor's 1192 victory at Tarain opened northern India, and his lieutenant Qutb al-Din Aibak then founded the Delhi Sultanate."
+ },
+ {
+  "cause": "Q128160",
+  "effect": "Q186444",
+  "strength": "contributing",
+  "mechanism": "The 1962 Cuban Missile Crisis showed the danger of nuclear confrontation, building momentum for a treaty limiting nuclear weapon spread."
+ },
+ {
+  "cause": "Q207327",
+  "effect": "Q173065",
+  "strength": "primary",
+  "mechanism": "The 1282 Sicilian Vespers revolt cut Sicily from Angevin rule, leaving the mainland Angevin domain as a separate Kingdom of Naples."
+ },
+ {
+  "cause": "Q173065",
+  "effect": "Q80702",
+  "strength": "contributing",
+  "mechanism": "Naples passed to the Aragonese crown in 1442 and later the Spanish crown, which governed it as part of the Spanish Empire."
+ },
+ {
+  "cause": "Q3708255",
+  "effect": "Q200032",
+  "strength": "primary",
+  "mechanism": "The Seljuk victory at Manzikert in 1071 opened Anatolia to Turkish settlement and prompted Byzantine appeals to the West that helped trigger the First Crusade."
+ },
+ {
+  "cause": "Q68",
+  "effect": "Q782543",
+  "strength": "minor",
+  "mechanism": "Computers supplied the processing power and displays that made graphical interfaces practical for everyday use."
+ },
+ {
+  "cause": "Q15718485",
+  "effect": "Q19600530",
+  "strength": "minor",
+  "mechanism": "The #BlackLivesMatter hashtag, launched on Twitter in 2013, spread the movement quickly and made the platform central to its organizing."
+ },
+ {
+  "cause": "Q174193",
+  "effect": "Q83278",
+  "strength": "primary",
+  "mechanism": "The 1801 Acts of Union created the United Kingdom, and the combined Union Flag was adopted to represent it."
+ },
+ {
+  "cause": "Q81414",
+  "effect": "Q978",
+  "strength": "contributing",
+  "mechanism": "TCP/IP internetworking let images and text spread across networks, so memes could be copied and shared rapidly online."
+ },
+ {
+  "cause": "Q11146",
+  "effect": "Q52843",
+  "strength": "contributing",
+  "mechanism": "Lisbon amended the Maastricht Treaty's framework to reform EU institutions and decision-making after enlargement."
+ },
+ {
+  "cause": "Q52843",
+  "effect": "Q7888194",
+  "strength": "contributing",
+  "mechanism": "Lisbon introduced Article 50, a formal procedure for leaving the EU, which the UK later used to begin Brexit."
+ }
+]

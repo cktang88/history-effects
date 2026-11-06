@@ -1,0 +1,86 @@
+[
+ {
+  "cause": "Q428",
+  "effect": "Q432",
+  "strength": "contributing",
+  "mechanism": "The revealed Quran became Islam's central scripture, codifying the beliefs, worship and law that define the religion."
+ },
+ {
+  "cause": "Q6691",
+  "effect": "Q486761",
+  "strength": "contributing",
+  "mechanism": "Homeric epics became the core of Greek education and shared cultural identity, shaping the values and literature of classical Greece."
+ },
+ {
+  "cause": "Q11442",
+  "effect": "Q1420",
+  "strength": "contributing",
+  "mechanism": "Bicycle makers supplied pneumatic tyres, chain drives, precision tubing and engineers that early automobile manufacturers adapted for motor vehicles."
+ },
+ {
+  "cause": "Q11427",
+  "effect": "Q12876",
+  "strength": "minor",
+  "mechanism": "Mass-produced steel plate supplied the armour and structure that made the armoured tank practical in World War I."
+ },
+ {
+  "cause": "Q1059758",
+  "effect": "Q11772",
+  "strength": "contributing",
+  "mechanism": "Collapse of Bronze Age palace economies caused the Greek Dark Ages, from which the polis system and Greek culture emerged."
+ },
+ {
+  "cause": "Q1059758",
+  "effect": "Q11764",
+  "strength": "contributing",
+  "mechanism": "Disrupted Bronze Age trade networks made tin scarce, encouraging wider adoption of iron, which was cheaper and locally available."
+ },
+ {
+  "cause": "Q466",
+  "effect": "Q6368",
+  "strength": "contributing",
+  "mechanism": "Berners-Lee built the first browser alongside the Web protocols, since the new hypertext system needed a client to read and edit pages."
+ },
+ {
+  "cause": "Q34490",
+  "effect": "Q2429253",
+  "strength": "primary",
+  "mechanism": "Al-Qaeda in Iraq, founded under Al-Qaeda's banner, evolved into the Islamic State after breaking with Al-Qaeda's central leadership."
+ },
+ {
+  "cause": "Q335095",
+  "effect": "Q11425",
+  "strength": "contributing",
+  "mechanism": "Movie cameras and projectors allowed frame-by-frame filming and projection, providing the technical basis for animated films."
+ },
+ {
+  "cause": "Q11696",
+  "effect": "Q181026",
+  "strength": "primary",
+  "mechanism": "President Monroe's 1823 declaration warned European powers against new colonization in the Americas, becoming a cornerstone of US foreign policy."
+ },
+ {
+  "cause": "Q11696",
+  "effect": "Q193155",
+  "strength": "primary",
+  "mechanism": "President Jefferson's diplomacy secured the 1803 purchase of Louisiana from France, roughly doubling the nation's territory."
+ },
+ {
+  "cause": "Q11696",
+  "effect": "Q8676",
+  "strength": "contributing",
+  "mechanism": "Abraham Lincoln's 1860 presidential election prompted Southern states to secede, triggering the American Civil War."
+ },
+ {
+  "cause": "Q4692",
+  "effect": "Q23540",
+  "strength": "contributing",
+  "mechanism": "Renaissance humanist scholarship, including Erasmus's Greek New Testament, encouraged critical scrutiny of church texts and practice that fed the Reformation."
+ },
+ {
+  "cause": "Q12539",
+  "effect": "Q2269",
+  "strength": "minor",
+  "mechanism": "Enlightenment emphasis on empirical inquiry and practical knowledge encouraged technical innovation, a contributing intellectual background to industrialization."
+ }
+]

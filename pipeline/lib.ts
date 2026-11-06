@@ -3,6 +3,7 @@
 
 import { createHash } from "node:crypto";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { gunzipSync, gzipSync } from "node:zlib";
 
 export const USER_AGENT = "history-effects-pipeline/0.1 (https://github.com/cktang88/history-effects)";
 const CACHE_DIR = new URL("./.cache/", import.meta.url);
@@ -107,4 +108,15 @@ export async function writePipeline(name: string, value: unknown) {
 
 export function log(...args: unknown[]) {
   process.stderr.write(args.map(String).join(" ") + "\n");
+}
+
+// The extracted Wikipedia evidence is large, so it's stored gzipped (and
+// committed, so rebuilds don't need the dump).
+export async function readWiki<T>(): Promise<T> {
+  return JSON.parse(gunzipSync(await readFile(new URL("./out/wiki.json.gz", import.meta.url))).toString("utf8")) as T;
+}
+
+export async function writeWiki(value: unknown) {
+  await mkdir(new URL("./out/", import.meta.url), { recursive: true });
+  await writeFile(new URL("./out/wiki.json.gz", import.meta.url), gzipSync(JSON.stringify(value), { level: 9 }));
 }

@@ -1,0 +1,818 @@
+[
+  {
+    "cause": "Q12725",
+    "effect": "Q47616",
+    "strength": "primary",
+    "mechanism": "Electric current passed through a carbon filament heated it to incandescence, the principle Edison and Swan exploited to make practical bulbs."
+  },
+  {
+    "cause": "Q131502",
+    "effect": "Q47616",
+    "strength": "contributing",
+    "mechanism": "Gramme's 1873 dynamo supplied the reliable current that let Edison run his carbon-filament bulb continuously in homes and streets."
+  },
+  {
+    "cause": "Q47616",
+    "effect": "Q11656",
+    "strength": "minor",
+    "mechanism": "Edison's 1883 observation of current crossing a bulb's vacuum led Fleming to patent the thermionic valve, the diode, in 1904."
+  },
+  {
+    "cause": "Q9554",
+    "effect": "Q75809",
+    "strength": "primary",
+    "mechanism": "Luther's 1517 Ninety-Five Theses and his later German writings founded the Lutheran movement and its distinct doctrinal identity."
+  },
+  {
+    "cause": "Q144334",
+    "effect": "Q75809",
+    "strength": "contributing",
+    "mechanism": "Printing presses multiplied Luther's pamphlets and vernacular Bible translations, spreading Lutheran ideas across German lands within years."
+  },
+  {
+    "cause": "Q4692",
+    "effect": "Q75809",
+    "strength": "minor",
+    "mechanism": "Renaissance humanist philology, notably Erasmus's 1516 Greek New Testament, gave Luther the textual tools to challenge Church doctrine."
+  },
+  {
+    "cause": "Q878985",
+    "effect": "Q47783",
+    "strength": "primary",
+    "mechanism": "Postmodern thinkers reacted against modernism's faith in universal reason and progress, rejecting its grand narratives and aesthetic purity."
+  },
+  {
+    "cause": "Q362",
+    "effect": "Q47783",
+    "strength": "contributing",
+    "mechanism": "Postwar disillusionment after the atrocities of total war eroded confidence in progress and totalizing ideologies, fostering postmodern skepticism."
+  },
+  {
+    "cause": "Q963303",
+    "effect": "Q172107",
+    "strength": "primary",
+    "mechanism": "The 1569 Union of Lublin fused the Polish Crown and the Grand Duchy of Lithuania into one commonwealth with a shared Sejm and king."
+  },
+  {
+    "cause": "Q246863",
+    "effect": "Q172107",
+    "strength": "contributing",
+    "mechanism": "Lithuania's strain against Muscovite invasion in the Livonian War pushed it to accept full union with Poland at Lublin in 1569."
+  },
+  {
+    "cause": "Q71084",
+    "effect": "Q131964",
+    "strength": "primary",
+    "mechanism": "Napoleon's 1804 proclamation of the French Empire led Francis II to proclaim the Austrian Empire the same year to preserve Habsburg imperial parity."
+  },
+  {
+    "cause": "Q78994",
+    "effect": "Q131964",
+    "strength": "contributing",
+    "mechanism": "Defeats in the Napoleonic Wars, including Austerlitz in 1805, ended the Holy Roman Empire in 1806 and forced Habsburg reorganisation into a new empire."
+  },
+  {
+    "cause": "Q12861",
+    "effect": "Q127197",
+    "strength": "primary",
+    "mechanism": "Gunpowder charges packed into iron or ceramic casings produced the explosive bombs of the thirteenth century, such as Song-dynasty thunder-crash devices."
+  },
+  {
+    "cause": "Q988780",
+    "effect": "Q5325",
+    "strength": "primary",
+    "mechanism": "Faraday's 1831 discovery that changing magnetic fields induce current showed how coils oppose changes in current, defining inductance."
+  },
+  {
+    "cause": "Q178032",
+    "effect": "Q5325",
+    "strength": "minor",
+    "mechanism": "Sturgeon's 1825 electromagnet demonstrated the coil-and-core arrangement on which practical inductors depend."
+  },
+  {
+    "cause": "Q188586",
+    "effect": "Q80056",
+    "strength": "minor",
+    "mechanism": "Frederick II's Sicilian court poets in the Kingdom of Sicily developed the sonnet form in the 1230s and 1240s."
+  },
+  {
+    "cause": "Q23810",
+    "effect": "Q80728",
+    "strength": "primary",
+    "mechanism": "Alfred Nobel patented dynamite in 1867 by absorbing nitroglycerine into diatomaceous earth, making a stable and transportable explosive."
+  },
+  {
+    "cause": "Q7523",
+    "effect": "Q7313",
+    "strength": "primary",
+    "mechanism": "Kublai Khan proclaimed the Yuan dynasty in 1271 and went on to complete the conquest of Song China in 1279."
+  },
+  {
+    "cause": "Q12557",
+    "effect": "Q7313",
+    "strength": "contributing",
+    "mechanism": "Mongol conquests under Genghis Khan and his successors created the empire whose Chinese branch Kublai Khan turned into the Yuan."
+  },
+  {
+    "cause": "Q7462",
+    "effect": "Q7313",
+    "strength": "contributing",
+    "mechanism": "Mongol armies under Kublai Khan conquered the Southern Song between 1276 and 1279, completing the territory the Yuan ruled."
+  },
+  {
+    "cause": "Q5066",
+    "effect": "Q7313",
+    "strength": "minor",
+    "mechanism": "Mongol armies destroyed the Jin dynasty of northern China in 1234, giving the Mongols the North China base that became the Yuan core."
+  },
+  {
+    "cause": "Q7313",
+    "effect": "Q9903",
+    "strength": "contributing",
+    "mechanism": "The Yuan's collapse amid mass rebellion let Zhu Yuanzhang drive the Mongols out in 1368 and found the Ming dynasty."
+  },
+  {
+    "cause": "Q7313",
+    "effect": "Q8959",
+    "strength": "minor",
+    "mechanism": "After the Yuan fell in 1368, its remnant Mongol court retreated north and persisted as the Northern Yuan until 1691."
+  },
+  {
+    "cause": "Q7310",
+    "effect": "Q488",
+    "strength": "contributing",
+    "mechanism": "Fear that Nazi Germany was building a bomb prompted Einstein's 1939 letter and the US Manhattan Project that produced the 1945 weapons."
+  },
+  {
+    "cause": "Q192660",
+    "effect": "Q488",
+    "strength": "minor",
+    "mechanism": "Heavy US casualties on Okinawa in 1945 made invasion estimates grim, strengthening planners' case for using the atomic bombs."
+  },
+  {
+    "cause": "Q1341539",
+    "effect": "Q83085",
+    "strength": "primary",
+    "mechanism": "The 1978 Saur Revolution brought the communist PDPA to power, and the Soviet Union intervened in December 1979 to prop up its government."
+  },
+  {
+    "cause": "Q83085",
+    "effect": "Q34490",
+    "strength": "contributing",
+    "mechanism": "Arab volunteers recruited to fight the Soviets in Afghanistan, including Osama bin Laden, founded al-Qaeda in 1988."
+  },
+  {
+    "cause": "Q83085",
+    "effect": "Q2405009",
+    "strength": "contributing",
+    "mechanism": "Soviet withdrawal in 1989 ended Moscow's support for Najibullah's regime, and the mujahideen fought for control of Afghanistan in the civil war."
+  },
+  {
+    "cause": "Q83085",
+    "effect": "Q1415585",
+    "strength": "minor",
+    "mechanism": "After the Soviet withdrawal and the collapse of Najibullah's government in 1992, mujahideen parties formed the Islamic State of Afghanistan."
+  },
+  {
+    "cause": "Q185063",
+    "effect": "Q7183",
+    "strength": "primary",
+    "mechanism": "Qin conquered its rivals one by one during the Warring States period, ending centuries of interstate war and creating the first unified Chinese state in 221 BC."
+  },
+  {
+    "cause": "Q7192",
+    "effect": "Q7183",
+    "strength": "primary",
+    "mechanism": "Qin Shi Huang, king of Qin, completed the conquest of the six rival states in 221 BC and proclaimed himself the first emperor."
+  },
+  {
+    "cause": "Q1195760",
+    "effect": "Q7183",
+    "strength": "minor",
+    "mechanism": "Qin's decisive victory over Zhao at Changping in 260 BC opened the path to conquest of the rival states."
+  },
+  {
+    "cause": "Q7183",
+    "effect": "Q827040",
+    "strength": "minor",
+    "mechanism": "After Qin collapsed, the Qin general Zhao Tuo seized Guangdong and Vietnam and proclaimed the Nanyue kingdom around 204 BC."
+  },
+  {
+    "cause": "Q178032",
+    "effect": "Q72313",
+    "strength": "primary",
+    "mechanism": "Sturgeon's 1825 electromagnet established the coil-and-core force on which early electric motors, such as Jacobi's 1834 machine, depended."
+  },
+  {
+    "cause": "Q12725",
+    "effect": "Q72313",
+    "strength": "contributing",
+    "mechanism": "Faraday's 1821 electromagnetic rotation device showed that electric current produces continuous mechanical motion."
+  },
+  {
+    "cause": "Q807843",
+    "effect": "Q80330",
+    "strength": "primary",
+    "mechanism": "Charles I's failed Bishops' Wars against the Scots left him bankrupt and forced him to summon Parliament, which turned against him and precipitated war."
+  },
+  {
+    "cause": "Q80330",
+    "effect": "Q330362",
+    "strength": "primary",
+    "mechanism": "After the king's defeat and execution in 1649, Parliament's victorious New Model Army ruled through the Rump and proclaimed a republic called the Commonwealth."
+  },
+  {
+    "cause": "Q80330",
+    "effect": "Q846848",
+    "strength": "contributing",
+    "mechanism": "The collapse of the republic after Cromwell's death and the army's disarray led Parliament to invite Charles II back, restoring the monarchy in 1660."
+  },
+  {
+    "cause": "Q1461147",
+    "effect": "Q80330",
+    "strength": "contributing",
+    "mechanism": "The 1641 Irish rebellion and reports of royal complicity made Parliament distrust the king's control of the army, pushing both sides toward war."
+  },
+  {
+    "cause": "Q82708",
+    "effect": "Q80330",
+    "strength": "minor",
+    "mechanism": "Disputes over the Church of England's liturgy and governance between Anglican bishops and Puritan reformers deepened the religious division behind the war."
+  },
+  {
+    "cause": "Q71092",
+    "effect": "Q254106",
+    "strength": "primary",
+    "mechanism": "Napoleon III's dispute with Russia over Holy Places in Jerusalem and his push for prestige led France to join Britain against Russia in 1854."
+  },
+  {
+    "cause": "Q34266",
+    "effect": "Q254106",
+    "strength": "contributing",
+    "mechanism": "Nicholas I's push for Russian influence over Ottoman Orthodox subjects and the Danubian principalities triggered the Russo-Ottoman war that drew in Britain and France."
+  },
+  {
+    "cause": "Q7310",
+    "effect": "Q43056",
+    "strength": "primary",
+    "mechanism": "Nazi Germany's ideology and expansionism drove the 1936 Rome-Berlin Axis and 1940 Tripartite Pact that formed the Axis powers."
+  },
+  {
+    "cause": "Q8698",
+    "effect": "Q43056",
+    "strength": "minor",
+    "mechanism": "The Great Depression's economic collapse strengthened fascist and militarist movements in Germany, Italy and Japan, the states that formed the Axis."
+  },
+  {
+    "cause": "Q12560",
+    "effect": "Q133641",
+    "strength": "contributing",
+    "mechanism": "Ottoman control of eastern Mediterranean and overland trade routes after 1453 pushed Portuguese and Spanish crowns to seek direct sea routes to Asia."
+  },
+  {
+    "cause": "Q4692",
+    "effect": "Q133641",
+    "strength": "minor",
+    "mechanism": "Renaissance curiosity and advances in cartography and nautical science encouraged systematic overseas exploration by Portugal and Spain."
+  },
+  {
+    "cause": "Q878985",
+    "effect": "Q6034",
+    "strength": "contributing",
+    "mechanism": "Dada artists rejected modernist notions of art and rational progress, staging anti-art provocations in Zurich from 1916 that mocked bourgeois culture."
+  },
+  {
+    "cause": "Q80113",
+    "effect": "Q6034",
+    "strength": "minor",
+    "mechanism": "Expressionist painters and poets in Germany pursued emotional distortion and anti-bourgeois revolt, aesthetics that Dada radicalised."
+  },
+  {
+    "cause": "Q6034",
+    "effect": "Q39427",
+    "strength": "primary",
+    "mechanism": "Dada's Paris circle, led by André Breton, turned Dada's provocations toward dream and the unconscious, founding Surrealism in 1924."
+  },
+  {
+    "cause": "Q6034",
+    "effect": "Q47783",
+    "strength": "minor",
+    "mechanism": "Duchamp's readymades and Dada's challenge to art institutions anticipated the postwar critique of originality and high-art boundaries."
+  },
+  {
+    "cause": "Q93180",
+    "effect": "Q1986139",
+    "strength": "primary",
+    "mechanism": "Parthian nomads under Arsaces seized Parthia from Seleucid control around 247 BC, founding the independent Arsacid Parthian state."
+  },
+  {
+    "cause": "Q488880",
+    "effect": "Q1986139",
+    "strength": "minor",
+    "mechanism": "Greco-Bactria's secession from the Seleucids weakened Seleucid control of the eastern satrapies, enabling Parthian expansion."
+  },
+  {
+    "cause": "Q5339",
+    "effect": "Q80831",
+    "strength": "primary",
+    "mechanism": "Bell Labs' point-contact transistor of 1947 provided the solid-state switching element that Kilby and Noyce combined into the first integrated circuits."
+  },
+  {
+    "cause": "Q68",
+    "effect": "Q80831",
+    "strength": "contributing",
+    "mechanism": "Computer makers' demand for smaller, faster logic and military computing contracts drove Fairchild and Texas Instruments to commercialise integrated circuits."
+  },
+  {
+    "cause": "Q80831",
+    "effect": "Q5297",
+    "strength": "primary",
+    "mechanism": "Integrated-circuit technology let Intel fit a complete central processing unit onto one chip, producing the 4004 microprocessor in 1971."
+  },
+  {
+    "cause": "Q6534",
+    "effect": "Q128015",
+    "strength": "primary",
+    "mechanism": "The French Revolutionary government adopted the guillotine in 1792 as the standard method of execution under its new penal laws."
+  },
+  {
+    "cause": "Q12539",
+    "effect": "Q128015",
+    "strength": "minor",
+    "mechanism": "Enlightenment penal reformers argued for equal, humane execution, and Guillotin's 1789 proposal reflected that egalitarian rationale."
+  },
+  {
+    "cause": "Q432",
+    "effect": "Q123559",
+    "strength": "primary",
+    "mechanism": "Muslim armies inspired by the Islamic expansion crossed into Iberia in 711 and conquered the Visigothic kingdom."
+  },
+  {
+    "cause": "Q8575586",
+    "effect": "Q123559",
+    "strength": "primary",
+    "mechanism": "The Umayyad Caliphate sent Tariq ibn Ziyad's expeditionary army across the strait in 711, launching the conquest that created Al-Andalus."
+  },
+  {
+    "cause": "Q275918",
+    "effect": "Q123559",
+    "strength": "contributing",
+    "mechanism": "The early Muslim conquests across the Middle East and North Africa built the military and administrative base from which Iberia was invaded."
+  },
+  {
+    "cause": "Q622855",
+    "effect": "Q123559",
+    "strength": "minor",
+    "mechanism": "Berber troops from Ifriqiya formed the bulk of the 711 invasion force that conquered the Visigothic kingdom."
+  },
+  {
+    "cause": "Q123559",
+    "effect": "Q79791",
+    "strength": "contributing",
+    "mechanism": "Christian kingdoms in northern Iberia launched a centuries-long campaign to retake territory from Al-Andalus, the Reconquista."
+  },
+  {
+    "cause": "Q123559",
+    "effect": "Q231392",
+    "strength": "minor",
+    "mechanism": "Christian resistance in the northern mountains under Pelagius created the Kingdom of Asturias as a base against Muslim rule."
+  },
+  {
+    "cause": "Q123559",
+    "effect": "Q745799",
+    "strength": "minor",
+    "mechanism": "Scholars in Córdoba and Toledo translated Greek and Arabic science and philosophy, making Al-Andalus a major centre of the Islamic Golden Age."
+  },
+  {
+    "cause": "Q27306",
+    "effect": "Q33143",
+    "strength": "contributing",
+    "mechanism": "Frederick II's 1740 seizure of Silesia from Austria left Maria Theresa determined to recover it, prompting her 1756 alliance with France."
+  },
+  {
+    "cause": "Q161885",
+    "effect": "Q33143",
+    "strength": "contributing",
+    "mechanism": "Anglo-French rivalry over North American and Indian trade, escalating in the Ohio Valley, made colonial clashes the war's central conflict."
+  },
+  {
+    "cause": "Q33143",
+    "effect": "Q6534",
+    "strength": "contributing",
+    "mechanism": "The enormous debt France incurred fighting the Seven Years' War forced Louis XVI to seek new taxes, precipitating the fiscal crisis behind 1789."
+  },
+  {
+    "cause": "Q46805",
+    "effect": "Q46825",
+    "strength": "primary",
+    "mechanism": "Gothic architecture and sculpture evolved directly out of Romanesque forms, with pointed arches and ribbed vaults replacing rounded ones in 12th-century France."
+  },
+  {
+    "cause": "Q70972",
+    "effect": "Q46825",
+    "strength": "contributing",
+    "mechanism": "Capetian royal patronage in the Île-de-France, centred on Abbot Suger's rebuilding of Saint-Denis from 1140, launched the Gothic style."
+  },
+  {
+    "cause": "Q46696",
+    "effect": "Q42834",
+    "strength": "primary",
+    "mechanism": "Theodosius I's death in 395 left the empire permanently divided between his sons, giving the Western half its own emperor, Honorius."
+  },
+  {
+    "cause": "Q329838",
+    "effect": "Q42834",
+    "strength": "contributing",
+    "mechanism": "Decades of civil war, plague and invasion in the third century drained Rome's finances and army, weakening the western state for generations."
+  },
+  {
+    "cause": "Q192473",
+    "effect": "Q42834",
+    "strength": "contributing",
+    "mechanism": "The Gothic victory at Adrianople in 378 killed Emperor Valens and let Goths settle inside the empire as armed federates."
+  },
+  {
+    "cause": "Q131192",
+    "effect": "Q42834",
+    "strength": "primary",
+    "mechanism": "Germanic peoples, pushed by Hunnic pressure, crossed the frontiers and carved out kingdoms such as those of the Visigoths and Vandals inside Roman territory."
+  },
+  {
+    "cause": "Q8413",
+    "effect": "Q42834",
+    "strength": "minor",
+    "mechanism": "Constantine's founding of Constantinople in 330 shifted imperial resources and attention eastward, leaving the western provinces with weaker defences."
+  },
+  {
+    "cause": "Q42834",
+    "effect": "Q126936",
+    "strength": "contributing",
+    "mechanism": "After Rome's western rule collapsed, Visigothic kings consolidated their settlement in Gaul and Iberia into a kingdom that lasted until 718."
+  },
+  {
+    "cause": "Q42834",
+    "effect": "Q10416611",
+    "strength": "contributing",
+    "mechanism": "Vandal conquest of Roman North Africa in the 430s, exploiting the western empire's weakness, created an independent Vandal kingdom."
+  },
+  {
+    "cause": "Q42834",
+    "effect": "Q583038",
+    "strength": "contributing",
+    "mechanism": "Theodoric the Great, King of the Ostrogoths, ruled Italy from 493 after the western emperor was deposed, founding an independent Ostrogothic kingdom."
+  },
+  {
+    "cause": "Q42834",
+    "effect": "Q146246",
+    "strength": "minor",
+    "mechanism": "Clovis and the Franks extended their rule over Gallo-Roman territory in the vacuum left by the western empire, founding the Frankish realm."
+  },
+  {
+    "cause": "Q79965",
+    "effect": "Q186537",
+    "strength": "contributing",
+    "mechanism": "Tatar princes under the Golden Horde's collapse in the 1430s split off to found the Khanate of Kazan, which kept Horde-derived rule on the Volga."
+  },
+  {
+    "cause": "Q79965",
+    "effect": "Q210163",
+    "strength": "contributing",
+    "mechanism": "Golden Horde authority fragmenting in the 1460s let Astrakhan's Chinggisid prince establish a successor khanate on the lower Volga."
+  },
+  {
+    "cause": "Q79965",
+    "effect": "Q631210",
+    "strength": "contributing",
+    "mechanism": "Nogai clans of the former Golden Horde separated into an autonomous Nogai Horde that dominated the northern Caspian steppe."
+  },
+  {
+    "cause": "Q79965",
+    "effect": "Q170770",
+    "strength": "contributing",
+    "mechanism": "Moscow's princes collected tribute for the Golden Horde and used that role to extend their territory, laying the basis of the Grand Principality."
+  },
+  {
+    "cause": "Q8683",
+    "effect": "Q180573",
+    "strength": "contributing",
+    "mechanism": "Cold War containment led the United States to back Ngo Dinh Diem's Saigon government after 1954 as a non-communist bulwark in Vietnam."
+  },
+  {
+    "cause": "Q167457",
+    "effect": "Q8880",
+    "strength": "primary",
+    "mechanism": "The 1957 Treaty of Rome created the European Economic Community and its Commission as the executive body."
+  },
+  {
+    "cause": "Q362",
+    "effect": "Q8880",
+    "strength": "contributing",
+    "mechanism": "Postwar determination to prevent another European war between France and Germany drove the six founders to pool economic institutions."
+  },
+  {
+    "cause": "Q8880",
+    "effect": "Q11146",
+    "strength": "minor",
+    "mechanism": "The Commission's single-market and institutional role was carried into the European Union that the 1992 Maastricht Treaty created."
+  },
+  {
+    "cause": "Q8707",
+    "effect": "Q188712",
+    "strength": "primary",
+    "mechanism": "The 1868 Meiji Restoration overthrew the Tokugawa shogunate and established a centralised imperial state that became the Empire of Japan."
+  },
+  {
+    "cause": "Q771451",
+    "effect": "Q188712",
+    "strength": "contributing",
+    "mechanism": "Commodore Perry's 1854 Convention of Kanagawa forced Japan to open ports, convincing samurai reformers that Western-style modernisation was necessary."
+  },
+  {
+    "cause": "Q191282",
+    "effect": "Q188712",
+    "strength": "minor",
+    "mechanism": "Britain's victory over Qing China in the First Opium War alarmed Japanese elites and accelerated calls for military and institutional reform."
+  },
+  {
+    "cause": "Q188712",
+    "effect": "Q178687",
+    "strength": "primary",
+    "mechanism": "Japanese forces entered Korea in 1894 and attacked Qing China, launching the First Sino-Japanese War that Japan won decisively."
+  },
+  {
+    "cause": "Q188712",
+    "effect": "Q170314",
+    "strength": "primary",
+    "mechanism": "Japan's 1937 advance from the Marco Polo Bridge incident launched full-scale invasion of China, starting the Second Sino-Japanese War."
+  },
+  {
+    "cause": "Q188712",
+    "effect": "Q30623",
+    "strength": "primary",
+    "mechanism": "The Kwantung Army of the Empire of Japan seized Manchuria in 1931 and in 1932 established the puppet state of Manchukuo under Puyi."
+  },
+  {
+    "cause": "Q188712",
+    "effect": "Q488",
+    "strength": "contributing",
+    "mechanism": "Japan's refusal to surrender after the 1944-45 Pacific campaigns led the United States to drop atomic bombs on Hiroshima and Nagasaki in August 1945."
+  },
+  {
+    "cause": "Q79911",
+    "effect": "Q131337",
+    "strength": "primary",
+    "mechanism": "Bolshevik Red Army victories in the Russian Civil War overthrew the independent Azerbaijan Democratic Republic in 1920, creating the Azerbaijan Soviet Socialist Republic."
+  },
+  {
+    "cause": "Q361",
+    "effect": "Q131337",
+    "strength": "contributing",
+    "mechanism": "The collapse of the Russian Empire during World War I opened the Caucasus to independence movements and then to Bolshevik conquest."
+  },
+  {
+    "cause": "Q131337",
+    "effect": "Q244165",
+    "strength": "contributing",
+    "mechanism": "Soviet-era decision to place Nagorno-Karabakh inside Azerbaijan SSR left an Armenian-majority region under Baku, underlying the 1991 Artsakh secession."
+  },
+  {
+    "cause": "Q91",
+    "effect": "Q81931",
+    "strength": "primary",
+    "mechanism": "Lincoln's 1860 election on an antislavery platform triggered secession by Deep South states, which formed the Confederacy in February 1861."
+  },
+  {
+    "cause": "Q81931",
+    "effect": "Q8676",
+    "strength": "primary",
+    "mechanism": "The Confederate states' secession and their April 1861 attack on Fort Sumter began the American Civil War."
+  },
+  {
+    "cause": "Q12725",
+    "effect": "Q101674",
+    "strength": "contributing",
+    "mechanism": "Electric motors powering suction fans made the 1901 electric vacuum cleaner of Hubert Booth practical for domestic use."
+  },
+  {
+    "cause": "Q7318",
+    "effect": "Q43250",
+    "strength": "primary",
+    "mechanism": "The Nazi regime built the Gestapo in 1933 from Prussia's political police under Göring, and Himmler later extended it nationwide."
+  },
+  {
+    "cause": "Q43250",
+    "effect": "Q2763",
+    "strength": "minor",
+    "mechanism": "Gestapo officers, including the RSHA's Jewish affairs section under Eichmann, organised the deportations of Jews to extermination camps."
+  },
+  {
+    "cause": "Q242115",
+    "effect": "Q7462",
+    "strength": "primary",
+    "mechanism": "The collapse of central authority across the Five Dynasties and Ten Kingdoms period created the conditions Zhao Kuangyin exploited to reunify China under the Song."
+  },
+  {
+    "cause": "Q1154556",
+    "effect": "Q7462",
+    "strength": "contributing",
+    "mechanism": "General Zhao Kuangyin seized the throne from the last Later Zhou emperor in 960 and proclaimed the Song dynasty."
+  },
+  {
+    "cause": "Q7462",
+    "effect": "Q127197",
+    "strength": "minor",
+    "mechanism": "Song military engineers developed gunpowder bombs and incendiary devices, the explosive weapons that appear in 1221 bomb records."
+  },
+  {
+    "cause": "Q8409",
+    "effect": "Q62943",
+    "strength": "contributing",
+    "mechanism": "Alexander's withdrawal from the Punjab in 325 BC left satrapies vacant and Greek garrisons that Chandragupta Maurya subsequently overthrew."
+  },
+  {
+    "cause": "Q846025",
+    "effect": "Q62943",
+    "strength": "minor",
+    "mechanism": "Magadha, the most powerful of the Mahajanapadas, supplied the territorial and military base from which the Mauryan state expanded."
+  },
+  {
+    "cause": "Q62943",
+    "effect": "Q651377",
+    "strength": "primary",
+    "mechanism": "Pushyamitra Shunga, a Mauryan general, killed the last Maurya ruler around 185 BC and seized the throne, founding the Shunga Empire."
+  },
+  {
+    "cause": "Q62943",
+    "effect": "Q5257",
+    "strength": "contributing",
+    "mechanism": "After Mauryan authority collapsed in the Deccan, Satavahana rulers consolidated independent power there, founding the Satavahana dynasty."
+  },
+  {
+    "cause": "Q62943",
+    "effect": "Q93180",
+    "strength": "minor",
+    "mechanism": "Chandragupta Maurya's victory over Seleucus I around 305 BC forced the Seleucid ruler to cede territory west of the Indus."
+  },
+  {
+    "cause": "Q540978",
+    "effect": "Q172579",
+    "strength": "contributing",
+    "mechanism": "Franco-Piedmontese victories over Austria in 1859 gave Piedmont Lombardy, and the Sardinian kingdom then expanded into the Italian peninsula as the Kingdom of Italy."
+  },
+  {
+    "cause": "Q71092",
+    "effect": "Q172579",
+    "strength": "contributing",
+    "mechanism": "Napoleon III's secret 1858 Plombières agreement with Cavour committed French troops to the war against Austria that enlarged the Piedmontese state."
+  },
+  {
+    "cause": "Q6235",
+    "effect": "Q172579",
+    "strength": "contributing",
+    "mechanism": "Italian nationalism of the Risorgimento, promoted by Mazzini and Garibaldi's supporters, gave the unification movement its popular mass base."
+  },
+  {
+    "cause": "Q254106",
+    "effect": "Q172579",
+    "strength": "minor",
+    "mechanism": "Piedmont-Sardinia's participation in the Crimean War earned Cavour a seat at the 1856 Paris Congress and diplomatic support for Italian unification."
+  },
+  {
+    "cause": "Q12548",
+    "effect": "Q65968",
+    "strength": "contributing",
+    "mechanism": "The election of Rudolf of Habsburg as German king in 1273 launched the dynasty's rise to dominance within the Holy Roman Empire."
+  },
+  {
+    "cause": "Q171150",
+    "effect": "Q65968",
+    "strength": "minor",
+    "mechanism": "After the Hungarian defeat at Mohács in 1526, Habsburg claims through the Jagiellon succession gave the dynasty the Hungarian and Bohemian crowns."
+  },
+  {
+    "cause": "Q517",
+    "effect": "Q48314",
+    "strength": "primary",
+    "mechanism": "Napoleon's return from Elba in March 1815 prompted the Allies to reassemble, and his decision to attack Wellington and Blücher caused the battle at Waterloo."
+  },
+  {
+    "cause": "Q48314",
+    "effect": "Q207162",
+    "strength": "primary",
+    "mechanism": "Wellington and Blücher's victory at Waterloo let the Allies restore Louis XVIII to the French throne, inaugurating the Bourbon Restoration."
+  },
+  {
+    "cause": "Q854415",
+    "effect": "Q4948",
+    "strength": "contributing",
+    "mechanism": "Lombard invasions of northern Italy from 568 drove refugees into the Venetian lagoon, where they founded the settlements that became Venice."
+  },
+  {
+    "cause": "Q131192",
+    "effect": "Q4948",
+    "strength": "contributing",
+    "mechanism": "Attila's Hunnic raids of the 450s and later Germanic invasions pushed Italian populations onto the lagoon islands for refuge."
+  },
+  {
+    "cause": "Q8409",
+    "effect": "Q93180",
+    "strength": "primary",
+    "mechanism": "Alexander's conquests and his death in 323 BC produced the Diadochi, whose general Seleucus founded the Seleucid state in Asia."
+  },
+  {
+    "cause": "Q1231054",
+    "effect": "Q93180",
+    "strength": "minor",
+    "mechanism": "Ptolemy's 312 BC victory at Gaza over Demetrius let Seleucus return to Babylon, the event that began the Seleucid era."
+  },
+  {
+    "cause": "Q93180",
+    "effect": "Q7930888",
+    "strength": "primary",
+    "mechanism": "Antiochus IV's suppression of Jewish worship and imposition of Greek cult in Judea provoked the Maccabean revolt of 167 BC."
+  },
+  {
+    "cause": "Q93180",
+    "effect": "Q1259381",
+    "strength": "contributing",
+    "mechanism": "Antiochus III's war with Rome ended in defeat at Magnesia, and the Roman-imposed Treaty of Apamea in 188 BC stripped Seleucid territory west of the Taurus."
+  },
+  {
+    "cause": "Q42976",
+    "effect": "Q133356",
+    "strength": "primary",
+    "mechanism": "The Bolsheviks' October 1917 seizure of power let them establish Soviet government in Ukraine, which became the Ukrainian Soviet Socialist Republic in 1919."
+  },
+  {
+    "cause": "Q243610",
+    "effect": "Q133356",
+    "strength": "minor",
+    "mechanism": "Bolshevik forces destroyed the Ukrainian People's Republic in 1919 and 1920, clearing the way for a wholly Soviet Ukrainian government."
+  },
+  {
+    "cause": "Q186284",
+    "effect": "Q133356",
+    "strength": "contributing",
+    "mechanism": "The Polish-Soviet War of 1919 to 1921 and the Treaty of Riga fixed the western frontier that set the Ukrainian SSR's border with Poland."
+  },
+  {
+    "cause": "Q361",
+    "effect": "Q133356",
+    "strength": "contributing",
+    "mechanism": "The collapse of the Russian Empire during World War I opened the way for Ukrainian independence movements and then Bolshevik conquest."
+  },
+  {
+    "cause": "Q161885",
+    "effect": "Q14211",
+    "strength": "contributing",
+    "mechanism": "The 1707 Act of Union created a single Parliament of Great Britain whose leading minister, Walpole, from 1721 developed the office of Prime Minister."
+  },
+  {
+    "cause": "Q2006877",
+    "effect": "Q14211",
+    "strength": "minor",
+    "mechanism": "The Hanoverian monarchs George I and George II, with limited English and frequent absences, left cabinet business to ministers, cementing their leadership."
+  },
+  {
+    "cause": "Q12562",
+    "effect": "Q82708",
+    "strength": "primary",
+    "mechanism": "The Reformation's challenge to papal authority supplied the doctrinal and political climate in which Henry VIII broke with Rome and founded the Church of England."
+  },
+  {
+    "cause": "Q38370",
+    "effect": "Q82708",
+    "strength": "primary",
+    "mechanism": "Henry VIII's Act of Supremacy of 1534 made the king head of the English church after the Pope refused his annulment, creating the Church of England."
+  },
+  {
+    "cause": "Q465627",
+    "effect": "Q82708",
+    "strength": "minor",
+    "mechanism": "Charles V's troops sacked Rome in 1527, leaving Pope Clement VII dependent on the emperor and unable to grant Henry VIII's annulment."
+  },
+  {
+    "cause": "Q9554",
+    "effect": "Q82708",
+    "strength": "minor",
+    "mechanism": "Luther's writings gave English reformers such as Tyndale the scriptural arguments against papal authority that shaped the English break with Rome."
+  },
+  {
+    "cause": "Q362",
+    "effect": "Q83201",
+    "strength": "contributing",
+    "mechanism": "WWII weakened the European colonial powers and inspired independence movements in Asia and Africa, whose leaders gathered at Bandung in 1955 to seek a non-bloc path."
+  },
+  {
+    "cause": "Q102490",
+    "effect": "Q79757",
+    "strength": "primary",
+    "mechanism": "Torricelli's 1643 mercury tube experiment demonstrated atmospheric pressure, producing the first barometer."
+  },
+  {
+    "cause": "Q307",
+    "effect": "Q79757",
+    "strength": "contributing",
+    "mechanism": "Galileo's observation that pumps raised water only about ten metres prompted the vacuum experiments that led Torricelli to the barometer."
+  }
+]

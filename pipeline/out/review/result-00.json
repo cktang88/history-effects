@@ -1,0 +1,297 @@
+{
+  "Q11812>Q4917": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q11772>Q745799": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Abbasid caliphs sponsored translation of Greek philosophical and scientific texts into Arabic, which Islamic scholars of the Golden Age then built upon."
+  },
+  "Q41984>Q545449": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q4917>Q81545": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q4917>Q11264": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q41984>Q134900605": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q58792>Q120843": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q58792>Q119860532": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q4917>Q137612545": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q824489>Q193245": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "Colonial wars in Africa and economic stagnation under Estado Novo led young army officers of the MFA to stage the 25 April 1974 coup that ended the regime."
+  },
+  "Q7521>Q369560": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "Mongke Khan dispatched Hulagu westward with orders to crush the Assassins and the Abbasid caliphate, and Hulagu sacked Baghdad in 1258."
+  },
+  "Q4917>Q188532": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q203023>Q58792": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q173282>Q682597": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q391358>Q48537": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q11201>Q391358": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q35525>Q391358": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q4917>Q2885072": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q58792>Q111017791": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q4917>Q204213": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q203563>Q212220": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q186581>Q1134220": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q391358>Q623429": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "The Proclamation made ending slavery a Union war aim, paving the way for the 13th Amendment and the Reconstruction policies that followed emancipation."
+  },
+  "Q4917>Q856650": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q192769>Q308439": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q631489>Q308439": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q203563>Q1044829": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Boyar factions opposed to Tsar Vasily Shuisky invited Polish intervention, drawing Polish-Lithuanian forces into the Russian Time of Troubles."
+  },
+  "Q41984>Q53479": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q128168>Q641479": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Catholic missionary pressure and Uniate church policies, backed by szlachta and magnates, persecuted Orthodox Ruthenians and fueled the Cossack-peasant revolt."
+  },
+  "Q1029847>Q228911": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q719252>Q391358": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "Union victory at Antietam in September 1862 gave Lincoln the political opening to issue the preliminary Emancipation Proclamation."
+  },
+  "Q391358>Q719252": {
+    "verdict": "reverse",
+    "strength": "primary",
+    "mechanism": "Union victory at Antietam in September 1862 gave Lincoln the political opening to issue the preliminary Emancipation Proclamation."
+  },
+  "Q31066>Q726798": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q1065854>Q170682": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q221469>Q308439": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q846674>Q308439": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q465627>Q128168": {
+    "verdict": "keep",
+    "strength": "minor",
+    "mechanism": "The Sack of Rome discredited the Renaissance papacy and pushed the Church toward austere reform, reinforcing the Catholic reform movement."
+  },
+  "Q4917>Q139821980": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q9957>Q112524": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q4917>Q15353665": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q58792>Q1142572": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q2001966>Q617772": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "The Company-run Indian government, under orders from London, declared war on Persia in 1856 to counter Persian pressure on Herat and British interests."
+  },
+  "Q2001966>Q78994": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q2001966>Q191282": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "Company-run Bengal opium was auctioned to private traders who smuggled it into China, provoking Qing suppression and the British war of 1839."
+  },
+  "Q2001966>Q989092": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "The Company government in India under Governor-General Auckland launched the 1839 invasion to install Shah Shuja, triggering the First Anglo-Afghan War."
+  },
+  "Q221357>Q1501724": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q58792>Q643925": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q2001966>Q243979": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q2001966>Q238262": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q2001966>Q12444025": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Company annexations, economic drain and the crushing of the 1857 revolt generated grievances that later fed the nationalist movement against British rule."
+  },
+  "Q46652>Q1150344": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "After the Portuguese captured Malacca in 1511, the exiled Malaccan royal line founded the Johor Sultanate in 1528 as Malacca successor state."
+  },
+  "Q2060657>Q2672432": {
+    "verdict": "keep",
+    "strength": "primary",
+    "mechanism": "King Kertanegara humiliated Mongol envoy Meng Qi, prompting Kublai Khan to launch a punitive invasion of Java in 1293."
+  },
+  "Q1619120>Q622774": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q1139080>Q1065854": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q4917>Q6500827": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "The 1985 Plaza Accord depreciated the dollar against the yen, prompting yen appreciation and low Japanese interest rates that inflated the asset bubble."
+  },
+  "Q2018662>Q250515": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Kamarnava, a Western Ganga prince, migrated from Gangavadi to Kalinga and founded the Eastern Ganga line, as recorded in its copper plates."
+  },
+  "Q1346632>Q3269746": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  },
+  "Q1787448>Q1987351": {
+    "verdict": "keep",
+    "strength": "contributing",
+    "mechanism": "Pride's Purge created the Rump Parliament, which tried and executed Charles I and set up the republic that Cromwell later turned into the Protectorate."
+  },
+  "Q82006>Q1318051": {
+    "verdict": "reject",
+    "strength": "minor",
+    "mechanism": ""
+  }
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "cause": "Q11696",
+    "effect": "Q35525",
+    "strength": "primary",
+    "mechanism": "The creation of the US presidency in 1789 required an official executive residence, which the White House provides."
+  },
+  {
+    "cause": "Q48525",
+    "effect": "Q35525",
+    "strength": "contributing",
+    "mechanism": "Relocating the federal government to Washington, D.C. created the need for a dedicated executive mansion in the new capital."
+  },
+  {
+    "cause": "Q249",
+    "effect": "Q11656",
+    "strength": "contributing",
+    "mechanism": "Fleming's valve was developed to detect radio signals in wireless telegraphy, producing the first thermionic diode."
+  },
+  {
+    "cause": "Q11656",
+    "effect": "Q68",
+    "strength": "contributing",
+    "mechanism": "Thermionic valves such as diodes and triodes became the switching elements of early electronic computers."
+  },
+  {
+    "cause": "Q79965",
+    "effect": "Q42005",
+    "strength": "contributing",
+    "mechanism": "Golden Horde troops besieging Caffa in 1346 and Mongol trade routes carried plague into Europe."
+  },
+  {
+    "cause": "Q12969754",
+    "effect": "Q11455",
+    "strength": "contributing",
+    "mechanism": "Hertz's confirmation of electromagnetic waves validated Maxwell's electrodynamics, the theory special relativity reconciled with mechanics."
+  },
+  {
+    "cause": "Q9683",
+    "effect": "Q1059892",
+    "strength": "contributing",
+    "mechanism": "Japan modeled its Taiho Code of 701 on Tang legal codes and administration, adopting the Tang governance model."
+  },
+  {
+    "cause": "Q9683",
+    "effect": "Q715257",
+    "strength": "contributing",
+    "mechanism": "A Tang military alliance with Silla defeated Goguryeo and Baekje, enabling Silla to unify most of the Korean peninsula."
+  },
+  {
+    "cause": "Q1048",
+    "effect": "Q11184",
+    "strength": "primary",
+    "mechanism": "Julius Caesar commissioned Sosigenes to reform the Roman calendar, establishing the 365.25-day Julian year in 46 BC."
+  },
+  {
+    "cause": "Q161904",
+    "effect": "Q37200",
+    "strength": "primary",
+    "mechanism": "Pharaoh Khufu commissioned the Great Pyramid as his royal tomb, mobilizing the state labour force that built it."
+  },
+  {
+    "cause": "Q220276",
+    "effect": "Q37200",
+    "strength": "contributing",
+    "mechanism": "Djoser's Step Pyramid of the Third Dynasty established the monumental stone pyramid form that Khufu's architects developed into the Great Pyramid."
+  },
+  {
+    "cause": "Q15180",
+    "effect": "Q486",
+    "strength": "contributing",
+    "mechanism": "The Soviet RBMK reactor design and a secretive, test-driven operating culture set up the 1986 explosion at Chernobyl."
+  },
+  {
+    "cause": "Q12861",
+    "effect": "Q12560",
+    "strength": "minor",
+    "mechanism": "Firearms and artillery powered by gunpowder gave the Ottomans military advantages that supported their conquests."
+  },
+  {
+    "cause": "Q12757",
+    "effect": "Q362",
+    "strength": "contributing",
+    "mechanism": "Internal combustion engines powered the tanks, trucks and aircraft that mechanized and accelerated World War II."
+  },
+  {
+    "cause": "Q36704",
+    "effect": "Q37024",
+    "strength": "contributing",
+    "mechanism": "The breakup of Yugoslavia left Serbia and Montenegro as the rump federation, which it succeeded in 2003."
+  },
+  {
+    "cause": "Q713750",
+    "effect": "Q16957",
+    "strength": "primary",
+    "mechanism": "The founding of West Germany in 1949 prompted the Soviet occupation zone to be organized as the German Democratic Republic later that year."
+  },
+  {
+    "cause": "Q179744",
+    "effect": "Q40415",
+    "strength": "minor",
+    "mechanism": "Daguerreotype photography pushed painters toward capturing transient light and colour, an influence on the Impressionists."
+  },
+  {
+    "cause": "Q1035",
+    "effect": "Q43478",
+    "strength": "primary",
+    "mechanism": "Darwin's theory of natural selection, presented with Wallace in 1858 and published in 1859, became the foundation of evolutionary biology."
+  }
+]

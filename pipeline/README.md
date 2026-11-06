@@ -43,7 +43,9 @@ bun run data:gapfill-merge # 06b: validate and merge into data/curated.json
 # coverage pass (occasionally): 07-coverage-prep → agents → `07-coverage-merge.ts titles` → 07b-redirects.py → 07-coverage-merge.ts
 ```
 
-HTTP responses are cached in `pipeline/.cache/` (git-ignored), so reruns are cheap. Intermediate files go to `pipeline/out/`.
+HTTP responses are cached in `pipeline/.cache/` (git-ignored), so reruns are cheap.
+
+**The intermediate snapshot is committed** in `pipeline/out/` (≈28 MB): raw entities, relations, countries, images, the extracted Wikipedia evidence (`wiki.json.gz`), and every agent's inputs and outputs (`review/`, `gapfill/`, `coverage/`), which serve as the audit trail of each AI judgment. With it, `bun run data:build` and the review and gap-fill steps run offline. Only the raw article dump (`out/dump/`, ≈170 MB) and the HTTP cache are left out; `03a-dump.py` re-fetches the dump on demand.
 
 **Why the dumps:** the Wikipedia API rate-limits shared IPs. The multistream dump's index maps every title to a small bz2 block, so [`03a-dump.py`](03a-dump.py) range-requests only the blocks containing our articles, about 5% of the 27 GB dump. Redirects come from the redirect table dump, so links like "Versailles Treaty" resolve.
 

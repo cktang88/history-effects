@@ -1,0 +1,545 @@
+{
+ "region": "Latin America",
+ "cells": [
+  {
+   "cell": "pre|Latin America",
+   "era": "Before 3000 BCE",
+   "from": -12000,
+   "to": -3000,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "-3000_-2000|Latin America",
+   "era": "3000–2000 BCE",
+   "from": -3000,
+   "to": -2000,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "-2000_-1000|Latin America",
+   "era": "2000–1000 BCE",
+   "from": -2000,
+   "to": -1000,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "-1000_-500|Latin America",
+   "era": "1000–500 BCE",
+   "from": -1000,
+   "to": -500,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "-500_0|Latin America",
+   "era": "500–0 BCE",
+   "from": -500,
+   "to": 0,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "0_250|Latin America",
+   "era": "0–250",
+   "from": 0,
+   "to": 250,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "250_500|Latin America",
+   "era": "250–500",
+   "from": 250,
+   "to": 500,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "500_750|Latin America",
+   "era": "500–750",
+   "from": 500,
+   "to": 750,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "750_1000|Latin America",
+   "era": "750–1000",
+   "from": 750,
+   "to": 1000,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1000_1100|Latin America",
+   "era": "1000–1100",
+   "from": 1000,
+   "to": 1100,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1100_1200|Latin America",
+   "era": "1100–1200",
+   "from": 1100,
+   "to": 1200,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1200_1300|Latin America",
+   "era": "1200–1300",
+   "from": 1200,
+   "to": 1300,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1300_1400|Latin America",
+   "era": "1300–1400",
+   "from": 1300,
+   "to": 1400,
+   "have": [
+    "Aztec Empire"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1400_1500|Latin America",
+   "era": "1400–1500",
+   "from": 1400,
+   "to": 1500,
+   "have": [
+    "Grenada",
+    "Inca Empire",
+    "Portuguese Empire"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "1500_1550|Latin America",
+   "era": "1500–1550",
+   "from": 1500,
+   "to": 1550,
+   "have": [
+    "Spanish conquest of the Aztec Empire",
+    "Spanish conquest of the Inca Empire",
+    "La Noche Triste",
+    "Arauco War",
+    "Battle of Cajamarca",
+    "Fall of Tenochtitlan",
+    "Inca Civil War"
+   ],
+   "count": 7
+  },
+  {
+   "cell": "1550_1600|Latin America",
+   "era": "1550–1600",
+   "from": 1550,
+   "to": 1600,
+   "have": [
+    "Anglo-Spanish War (1585–1604)"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1600_1650|Latin America",
+   "era": "1600–1650",
+   "from": 1600,
+   "to": 1650,
+   "have": [
+    "Barbados",
+    "Dutch–Portuguese War"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1650_1700|Latin America",
+   "era": "1650–1700",
+   "from": 1650,
+   "to": 1700,
+   "have": [
+    "Anglo-Spanish War (1654–1660)"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1700_1750|Latin America",
+   "era": "1700–1750",
+   "from": 1700,
+   "to": 1750,
+   "have": [
+    "Anglo-Spanish War (1727–1729)"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1750_1800|Latin America",
+   "era": "1750–1800",
+   "from": 1750,
+   "to": 1800,
+   "have": [
+    "Haitian Revolution",
+    "War of the First Coalition",
+    "Quasi-War",
+    "Zong massacre",
+    "Guaraní War",
+    "Inconfidência Mineira"
+   ],
+   "count": 6
+  },
+  {
+   "cell": "1800_1810|Latin America",
+   "era": "1800s",
+   "from": 1800,
+   "to": 1810,
+   "have": [
+    "Spanish American wars of independence",
+    "War of the Oranges",
+    "1804 Haitian massacre",
+    "Bolivian War of Independence",
+    "Battle of Vertières"
+   ],
+   "count": 5
+  },
+  {
+   "cell": "1810_1820|Latin America",
+   "era": "1810s",
+   "from": 1810,
+   "to": 1820,
+   "have": [
+    "Gran Colombia",
+    "United Provinces of the Río de la Plata",
+    "May Revolution",
+    "Argentine War of Independence",
+    "Grito de Dolores",
+    "Battle of Boyacá",
+    "Battle of Maipú",
+    "Battle of Chacabuco",
+    "Argentine Civil Wars",
+    "Venezuelan War of Independence",
+    "Chilean War of Independence",
+    "Colombian War of Independence",
+    "Primera Junta"
+   ],
+   "count": 13
+  },
+  {
+   "cell": "1820_1830|Latin America",
+   "era": "1820s",
+   "from": 1820,
+   "to": 1830,
+   "have": [
+    "Empire of Brazil",
+    "Federal Republic of Central America",
+    "First Mexican Empire",
+    "Battle of Ayacucho",
+    "Cisplatine War",
+    "Peruvian War of Independence",
+    "Brazilian War of Independence",
+    "Battle of Carabobo",
+    "Battle of Junín",
+    "Gran Colombia–Peru War"
+   ],
+   "count": 10
+  },
+  {
+   "cell": "1830_1840|Latin America",
+   "era": "1830s",
+   "from": 1830,
+   "to": 1840,
+   "have": [
+    "Uruguayan Civil War",
+    "Ragamuffin War",
+    "War of the Confederation"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "1840_1850|Latin America",
+   "era": "1840s",
+   "from": 1840,
+   "to": 1850,
+   "have": [
+    "Mexican–American War",
+    "Treaty of Guadalupe Hidalgo",
+    "Dominican War of Independence",
+    "Caste War of Yucatán"
+   ],
+   "count": 4
+  },
+  {
+   "cell": "1850_1860|Latin America",
+   "era": "1850s",
+   "from": 1850,
+   "to": 1860,
+   "have": [
+    "Reform War",
+    "Platine War",
+    "Federal War"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "1860_1870|Latin America",
+   "era": "1860s",
+   "from": 1860,
+   "to": 1870,
+   "have": [
+    "Paraguayan War",
+    "Second Mexican Empire",
+    "Ten Years' War",
+    "Battle of Puebla",
+    "Chincha Islands War",
+    "Battle of Camarón",
+    "Occupation of Araucanía",
+    "Uruguayan War",
+    "Dominican Restoration War"
+   ],
+   "count": 9
+  },
+  {
+   "cell": "1870_1880|Latin America",
+   "era": "1870s",
+   "from": 1870,
+   "to": 1880,
+   "have": [
+    "War of the Pacific"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1880_1890|Latin America",
+   "era": "1880s",
+   "from": 1880,
+   "to": 1890,
+   "have": [
+    "Proclamation of the Republic (Brazil)"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1890_1900|Latin America",
+   "era": "1890s",
+   "from": 1890,
+   "to": 1900,
+   "have": [
+    "Cuban War of Independence",
+    "Banana Wars",
+    "Thousand Days' War",
+    "War of Canudos",
+    "Acre War",
+    "Chilean Civil War of 1891"
+   ],
+   "count": 6
+  },
+  {
+   "cell": "1900_1910|Latin America",
+   "era": "1900s",
+   "from": 1900,
+   "to": 1910,
+   "have": [
+    "Santa María School massacre"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1910_1920|Latin America",
+   "era": "1910s",
+   "from": 1910,
+   "to": 1920,
+   "have": [
+    "Mexican Revolution",
+    "Battle of the Falkland Islands",
+    "Ten Tragic Days"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "1920_1930|Latin America",
+   "era": "1920s",
+   "from": 1920,
+   "to": 1930,
+   "have": [
+    "Cristero War",
+    "Banana Massacre"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1930_1940|Latin America",
+   "era": "1930s",
+   "from": 1930,
+   "to": 1940,
+   "have": [
+    "Battle of the Atlantic",
+    "Chaco War",
+    "Battle of the River Plate",
+    "Montevideo Convention",
+    "Parsley massacre",
+    "Colombia–Peru War",
+    "La Matanza",
+    "Revolution of 1930",
+    "Constitutionalist Revolution"
+   ],
+   "count": 9
+  },
+  {
+   "cell": "1940_1950|Latin America",
+   "era": "1940s",
+   "from": 1940,
+   "to": 1950,
+   "have": [
+    "Cold War",
+    "Ecuadorian–Peruvian War",
+    "La Violencia",
+    "Costa Rican Civil War",
+    "Paraguayan Civil War (1947)",
+    "1943 Argentine Revolution"
+   ],
+   "count": 6
+  },
+  {
+   "cell": "1950_1960|Latin America",
+   "era": "1950s",
+   "from": 1950,
+   "to": 1960,
+   "have": [
+    "Netherlands Antilles",
+    "Cuban Revolution",
+    "1954 Guatemalan coup d'état",
+    "Battle of Santa Clara",
+    "Escambray rebellion",
+    "Mexican Dirty War"
+   ],
+   "count": 6
+  },
+  {
+   "cell": "1960_1970|Latin America",
+   "era": "1960s",
+   "from": 1960,
+   "to": 1970,
+   "have": [
+    "Jamaica",
+    "Saint Kitts and Nevis",
+    "Saint Lucia",
+    "1960 Valdivia earthquake",
+    "Football War",
+    "Colombian conflict",
+    "Guatemalan Civil War",
+    "Military dictatorship in Brazil",
+    "Tlatelolco massacre",
+    "1964 Brazilian coup d'état",
+    "Dominican Civil War"
+   ],
+   "count": 11
+  },
+  {
+   "cell": "1970_1980|Latin America",
+   "era": "1970s",
+   "from": 1970,
+   "to": 1980,
+   "have": [
+    "Saint Vincent and the Grenadines",
+    "1973 Chilean coup d'état",
+    "National Reorganization Process",
+    "Nicaraguan Revolution",
+    "Salvadoran Civil War",
+    "1970 Ancash earthquake",
+    "1976 Argentine coup d'état",
+    "Ezeiza massacre"
+   ],
+   "count": 8
+  },
+  {
+   "cell": "1980_1990|Latin America",
+   "era": "1980s",
+   "from": 1980,
+   "to": 1990,
+   "have": [
+    "Belize",
+    "Antigua and Barbuda",
+    "Falklands War",
+    "United Nations Convention on the Law of the Sea",
+    "Paquisha War",
+    "Guatemalan genocide",
+    "El Mozote massacre",
+    "Surinamese Civil War"
+   ],
+   "count": 8
+  },
+  {
+   "cell": "1990_2000|Latin America",
+   "era": "1990s",
+   "from": 1990,
+   "to": 2000,
+   "have": [
+    "Bolivarian Revolution",
+    "Cenepa War",
+    "Carandiru massacre"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "2000_2010|Latin America",
+   "era": "2000s",
+   "from": 2000,
+   "to": 2010,
+   "have": [
+    "Mexican drug war",
+    "United Nations Convention Against Corruption",
+    "Hurricane Dean",
+    "Hurricane Ivan",
+    "2002 Venezuelan coup attempt",
+    "2004 Haitian coup d'état"
+   ],
+   "count": 6
+  },
+  {
+   "cell": "2010_2020|Latin America",
+   "era": "2010s",
+   "from": 2010,
+   "to": 2020,
+   "have": [
+    "2010 Haiti earthquake",
+    "2010 Chile earthquake",
+    "2016 Ecuador earthquake",
+    "2017 Chiapas earthquake",
+    "Hurricane Patricia",
+    "2017 Puebla earthquake",
+    "Escazú Agreement",
+    "United States–Mexico–Canada Agreement",
+    "2015–16 Zika virus epidemic",
+    "2010s Haiti cholera outbreak",
+    "2014 Iquique earthquake",
+    "Rio de Janeiro school shooting"
+   ],
+   "count": 12
+  },
+  {
+   "cell": "2020_2030|Latin America",
+   "era": "2020s",
+   "from": 2020,
+   "to": 2030,
+   "have": [
+    "8 January Brasília attacks",
+    "COVID-19 pandemic in Brazil",
+    "Assassination of Jovenel Moïse",
+    "COVID-19 pandemic in Mexico",
+    "2025 United Nations Climate Change Conference",
+    "COVID-19 pandemic in Argentina",
+    "COVID-19 pandemic in Peru",
+    "2024 Bolivian coup attempt",
+    "COVID-19 pandemic in Colombia",
+    "COVID-19 pandemic in Bolivia",
+    "COVID-19 pandemic in Chile",
+    "COVID-19 pandemic in Suriname",
+    "2022 Peruvian self-coup attempt"
+   ],
+   "count": 13
+  }
+ ]
+}

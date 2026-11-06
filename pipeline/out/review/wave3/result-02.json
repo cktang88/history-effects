@@ -1,0 +1,312 @@
+{
+ "Q361>Q537143": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q621917>Q1290590": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7416>Q15251": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Thatcher's 1982 Beijing talks with Deng Xiaoping produced the 1984 Sino-British Joint Declaration, which fixed the 1997 handover of Hong Kong."
+ },
+ "Q8440>Q65072493": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Chávez's 1999 constitution and institutional overhaul built the system that Nicolás Maduro used to control the 2024 election."
+ },
+ "Q18578423>Q5308718": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q269655>Q696874": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Japan's harsh terms in the Treaty of Shimonoseki alarmed Russia, Germany and France, which jointly forced Japan to return the Liaodong Peninsula to China."
+ },
+ "Q868261>Q6500827": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Black Monday's 1987 crash led the Bank of Japan to delay monetary tightening, letting Japan's asset bubble inflate further before it burst."
+ },
+ "Q457786>Q25830856": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Duterte, elected in 2016 on a law-and-order platform, launched the intensified anti-drug campaign, applying his Davao City model nationwide."
+ },
+ "Q604100>Q426737": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Sredny Stog communities contributed ancestry and material culture to the Yamnaya culture that formed on the steppes in the later fourth and third millennia BC."
+ },
+ "Q129006>Q924138": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Attlee's cabinet secretly approved an independent British atomic bomb programme in 1947, whose first test device was detonated in Operation Hurricane in 1952."
+ },
+ "Q83873548>Q65091319": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q42970>Q133309815": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2418422>Q1348639": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1893 depression led Pullman to cut wages while keeping rents high, provoking the 1894 strike that shut down rail traffic across the Northern states."
+ },
+ "Q8729>Q2006230": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2006230>Q488": {
+  "verdict": "reverse",
+  "strength": "contributing",
+  "mechanism": "The 1945 American atomic bombings of Hiroshima and Nagasaki convinced Stalin to accelerate and prioritize the Soviet atomic bomb project."
+ },
+ "Q12860>Q18578423": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "After conquering Granada in 1492, Ferdinand and co-ruler Isabella sponsored Columbus's transatlantic voyages in the name of the Catholic Monarchs."
+ },
+ "Q498117>Q178687": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7313>Q2672432": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q747589>Q2166177": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Zulu victory at Isandlwana forced Britain to launch a renewed invasion of Zululand, whose army defeated the Zulu forces at Ulundi in July 1879."
+ },
+ "Q2634783>Q2394474": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1930 revolution installed Getúlio Vargas, who used emergency powers to dissolve Congress and impose the Estado Novo dictatorship in 1937."
+ },
+ "Q160554>Q1642187": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q8729>Q1092510": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The Bolshevik seizure of power and fear of revolution spreading abroad fueled American anti-radical hysteria, producing the 1919–1920 Red Scare and Palmer Raids."
+ },
+ "Q42976>Q1092510": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q6957844>Q4465891": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q208694>Q2607169": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Pakistan's leaders, judging India's army weakened by its 1962 defeat by China, planned Operation Gibraltar, infiltrating fighters into Indian-held Kashmir."
+ },
+ "Q128902>Q587151": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q131297>Q1433226": {
+  "verdict": "reverse",
+  "strength": "primary",
+  "mechanism": "The Rwandan genocide that began in April 1994 prompted the UN mandate and French-led deployment of Opération Turquoise to Rwanda in June 1994."
+ },
+ "Q1121532>Q589285": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "After 1578, Ahmad al-Mansur's Moroccan army recruited Portuguese captives taken at Alcácer Quibir and used victory wealth to finance the Songhai invasion."
+ },
+ "Q223126>Q4414118": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Military humiliation in the Chaco War discredited Bolivia's traditional oligarchy and spawned the Generación del Chaco, which backed the MNR's 1952 revolution."
+ },
+ "Q9903>Q484271": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q65091319>Q112317546": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q797848>Q4166578": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2985554>Q1922071": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Pakistan's Operation Searchlight crackdown in East Pakistan drove millions of refugees into India, prompting Indian intervention and open war with Pakistan in December 1971."
+ },
+ "Q296754>Q2917077": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1977699>Q78994": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q152004>Q1475005": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Chilean victories and the occupation of Lima forced Peru to sign the 1883 Treaty of Ancón, ceding Tarapacá and provisionally surrendering Tacna and Arica."
+ },
+ "Q1977699>Q2786767": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q705571>Q16056284": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Wartime recruitment of Nyasaland labourers for the East African campaign, and the hardships it brought, fuelled John Chilembwe's January 1915 revolt against colonial rule."
+ },
+ "Q1825430>Q191282": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Lin Zexu's 1839 destruction of over 1,000 tons of British merchants' opium at Humen provoked Britain to dispatch a naval expedition to China in 1840."
+ },
+ "Q9903>Q4520158": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1046201>Q169598": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q4116897>Q529723": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1789038>Q472802": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The New Zealand Company's land purchases and settlement schemes pressed Britain to annex New Zealand, and Governor Hobson negotiated the Treaty of Waitangi in 1840."
+ },
+ "Q944941>Q4353495": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Veterans of the 1798 Irish rebellion, transported to New South Wales as convicts, led the 1804 Castle Hill rising, seeking to seize ships back to Ireland."
+ },
+ "Q16574>Q709855": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2607169>Q233583": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Pakistan's Operation Gibraltar infiltrated fighters into Indian-held Kashmir in August 1965, provoking an Indian counteroffensive that escalated into full war."
+ },
+ "Q695566>Q5599833": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1873 panic and long depression led railroads to cut wages repeatedly, and the resulting worker anger produced the nationwide Great Railroad Strike of 1877."
+ },
+ "Q1054850>Q2625916": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q42534>Q2625916": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1050999>Q1204796": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Turkey's July 1974 invasion of Cyprus, launched after the junta-backed coup, discredited Greece's colonels, who collapsed and handed power to civilians, starting the Metapolitefsi."
+ },
+ "Q233583>Q2607169": {
+  "verdict": "reverse",
+  "strength": "contributing",
+  "mechanism": "Pakistan's Operation Gibraltar infiltration into Kashmir in 1965 provoked India's counterattack, escalating into the India–Pakistan war of 1965."
+ },
+ "Q118382>Q472699": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "South Carolina planters, defending slavery against federal tariffs and anti-slavery pressure, passed the 1832 ordinance nullifying federal tariffs."
+ },
+ "Q7462>Q1205096": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q538766>Q2091916": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1854 Plan of Ayutla brought liberals to power, whose 1857 constitution and anticlerical laws provoked conservatives into the Reform War of 1857–1861."
+ },
+ "Q181026>Q3944738": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q9592>Q1536983": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q4870727>Q129864": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q332620>Q4871308": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1619120>Q1318051": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1781531>Q838190": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Reports of atrocities under King Leopold's Congo Free State, publicized by E.D. Morel, led activists to found the Congo Reform Association in 1904."
+ },
+ "Q13582>Q838190": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q209297>Q3944738": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ }
+}

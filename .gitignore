@@ -18,5 +18,7 @@ bun.lockb
 
 # pipeline HTTP cache (re-runs are free; delete to refetch)
 pipeline/.cache/
-pipeline/out/
+# raw article dump (≈170 MB, re-derivable); everything else in out/ is committed
+pipeline/out/dump/
+pipeline/out/wiki/
 __pycache__/

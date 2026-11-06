@@ -1,0 +1,470 @@
+[
+  {
+    "cause": "Q33143",
+    "effect": "Q192769",
+    "strength": "primary",
+    "mechanism": "Britain's debt from the Seven Years' War led Parliament to impose new taxes and tighter control on the American colonies, provoking resistance."
+  },
+  {
+    "cause": "Q12539",
+    "effect": "Q192769",
+    "strength": "contributing",
+    "mechanism": "Enlightenment arguments for natural rights and popular sovereignty, spread through colonial pamphlets and newspapers, gave colonists an ideological case against British rule."
+  },
+  {
+    "cause": "Q192769",
+    "effect": "Q48525",
+    "strength": "contributing",
+    "mechanism": "Dissatisfaction with the weak Articles of Confederation led states to adopt the 1787 Constitution, which created the federal government of the United States."
+  },
+  {
+    "cause": "Q171328",
+    "effect": "Q466087",
+    "strength": "contributing",
+    "mechanism": "The UN Charter's commitment to human rights provided the post-war framework on which the Convention on the Rights of the Child was later drafted."
+  },
+  {
+    "cause": "Q42976",
+    "effect": "Q165058",
+    "strength": "minor",
+    "mechanism": "The Bolshevik seizure of power built the Soviet state whose forced grain requisitions and collectivization in Ukraine produced the famine."
+  },
+  {
+    "cause": "Q1273506",
+    "effect": "Q35216",
+    "strength": "primary",
+    "mechanism": "King Wu's forces defeated the Shang army at Muye, ending Shang rule and establishing the Zhou dynasty."
+  },
+  {
+    "cause": "Q40415",
+    "effect": "Q80113",
+    "strength": "contributing",
+    "mechanism": "Expressionists rejected Impressionism's focus on optical light, turning instead to subjective emotion and distorted form."
+  },
+  {
+    "cause": "Q80113",
+    "effect": "Q6034",
+    "strength": "minor",
+    "mechanism": "The Expressionist revolt against conventional form and bourgeois norms in German-speaking cities fed directly into the anti-art ideas of Dada."
+  },
+  {
+    "cause": "Q12567",
+    "effect": "Q179876",
+    "strength": "contributing",
+    "mechanism": "Viking invasions destroyed rival kingdoms, pushing Wessex under Alfred and Æthelstan to unify the English kingdoms into one realm."
+  },
+  {
+    "cause": "Q4692",
+    "effect": "Q200464",
+    "strength": "minor",
+    "mechanism": "Renaissance curiosity and advances in navigation and cartography fuelled the Portuguese voyages that built the empire."
+  },
+  {
+    "cause": "Q200464",
+    "effect": "Q133641",
+    "strength": "contributing",
+    "mechanism": "Portuguese voyages along the African coast and to India opened the sea routes that launched the Age of Discovery."
+  },
+  {
+    "cause": "Q200464",
+    "effect": "Q184716",
+    "strength": "contributing",
+    "mechanism": "Portuguese colonization of Brazil from 1500 established one of the first permanent European settlements in the Americas."
+  },
+  {
+    "cause": "Q150995",
+    "effect": "Q27306",
+    "strength": "contributing",
+    "mechanism": "The Peace of Westphalia gave Brandenburg's rulers Eastern Pomerania and other territories, expanding the base of the future Prussian state."
+  },
+  {
+    "cause": "Q81212",
+    "effect": "Q170174",
+    "strength": "primary",
+    "mechanism": "Pepin the Short's 756 donation of conquered Lombard lands to the papacy created the territorial base of the Papal States."
+  },
+  {
+    "cause": "Q42834",
+    "effect": "Q170174",
+    "strength": "contributing",
+    "mechanism": "The collapse of Western Roman imperial authority left Italy without protection, letting the papacy grow into the dominant local power."
+  },
+  {
+    "cause": "Q362",
+    "effect": "Q127956",
+    "strength": "contributing",
+    "mechanism": "Wartime radar research produced the magnetron, the high-power microwave source that made microwave cooking practical."
+  },
+  {
+    "cause": "Q38789",
+    "effect": "Q161227",
+    "strength": "contributing",
+    "mechanism": "Soviet victory at Stalingrad shifted the war's balance, giving Stalin the military leverage he used to press his demands at Yalta."
+  },
+  {
+    "cause": "Q83055",
+    "effect": "Q161227",
+    "strength": "contributing",
+    "mechanism": "Germany's June 1941 invasion drew the Soviet Union into the Allied coalition, making Soviet participation and demands central to Yalta."
+  },
+  {
+    "cause": "Q16470",
+    "effect": "Q161227",
+    "strength": "minor",
+    "mechanism": "The Western Allies' June 1944 Normandy landings opened a second front, shaping the postwar zones of control discussed at Yalta."
+  },
+  {
+    "cause": "Q7318",
+    "effect": "Q189266",
+    "strength": "primary",
+    "mechanism": "Nazi Germany's June 1941 invasion of the Soviet Union opened the Eastern Front, the main land theatre of the war in Europe."
+  },
+  {
+    "cause": "Q130796",
+    "effect": "Q189266",
+    "strength": "minor",
+    "mechanism": "The 1939 Molotov-Ribbentrop Pact gave Germany a free hand in Poland, and Hitler's later decision to break it led to the Eastern Front."
+  },
+  {
+    "cause": "Q171328",
+    "effect": "Q123759",
+    "strength": "contributing",
+    "mechanism": "The UN Charter's Chapter VIII authorized regional security arrangements, providing the legal basis for the Organization of American States."
+  },
+  {
+    "cause": "Q231392",
+    "effect": "Q79791",
+    "strength": "contributing",
+    "mechanism": "Asturian kings launched Christian counter-offensives from the northern mountains, creating a base from which Reconquista campaigns advanced south."
+  },
+  {
+    "cause": "Q957186",
+    "effect": "Q79791",
+    "strength": "minor",
+    "mechanism": "The Asturian victory at Covadonga is traditionally seen as the opening of Christian resistance that grew into the Reconquista."
+  },
+  {
+    "cause": "Q79791",
+    "effect": "Q75613",
+    "strength": "minor",
+    "mechanism": "Almoravid armies crossed into Iberia in 1086 to halt Alfonso VI's advances, drawing the Almoravid dynasty into the Reconquista's struggle."
+  },
+  {
+    "cause": "Q79791",
+    "effect": "Q199688",
+    "strength": "minor",
+    "mechanism": "Almohad rulers intervened in Iberia to halt Christian advances, sustaining the Reconquista's conflict into the twelfth century."
+  },
+  {
+    "cause": "Q551888",
+    "effect": "Q428995",
+    "strength": "primary",
+    "mechanism": "Alexander the Great's conquests across Persia and Egypt spread Greek rule and culture, and his death in 323 BC left the Hellenistic kingdoms."
+  },
+  {
+    "cause": "Q2912306",
+    "effect": "Q428995",
+    "strength": "contributing",
+    "mechanism": "The Wars of the Diadochi divided Alexander's empire among rival generals, producing the Ptolemaic, Seleucid and Antigonid kingdoms."
+  },
+  {
+    "cause": "Q209440",
+    "effect": "Q64403",
+    "strength": "contributing",
+    "mechanism": "Voltaic cell discoveries gave chemists a steady electric current, enabling Nicholson and Carlisle's 1800 electrolysis of water."
+  },
+  {
+    "cause": "Q8669",
+    "effect": "Q26683",
+    "strength": "primary",
+    "mechanism": "Arab-Israeli hostilities and the Palestinian refugee crisis led Arab states to found the PLO in 1964 as the Palestinian national voice."
+  },
+  {
+    "cause": "Q6235",
+    "effect": "Q12583",
+    "strength": "minor",
+    "mechanism": "The Cuban nationalist insurgency against Spanish rule drove the 1895-98 war of independence that drew the United States into the conflict."
+  },
+  {
+    "cause": "Q78994",
+    "effect": "Q26013",
+    "strength": "contributing",
+    "mechanism": "Anglo-French Napoleonic conflict led Britain to impress American sailors and enforce trade restrictions, provoking the U.S. declaration of war."
+  },
+  {
+    "cause": "Q81545",
+    "effect": "Q2946372",
+    "strength": "contributing",
+    "mechanism": "Weapons from Libyan arsenals and Tuareg fighters returning from Gaddafi's army fed the 2012 rebellion that sparked the Mali War."
+  },
+  {
+    "cause": "Q81545",
+    "effect": "Q178810",
+    "strength": "minor",
+    "mechanism": "The 2011 NATO intervention in Libya hardened Russian and Chinese opposition to Western action, shaping the response to the Syrian civil war."
+  },
+  {
+    "cause": "Q131297",
+    "effect": "Q327237",
+    "strength": "contributing",
+    "mechanism": "Hutu militias and refugees who fled into eastern Zaire after the genocide fed the Kivu conflict that became part of the Congo wars."
+  },
+  {
+    "cause": "Q12536",
+    "effect": "Q745799",
+    "strength": "primary",
+    "mechanism": "Abbasid patronage in Baghdad, including the translation movement and the House of Wisdom, created the institutions that drove the Islamic Golden Age."
+  },
+  {
+    "cause": "Q8575586",
+    "effect": "Q745799",
+    "strength": "minor",
+    "mechanism": "Umayyad rule established Arabic administration and Muslim-ruled cities across the Middle East, creating the territories where Abbasid scholarship flourished."
+  },
+  {
+    "cause": "Q432",
+    "effect": "Q745799",
+    "strength": "contributing",
+    "mechanism": "Islamic scriptural and legal needs, including Quran interpretation and hadith study, motivated early scholarship in language, law and science."
+  },
+  {
+    "cause": "Q330369",
+    "effect": "Q34636",
+    "strength": "contributing",
+    "mechanism": "William Morris's Arts and Crafts movement promoted handcraft and organic ornament, which Art Nouveau designers adopted and transformed."
+  },
+  {
+    "cause": "Q34636",
+    "effect": "Q878985",
+    "strength": "minor",
+    "mechanism": "Art Nouveau's break with historical revival styles helped establish the modernist principle of new forms suited to new materials."
+  },
+  {
+    "cause": "Q42934",
+    "effect": "Q131221",
+    "strength": "contributing",
+    "mechanism": "Cubist fragmentation of form pushed Futurist painters such as Boccioni toward dynamic, multi-view compositions."
+  },
+  {
+    "cause": "Q2269",
+    "effect": "Q131221",
+    "strength": "minor",
+    "mechanism": "Industrialization and the new machine age supplied the speed and technology that Futurists celebrated in their manifestos."
+  },
+  {
+    "cause": "Q131221",
+    "effect": "Q6034",
+    "strength": "minor",
+    "mechanism": "Futurist manifesto provocation and performance style influenced the anti-art experiments of Dada in Zurich and Berlin."
+  },
+  {
+    "cause": "Q131221",
+    "effect": "Q173782",
+    "strength": "minor",
+    "mechanism": "The Futurist celebration of speed and machines fed into the streamlined, machine-age imagery of Art Deco."
+  },
+  {
+    "cause": "Q976887",
+    "effect": "Q11264",
+    "strength": "minor",
+    "mechanism": "The 1954 US-backed overthrow of Guatemala's Arbenz government convinced Cuban revolutionaries that reform under US-aligned rule was impossible."
+  },
+  {
+    "cause": "Q46083",
+    "effect": "Q133132",
+    "strength": "primary",
+    "mechanism": "Defeat at Sedan and the 1870-71 Prussian siege left Parisians armed and angry, which sparked the Commune's seizure of power in March 1871."
+  },
+  {
+    "cause": "Q71092",
+    "effect": "Q133132",
+    "strength": "contributing",
+    "mechanism": "Napoleon III's capture at Sedan collapsed the Second Empire, leaving a political vacuum that let Parisian radicals seize the city."
+  },
+  {
+    "cause": "Q133132",
+    "effect": "Q42976",
+    "strength": "minor",
+    "mechanism": "Lenin and other Marxists drew on the Paris Commune's model of workers' government when they prepared the 1917 Bolshevik revolution."
+  },
+  {
+    "cause": "Q41304",
+    "effect": "Q124354",
+    "strength": "contributing",
+    "mechanism": "The Weimar Republic's progressive cultural policy and state funding enabled the founding of the Bauhaus in Weimar in 1919."
+  },
+  {
+    "cause": "Q42934",
+    "effect": "Q124354",
+    "strength": "minor",
+    "mechanism": "Cubist formal experiments shaped Bauhaus teachers' approach to abstraction and the reduction of visual form to basic elements."
+  },
+  {
+    "cause": "Q37853",
+    "effect": "Q170292",
+    "strength": "contributing",
+    "mechanism": "Reaction against Baroque excess and ornament pushed seventeenth-century French and English artists toward classical restraint."
+  },
+  {
+    "cause": "Q170292",
+    "effect": "Q14378",
+    "strength": "contributing",
+    "mechanism": "Classicism's revival of classical standards of proportion and order became the foundation of eighteenth-century Neoclassicism."
+  },
+  {
+    "cause": "Q170292",
+    "effect": "Q37068",
+    "strength": "minor",
+    "mechanism": "Romantic writers rejected the classicist rules of form and reason, defining themselves in opposition to classicist norms."
+  },
+  {
+    "cause": "Q151340",
+    "effect": "Q69808",
+    "strength": "primary",
+    "mechanism": "France's 1940 defeat in the Battle of France led to the armistice that established the Vichy regime."
+  },
+  {
+    "cause": "Q7318",
+    "effect": "Q69808",
+    "strength": "contributing",
+    "mechanism": "Nazi Germany imposed the 1940 armistice terms that created Vichy as a nominally independent French state under German control."
+  },
+  {
+    "cause": "Q134840",
+    "effect": "Q70972",
+    "strength": "primary",
+    "mechanism": "The 843 Treaty of Verdun split the Carolingian Empire, creating West Francia as the core of what became the Kingdom of France."
+  },
+  {
+    "cause": "Q70972",
+    "effect": "Q12551",
+    "strength": "minor",
+    "mechanism": "Capetian succession disputes and English claims to the French crown triggered the Hundred Years' War, in which the French kingdom fought England."
+  },
+  {
+    "cause": "Q620965",
+    "effect": "Q71084",
+    "strength": "primary",
+    "mechanism": "Napoleon's Brumaire coup of 1799 seized power, and his consulate led to the proclamation of the Empire in 1804."
+  },
+  {
+    "cause": "Q6534",
+    "effect": "Q71084",
+    "strength": "contributing",
+    "mechanism": "Revolutionary upheaval destroyed the monarchy and created the conditions in which Napoleon could rise to power."
+  },
+  {
+    "cause": "Q71084",
+    "effect": "Q152115",
+    "strength": "contributing",
+    "mechanism": "Napoleon created the Duchy of Warsaw in 1807 from Prussian Polish territories, a direct product of the Empire's expansion."
+  },
+  {
+    "cause": "Q71084",
+    "effect": "Q46362",
+    "strength": "contributing",
+    "mechanism": "Napoleon's defeat and the end of the Empire led the victorious powers to convene the Congress of Vienna to redraw Europe."
+  },
+  {
+    "cause": "Q71084",
+    "effect": "Q51122",
+    "strength": "minor",
+    "mechanism": "Napoleonic reorganization of Italy spread nationalist ideas and administrative unity that later fed the movement for unification."
+  },
+  {
+    "cause": "Q957586",
+    "effect": "Q132856",
+    "strength": "contributing",
+    "mechanism": "The Turkish invasion of Armenia in late 1920 led to Soviet intervention that installed Soviet rule across the republic."
+  },
+  {
+    "cause": "Q79911",
+    "effect": "Q132856",
+    "strength": "contributing",
+    "mechanism": "The Red Army's victory in the Russian Civil War enabled Bolshevik conquest of the Caucasus and the creation of Soviet republics there."
+  },
+  {
+    "cause": "Q139670",
+    "effect": "Q132856",
+    "strength": "minor",
+    "mechanism": "The collapse of the First Republic of Armenia left the country open to Soviet takeover in 1920."
+  },
+  {
+    "cause": "Q192769",
+    "effect": "Q11201",
+    "strength": "contributing",
+    "mechanism": "The American Revolution produced an independent United States whose 1787 Constitution created a federal judiciary, including the Supreme Court."
+  },
+  {
+    "cause": "Q392601",
+    "effect": "Q11201",
+    "strength": "minor",
+    "mechanism": "Shays's Rebellion in 1786-87 convinced leaders that the Confederation was too weak, prompting the federal courts created by the Constitution."
+  },
+  {
+    "cause": "Q11201",
+    "effect": "Q8676",
+    "strength": "minor",
+    "mechanism": "The Court's Dred Scott decision of 1857 escalated sectional conflict over slavery, one step toward the American Civil War."
+  },
+  {
+    "cause": "Q12560",
+    "effect": "Q160440",
+    "strength": "contributing",
+    "mechanism": "Ottoman suzerainty over Crimea made the khanate a vassal state whose rulers depended on Ottoman backing for their authority."
+  },
+  {
+    "cause": "Q68",
+    "effect": "Q81414",
+    "strength": "minor",
+    "mechanism": "Advances in computing hardware provided the machines and networks on which TCP/IP was designed and tested."
+  },
+  {
+    "cause": "Q81414",
+    "effect": "Q466",
+    "strength": "contributing",
+    "mechanism": "TCP/IP's standardized transport let Berners-Lee build the World Wide Web on top of the internet."
+  },
+  {
+    "cause": "Q1417059",
+    "effect": "Q8575586",
+    "strength": "primary",
+    "mechanism": "The civil war after Uthman's murder let Mu'awiya seize the caliphate and establish the Umayyad dynasty in 661."
+  },
+  {
+    "cause": "Q275918",
+    "effect": "Q8575586",
+    "strength": "contributing",
+    "mechanism": "Conquests of Syria, Egypt and Persia supplied the provinces and wealth that the Umayyad state governed from Damascus."
+  },
+  {
+    "cause": "Q8575586",
+    "effect": "Q12536",
+    "strength": "primary",
+    "mechanism": "The Abbasid overthrow of the Umayyads in 750 put the Abbasid Caliphate in their place, ruling from Baghdad."
+  },
+  {
+    "cause": "Q8575586",
+    "effect": "Q123559",
+    "strength": "primary",
+    "mechanism": "Umayyad armies conquered most of the Visigothic kingdom from 711, creating the Islamic polity of al-Andalus under Umayyad rule."
+  },
+  {
+    "cause": "Q8575586",
+    "effect": "Q79791",
+    "strength": "contributing",
+    "mechanism": "The Umayyad conquest of Iberia provoked the Christian campaigns to retake territory that became the Reconquista."
+  },
+  {
+    "cause": "Q8683",
+    "effect": "Q4576",
+    "strength": "contributing",
+    "mechanism": "Soviet expansion in Eastern Europe and Cold War rivalry gave Washington strong motives to fund the rebuilding of Western Europe."
+  },
+  {
+    "cause": "Q80130",
+    "effect": "Q865344",
+    "strength": "contributing",
+    "mechanism": "Nuremberg's establishment of crimes against humanity and genocide principles helped shape the 1948 Genocide Convention."
+  }
+]

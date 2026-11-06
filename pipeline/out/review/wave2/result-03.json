@@ -1,0 +1,1627 @@
+{
+ "Q163780>Q1137957": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q219470>Q459162": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q836386>Q459162": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q182817>Q459162": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q193245>Q459162": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q11409>Q153081": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The apartheid government's decree forcing Afrikaans as a medium of instruction in Soweto schools sparked the 1976 student protests and uprising."
+ },
+ "Q104705419>Q116142348": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q41726>Q638903": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Freemason lodges and the Carbonária secret societies organised republican conspirators who overthrew the Portuguese monarchy in the 5 October 1910 revolution."
+ },
+ "Q1137957>Q182817": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1137957>Q7184": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1948 Prague coup alarmed Western governments, prompting the Brussels Pact talks and US commitment that led to the NATO treaty in 1949."
+ },
+ "Q19546>Q1147471": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Papal bulls of 1493 divided Spanish and Portuguese claims by a meridian; the resulting antimeridian dispute was settled by the 1529 Zaragoza treaty."
+ },
+ "Q179275>Q18641076": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q78994>Q876357": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Post-1815 economic depression after the Napoleonic Wars, with collapsing textile demand and high bread prices, fuelled radical unrest that Manchester magistrates suppressed at Peterloo."
+ },
+ "Q876357>Q518753": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q192473>Q1463845": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "After Adrianople killed Emperor Valens, Theodosius settled Goths inside the empire as foederati; their leader Alaric later sacked Rome in 410."
+ },
+ "Q1463845>Q139808": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q14211>Q68580968": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q81068910>Q68580968": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The pandemic forced the UN to postpone COP26 from 2020 to November 2021, and pandemic restrictions shaped the conference's reduced attendance and format."
+ },
+ "Q84104992>Q68580968": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q84167106>Q68580968": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q170541>Q69163529": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The Eastern Bloc's internal collapse, with Hungary opening its Austrian border in 1989, let East Germans flee and forced the GDR to open the Berlin Wall."
+ },
+ "Q10806>Q179275": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "After 9/11 Pakistan aligned with the US war on terror and sent its army into the tribal areas, provoking local militant groups to launch an insurgency from 2004."
+ },
+ "Q778010>Q127912": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Fighting at Lexington and Concord pushed colonists toward independence after reconciliation failed, and the Second Continental Congress adopted the Declaration in July 1776."
+ },
+ "Q697625>Q80130": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1069736>Q181533": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q316817>Q153081": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1973 oil shock triggered a global recession that raised South African unemployment, fuelling township anger that exploded into the 1976 Soweto protests."
+ },
+ "Q644960>Q212983": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q42418>Q12302518": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q69808>Q200472": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q41852>Q248984": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q9458>Q248984": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Muhammad's founding of the Islamic polity and clashes with Byzantium gave his successors the armed community and mandate the Rashidun caliphs used to conquer Syria."
+ },
+ "Q26918>Q248984": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q82674>Q430726": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7207>Q430726": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q54054>Q631163": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q81506>Q1151913": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q122553>Q1151913": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q34479>Q254599": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q11256>Q1463516": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Cuban military training, arms and advisers under Fidel Castro's direction gave the FSLN the military capacity that proved critical to its victory."
+ },
+ "Q842380>Q15353665": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Khartoum's divide-and-rule arming of militias and the SPLA's ethnic factionalism during the Second Sudanese Civil War left armed, ethnically divided forces that fought in 2013."
+ },
+ "Q192769>Q944941": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q79911>Q811250": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "War-communism grain requisitions during the Russian Civil War stripped Tambov peasants of their harvests, driving them to revolt under Alexander Antonov in 1920."
+ },
+ "Q104309>Q811250": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q203023>Q811250": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Cheka requisition squads and reprisals against peasants enforcing grain seizures drove Tambov villagers into armed revolt."
+ },
+ "Q214426>Q279662": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1917 constitution's anticlerical articles, enforced by President Calles from 1926 against the Catholic Church, triggered the Cristero armed revolt."
+ },
+ "Q130796>Q26195": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q361>Q243618": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The WWI-era Treaty of Trianon stripped Hungary of Transylvanian territory, creating revisionist demands that Germany and Italy arbitrated in the 1940 Second Vienna Award."
+ },
+ "Q84263196>Q84081307": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q84263196>Q86675924": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q84263196>Q86717788": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q84263196>Q86756826": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q39619>Q2484843": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q34417>Q613478": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q8573>Q1195058": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Sun Yat-sen's 1923 alliance with Soviet advisers and the CCP created the United Front, whose tensions Chiang Kai-shek broke in the April 1927 Shanghai purge."
+ },
+ "Q2487>Q698045": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q743776>Q33745": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q51656>Q1154983": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2479435>Q49104": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1985-2000 Israeli occupation and Hezbollah's resistance left the border unresolved and Hezbollah armed; its July 2006 cross-border raid triggered the 2006 war."
+ },
+ "Q944859>Q737542": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The Taira victory in the 1160 Heiji Rebellion humbled the Minamoto and angered Emperor Go-Shirakawa, whose resentment of Taira power led to the 1180 Genpei War."
+ },
+ "Q701335>Q690361": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q643925>Q849563": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2426040>Q1154983": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1788485>Q3849563": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The Barons' Crusade's alliance with Damascus against Egypt prompted Egyptian Ayyubid Najm al-Din Ayyub to hire Khwarazmian mercenaries, who sacked Jerusalem in 1244."
+ },
+ "Q3427966>Q190517": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q200855>Q697654": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q27759>Q676340": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q767844>Q1750892": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q697654>Q690470": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q316897>Q41320": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q700032>Q610242": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q612286>Q633560": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The Babylonian and Median capture of Nineveh drove surviving Assyrian leaders to ally with Egypt, whose army fought Babylon at Carchemish around 605 BCE."
+ },
+ "Q763428>Q1400402": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1073476>Q362": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q334029>Q40949": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1259237>Q83085": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q645986>Q48249": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The junta's economic crisis and need for nationalist legitimacy led it to order the April 1982 invasion of the Falkland Islands."
+ },
+ "Q170314>Q665554": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1209169>Q620735": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q128172378>Q134900605": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q123210>Q182062": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Russian-backed Greek fleets in the 1787-92 war and Russia's weakening of the Ottomans gave Greek communities military experience and nationalist hopes that fed the 1821 revolt."
+ },
+ "Q234738>Q869500": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The Turkish victory forced the Lausanne straits regime, which Ankara revised at the 1936 Montreux Convention, restoring Turkish control over the Straits."
+ },
+ "Q234738>Q957586": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q842380>Q117716414": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q246863>Q1044829": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q842380>Q190758": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Khartoum's arming of Baggara militias, first used in the Second Sudanese Civil War, was repeated in Darfur, where government-backed Janjaweed militias carried out atrocities."
+ },
+ "Q916495>Q646322": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q123227>Q123210": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1774 treaty's ambiguous clauses on Crimea and Orthodox protection gave Catherine II pretexts for annexing Crimea, provoking the Ottoman declaration of war in 1787."
+ },
+ "Q123210>Q6534": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q12546>Q609836": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q179848>Q609836": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q361>Q609836": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q362>Q609836": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q8683>Q609836": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7184>Q609836": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q630259>Q160077": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q630259>Q212220": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q630259>Q698985": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q630259>Q361": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q755170>Q916495": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q101534>Q957586": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q80034>Q957586": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q328499>Q957586": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q957586>Q157648": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q963303>Q1044829": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q9592>Q1044829": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1044829>Q43056": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1044829>Q186284": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q216702>Q1259237": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q989092>Q1259237": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q233507>Q1259237": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1879 Treaty of Gandamak placed Afghan foreign affairs under British control, a grievance that Amanullah Khan's 1919 war aimed to end."
+ },
+ "Q361>Q1259237": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Britain's wartime exhaustion and postwar Indian unrest, with thinned garrisons, encouraged Amanullah Khan to launch his May 1919 attack on British India."
+ },
+ "Q199820>Q1259237": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q282352>Q1259237": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1259237>Q79911": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1259237>Q104309": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q677316>Q1616064": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Rome's distraction by the Social War let Mithridates VI of Pontus seize Asia Minor and launch the First Mithridatic War in 89 BC."
+ },
+ "Q12546>Q51653": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q160307>Q51653": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q456993>Q51653": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q846670>Q51653": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q51653>Q51655": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2487>Q699849": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q4373>Q699849": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q74623>Q699849": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q638587>Q699849": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q54434>Q699849": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q313102>Q699849": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Charles VI's 1713 Pragmatic Sanction left a contested succession after his 1740 death, which Frederick II exploited by invading Silesia."
+ },
+ "Q173366>Q699849": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q689128>Q1514908": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q6235>Q1514908": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q14213>Q1514908": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q101534>Q2479606": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The February Revolution's collapse of central Russian authority let Kyiv's Central Rada assert Ukrainian autonomy, which Bolshevik forces then contested from late 1917."
+ },
+ "Q154573>Q2479606": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The collapse of the Eastern Front left millions of demobilised, armed soldiers who returned home and filled the armed units fighting in Ukraine's 1917-1921 war."
+ },
+ "Q83372>Q2479606": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q104309>Q2479606": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2479606>Q165058": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2479606>Q130796": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2479606>Q83055": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2479606>Q189266": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2479606>Q362": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2479606>Q1048744": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1750892>Q160077": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1204 sack fragmented Byzantium into rival Latin and Greek successor states, leaving a weakened empire unable to withstand the Ottoman siege of 1453."
+ },
+ "Q733364>Q203729": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q154573>Q233219": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q243620>Q52226": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q8683>Q52226": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q49330>Q52226": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q5987345>Q52226": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q14213>Q52226": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q52226>Q131297": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "After US deaths in Mogadishu, Washington's fear of another Somalia led it to refuse intervention in Rwanda, letting the 1994 genocide proceed."
+ },
+ "Q52226>Q545449": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q187549>Q847287": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q41300>Q847287": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q11696>Q745979": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q745979>Q719252": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q170541>Q769377": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q8683>Q769377": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q151179>Q769377": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q43056>Q769377": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q362>Q769377": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q505939>Q769377": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q181533>Q769377": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1069736>Q769377": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7184>Q769377": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q769377>Q190315": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Croatia's Operation Storm, with NATO air strikes against Bosnian Serb forces, shifted the military balance and pushed the parties toward the 1995 Dayton talks."
+ },
+ "Q1750892>Q630259": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q482407>Q482402": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q748780>Q482402": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q9592>Q482402": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q193484>Q482402": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q8683>Q482402": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q35525>Q482402": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q845668>Q641479": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1596 Union of Brest forced Ukrainian Orthodox into the Catholic-linked Uniate church, deepening religious grievances that fuelled Khmelnytsky's 1648 Cossack uprising."
+ },
+ "Q8683>Q1274389": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1274389>Q69163529": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q179848>Q75844": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q179288>Q368689": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q130263>Q368689": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Janissary-origin Dahije rulers in Belgrade oppressed Serb notables, provoking Karađorđe's 1804 Orašac uprising."
+ },
+ "Q361>Q161141": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Germany's WWI defeat left demobilised Freikorps units and nationalist officers, who launched the Kapp Putsch in March 1920 after the government ordered them disbanded."
+ },
+ "Q160944>Q161141": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The stab-in-the-back myth, promoted by militarist circles, convinced many right-wing officers that the Weimar Republic was illegitimate, fuelling the 1920 Kapp putsch."
+ },
+ "Q8736>Q161141": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Versailles limited the army to 100,000 men and ordered Freikorps disbanded, prompting the Ehrhardt Brigade and Wolfgang Kapp to stage the March 1920 putsch."
+ },
+ "Q362>Q817137": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q190029>Q817137": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Former KLA fighters and weapons from the 1998-99 Kosovo War formed the NLA, which launched the 2001 insurgency in northwest Macedonia."
+ },
+ "Q132551>Q817137": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q269655>Q665554": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q963303>Q845668": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q163244>Q665554": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The Potsdam Declaration's surrender terms, accepted by Japan in August 1945, became the basis of the Instrument of Surrender signed in September."
+ },
+ "Q616109>Q827212": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1848 treaty's boundary survey error left disputed land that the US bought in 1853 to secure a southern railway route."
+ },
+ "Q625107>Q278960": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1952-1954 H-bomb tests spread radioactive fallout worldwide, mobilising public opposition that led the US, UK and USSR to sign the 1963 test ban."
+ },
+ "Q488>Q278960": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q38130>Q869500": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q8736>Q869500": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q127197>Q645986": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q51648>Q845668": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q49105>Q128172378": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q181026>Q1514908": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q21707860>Q111208159": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q10707>Q2444955": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q925960>Q79791": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q164432>Q1501724": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Spain's wartime fiscal demands in the Eighty Years' War against the Dutch, including heavy levies on Portugal, sparked the December 1640 Portuguese revolt."
+ },
+ "Q221469>Q233343": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q217981>Q714777": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q161705>Q427958": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q5933860>Q253774": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q4712>Q698281": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The Burgundian Netherlands passed to Habsburg Charles V, whose combined Spanish and Burgundian inheritance drove Francis I to launch the 1521 Italian War."
+ },
+ "Q136344>Q178084": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1121044>Q172107": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1385 Krewo union bound Lithuania's Jogaila to the Polish crown, creating the dynastic link that the 1569 Lublin Union turned into the Commonwealth."
+ },
+ "Q112070734>Q129099995": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q733668>Q248984": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q15542964>Q168556": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1544 Treaty of Crépy ended the Italian War, freeing Charles V to crush the Schmalkaldic League of Protestant princes in 1546-47."
+ },
+ "Q683341>Q63468": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2403418>Q192050": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Colonel Dimitrijević and other officers who staged the 1903 May Coup later formed the Black Hand, whose members organised the 1914 assassination in Sarajevo."
+ },
+ "Q2748708>Q8641370": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1551794>Q362": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Japan's 1931 seizure of Manchuria, met only with League protest, emboldened militarists to expand into China and then the Pacific theatre."
+ },
+ "Q495558>Q8663": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q159950>Q495558": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Japan's victory in the 1904-05 Russo-Japanese War removed Russia as a rival, enabling Japan to annex Korea in 1910 with little foreign protest."
+ },
+ "Q706183>Q178687": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1884-85 Sino-French War drew Qing troops from Korea, and the resulting Li-Ito Tianjin Convention left rival Chinese and Japanese claims that led to the 1894 war."
+ },
+ "Q192408>Q706183": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q6286>Q1132393": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Carthage's failure to pay the mercenaries it had hired during the First Punic War, demobilised after its 241 BC defeat, triggered the Mercenary War mutiny."
+ },
+ "Q246863>Q158677": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The Livonian War's collapse of Livonian order left Danish and Swedish rivalry over the Baltic territories, which erupted into the 1563 Northern Seven Years' War."
+ },
+ "Q246863>Q17335": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2326099>Q887684": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The exhausting 602-628 war left Sasanian Persia and Byzantium depleted, and Persia's weakened state collapsed before Rashidun armies in the 630s."
+ },
+ "Q500409>Q317519": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Two centuries of Roman-Persian war, peaking in Persia's 619-629 occupation of Egypt, left Byzantine Egypt weakly defended when Amr ibn al-As invaded in 639."
+ },
+ "Q500409>Q399482": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q167396>Q223604": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q399482>Q1455917": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q604938>Q244932": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1860 Convention of Peking ceded Outer Manchuria to Russia and left ambiguous river boundaries, which Beijing and Moscow disputed, leading to the 1969 Damansky clash."
+ },
+ "Q244932>Q623994": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1139887>Q1420115": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1813 Treaty of Gulistan ceded Caucasian khanates to Russia, and Persia's revanchist campaign to regain them triggered the 1826-28 war."
+ },
+ "Q609836>Q1780216": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q827472>Q51653": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q741098>Q51653": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q221670>Q25857": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Louis XIV invoked his wife Maria Theresa's Spanish inheritance claim, tied to the 1659 Pyrenees marriage, to invade the Spanish Netherlands in 1667."
+ },
+ "Q916495>Q25857": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q6271>Q75665": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Rome's victory in the Second Punic War freed its forces, and unresolved hostilities with Philip V, who had allied with Hannibal, led Rome to war against Macedon in 200 BC."
+ },
+ "Q846876>Q158677": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q361>Q202465": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q202465>Q190029": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q9592>Q706183": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q48189>Q937255": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2326099>Q275918": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Exhaustion of Byzantium and Sasanian Persia after the 602-628 war left both unable to resist the early Muslim conquests of the 630s and 640s."
+ },
+ "Q2326099>Q432": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2326099>Q29100": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Exhausted by the 602-628 war, Byzantium could not hold its recently regained Syria and Egypt against Arab forces from 634 onward."
+ },
+ "Q2326099>Q317519": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Persia's 619-629 occupation of Egypt and the exhaustion of both empires left Byzantine Egypt weakly defended when Amr ibn al-As invaded in 639."
+ },
+ "Q2326099>Q399482": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2326099>Q27900": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q9592>Q306123": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7310>Q306123": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q306123>Q362": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q737542>Q8707": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q181026>Q1282732": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q14213>Q1282732": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q5043>Q1780216": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1780216>Q609836": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1551794>Q52418": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Japan's conquest of Manchuria triggered Western sanctions and the 1941 US oil embargo, pushing Tokyo's leaders to plan the December 1941 Pearl Harbor attack."
+ },
+ "Q853976>Q130847": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2326099>Q194226": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Byzantium's army, drained by the 602-628 war, was defeated by Muslim forces at Yarmouk in 636 after years of costly campaigning against Persia."
+ },
+ "Q1368240>Q222520": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q153858>Q659246": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1551794>Q219230": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Japan's Manchurian occupation and its growing garrisons in North China produced the friction that sparked the July 1937 Marco Polo Bridge clash."
+ },
+ "Q1551794>Q188925": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Japan's puppet state Manchukuo drew the Kwantung Army into border clashes with Soviet-Mongolian forces, culminating in the 1939 Khalkhin Gol battles."
+ },
+ "Q853976>Q426227": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2326099>Q836844": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Persia's exhausting 602-628 war and the succession crisis that followed left Sasanian armies weakened, and they lost to Arab forces at al-Qadisiyyah in 636."
+ },
+ "Q221469>Q745979": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q330>Q63468": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q330>Q207318": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q330>Q179250": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q6271>Q391087": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q75665>Q391087": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q38130>Q533034": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q186284>Q533034": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q184190>Q533034": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q533034>Q362": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q533034>Q150812": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q533034>Q1402078": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q154573>Q250652": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q174205>Q250652": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Russia's 1877 capture of Kars gave the Ottomans a strategic objective, and Enver Pasha's 1914 Sarikamish offensive aimed to recover the city."
+ },
+ "Q152283>Q250652": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q170305>Q319124": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q456993>Q827472": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q846674>Q40949": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q846674>Q3719": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q846674>Q8676": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q659246>Q153858": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q178795>Q27429856": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7184>Q47465940": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q194226>Q399482": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q317519>Q399482": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1417059>Q399482": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The First Fitna ended with Mu'awiya's consolidated Umayyad caliphate, which resumed attacks and launched the 674 siege of Constantinople."
+ },
+ "Q399482>Q160077": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q51649>Q741098": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q456993>Q741098": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q659246>Q8729": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q604938>Q150229": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1860 Convention of Peking granted foreign missionaries rights to preach across China, and the resulting missionary expansion fuelled the anti-Christian Boxer movement."
+ },
+ "Q459162>Q236023": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 2005 Tulip Revolution brought Kurmanbek Bakiyev to power, and his corrupt, repressive rule triggered the 2010 uprising that ousted him."
+ },
+ "Q35525>Q236023": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q11032>Q1368440": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1368440>Q159950": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q6235>Q1368440": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q696217>Q309184": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q548067>Q495558": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Portsmouth's Article 2 recognised Japan's paramount interests in Korea after Russia's defeat, removing the diplomatic barrier to Japan's 1910 annexation."
+ },
+ "Q623994>Q169401": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q278960>Q521306": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1963 PTBT banned atmospheric tests but left underground testing legal, the gap that the 1996 CTBT was negotiated to close."
+ },
+ "Q625107>Q521306": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q186444>Q521306": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1968 NPT's Article VI obligation to halt the arms race and seek a test ban, reinforced by the 1995 NPT extension deal, forced negotiation of the 1996 CTBT."
+ },
+ "Q35637>Q688993": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q99717>Q521306": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q122975233>Q124086054": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q27429856>Q28094271": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q82664>Q579179": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q495558>Q498735": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q836844>Q317519": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1551794>Q37470": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q159950>Q1551794": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Japan's 1905 Liaodong lease and South Manchuria Railway, guarded by the Kwantung Army, gave Japanese officers the means and motive to seize Manchuria in 1931."
+ },
+ "Q1551794>Q94916": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1551794>Q154255": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1551794>Q150812": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q84263196>Q86948603": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q84263196>Q87235177": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q84263196>Q87250732": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q332620>Q195378": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q150688>Q279662": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1048>Q525325": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q6683>Q2091916": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q68969>Q1374443": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ }
+}

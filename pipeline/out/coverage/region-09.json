@@ -1,0 +1,415 @@
+{
+ "region": "Oceania",
+ "cells": [
+  {
+   "cell": "pre|Oceania",
+   "era": "Before 3000 BCE",
+   "from": -12000,
+   "to": -3000,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "-3000_-2000|Oceania",
+   "era": "3000–2000 BCE",
+   "from": -3000,
+   "to": -2000,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "-2000_-1000|Oceania",
+   "era": "2000–1000 BCE",
+   "from": -2000,
+   "to": -1000,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "-1000_-500|Oceania",
+   "era": "1000–500 BCE",
+   "from": -1000,
+   "to": -500,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "-500_0|Oceania",
+   "era": "500–0 BCE",
+   "from": -500,
+   "to": 0,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "0_250|Oceania",
+   "era": "0–250",
+   "from": 0,
+   "to": 250,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "250_500|Oceania",
+   "era": "250–500",
+   "from": 250,
+   "to": 500,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "500_750|Oceania",
+   "era": "500–750",
+   "from": 500,
+   "to": 750,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "750_1000|Oceania",
+   "era": "750–1000",
+   "from": 750,
+   "to": 1000,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1000_1100|Oceania",
+   "era": "1000–1100",
+   "from": 1000,
+   "to": 1100,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1100_1200|Oceania",
+   "era": "1100–1200",
+   "from": 1100,
+   "to": 1200,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1200_1300|Oceania",
+   "era": "1200–1300",
+   "from": 1200,
+   "to": 1300,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1300_1400|Oceania",
+   "era": "1300–1400",
+   "from": 1300,
+   "to": 1400,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1400_1500|Oceania",
+   "era": "1400–1500",
+   "from": 1400,
+   "to": 1500,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1500_1550|Oceania",
+   "era": "1500–1550",
+   "from": 1500,
+   "to": 1550,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1550_1600|Oceania",
+   "era": "1550–1600",
+   "from": 1550,
+   "to": 1600,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1600_1650|Oceania",
+   "era": "1600–1650",
+   "from": 1600,
+   "to": 1650,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1650_1700|Oceania",
+   "era": "1650–1700",
+   "from": 1650,
+   "to": 1700,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1700_1750|Oceania",
+   "era": "1700–1750",
+   "from": 1700,
+   "to": 1750,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1750_1800|Oceania",
+   "era": "1750–1800",
+   "from": 1750,
+   "to": 1800,
+   "have": [
+    "Hawaiian Kingdom",
+    "Mutiny on the Bounty"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1800_1810|Oceania",
+   "era": "1800s",
+   "from": 1800,
+   "to": 1810,
+   "have": [
+    "Musket Wars",
+    "Rum Rebellion"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1810_1820|Oceania",
+   "era": "1810s",
+   "from": 1810,
+   "to": 1820,
+   "have": [
+    "War of 1812"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1820_1830|Oceania",
+   "era": "1820s",
+   "from": 1820,
+   "to": 1830,
+   "have": [
+    "Black War"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1830_1840|Oceania",
+   "era": "1830s",
+   "from": 1830,
+   "to": 1840,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1840_1850|Oceania",
+   "era": "1840s",
+   "from": 1840,
+   "to": 1850,
+   "have": [
+    "New Zealand",
+    "New Zealand Wars"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1850_1860|Oceania",
+   "era": "1850s",
+   "from": 1850,
+   "to": 1860,
+   "have": [
+    "Eureka Rebellion"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1860_1870|Oceania",
+   "era": "1860s",
+   "from": 1860,
+   "to": 1870,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1870_1880|Oceania",
+   "era": "1870s",
+   "from": 1870,
+   "to": 1880,
+   "have": [
+    "Nauruan Civil War"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1880_1890|Oceania",
+   "era": "1880s",
+   "from": 1880,
+   "to": 1890,
+   "have": [
+    "Samoan Civil War"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1890_1900|Oceania",
+   "era": "1890s",
+   "from": 1890,
+   "to": 1900,
+   "have": [
+    "Overthrow of the Hawaiian Kingdom",
+    "Second Samoan Civil War"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1900_1910|Oceania",
+   "era": "1900s",
+   "from": 1900,
+   "to": 1910,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1910_1920|Oceania",
+   "era": "1910s",
+   "from": 1910,
+   "to": 1920,
+   "have": [
+    "Battle of Coronel"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1920_1930|Oceania",
+   "era": "1920s",
+   "from": 1920,
+   "to": 1930,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1930_1940|Oceania",
+   "era": "1930s",
+   "from": 1930,
+   "to": 1940,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1940_1950|Oceania",
+   "era": "1940s",
+   "from": 1940,
+   "to": 1950,
+   "have": [
+    "Attack on Pearl Harbor",
+    "Pacific War",
+    "Battle of Midway",
+    "Battle of the Coral Sea",
+    "Guadalcanal campaign",
+    "Operation Kikusui I",
+    "Japanese Instrument of Surrender",
+    "Battle of Tarawa",
+    "Solomon Islands campaign",
+    "Battle of Savo Island",
+    "Battle of Wake Island",
+    "Naval Battle of Guadalcanal",
+    "Battle of the Santa Cruz Islands",
+    "Battle of the Eastern Solomons",
+    "Bombing of Darwin",
+    "Battle of Cape Esperance",
+    "Battle of Tassafaronga",
+    "Battle of the Tenaru",
+    "Battle of Rennell Island",
+    "Battle of Eniwetok",
+    "Battle of Attu",
+    "Bougainville campaign",
+    "Battle of Milne Bay",
+    "Battle of Rabaul (1942)",
+    "Battle of Edson's Ridge"
+   ],
+   "count": 30
+  },
+  {
+   "cell": "1950_1960|Oceania",
+   "era": "1950s",
+   "from": 1950,
+   "to": 1960,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1960_1970|Oceania",
+   "era": "1960s",
+   "from": 1960,
+   "to": 1970,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1970_1980|Oceania",
+   "era": "1970s",
+   "from": 1970,
+   "to": 1980,
+   "have": [
+    "Tuvalu",
+    "Solomon Islands"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1980_1990|Oceania",
+   "era": "1980s",
+   "from": 1980,
+   "to": 1990,
+   "have": [
+    "Bougainville conflict"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1990_2000|Oceania",
+   "era": "1990s",
+   "from": 1990,
+   "to": 2000,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "2000_2010|Oceania",
+   "era": "2000s",
+   "from": 2000,
+   "to": 2010,
+   "have": [
+    "2009 Samoa earthquake and tsunami"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "2010_2020|Oceania",
+   "era": "2010s",
+   "from": 2010,
+   "to": 2020,
+   "have": [
+    "2011 Christchurch earthquake",
+    "Trans-Pacific Partnership",
+    "2016 Kaikōura earthquake"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "2020_2030|Oceania",
+   "era": "2020s",
+   "from": 2020,
+   "to": 2030,
+   "have": [
+    "2023–2026 mpox epidemic",
+    "COVID-19 pandemic in Australia",
+    "COVID-19 pandemic in New Zealand",
+    "COVID-19 pandemic in Oceania"
+   ],
+   "count": 4
+  }
+ ]
+}

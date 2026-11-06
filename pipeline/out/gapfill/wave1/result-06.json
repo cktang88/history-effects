@@ -1,0 +1,494 @@
+[
+ {
+  "cause": "Q7318",
+  "effect": "Q154255",
+  "strength": "primary",
+  "mechanism": "Hitler's demand for the Sudetenland, backed by threats of war, forced the Munich conference to approve German annexation of the territory."
+ },
+ {
+  "cause": "Q8736",
+  "effect": "Q154255",
+  "strength": "contributing",
+  "mechanism": "Versailles' German grievances and disputed borders fed revisionist demands that Britain and France tried to satisfy at Munich with territorial concessions."
+ },
+ {
+  "cause": "Q150995",
+  "effect": "Q27306",
+  "strength": "minor",
+  "mechanism": "Westphalia awarded Brandenburg-Prussia Eastern Pomerania and secularized bishoprics such as Halberstadt and Minden, enlarging the state that became the Kingdom of Prussia."
+ },
+ {
+  "cause": "Q39524",
+  "effect": "Q170468",
+  "strength": "primary",
+  "mechanism": "Nasser pursued pan-Arab unity and accepted Syria's 1958 request for merger, creating the United Arab Republic under his leadership."
+ },
+ {
+  "cause": "Q1780431",
+  "effect": "Q170468",
+  "strength": "contributing",
+  "mechanism": "The 1952 Free Officers' revolution brought Nasser's regime to power, giving the pan-Arab union project its Egyptian base."
+ },
+ {
+  "cause": "Q7321",
+  "effect": "Q179023",
+  "strength": "primary",
+  "mechanism": "Jacques Cartier's 1534 voyage claimed the St. Lawrence region for France, initiating the New France claims that anchored the empire."
+ },
+ {
+  "cause": "Q133641",
+  "effect": "Q179023",
+  "strength": "contributing",
+  "mechanism": "European overseas exploration from the late fifteenth century opened the maritime routes and trade prospects that France pursued in the Americas and beyond."
+ },
+ {
+  "cause": "Q79911",
+  "effect": "Q130229",
+  "strength": "primary",
+  "mechanism": "The Russian Civil War let the Red Army conquer the Democratic Republic of Georgia in 1921, establishing Soviet rule over the territory."
+ },
+ {
+  "cause": "Q49696",
+  "effect": "Q7405",
+  "strength": "contributing",
+  "mechanism": "Centuries of division among the Northern and Southern dynasties left China fragmented, which Sui Emperor Wen reunified by conquering Chen in 589."
+ },
+ {
+  "cause": "Q7405",
+  "effect": "Q9683",
+  "strength": "primary",
+  "mechanism": "Li Yuan's rebellion against the overextended Sui, after failed Goguryeo campaigns, toppled the dynasty in 618 and founded the Tang."
+ },
+ {
+  "cause": "Q15605",
+  "effect": "Q273508",
+  "strength": "minor",
+  "mechanism": "Precise CMB measurements by COBE and WMAP tested and constrained inflationary cosmology, which had predicted the sky's observed uniformity and fluctuations."
+ },
+ {
+  "cause": "Q210036",
+  "effect": "Q29269",
+  "strength": "primary",
+  "mechanism": "Ichkeria's 1991 unilateral declaration of independence, rejected by Moscow, led Yeltsin to send federal troops into Chechnya in December 1994."
+ },
+ {
+  "cause": "Q165725",
+  "effect": "Q361",
+  "strength": "contributing",
+  "mechanism": "The Balkan Wars expanded Serbia and Bulgaria and angered Austria-Hungary, heightening the rivalries that fed the July Crisis and the outbreak of World War I."
+ },
+ {
+  "cause": "Q160077",
+  "effect": "Q133641",
+  "strength": "contributing",
+  "mechanism": "Ottoman control of eastern trade routes after 1453 pushed Portugal and Spain to seek sea routes to Asia, accelerating overseas exploration."
+ },
+ {
+  "cause": "Q160077",
+  "effect": "Q871792",
+  "strength": "minor",
+  "mechanism": "Ottoman expansion after 1453 conquered the Byzantine Morea and Athens, bringing Greek lands under centuries of Ottoman rule."
+ },
+ {
+  "cause": "Q134147",
+  "effect": "Q203209",
+  "strength": "minor",
+  "mechanism": "Pop artists' use of everyday objects and mass-media imagery broadened what counted as art, paving the way for conceptual art in the 1960s."
+ },
+ {
+  "cause": "Q188712",
+  "effect": "Q30623",
+  "strength": "primary",
+  "mechanism": "Kwantung Army officers of Imperial Japan staged the 1931 Mukden Incident and then established Manchukuo as a puppet state in 1932."
+ },
+ {
+  "cause": "Q1073476",
+  "effect": "Q30623",
+  "strength": "contributing",
+  "mechanism": "Chiang Kai-shek's Northern Expedition unified much of China and threatened Japan's Manchurian interests, prompting the Kwantung Army to seize Manchuria."
+ },
+ {
+  "cause": "Q8698",
+  "effect": "Q30623",
+  "strength": "minor",
+  "mechanism": "Depression-era economic distress strengthened militarist factions in Tokyo that favored seizing Manchuria's resources and markets."
+ },
+ {
+  "cause": "Q30623",
+  "effect": "Q170314",
+  "strength": "contributing",
+  "mechanism": "Manchukuo became the base from which Japan expanded into North China, leading to full-scale war with China in July 1937."
+ },
+ {
+  "cause": "Q30623",
+  "effect": "Q362",
+  "strength": "contributing",
+  "mechanism": "Japan's conquest of Manchuria began the militarist expansion in Asia that drew it into the Pacific War within World War II."
+ },
+ {
+  "cause": "Q49683",
+  "effect": "Q172107",
+  "strength": "contributing",
+  "mechanism": "The Grand Duchy's nobility accepted the 1569 Union of Lublin, merging with the Kingdom of Poland into the Polish-Lithuanian Commonwealth."
+ },
+ {
+  "cause": "Q207318",
+  "effect": "Q174193",
+  "strength": "contributing",
+  "mechanism": "Fear of French invasion and the 1798 Irish rebellion led Pitt's government to pass the 1800 Acts of Union, joining Ireland to Great Britain."
+ },
+ {
+  "cause": "Q51656",
+  "effect": "Q178897",
+  "strength": "primary",
+  "mechanism": "Crusaders diverted from their goal sacked Constantinople in 1204, and their leaders then carved the Byzantine lands into the Latin Empire."
+ },
+ {
+  "cause": "Q128076",
+  "effect": "Q178897",
+  "strength": "contributing",
+  "mechanism": "Innocent III's 1198 call for a new crusade launched the expedition that ended in the 1204 conquest of Constantinople."
+ },
+ {
+  "cause": "Q178897",
+  "effect": "Q181254",
+  "strength": "contributing",
+  "mechanism": "Byzantine exiles under Theodore Laskaris set up the Nicaean state in Anatolia, which retook Constantinople from the Latins in 1261."
+ },
+ {
+  "cause": "Q178897",
+  "effect": "Q187684",
+  "strength": "minor",
+  "mechanism": "Michael Komnenos Doukas founded the Despotate of Epirus after the 1204 conquest, creating a rival Greek state that contested Latin control."
+ },
+ {
+  "cause": "Q130796",
+  "effect": "Q130280",
+  "strength": "primary",
+  "mechanism": "The Molotov–Ribbentrop Pact's secret protocol placed Estonia in the Soviet sphere, enabling Moscow's 1940 occupation and annexation."
+ },
+ {
+  "cause": "Q12557",
+  "effect": "Q229411",
+  "strength": "minor",
+  "mechanism": "Repeated Mongol invasions of northwestern India pressed the Delhi sultans to maintain large standing armies and frontier fortifications."
+ },
+ {
+  "cause": "Q229411",
+  "effect": "Q33296",
+  "strength": "contributing",
+  "mechanism": "Babur's 1526 invasion from Kabul defeated the last Lodi sultan at Panipat, founding the Mughal Empire on the sultanate's ruins."
+ },
+ {
+  "cause": "Q229411",
+  "effect": "Q167639",
+  "strength": "contributing",
+  "mechanism": "Vijayanagara arose around 1336 as Hindu leaders resisted the southern expansion of Delhi's Muhammad bin Tughlaq, creating a rival southern empire."
+ },
+ {
+  "cause": "Q229411",
+  "effect": "Q374521",
+  "strength": "contributing",
+  "mechanism": "Hasan Gangu's 1347 revolt against Delhi's authority established the Bahmani Sultanate, an independent Deccan kingdom."
+ },
+ {
+  "cause": "Q273874",
+  "effect": "Q3708094",
+  "strength": "contributing",
+  "mechanism": "Seljuk Turks under Tughril Beg overthrew the Buyid amirs in Baghdad in 1055, taking control of the Abbasid caliphate."
+ },
+ {
+  "cause": "Q12536",
+  "effect": "Q3708094",
+  "strength": "contributing",
+  "mechanism": "Caliph al-Qa'im invited Tughril Beg to Baghdad to end Buyid domination, granting him the sultan title and making the Seljuks protectors of the caliphate."
+ },
+ {
+  "cause": "Q3708094",
+  "effect": "Q51649",
+  "strength": "contributing",
+  "mechanism": "Seljuk conquests in Anatolia and Syria prompted Byzantine appeals that led Pope Urban II to launch the First Crusade in 1095."
+ },
+ {
+  "cause": "Q9215",
+  "effect": "Q131246",
+  "strength": "primary",
+  "mechanism": "Freud formulated the Oedipus complex from clinical cases and his self-analysis, presenting it in The Interpretation of Dreams."
+ },
+ {
+  "cause": "Q131246",
+  "effect": "Q39427",
+  "strength": "minor",
+  "mechanism": "Surrealists drew on Freudian psychoanalysis, including Oedipal themes of desire and repression, to explore the unconscious in their art and writing."
+ },
+ {
+  "cause": "Q8958",
+  "effect": "Q144334",
+  "strength": "primary",
+  "mechanism": "Gutenberg combined movable metal type, oil-based ink and an adapted screw press around 1439, creating a practical mechanized printing system."
+ },
+ {
+  "cause": "Q4692",
+  "effect": "Q144334",
+  "strength": "contributing",
+  "mechanism": "Renaissance humanists' demand for classical texts and new learning created a large market that rewarded mass book production."
+ },
+ {
+  "cause": "Q144334",
+  "effect": "Q11032",
+  "strength": "primary",
+  "mechanism": "Cheap, fast reproduction on presses enabled regular news sheets, leading to the first periodical newspapers in the early seventeenth century."
+ },
+ {
+  "cause": "Q144334",
+  "effect": "Q23540",
+  "strength": "contributing",
+  "mechanism": "Printed pamphlets and vernacular Bibles let Luther's writings spread quickly across Germany, underpinning the Protestant Reformation."
+ },
+ {
+  "cause": "Q144334",
+  "effect": "Q6235",
+  "strength": "contributing",
+  "mechanism": "Mass-printed vernacular books and newspapers created shared reading publics that helped build national identities, a process historians call print capitalism."
+ },
+ {
+  "cause": "Q169973",
+  "effect": "Q483400",
+  "strength": "minor",
+  "mechanism": "Coriolis's 1835 analysis of motion in rotating frames supplied the mathematical basis for the rotating-wheel effects that Foucault exploited in 1852."
+ },
+ {
+  "cause": "Q483400",
+  "effect": "Q197",
+  "strength": "contributing",
+  "mechanism": "Gyroscopic flight instruments and autopilots allowed aircraft to fly stably without visual horizon references, making instrument flight practical."
+ },
+ {
+  "cause": "Q483400",
+  "effect": "Q26540",
+  "strength": "minor",
+  "mechanism": "Gyroscopes give spacecraft attitude control and orientation sensing, making reliable satellite stabilization and pointing practical."
+ },
+ {
+  "cause": "Q46083",
+  "effect": "Q177859",
+  "strength": "contributing",
+  "mechanism": "After Germany's 1871 victory, France sought Russian support, producing the Franco-Russian alliance that later anchored the Triple Entente."
+ },
+ {
+  "cause": "Q329618",
+  "effect": "Q177859",
+  "strength": "contributing",
+  "mechanism": "German colonial and naval ambitions alarmed Britain and France, drawing London toward Paris and St Petersburg through the 1904 and 1907 agreements."
+ },
+ {
+  "cause": "Q172107",
+  "effect": "Q151616",
+  "strength": "contributing",
+  "mechanism": "Augustus II of Poland-Lithuania joined Russia and Denmark's 1700 alliance against Sweden, opening the war with an attack on Swedish Livonia."
+ },
+ {
+  "cause": "Q151616",
+  "effect": "Q34266",
+  "strength": "primary",
+  "mechanism": "Victory over Sweden and the 1721 Treaty of Nystad gave Russia the Baltic coast, and the Senate proclaimed Peter I emperor."
+ },
+ {
+  "cause": "Q151616",
+  "effect": "Q27306",
+  "strength": "minor",
+  "mechanism": "Prussia gained Swedish Stettin and part of Western Pomerania in the war's settlement, enlarging the state that became the Kingdom of Prussia."
+ },
+ {
+  "cause": "Q83311",
+  "effect": "Q76026",
+  "strength": "primary",
+  "mechanism": "Achaemenid expansion under Darius I, including the conquest of Ionia, drew Greek city-states into direct conflict with Persian power."
+ },
+ {
+  "cause": "Q362",
+  "effect": "Q186444",
+  "strength": "minor",
+  "mechanism": "Atomic bombs developed and used in World War II created the proliferation problem that the NPT was designed to contain."
+ },
+ {
+  "cause": "Q208688",
+  "effect": "Q52843",
+  "strength": "contributing",
+  "mechanism": "Nice left institutional reform unresolved before enlargement, prompting the Laeken process and convention that eventually drafted the Lisbon reforms."
+ },
+ {
+  "cause": "Q12539",
+  "effect": "Q14378",
+  "strength": "contributing",
+  "mechanism": "Enlightenment ideals of reason and civic virtue drove artists and writers to model their work on classical antiquity."
+ },
+ {
+  "cause": "Q14378",
+  "effect": "Q37068",
+  "strength": "minor",
+  "mechanism": "Romantic writers and painters reacted against neoclassical rules of form and reason, emphasizing emotion, nature and the individual."
+ },
+ {
+  "cause": "Q2599340",
+  "effect": "Q173065",
+  "strength": "primary",
+  "mechanism": "The 1282 Sicilian Vespers split the Kingdom of Sicily, leaving the Angevin rulers in control of the mainland as the Kingdom of Naples."
+ },
+ {
+  "cause": "Q186096",
+  "effect": "Q246863",
+  "strength": "contributing",
+  "mechanism": "Ivan IV's 1558 invasion of Livonia sought Baltic access and launched a quarter-century war that drew in Poland, Lithuania and Sweden."
+ },
+ {
+  "cause": "Q186096",
+  "effect": "Q963303",
+  "strength": "contributing",
+  "mechanism": "Muscovite pressure in the Livonian War pushed Poland and Lithuania to merge at Lublin in 1569, forming the Polish–Lithuanian Commonwealth."
+ },
+ {
+  "cause": "Q273874",
+  "effect": "Q3708255",
+  "strength": "contributing",
+  "mechanism": "Seljuk Turks under Tughril Beg overthrew the Buyid amirs in Baghdad in 1055, becoming protectors of the Abbasid caliphate."
+ },
+ {
+  "cause": "Q12536",
+  "effect": "Q3708255",
+  "strength": "contributing",
+  "mechanism": "The Abbasid caliph invited Tughril Beg to Baghdad to end Buyid rule, granting the Seljuks legitimacy as defenders of Sunni Islam."
+ },
+ {
+  "cause": "Q3708255",
+  "effect": "Q51649",
+  "strength": "contributing",
+  "mechanism": "Seljuk conquests in Anatolia and Syria prompted Byzantine appeals that led Pope Urban II to call the First Crusade at Clermont in 1095."
+ },
+ {
+  "cause": "Q3708255",
+  "effect": "Q12560",
+  "strength": "minor",
+  "mechanism": "After the Seljuk sultanate of Rum weakened in the thirteenth century, its successor principalities gave rise to the Ottoman state under Osman."
+ },
+ {
+  "cause": "Q782543",
+  "effect": "Q6368",
+  "strength": "contributing",
+  "mechanism": "Graphical browsers such as NCSA Mosaic, released in 1993, applied GUI conventions to make the Web usable for ordinary people."
+ },
+ {
+  "cause": "Q58803",
+  "effect": "Q26540",
+  "strength": "contributing",
+  "mechanism": "Solar cells powered early spacecraft such as Vanguard 1 in 1958, establishing photovoltaic arrays as the standard satellite power source."
+ },
+ {
+  "cause": "Q182135",
+  "effect": "Q58389",
+  "strength": "contributing",
+  "mechanism": "The 1589 extinction of the Valois line made Henry of Navarre, a Bourbon, the heir to the French throne."
+ },
+ {
+  "cause": "Q58389",
+  "effect": "Q80702",
+  "strength": "minor",
+  "mechanism": "Philip V's Bourbon accession in 1700 brought centralizing reforms to the Spanish Empire after the War of the Spanish Succession."
+ },
+ {
+  "cause": "Q5987345",
+  "effect": "Q610272",
+  "strength": "primary",
+  "mechanism": "The ICRC's 1863 founding and push for neutral battlefield care led to the 1864 Geneva Conference and the First Geneva Convention."
+ },
+ {
+  "cause": "Q466",
+  "effect": "Q15718485",
+  "strength": "contributing",
+  "mechanism": "Twitter was built as a web service on the World Wide Web's browsers and protocols, which made its public real-time messaging platform possible."
+ },
+ {
+  "cause": "Q317521",
+  "effect": "Q15718485",
+  "strength": "primary",
+  "mechanism": "Musk's 2022 acquisition of the company and its 2023 rebranding as X ended the Twitter name and platform era."
+ },
+ {
+  "cause": "Q701045",
+  "effect": "Q178687",
+  "strength": "primary",
+  "mechanism": "The 1894 Tonghak Rebellion in Korea prompted both Qing China and Japan to send troops there, triggering the war between them."
+ },
+ {
+  "cause": "Q47842",
+  "effect": "Q178687",
+  "strength": "minor",
+  "mechanism": "Empress Dowager Cixi's diversion of naval funds to palace projects left the Beiyang Fleet underequipped against Japan."
+ },
+ {
+  "cause": "Q150701",
+  "effect": "Q27306",
+  "strength": "minor",
+  "mechanism": "Prussia traded troops to the Habsburgs for the 1701 royal title and gained Upper Guelders at the 1713 Utrecht settlement."
+ },
+ {
+  "cause": "Q33296",
+  "effect": "Q83618",
+  "strength": "primary",
+  "mechanism": "Mughal control over the Deccan provoked Shivaji's revolt, the founding act of an independent Maratha polity."
+ },
+ {
+  "cause": "Q485547",
+  "effect": "Q83618",
+  "strength": "contributing",
+  "mechanism": "Aurangzeb's long Deccan campaigns drained Mughal resources and hardened Maratha resistance under Shivaji and his successors."
+ },
+ {
+  "cause": "Q1183649",
+  "effect": "Q83618",
+  "strength": "contributing",
+  "mechanism": "Maratha chiefs such as the Bhonsles built their power serving the Deccan sultanates of Bijapur and Ahmadnagar before breaking away."
+ },
+ {
+  "cause": "Q361",
+  "effect": "Q191077",
+  "strength": "primary",
+  "mechanism": "The collapse of Austria-Hungary at the end of World War I let South Slav lands unite into the Kingdom of Serbs, Croats and Slovenes in 1918."
+ },
+ {
+  "cause": "Q199820",
+  "effect": "Q191077",
+  "strength": "contributing",
+  "mechanism": "The 1919–1920 Paris settlements recognized the South Slav kingdom and fixed its borders with Italy, Austria and Hungary."
+ },
+ {
+  "cause": "Q191077",
+  "effect": "Q151179",
+  "strength": "minor",
+  "mechanism": "The 1929 royal dictatorship and centralizing policies radicalized Croat nationalism, helping the Ustaše grow into an armed separatist movement."
+ },
+ {
+  "cause": "Q171516",
+  "effect": "Q44746",
+  "strength": "minor",
+  "mechanism": "Compton's 1923 demonstration that light carries momentum reinforced the photon picture on which Heisenberg's quantum framework built."
+ },
+ {
+  "cause": "Q128076",
+  "effect": "Q51656",
+  "strength": "primary",
+  "mechanism": "Innocent III called for a new crusade in 1198, the expedition that Venetian interests then redirected toward Constantinople."
+ },
+ {
+  "cause": "Q151340",
+  "effect": "Q154720",
+  "strength": "primary",
+  "mechanism": "The fall of France in June 1940 gave Germany Channel-coast airfields and made an invasion of Britain strategically possible."
+ },
+ {
+  "cause": "Q7318",
+  "effect": "Q154720",
+  "strength": "primary",
+  "mechanism": "Hitler's Germany planned Operation Sea Lion and launched the Luftwaffe offensive to win air superiority for an invasion of Britain."
+ }
+]

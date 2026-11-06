@@ -1,0 +1,578 @@
+{
+ "region": "Sub-Saharan Africa",
+ "cells": [
+  {
+   "cell": "pre|Sub-Saharan Africa",
+   "era": "Before 3000 BCE",
+   "from": -12000,
+   "to": -3000,
+   "have": [
+    "Pharaoh",
+    "First Dynasty of Egypt",
+    "Early Dynastic Period of Egypt",
+    "Predynastic Egypt"
+   ],
+   "count": 4
+  },
+  {
+   "cell": "-3000_-2000|Sub-Saharan Africa",
+   "era": "3000–2000 BCE",
+   "from": -3000,
+   "to": -2000,
+   "have": [
+    "First Intermediate Period of Egypt",
+    "Third Dynasty of Egypt",
+    "Fifth Dynasty of Egypt",
+    "Second Dynasty of Egypt",
+    "Fourth Dynasty of Egypt",
+    "Land of Punt",
+    "Sixth Dynasty of Egypt",
+    "Eleventh Dynasty of Egypt",
+    "Seventh Dynasty of Egypt",
+    "Ninth Dynasty of Egypt",
+    "Eighth Dynasty of Egypt"
+   ],
+   "count": 11
+  },
+  {
+   "cell": "-2000_-1000|Sub-Saharan Africa",
+   "era": "2000–1000 BCE",
+   "from": -2000,
+   "to": -1000,
+   "have": [
+    "Eighteenth Dynasty of Egypt",
+    "Nineteenth Dynasty of Egypt",
+    "Twentieth Dynasty of Egypt",
+    "Twenty-first Dynasty of Egypt",
+    "Twelfth Dynasty of Egypt",
+    "Fifteenth Dynasty of Egypt",
+    "Seventeenth Dynasty of Egypt",
+    "Thirteenth Dynasty of Egypt",
+    "Sixteenth Dynasty of Egypt",
+    "Fourteenth Dynasty of Egypt"
+   ],
+   "count": 10
+  },
+  {
+   "cell": "-1000_-500|Sub-Saharan Africa",
+   "era": "1000–500 BCE",
+   "from": -1000,
+   "to": -500,
+   "have": [
+    "Twenty-sixth Dynasty of Egypt",
+    "Twenty-second Dynasty of Egypt",
+    "Twenty-fifth Dynasty of Egypt",
+    "Twenty-third Dynasty of Egypt",
+    "Twenty-fourth Dynasty of Egypt",
+    "Twenty-seventh Dynasty of Egypt"
+   ],
+   "count": 6
+  },
+  {
+   "cell": "-500_0|Sub-Saharan Africa",
+   "era": "500–0 BCE",
+   "from": -500,
+   "to": 0,
+   "have": [
+    "Thirtieth Dynasty of Egypt",
+    "Twenty-ninth Dynasty of Egypt",
+    "Twenty-eighth Dynasty of Egypt",
+    "Thirty-first Dynasty of Egypt"
+   ],
+   "count": 4
+  },
+  {
+   "cell": "0_250|Sub-Saharan Africa",
+   "era": "0–250",
+   "from": 0,
+   "to": 250,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "250_500|Sub-Saharan Africa",
+   "era": "250–500",
+   "from": 250,
+   "to": 500,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "500_750|Sub-Saharan Africa",
+   "era": "500–750",
+   "from": 500,
+   "to": 750,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "750_1000|Sub-Saharan Africa",
+   "era": "750–1000",
+   "from": 750,
+   "to": 1000,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1000_1100|Sub-Saharan Africa",
+   "era": "1000–1100",
+   "from": 1000,
+   "to": 1100,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1100_1200|Sub-Saharan Africa",
+   "era": "1100–1200",
+   "from": 1100,
+   "to": 1200,
+   "have": [
+    "Kingdom of Benin"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1200_1300|Sub-Saharan Africa",
+   "era": "1200–1300",
+   "from": 1200,
+   "to": 1300,
+   "have": [
+    "Mali Empire"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1300_1400|Sub-Saharan Africa",
+   "era": "1300–1400",
+   "from": 1300,
+   "to": 1400,
+   "have": [
+    "Kingdom of Kongo",
+    "Castilian Civil War of 1351–1369"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1400_1500|Sub-Saharan Africa",
+   "era": "1400–1500",
+   "from": 1400,
+   "to": 1500,
+   "have": [
+    "Mutapa Empire",
+    "Buganda",
+    "Oyo Empire"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "1500_1550|Sub-Saharan Africa",
+   "era": "1500–1550",
+   "from": 1500,
+   "to": 1550,
+   "have": [
+    "Imerina",
+    "Ethiopian–Adal War"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1550_1600|Sub-Saharan Africa",
+   "era": "1550–1600",
+   "from": 1550,
+   "to": 1600,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1600_1650|Sub-Saharan Africa",
+   "era": "1600–1650",
+   "from": 1600,
+   "to": 1650,
+   "have": [
+    "Dahomey"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1650_1700|Sub-Saharan Africa",
+   "era": "1650–1700",
+   "from": 1650,
+   "to": 1700,
+   "have": [
+    "Asante Empire"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1700_1750|Sub-Saharan Africa",
+   "era": "1700–1750",
+   "from": 1700,
+   "to": 1750,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1750_1800|Sub-Saharan Africa",
+   "era": "1750–1800",
+   "from": 1750,
+   "to": 1800,
+   "have": [
+    "Seven Years' War",
+    "Cape Colony",
+    "Xhosa Wars"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "1800_1810|Sub-Saharan Africa",
+   "era": "1800s",
+   "from": 1800,
+   "to": 1810,
+   "have": [
+    "Sokoto Caliphate"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1810_1820|Sub-Saharan Africa",
+   "era": "1810s",
+   "from": 1810,
+   "to": 1820,
+   "have": [
+    "Zulu Kingdom"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1820_1830|Sub-Saharan Africa",
+   "era": "1820s",
+   "from": 1820,
+   "to": 1830,
+   "have": [
+    "Gold Coast (British colony)",
+    "Anglo-Ashanti wars"
+   ],
+   "count": 2
+  },
+  {
+   "cell": "1830_1840|Sub-Saharan Africa",
+   "era": "1830s",
+   "from": 1830,
+   "to": 1840,
+   "have": [
+    "Battle of Blood River"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1840_1850|Sub-Saharan Africa",
+   "era": "1840s",
+   "from": 1840,
+   "to": 1850,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1850_1860|Sub-Saharan Africa",
+   "era": "1850s",
+   "from": 1850,
+   "to": 1860,
+   "have": [
+    "Orange Free State",
+    "South African Republic",
+    "Sultanate of Zanzibar"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "1860_1870|Sub-Saharan Africa",
+   "era": "1860s",
+   "from": 1860,
+   "to": 1870,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1870_1880|Sub-Saharan Africa",
+   "era": "1870s",
+   "from": 1870,
+   "to": 1880,
+   "have": [
+    "Anglo-Zulu War",
+    "Battle of Rorke's Drift",
+    "Battle of Isandlwana"
+   ],
+   "count": 3
+  },
+  {
+   "cell": "1880_1890|Sub-Saharan Africa",
+   "era": "1880s",
+   "from": 1880,
+   "to": 1890,
+   "have": [
+    "Congo Free State",
+    "German East Africa",
+    "First Boer War",
+    "German South West Africa",
+    "Kamerun",
+    "British Somaliland",
+    "Bechuanaland Protectorate",
+    "Atrocities in the Congo Free State",
+    "Basuto Gun War"
+   ],
+   "count": 9
+  },
+  {
+   "cell": "1890_1900|Sub-Saharan Africa",
+   "era": "1890s",
+   "from": 1890,
+   "to": 1900,
+   "have": [
+    "Anglo-Zanzibar War",
+    "Second Boer War",
+    "Boer Wars",
+    "First Matabele War",
+    "Jameson Raid",
+    "First Chimurenga",
+    "Siege of Mafeking",
+    "Second Franco-Dahomean War",
+    "First Franco-Dahomean War",
+    "Franco-Hova Wars",
+    "Congo Arab war"
+   ],
+   "count": 11
+  },
+  {
+   "cell": "1900_1910|Sub-Saharan Africa",
+   "era": "1900s",
+   "from": 1900,
+   "to": 1910,
+   "have": [
+    "Herero and Nama genocide",
+    "Maji Maji Rebellion",
+    "War of the Golden Stool",
+    "Herero uprising"
+   ],
+   "count": 4
+  },
+  {
+   "cell": "1910_1920|Sub-Saharan Africa",
+   "era": "1910s",
+   "from": 1910,
+   "to": 1920,
+   "have": [
+    "Union of South Africa",
+    "South West Africa",
+    "Battle of Tanga",
+    "Maritz rebellion"
+   ],
+   "count": 4
+  },
+  {
+   "cell": "1920_1930|Sub-Saharan Africa",
+   "era": "1920s",
+   "from": 1920,
+   "to": 1930,
+   "have": [
+    "Ruanda-Urundi"
+   ],
+   "count": 1
+  },
+  {
+   "cell": "1930_1940|Sub-Saharan Africa",
+   "era": "1930s",
+   "from": 1930,
+   "to": 1940,
+   "have": [],
+   "count": 0
+  },
+  {
+   "cell": "1940_1950|Sub-Saharan Africa",
+   "era": "1940s",
+   "from": 1940,
+   "to": 1950,
+   "have": [
+    "Battle of Madagascar",
+    "Battle of Dakar",
+    "Battle of Gabon",
+    "Malagasy Uprising"
+   ],
+   "count": 4
+  },
+  {
+   "cell": "1950_1960|Sub-Saharan Africa",
+   "era": "1950s",
+   "from": 1950,
+   "to": 1960,
+   "have": [
+    "Republic of Upper Volta",
+    "Federation of Rhodesia and Nyasaland",
+    "Mali Federation",
+    "Mau Mau rebellion",
+    "First Sudanese Civil War",
+    "Rwandan Revolution",
+    "Batepá massacre"
+   ],
+   "count": 7
+  },
+  {
+   "cell": "1960_1970|Sub-Saharan Africa",
+   "era": "1960s",
+   "from": 1960,
+   "to": 1970,
+   "have": [
+    "Eswatini",
+    "Lesotho",
+    "Rhodesia",
+    "Biafra",
+    "Tanganyika (1961–1964)",
+    "Nigerian Civil War",
+    "Sharpeville massacre",
+    "Portuguese Colonial War",
+    "Zanzibar Revolution",
+    "Angolan War of Independence",
+    "Mozambican War of Independence",
+    "Rhodesian Bush War",
+    "South African Border War",
+    "Guinea-Bissau War of Independence",
+    "Tanganyika laughter epidemic",
+    "Siege of Jadotville",
+    "Simba rebellion",
+    "Namibian War of Independence"
+   ],
+   "count": 18
+  },
+  {
+   "cell": "1970_1980|Sub-Saharan Africa",
+   "era": "1970s",
+   "from": 1970,
+   "to": 1980,
+   "have": [
+    "Zaire",
+    "Angolan Civil War",
+    "Ogaden War",
+    "Ethiopian Civil War",
+    "Transkei",
+    "Soweto uprising",
+    "Central African Empire",
+    "Uganda–Tanzania War"
+   ],
+   "count": 8
+  },
+  {
+   "cell": "1980_1990|Sub-Saharan Africa",
+   "era": "1980s",
+   "from": 1980,
+   "to": 1990,
+   "have": [
+    "Second Sudanese Civil War",
+    "First Liberian Civil War",
+    "African Charter on Human and Peoples' Rights",
+    "1983–1985 famine in Ethiopia",
+    "Agacher Strip War",
+    "Casamance conflict",
+    "Ugandan Bush War",
+    "1982 Ethiopian–Somali Border War"
+   ],
+   "count": 8
+  },
+  {
+   "cell": "1990_2000|Sub-Saharan Africa",
+   "era": "1990s",
+   "from": 1990,
+   "to": 2000,
+   "have": [
+    "Rwandan genocide",
+    "Somali Civil War",
+    "Second Congo War",
+    "First Congo War",
+    "Sierra Leone Civil War",
+    "Battle of Mogadishu (1993)",
+    "Nollywood",
+    "Rwandan Civil War",
+    "Second Liberian Civil War",
+    "Burundian Civil War",
+    "Guinea-Bissau Civil War",
+    "Republic of the Congo Civil War (1997–1999)"
+   ],
+   "count": 12
+  },
+  {
+   "cell": "2000_2010|Sub-Saharan Africa",
+   "era": "2000s",
+   "from": 2000,
+   "to": 2010,
+   "have": [
+    "Boko Haram insurgency",
+    "Kivu conflict",
+    "First Ivorian Civil War",
+    "Conflict in the Niger Delta",
+    "Somali Civil War (2009–present)",
+    "War in Somalia (2006–2009)",
+    "Central African Bush War"
+   ],
+   "count": 7
+  },
+  {
+   "cell": "2010_2020|Sub-Saharan Africa",
+   "era": "2010s",
+   "from": 2010,
+   "to": 2020,
+   "have": [
+    "Arab Spring",
+    "North East State of Somalia",
+    "2011 East Africa drought",
+    "South Sudanese Civil War",
+    "2017 Zimbabwean coup d'état",
+    "Arab Winter",
+    "Central African Republic Civil War",
+    "Marikana massacre",
+    "2012 Malian coup d'état",
+    "Kivu Ebola epidemic",
+    "2014 Burkina Faso uprising",
+    "2015 Baga massacre",
+    "2010 Nigerien coup d'état",
+    "Tuareg rebellion (2012)",
+    "2010–2011 Ivorian crisis",
+    "Libyan crisis",
+    "2019 Gabonese coup attempt",
+    "2015 Burkina Faso coup attempt",
+    "Second Ivorian Civil War",
+    "Islamist insurgency in Burkina Faso",
+    "Ngogo Chimpanzee War"
+   ],
+   "count": 21
+  },
+  {
+   "cell": "2020_2030|Sub-Saharan Africa",
+   "era": "2020s",
+   "from": 2020,
+   "to": 2030,
+   "have": [
+    "MV Hondius hantavirus outbreak",
+    "2023 Nigerien coup d'état",
+    "2023 Gabonese coup d'état",
+    "2026 Ebola epidemic",
+    "COVID-19 pandemic in Africa",
+    "2020 Malian coup d'état",
+    "2021 Guinean coup d'état",
+    "January 2022 Burkina Faso coup d'état",
+    "COVID-19 pandemic in South Africa",
+    "COVID-19 pandemic in Benin",
+    "September 2022 Burkina Faso coup d'état",
+    "COVID-19 pandemic in Gabon",
+    "COVID-19 pandemic in Rwanda",
+    "COVID-19 pandemic in Zambia",
+    "COVID-19 pandemic in Angola",
+    "COVID-19 pandemic in the Democratic Republic of the Congo",
+    "COVID-19 pandemic in Nigeria",
+    "COVID-19 pandemic in Seychelles",
+    "COVID-19 pandemic in the Central African Republic",
+    "2025 Guinea-Bissau coup d'état",
+    "2021 Malian coup d'état",
+    "2025 Malagasy coup d'état"
+   ],
+   "count": 22
+  }
+ ]
+}

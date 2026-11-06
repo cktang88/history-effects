@@ -1,0 +1,21 @@
+[
+  {"cause": "Q551888", "effect": "Q62943", "strength": "primary", "mechanism": "Alexander's campaigns in Persia and northwest India broke existing powers and left a political vacuum that Chandragupta exploited to seize the Mauryan throne."},
+  {"cause": "Q846025", "effect": "Q62943", "strength": "contributing", "mechanism": "Magadha's rise out of the Mahajanapadas system supplied the territorial base and administrative tradition from which the Mauryan state expanded."},
+  {"cause": "Q2912306", "effect": "Q62943", "strength": "contributing", "mechanism": "Diadochi wars kept the Seleucid rulers occupied in the west, letting Chandragupta seize northwestern territories in the early third century BCE."},
+  {"cause": "Q181765", "effect": "Q65968", "strength": "contributing", "mechanism": "Habsburg dynasts won election to the imperial crown from 1273, and the Holy Roman office became the power base from which the dynasty expanded."},
+  {"cause": "Q171150", "effect": "Q65968", "strength": "minor", "mechanism": "After the 1526 battle of Mohacs, Habsburg succession claims gave the dynasty the Hungarian crown, extending its rule into Central Europe."},
+  {"cause": "Q65968", "effect": "Q42585", "strength": "minor", "mechanism": "Habsburg succession to the Bohemian crown after 1526 brought the kingdom under Habsburg dynastic rule for centuries."},
+  {"cause": "Q608613", "effect": "Q4948", "strength": "contributing", "mechanism": "Refugees fleeing the collapse of Roman authority and barbarian invasions settled the Venetian lagoons, founding the community that became the republic."},
+  {"cause": "Q477973", "effect": "Q4948", "strength": "minor", "mechanism": "Justinian's Gothic War restored Byzantine administration over Italy and the lagoon settlements, shaping Venice's early ties to Constantinople."},
+  {"cause": "Q4948", "effect": "Q12546", "strength": "minor", "mechanism": "Venetian shipping and naval power carried crusading armies and supplies, making Venice a central logistical partner of the Crusades."},
+  {"cause": "Q128160", "effect": "Q186444", "strength": "contributing", "mechanism": "Alarm over the 1962 standoff pushed the superpowers toward arms control, a process that culminated in the 1968 Non-Proliferation Treaty."},
+  {"cause": "Q392119", "effect": "Q466087", "strength": "minor", "mechanism": "The 1966 ICCPR set out the UN human rights framework that the Convention on the Rights of the Child drew on for its rights standards."},
+  {"cause": "Q83476", "effect": "Q179876", "strength": "contributing", "mechanism": "Alfred the Great's defeat of Viking forces and consolidation of Wessex laid the groundwork for the later unification of the English kingdom."},
+  {"cause": "Q12560", "effect": "Q200464", "strength": "minor", "mechanism": "Ottoman control of eastern Mediterranean trade routes after 1453 pushed Portugal to seek direct sea routes to Asia."},
+  {"cause": "Q428995", "effect": "Q5043", "strength": "minor", "mechanism": "Koine Greek and Hellenistic Jewish communities supplied the linguistic and cultural networks through which early Christianity spread across the Mediterranean."},
+  {"cause": "Q215643", "effect": "Q25979", "strength": "minor", "mechanism": "The Indo-Greek collapse in the northwest left a political vacuum that Kushan rulers filled, consolidating power in Bactria and northern India."},
+  {"cause": "Q189508", "effect": "Q161885", "strength": "minor", "mechanism": "The 1688 Glorious Revolution settled a Protestant succession that made a constitutional union with Scotland politically feasible in 1707."},
+  {"cause": "Q4576", "effect": "Q7184", "strength": "minor", "mechanism": "Marshall Plan aid tied Western European recovery to transatlantic cooperation, a framework that fed directly into the 1949 NATO security alliance."},
+  {"cause": "Q127050", "effect": "Q8683", "strength": "contributing", "mechanism": "The bomb programme created a nuclear arsenal and arms race between the superpowers that became the core military rivalry of the Cold War."},
+  {"cause": "Q127050", "effect": "Q625107", "strength": "minor", "mechanism": "Los Alamos weapons work at the Manhattan Project laid the technical and institutional base from which thermonuclear weapons were developed."}
+]

@@ -1,0 +1,74 @@
+[
+ {
+  "cause": "Q55502",
+  "effect": "Q187549",
+  "strength": "minor",
+  "mechanism": "The Hospitallers, whose Jerusalem hospital predated the kingdom, were militarised and drawn into defending the crusader states."
+ },
+ {
+  "cause": "Q9458",
+  "effect": "Q12490507",
+  "strength": "primary",
+  "mechanism": "Muhammad founded the Muslim community at Medina and its political leadership, which the first four caliphs inherited and institutionalised as the Rashidun state."
+ },
+ {
+  "cause": "Q428",
+  "effect": "Q12490507",
+  "strength": "contributing",
+  "mechanism": "The Quran's revelations supplied the scriptural and legal foundation that the early caliphs applied in governing their expanding Muslim state."
+ },
+ {
+  "cause": "Q8423",
+  "effect": "Q170305",
+  "strength": "contributing",
+  "mechanism": "Cyrus the Great's conquests built the Achaemenid empire, whose provincial administration the satrapy system was developed to govern."
+ },
+ {
+  "cause": "Q20437507",
+  "effect": "Q170305",
+  "strength": "contributing",
+  "mechanism": "Median administrative practices for governing subject regions were inherited by the Achaemenids and shaped the satrapy system."
+ },
+ {
+  "cause": "Q36704",
+  "effect": "Q170334",
+  "strength": "contributing",
+  "mechanism": "Yugoslavia's violent dissolution in the early 1990s produced the Bosnian War, within which the Srebrenica massacre was committed."
+ },
+ {
+  "cause": "Q7318",
+  "effect": "Q36756",
+  "strength": "primary",
+  "mechanism": "The Nazi regime directed SA and SS violence against Jews across Germany after a German diplomat was assassinated in Paris in 1938."
+ },
+ {
+  "cause": "Q36756",
+  "effect": "Q127013",
+  "strength": "contributing",
+  "mechanism": "The pogrom's open violence and mass arrests accelerated Nazi antisemitic policy toward systematic deportation and ultimately the Final Solution."
+ },
+ {
+  "cause": "Q38789",
+  "effect": "Q154182",
+  "strength": "contributing",
+  "mechanism": "Soviet victory at Stalingrad turned the tide on the Eastern Front, enabling the Red Army's sustained westward advance that ended at Berlin."
+ },
+ {
+  "cause": "Q130861",
+  "effect": "Q154182",
+  "strength": "contributing",
+  "mechanism": "The decisive Soviet defeat of German forces at Kursk seized the strategic initiative, sustaining the offensive that reached Berlin in 1945."
+ },
+ {
+  "cause": "Q71084",
+  "effect": "Q71092",
+  "strength": "contributing",
+  "mechanism": "The First Empire's Napoleonic legacy and plebiscitary model underpinned Louis-Napoleon's appeal and his 1852 restoration of imperial rule."
+ },
+ {
+  "cause": "Q8735",
+  "effect": "Q83311",
+  "strength": "contributing",
+  "mechanism": "Median administrative and military structures were absorbed when Cyrus took the Median realm, forming part of the foundation of the Achaemenid Persian Empire."
+ }
+]

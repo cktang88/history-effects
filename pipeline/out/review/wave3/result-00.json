@@ -1,0 +1,1502 @@
+{
+ "Q5167679>Q15860072": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Ukraine's 1991 independence let Kyiv pursue Western integration, which Moscow opposed, culminating in Russia's 2014 seizure of Crimea and backing of Donbas separatists."
+ },
+ "Q8683>Q5167679": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Cold War arms racing overstretched the Soviet economy, and the crisis that followed Gorbachev's reforms led to the union's collapse in 1991."
+ },
+ "Q5167679>Q110999040": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1991 dissolution created an independent Ukraine whose Western orientation Russia later confronted, culminating in the 2022 full-scale invasion."
+ },
+ "Q130796>Q5167679": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7795>Q81545": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q11264>Q128160": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The revolution's alignment with Moscow led Cuba to accept Soviet nuclear missiles in 1962, provoking the US confrontation."
+ },
+ "Q49101>Q49077": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Nasser's 1967 demand that UN buffer forces leave the Sinai, amid unsettled post-Suez tensions, helped trigger Israel's preemptive strike in the Six-Day War."
+ },
+ "Q187152>Q8669": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Balfour's promise of a Jewish national home backed Zionist settlement in Palestine, fueling Arab opposition and communal violence that escalated into the 1948 war."
+ },
+ "Q15224558>Q15920546": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Euromaidan ousted Yanukovych and installed a pro-Western government, which Russia used as the pretext to send troops into Crimea and stage an annexation referendum."
+ },
+ "Q36204>Q171178": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "The earthquake knocked out Fukushima Daiichi's external power, and the tsunami flooded its backup generators, causing loss of cooling and reactor meltdowns."
+ },
+ "Q855>Q5167679": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7795>Q10806": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7795>Q81068910": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7795>Q84263196": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7795>Q110999040": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q39671>Q12554": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q5167679>Q99659280": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Soviet collapse removed central control over Nagorno-Karabakh, letting Armenia and Azerbaijan fight the 1988-94 war, and its unresolved status fed the 2020 war."
+ },
+ "Q201684>Q8698": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "The 1929 crash wiped out wealth and confidence, prompting bank runs and credit contraction that turned a recession into a prolonged global depression."
+ },
+ "Q2042>Q7888194": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q567>Q7888194": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q192>Q7888194": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Cameron, to contain Eurosceptic pressure, promised and held the 2016 EU membership referendum, whose Leave vote led to the UK's withdrawal."
+ },
+ "Q15029>Q8567": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q83322>Q9316": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Guru Nanak's teachings and founding of the first Sikh community established the core doctrines that his successors institutionalized as Sikhism."
+ },
+ "Q501>Q164800": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Baudelaire's translations of Poe and symbolic, correspondence-based poetry in Les Fleurs du mal provided the models that Mallarme and Verlaine developed into Symbolism."
+ },
+ "Q7795>Q37643": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Iraq accused Kuwait of exceeding OPEC quotas, depressing oil prices and Iraqi revenues, and this grievance fed Saddam Hussein's 1990 invasion of Kuwait."
+ },
+ "Q17410>Q58715": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q22923830>Q104705419": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Trump's rejection of his 2020 defeat and repeated fraud claims mobilized supporters, who stormed the Capitol on January 6 to disrupt congressional certification."
+ },
+ "Q26189>Q12562": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The schism's rival popes discredited papal authority and fueled demands for conciliar reform, which Reformers later turned into a break with Rome."
+ },
+ "Q7795>Q33761": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q46333>Q170314": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7795>Q82664": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q167634>Q5167679": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Gorbachev's perestroika and glasnost loosened central control and freed nationalist movements, which pushed republics to declare sovereignty and ultimately dissolve the union in 1991."
+ },
+ "Q11264>Q191721": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Castro's nationalizations and Soviet alignment convinced Washington that Cuba must be overthrown, leading the CIA to train and land exile forces at the Bay of Pigs in 1961."
+ },
+ "Q7795>Q49077": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7795>Q126065": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q11256>Q128160": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Castro requested additional Soviet air-defence missiles and accepted Soviet nuclear deployments, giving Moscow the basis for placing missiles in Cuba in 1962."
+ },
+ "Q35314>Q128160": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Khrushchev decided in 1962 to secretly deploy intermediate-range nuclear missiles in Cuba to offset US strategic superiority, triggering the US blockade and confrontation."
+ },
+ "Q401>Q5406": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q34453>Q5167679": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Yeltsin's Russian government declared sovereignty and, with Ukrainian and Belarusian leaders, signed the December 1991 Belovezh Accords that dissolved the USSR."
+ },
+ "Q7795>Q49100": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q239060>Q187152": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q80880>Q896666": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "After 1997, Asian central banks built large dollar reserves invested in US Treasuries, lowering US rates and helping fuel the housing boom behind the 2008 crisis."
+ },
+ "Q7191>Q128160": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q362>Q128160": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q8683>Q128160": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q8683>Q191721": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q159950>Q242099": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Japan's 1905 gains, including the Kwantung leasehold and South Manchuria Railway, let the Kwantung Army expand its presence, enabling its staged 1931 Mukden incident."
+ },
+ "Q208191>Q83201": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Bandung's 1955 principles of non-alignment and anti-colonialism became the framework on which Yugoslavia, India and others founded the Non-Aligned Movement in 1956."
+ },
+ "Q123759>Q128160": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The OAS's 1962 expulsion of Cuba, backed by US pressure, convinced Havana it faced encirclement and pushed it to seek Soviet nuclear protection."
+ },
+ "Q8676>Q623429": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "The Union victory ended slavery and forced the question of Southern reintegration, creating the federal Reconstruction policies on emancipation, rights and readmission of states."
+ },
+ "Q15180>Q5167679": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q362>Q5167679": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q42976>Q5167679": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q6235>Q5167679": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Nationalist movements in the Baltic republics, Ukraine and the Caucasus mobilized mass independence campaigns that glasnost enabled, pushing republics out of the union."
+ },
+ "Q41644>Q5167679": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q5167679>Q485207": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q5167679>Q42418": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Soviet collapse ended Moscow's aid to Najibullah's Kabul government in 1991, letting the Afghan civil war spread and creating the opening in which the Taliban rose by 1996."
+ },
+ "Q5167679>Q10806": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q486>Q5167679": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Chernobyl's cleanup and compensation costs, estimated in the hundreds of billions of dollars, strained the Soviet budget and deepened the economic crisis behind the union's collapse."
+ },
+ "Q7795>Q21707860": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q362>Q127050": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Fear that Nazi Germany would build atomic weapons, combined with wartime mobilization, led the United States to launch the Manhattan Project to build nuclear bombs."
+ },
+ "Q127050>Q488": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "The Manhattan Project produced the uranium and plutonium bombs that the United States dropped on Hiroshima and Nagasaki in August 1945."
+ },
+ "Q11264>Q5167679": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q52418>Q127050": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Pearl Harbor brought the United States into the war, and the resulting urgency led the S-1 Committee to accelerate and expand the atomic weapons program."
+ },
+ "Q159950>Q49101": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q49101>Q128160": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q49101>Q8740": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q49101>Q49100": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q9592>Q187152": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q35032>Q187152": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q361>Q187152": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Wartime strategic calculations, including the wish to win Jewish support and secure Palestine, led Britain's government to issue the Balfour Declaration in November 1917."
+ },
+ "Q8729>Q187152": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The Russian Revolution made Britain fear Russia's exit from the war and seek Jewish backing abroad, a strategic calculation that shaped the 1917 Balfour Declaration."
+ },
+ "Q83372>Q187152": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q42976>Q187152": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q25906338>Q20857240": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q178810>Q20857240": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Syria's civil war displaced millions, and Syrians made up most of the roughly 1.3 million asylum seekers who reached Europe in 2015."
+ },
+ "Q132551>Q20857240": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q5167679>Q620735": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Georgia's post-Soviet independence and the frozen Abkhazia and South Ossetia conflicts gave Moscow the pretext to intervene militarily against Georgia in August 2008."
+ },
+ "Q5167679>Q182865": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q11696>Q42761": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q8740>Q42761": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The Pentagon Papers leak on the Vietnam War prompted Nixon's plumbers unit, whose break-ins and cover-up efforts led directly to the Watergate scandal."
+ },
+ "Q11201>Q42761": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7310>Q42761": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q167457>Q7888194": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q17013132>Q49106": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Oslo's failure to deliver statehood, combined with continued settlement expansion, fueled Palestinian anger that erupted in the Second Intifada in September 2000."
+ },
+ "Q11146>Q7888194": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1992 Maastricht Treaty provoked a strong Eurosceptic backlash that split the Conservative Party and fueled the Eurosceptic campaign for the 2016 referendum."
+ },
+ "Q17001802>Q134900605": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "After the US withdrew from the 2015 nuclear deal, Iran expanded enrichment, and Israel cited this stockpile as justification for its June 2025 strikes."
+ },
+ "Q58715>Q8690": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The Great Leap's famine and Mao's loss of prestige at the 1962 Cadres Conference led him to launch the Cultural Revolution to reassert his power."
+ },
+ "Q8413>Q187702": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "After legalizing Christianity, Constantine ordered a basilica built over the tomb of Jesus at Golgotha, completed around 335 as the Church of the Holy Sepulchre."
+ },
+ "Q164348>Q8411": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Soviet suppression of the Hungarian uprising led Spain, the Netherlands and Switzerland to boycott the 1956 Melbourne Olympics."
+ },
+ "Q49101>Q164348": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q5167679>Q29269": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "After the Soviet collapse let Chechen leader Dudayev declare independence in 1991, Moscow's 1994 attempt to reassert control triggered the First Chechen War."
+ },
+ "Q177859>Q187152": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q152283>Q187152": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q221382>Q5167679": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The failed August 1991 hardliner coup discredited the Communist Party, letting Yeltsin's Russia and other republics seize power and declare independence, leading to the December dissolution."
+ },
+ "Q126065>Q589673": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Revolutionary anti-American radicalism after the 1979 overthrow of the Shah let Islamist students seize the US embassy in Tehran on 4 November 1979."
+ },
+ "Q35314>Q58715": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Khrushchev's 1958 boast of surpassing the US through peaceful competition spurred Mao's push to launch the Great Leap Forward's rapid industrialization drive."
+ },
+ "Q2184>Q15920546": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q211674>Q187152": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7795>Q856650": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Iraq pressed OPEC to cut Kuwaiti overproduction and raise prices, a grievance Saddam Hussein cited before invading Kuwait in August 1990."
+ },
+ "Q187702>Q51649": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q165725>Q164983": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Ottoman defeats in the Balkan Wars led Allied planners to underestimate Ottoman strength, encouraging the 1915 amphibious landings at Gallipoli."
+ },
+ "Q164983>Q101534": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q164983>Q48249": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q164983>Q7785": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q187152>Q49097": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The Balfour commitment, embedded in the League Mandate, drove Zionist immigration and Arab opposition that escalated into the 1947-48 civil war and Arab-Israeli war."
+ },
+ "Q361>Q36756": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q164983>Q184425": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q15920546>Q110999040": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Russia's 2014 seizure of Crimea and support for Donbas separatists set up the conflict that Moscow escalated into the full-scale 2022 invasion."
+ },
+ "Q173100>Q5167679": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Glasnost removed censorship and let nationalist and reform movements mobilize openly, which undermined central authority and led to the union's dissolution in 1991."
+ },
+ "Q164983>Q16470": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q164983>Q193258": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q486>Q173100": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The Soviet cover-up of Chernobyl's scale undermined public trust, and the disaster's exposure of systemic failures pushed Gorbachev to adopt glasnost."
+ },
+ "Q42976>Q15920546": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q79911>Q15920546": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q362>Q15920546": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q167634>Q15920546": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q5167679>Q15920546": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Soviet dissolution left Crimea within an independent Ukraine, and disputes over the Black Sea Fleet and Russian-speaking population shaped Moscow's 2014 annexation."
+ },
+ "Q182865>Q20857240": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 2001-2021 Afghan war displaced large numbers of Afghans, who formed a significant share of the refugees reaching Europe in the 2015 migrant crisis."
+ },
+ "Q33761>Q20857240": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Arab Spring protests escalated into the Syrian civil war, which generated most of the refugees who arrived in Europe in 2015."
+ },
+ "Q83085>Q20857240": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1979-89 Soviet-Afghan War began four decades of conflict that displaced millions of Afghans, many of whom reached Europe in 2015."
+ },
+ "Q42418>Q20857240": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Taliban insurgency and its resurgence in Afghanistan drove many Afghan families to flee, making Afghans a major share of the asylum seekers reaching Europe in 2015."
+ },
+ "Q673175>Q179788": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Four decades of exhausting civil war led Henry IV to issue the 1598 Edict of Nantes, granting Huguenots legal rights to end the conflict."
+ },
+ "Q8690>Q1205521": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The Cultural Revolution's devastation discredited Maoist economics, and after Mao's 1976 death Deng's reformers launched market-oriented reform and opening."
+ },
+ "Q486>Q171178": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q190029>Q20857240": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q172587>Q171178": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q6165880>Q8663": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Soviet entry into the Pacific War in August 1945 led to Soviet occupation of northern Korea, establishing the communist regime that invaded the South in 1950."
+ },
+ "Q1134220>Q210354": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Mongol conquest made the Rus' principalities tribute-paying vassals of the Golden Horde, the domination that Dmitry of Moscow challenged at Kulikovo in 1380."
+ },
+ "Q163244>Q6165880": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q200790>Q49101": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "France's frustration with Egyptian support for the Algerian FLN pushed Paris to join Britain and Israel in the 1956 Suez operation."
+ },
+ "Q42976>Q58715": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q164348>Q58715": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q8663>Q58715": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q722699>Q464399": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1898 Fashoda standoff, ending in French withdrawal, convinced Britain and France to settle colonial disputes, producing the 1904 Entente Cordiale."
+ },
+ "Q13582>Q722699": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The Berlin Conference's effective-occupation rules triggered the late-1890s scramble for Africa, in which Britain and France clashed over the Upper Nile at Fashoda."
+ },
+ "Q186284>Q5167679": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q181026>Q128160": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q80880>Q1142572": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1997 Asian crisis cut regional demand and commodity prices, and the resulting fall in oil revenues drained Russia's reserves, forcing its August 1998 ruble devaluation and default."
+ },
+ "Q164983>Q132568": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q49101>Q316817": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q210398>Q170770": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Moscow's first prince, Daniel, was a Rurikid, and the dynasty's Moscow branch built the principality that became the Grand Principality of Moscow."
+ },
+ "Q7408>Q192408": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Repeated failure in the imperial examinations frustrated Hong Xiuquan's ambitions, and his millenarian movement then launched the Taiping Rebellion."
+ },
+ "Q201424>Q127050": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q68962>Q173282": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q191721>Q128160": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The failed 1961 Bay of Pigs invasion convinced Havana and Moscow that Kennedy would not fight, and Cuba's fear of invasion drove the decision to accept Soviet missiles."
+ },
+ "Q164983>Q234738": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q58715>Q2454958": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Forced collectivization, false production targets and grain requisitions during the Great Leap Forward caused the mass famine of 1959-61."
+ },
+ "Q361>Q201684": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q187152>Q3266633": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The Balfour Declaration's endorsement of a Jewish national home underpinned Mandate-era Zionist immigration and land acquisition that preceded the 1948 expulsion of Palestinians."
+ },
+ "Q130796>Q389646": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Soviet annexation of the Baltics under the 1939 secret protocol was the grievance that Baltic activists turned into the 1989 Baltic Way protest demanding independence."
+ },
+ "Q46333>Q362": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q173457>Q362": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q696187>Q95965839": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q185642>Q8729": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Bloody Sunday's massacre of petitioners sparked the 1905 revolution, whose failure left the autocracy discredited and set the stage for the 1917 revolutions."
+ },
+ "Q7184>Q277252": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Nixon's 1953 proposal for an Asian NATO, modeled on the North Atlantic alliance, led to the 1954 Manila treaty creating SEATO."
+ },
+ "Q49101>Q208484": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q179788>Q189508": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q36749>Q36756": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q23540>Q179788": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Growth of Calvinist Huguenot communities made religious war unavoidable, and their military strength forced Henry IV to grant them legal rights in the Edict of Nantes."
+ },
+ "Q9592>Q179788": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q242352>Q20857240": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q154640>Q254106": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q17013132>Q124086054": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q128160>Q193484": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7191>Q17013132": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q202578>Q187702": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q154640>Q181026": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Fear that Holy Alliance monarchies would help Spain recover its Latin American colonies led President Monroe to declare in 1823 that the Americas were closed to European intervention."
+ },
+ "Q242099>Q152195": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Japan's isolation after the 1931 Manchuria invasion drew Western hostility, leading Tokyo to seek an anti-communist alliance with Nazi Germany in 1936."
+ },
+ "Q184928>Q109878": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Nationwide strikes and uprisings in 1905 forced Nicholas II to issue the October Manifesto, promising a constitution and an elected Duma."
+ },
+ "Q361>Q1506365": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Wartime labor shortages in Northern industries, combined with the halt of European immigration during the war, drew millions of Black Southerners northward."
+ },
+ "Q203824>Q164983": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Ottoman poor performance in the 1911-12 Italo-Turkish War led Allied planners to underestimate Ottoman strength, encouraging the 1915 Gallipoli landings."
+ },
+ "Q127912>Q2736155": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Seneca Falls organizers adapted the Declaration of Independence's language to write the 1848 Declaration of Sentiments, demanding equal rights for women."
+ },
+ "Q193155>Q505802": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Jefferson commissioned the Lewis and Clark expedition to explore and map the vast territory the United States had just acquired from France."
+ },
+ "Q193155>Q6683": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q217172>Q19686631": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q689128>Q193155": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The failure of Napoleon's Saint-Domingue expedition, defeated by Haitian forces, led Napoleon to abandon his American empire and sell Louisiana to the United States."
+ },
+ "Q7795>Q316817": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "OPEC's coordinated pricing and output decisions, alongside the Arab producers' embargo, drove the 1973 price hikes that quadrupled oil prices."
+ },
+ "Q33143>Q193155": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "France's defeat in the Seven Years' War ceded Louisiana to Spain, and Napoleon's later retrocession of it to France set up the 1803 sale to the United States."
+ },
+ "Q696802>Q42761": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q208127>Q548067": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Japan's destruction of the Russian fleet at Tsushima broke Russian resolve to continue, leading Tsar Nicholas II to accept US-mediated peace talks at Portsmouth."
+ },
+ "Q208127>Q361": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q11270>Q191721": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q46809>Q191721": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q239543>Q187152": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q190712>Q164983": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "After the Marne and Ypres ended the war of movement on the Western Front, Churchill and Kitchener pursued a Dardanelles strike against the Ottomans, leading to Gallipoli."
+ },
+ "Q361>Q208855": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The Defence of India Act's wartime emergency powers, extended by the 1919 Rowlatt Act, provoked the Amritsar protest that British troops fired on at Jallianwala Bagh."
+ },
+ "Q178275>Q208855": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q76421>Q896666": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q155361>Q68962": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q45745>Q15180": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q81931>Q623429": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q208300>Q45745": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q208300>Q5167679": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q19830062>Q141182413": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 2015 Nepal earthquakes destabilized the Langtang Lirung glacier, whose collapse in a debris avalanche helped trigger the 2026 Nepal-Tibet floods."
+ },
+ "Q190758>Q20857240": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q127912>Q727854": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q379850>Q49101": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1955 Baghdad Pact, which Nasser saw as British encirclement, pushed Egypt toward Soviet arms and ultimately to the nationalization of the Suez Canal that precipitated the 1956 crisis."
+ },
+ "Q154510>Q7888194": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Austerity and the economic aftershocks of the 2007-09 recession eroded British support for EU membership, feeding the Leave vote in 2016."
+ },
+ "Q7795>Q154510": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q80130>Q389646": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q128160>Q208694": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Soviet preoccupation with the Cuban Missile Crisis led Khrushchev to withdraw support for India, and Mao exploited the moment to attack India in October 1962."
+ },
+ "Q185642>Q101534": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Bloody Sunday destroyed popular loyalty to Nicholas II, a loss that deepened through the 1905 revolution and fueled the 1917 uprising that toppled the Tsar."
+ },
+ "Q185642>Q184928": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Troops firing on Father Gapon's petition march on 22 January 1905 provoked nationwide strikes and protests that became the 1905 Revolution."
+ },
+ "Q184928>Q185642": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q187152>Q239060": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q239060>Q164983": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q83372>Q185642": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q191515>Q185642": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q35032>Q185642": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7795>Q80880": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q8740>Q277252": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q80880>Q10806": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q49101>Q835539": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The Suez crisis raised fears of Soviet influence in the Middle East, prompting Eisenhower to seek congressional authority to offer aid and defense to Middle Eastern states."
+ },
+ "Q76986>Q15920546": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The Belovezha Accords left Crimea inside independent Ukraine, and Russia's 2014 annexation later reversed that post-Soviet border settlement."
+ },
+ "Q242099>Q362": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1931 Mukden incident started Japan's military expansion in Manchuria, a path that led through the 1937 China war to Japan's role in the Pacific War."
+ },
+ "Q242099>Q170314": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The 1931 Mukden incident triggered Japan's invasion of Manchuria and the localized conflicts with Chinese forces that escalated into the 1937 Second Sino-Japanese War."
+ },
+ "Q205073>Q242099": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q191721>Q193484": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q152989>Q187152": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2305266>Q5167679": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q19546>Q207327": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Papal backing of Charles of Anjou's conquest of Sicily imposed harsh Angevin rule, which the 1282 Sicilian Vespers uprising overthrew."
+ },
+ "Q51656>Q207327": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q152989>Q164983": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The stalemate on the Western Front in late 1914 led the Entente to seek a decisive alternative theatre, prompting the Dardanelles campaign at Gallipoli."
+ },
+ "Q191721>Q42761": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q128160>Q191721": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q152033>Q8567": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q14213>Q191721": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q123759>Q191721": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q83372>Q191721": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q35525>Q191721": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q95965839>Q81068910": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q8676>Q391358": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "The war's escalation and Union military needs led Lincoln to issue the Emancipation Proclamation in 1863, freeing slaves in rebel-held territory."
+ },
+ "Q1134220>Q170770": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Moscow's princes gained Golden Horde favor as tribute collectors, using Mongol backing to outpace rival principalities and become the leading Russian state."
+ },
+ "Q179788>Q152218": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q976887>Q191721": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Operatives from the 1954 Guatemalan coup, and the CIA's confidence from that success, carried over into planning the 1961 Bay of Pigs invasion of Cuba."
+ },
+ "Q159950>Q208127": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q26189>Q478301": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q49105>Q17013132": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The First Intifada's mass uprising forced Israel and the PLO into negotiations, producing the Madrid process and the 1993 Oslo Accords."
+ },
+ "Q163730>Q46525": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q177859>Q208127": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q208127>Q152283": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q208127>Q52418": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q208127>Q362": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q208127>Q156554": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q548067>Q242099": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The Treaty of Portsmouth transferred Russia's South Manchuria railway lease to Japan, giving the Kwantung Army the zone from which it staged the 1931 Mukden incident."
+ },
+ "Q595321>Q5167679": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Mass nonviolent independence campaigns in Estonia, Latvia and Lithuania pressed Moscow and showed republics could secede, accelerating the Soviet collapse."
+ },
+ "Q41726>Q1146739": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q242099>Q1551794": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Kwantung Army officers staged the Mukden railway explosion on 18 September 1931 as the pretext to launch the invasion of Manchuria that same night."
+ },
+ "Q695566>Q1417847": {
+  "verdict": "keep",
+  "strength": "primary",
+  "mechanism": "Bank and railway failures in 1873 triggered credit contraction and deflation, which deepened into the 1873-79 Long Depression across Europe and North America."
+ },
+ "Q193155>Q638530": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q15224558>Q110413718": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q187702>Q192303": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q2454958>Q58715": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q58715>Q2885072": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q189508>Q219698": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The Glorious Revolution toppled Governor Andros in Massachusetts, leaving the colony without stable government and fueling the political turmoil in which the Salem trials occurred."
+ },
+ "Q82708>Q219698": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q80330>Q219698": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q154573>Q164983": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "With Russia cut off on the icebound Eastern Front and the Dardanelles closed, the Allies attacked Gallipoli to open a supply route to Russia."
+ },
+ "Q5167679>Q110413718": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q81068910>Q110413718": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Pandemic-era austerity and inflation stagnated wages in Kazakhstan, fueling grievances that erupted in the January 2022 unrest after gas price rises."
+ },
+ "Q717798>Q129053": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Arya Samaj leader Lala Lajpat Rai's 1924 two-nation argument and the Hindu reconversion movement hardened communal divisions that underpinned the 1947 partition."
+ },
+ "Q179975>Q208191": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q593774>Q7795": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q204213>Q5167679": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "The 1989 revolutions across the Eastern Bloc, including Romania's uprising, toppled Soviet-aligned regimes and pressed Gorbachev to devolve power, hastening the Soviet collapse."
+ },
+ "Q5167679>Q108102583": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q472802>Q7809": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q8683>Q208191": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Asian and African states, excluded from Cold War superpower decisions, convened at Bandung in 1955 to assert a neutral third path."
+ },
+ "Q210800>Q208127": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Japan's capture of Port Arthur in January 1905 freed its naval forces, which then intercepted the Russian Baltic Fleet at Tsushima."
+ },
+ "Q727854>Q39392": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "The Missouri Compromise's slavery line, extended to the Mexican Cession after 1846, was contested, forcing Congress to craft the 1850 compromise package."
+ },
+ "Q208156>Q178687": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q379850>Q208484": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q187152>Q49092": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q316743>Q207327": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Lord Edward's 1281 crusade, backed by Pope Martin IV, ended in a costly fiasco that drew Charles of Anjou away and set the stage for the 1282 Sicilian Vespers."
+ },
+ "Q164983>Q328499": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q309204>Q17013132": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q1780431>Q49101": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Nasser's Free Officers regime pursued nationalist policies, including nationalizing the Suez Canal in 1956, which provoked the British-French-Israeli invasion."
+ },
+ "Q279790>Q32993": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "May Fourth radicalized urban intellectuals, many of whom organized the Chinese Communist Party, which then mobilized peasants and workers in the revolution."
+ },
+ "Q943191>Q275918": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Persia's 602 abolition of the Lakhmid kingdom removed the Arab buffer on Iraq's frontier, weakening Sasanian defenses that Muslim armies exploited."
+ },
+ "Q477973>Q68962": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q187702>Q456993": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q173282>Q570204": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q875512>Q5167679": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7795>Q107802": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q724496>Q7888194": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q104309>Q15920546": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q151423>Q1050999": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q361>Q1050999": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q152283>Q1050999": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q193258>Q1050999": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q6235>Q1050999": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Greek Cypriot enosis nationalism, pursued through EOKA and the Athens-backed 1974 coup, provoked Turkey's invasion of northern Cyprus."
+ },
+ "Q7184>Q1050999": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q26189>Q212220": {
+  "verdict": "keep",
+  "strength": "minor",
+  "mechanism": "Papal division during the Western Schism weakened crusade mobilization, leaving the 1396 Crusader army at Nicopolis poorly coordinated against the Ottomans."
+ },
+ "Q5043>Q1773926": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q362>Q1773926": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q8683>Q1773926": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q7785>Q1773926": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q167246>Q361": {
+  "verdict": "keep",
+  "strength": "contributing",
+  "mechanism": "Austria-Hungary's 1908 annexation of Bosnia humiliated Serbia and Russia, creating the tensions that led to the Sarajevo assassination and the July 1914 crisis."
+ },
+ "Q477108>Q65042773": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ },
+ "Q253684>Q78994": {
+  "verdict": "reject",
+  "strength": "minor",
+  "mechanism": ""
+ }
+}

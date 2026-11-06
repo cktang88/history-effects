@@ -1,0 +1,32 @@
+[
+  {
+    "cause": "Q545449",
+    "effect": "Q926905",
+    "strength": "primary",
+    "mechanism": "The US-led occupation and dissolution of Iraq's army and state institutions fuelled an armed insurgency against coalition forces and the new government."
+  },
+  {
+    "cause": "Q131964",
+    "effect": "Q51122",
+    "strength": "contributing",
+    "mechanism": "Austrian rule over northern Italy and its defeats in 1859 and 1866 removed the main obstacle to unification."
+  },
+  {
+    "cause": "Q7183",
+    "effect": "Q268218",
+    "strength": "primary",
+    "mechanism": "Qin Shi Huang created the title of emperor and a centralised imperial administration that later Chinese dynasties kept for two millennia."
+  },
+  {
+    "cause": "Q1319855",
+    "effect": "Q184536",
+    "strength": "contributing",
+    "mechanism": "Sundiata Keita's victory over the Sosso king at Kirina in 1235 established the Mali hegemony from which the empire grew."
+  },
+  {
+    "cause": "Q5406",
+    "effect": "Q178665",
+    "strength": "contributing",
+    "mechanism": "Hittite expansion under Suppiluliuma I conquered Mitanni's western territories, ending its power as a Near Eastern kingdom."
+  }
+]

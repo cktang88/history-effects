@@ -10,8 +10,7 @@ import type { RawEntity } from "./01-entities.ts";
 import { detailsQuery, parseDetails } from "./01-entities.ts";
 import type { WikiArticle } from "./03-wikipedia.ts";
 import { LENSES, type LensId } from "./lenses.ts";
-import { chunk, log, qid, readPipeline, sparql, writePipeline } from "./lib.ts";
-import { readFile } from "node:fs/promises";
+import { chunk, log, qid, readPipeline, sparql, writePipeline, readWiki } from "./lib.ts";
 
 const MIN_CITING_ARTICLES = Number(process.env.EXPAND_MIN ?? 4);
 const MAX_NEW = Number(process.env.EXPAND_MAX ?? 900);
@@ -75,7 +74,7 @@ export function lensFromType(type: string | undefined, isHuman: boolean): LensId
 
 async function main() {
   const entities = await readPipeline<RawEntity[]>("entities.raw.json");
-  const wiki = JSON.parse(await readFile(new URL("./out/wiki.json", import.meta.url), "utf8")) as WikiArticle[];
+  const wiki = await readWiki<WikiArticle[]>();
   const known = new Set<string>();
   for (const e of entities) if (e.article) known.add(e.article);
   for (const a of wiki) for (const r of a.redirects) known.add(r);
