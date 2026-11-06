@@ -6,8 +6,16 @@
 set -eo pipefail
 cd "$(dirname "$0")/.."
 
+# The lockfiles need Bun 1.2+.
+case "$(bun --version 2>/dev/null)" in
+  "") echo "Bun is not installed: https://bun.sh (curl -fsSL https://bun.sh/install | bash)"; exit 1 ;;
+  0.*|1.0.*|1.1.*) echo "Bun $(bun --version) is too old; run: bun upgrade"; exit 1 ;;
+esac
+
+# Always sync dependencies (a no-op in well under a second when up to date):
+# stale node_modules from an older checkout miss packages added since.
 for dir in . server web; do
-  [ -d "$dir/node_modules" ] || (echo "Installing dependencies in $dir…" && cd "$dir" && bun install)
+  (cd "$dir" && bun install --silent) || { echo "bun install failed in $dir"; exit 1; }
 done
 
 mock=0
