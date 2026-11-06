@@ -4,7 +4,13 @@
 
 export const COL_W = 320;
 export const ROW_H = 160;
-export const NODE_H = 136;
+// Fallback card height before a card has been measured.
+export const NODE_H = 140;
+// Below this zoom, cards switch to overview mode (date + large title); the
+// canvas can't zoom out further than the point where that text would drop
+// under 12px on screen.
+export const DETAIL_ZOOM = 0.9;
+export const MIN_ZOOM = 0.45;
 export const NODE_W = 264;
 const GAP = 22;
 
@@ -141,7 +147,7 @@ export function layoutTimeline(nodes: LayoutNode[], edges: LayoutEdge[]): Layout
   const byColumn = new Map<number, { id: string; want: number; h: number }[]>();
   for (const n of nodes) {
     const c = column.get(n.id)!;
-    byColumn.set(c, [...(byColumn.get(c) ?? []), { id: n.id, want: n.row * ROW_H, h: NODE_H }]);
+    byColumn.set(c, [...(byColumn.get(c) ?? []), { id: n.id, want: n.row * ROW_H, h: n.height ?? NODE_H }]);
   }
   const positions = new Map<string, { x: number; y: number }>();
   for (const [c, items] of byColumn) {

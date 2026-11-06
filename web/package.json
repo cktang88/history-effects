@@ -10,7 +10,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "lint": "oxlint src"
+    "lint": "oxlint src",
+    "audit:readability": "node scripts/readability-audit.cjs"
   },
   "dependencies": {
     "@xyflow/react": "^12.3.5",

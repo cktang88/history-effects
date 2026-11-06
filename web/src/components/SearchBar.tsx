@@ -127,7 +127,7 @@ export function SearchForm({ search, large }: { search: Search; large?: boolean 
           onKeyDown={onKeyDown}
           onFocus={() => setFocused(true)}
           onBlur={() => setTimeout(() => setFocused(false), 150)}
-          placeholder="A war, leader, empire, invention… or “How did X lead to Y?”"
+          placeholder="Search history, or ask “How did X lead to Y?”"
           autoComplete="off"
           autoFocus={large}
         />

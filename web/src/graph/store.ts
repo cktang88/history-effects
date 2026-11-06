@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import type { Story } from "../types";
 import * as atlas from "../atlas/api";
-import { layoutTimeline, type Column } from "./layout";
+import { layoutTimeline, type Column, type Layout } from "./layout";
 import { lineage, type CausalEdgeType, type EventNodeType } from "./model";
 
 export type JobKind = "explore" | "effects" | "causes" | "more" | "enrich" | "path" | "explain";
@@ -28,6 +28,10 @@ export type GraphState = Snapshot & {
   degree: Record<string, { in: number; out: number }>;
 };
 
+// Overview mode (zoomed out) shows cards with different content, so card
+// heights are measured per mode.
+type Heights = Record<string, { detail?: number; overview?: number }>;
+
 const STORAGE_KEY = "history-effects:graph:v2";
 
 function loadSnapshot(): Snapshot {
@@ -45,9 +49,16 @@ function loadSnapshot(): Snapshot {
   }
 }
 
-export function computeLayout(nodes: EventNodeType[], edges: CausalEdgeType[]) {
+// Measured card heights per mode, kept outside the store so the layout can
+// read them while the store itself is being created.
+const measuredHeights: Heights = {};
+let overviewMode = false;
+
+export const cardHeight = (id: string) => measuredHeights[id]?.[overviewMode ? "overview" : "detail"];
+
+export function computeLayout(nodes: EventNodeType[], edges: CausalEdgeType[]): Layout {
   return layoutTimeline(
-    nodes.map((n) => ({ id: n.id, year: n.data.year, row: n.data.row, height: n.measured?.height })),
+    nodes.map((n) => ({ id: n.id, year: n.data.year, row: n.data.row, height: cardHeight(n.id) })),
     edges
   );
 }
@@ -169,6 +180,25 @@ function abortOrphanedJobs(nodeIds: Set<string>) {
   const rest = { ...jobs };
   for (const [k] of orphaned) delete rest[k];
   useGraph.setState({ jobs: rest });
+}
+
+// Records a card's measured height for the current mode; relayouts only when
+// a height actually changed.
+export function recordHeights(measured: { id: string; height: number }[]) {
+  const mode = overviewMode ? "overview" : "detail";
+  let changed = false;
+  for (const m of measured) {
+    if (Math.abs((measuredHeights[m.id]?.[mode] ?? 0) - m.height) < 2) continue;
+    measuredHeights[m.id] = { ...measuredHeights[m.id], [mode]: m.height };
+    changed = true;
+  }
+  if (changed) scheduleLayout();
+}
+
+export function setOverview(overview: boolean) {
+  if (overviewMode === overview) return;
+  overviewMode = overview;
+  scheduleLayout();
 }
 
 export function checkpoint() {

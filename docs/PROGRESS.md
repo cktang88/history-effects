@@ -4,6 +4,16 @@ Running build log. Newest entry on top.
 
 ---
 
+## 2026-11-06 — readability: no cut-off text, nothing under 12px
+
+- Added `web/scripts/readability-audit.cjs` (`bun run audit:readability` with the app running). It drives every view on desktop and mobile: landing, suggestions, entity, link, story, explanation, Atlas, legend, help, live AI streaming, toasts, and zoom extremes. It fails on text that renders under 12px (canvas zoom included, measured on the real transform), is cut off (overflow, ellipsis, line clamp, hidden-scrollbar scrollers), or is covered by another element of its own component. Baseline: 119 issue groups. Now: 0.
+- Cards are content-sized (no line clamps). The layout uses each card's measured height.
+- Two card modes tied to zoom. Detail (≥0.9×) shows full title and description at sizes that stay ≥12px. Overview (<0.9×) shows date and title in large type. The canvas no longer zooms out past 0.45×, where overview text would drop under 12px, and automatic framing respects that floor.
+- Cards reserve side padding for the edge badges, which used to cover the first letters of titles.
+- Edge tooltips are counter-scaled to a constant on-screen size (they reached 3px on mobile).
+- Every panel font is at least 12px. Atlas names, the activity panel and link explanations wrap instead of being truncated. All eras and age tabs are visible without hidden scrolling. Fixed a flex bug that let the Atlas list extend under its footer.
+
+
 ## 2026-11-06 — bugfix pass; network, caching and rendering optimization
 
 **Network (measured with an instrumented browser)**

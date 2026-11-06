@@ -2,7 +2,7 @@ import type { ReactFlowInstance } from "@xyflow/react";
 import * as api from "../api";
 import { connectFromDb, expandFromDb, openEntity, resolveEntity } from "./atlasActions";
 import type { CausalEdgeData, CausalItem, HistoricalEvent, Story } from "../types";
-import { NODE_H, NODE_W, ROW_H } from "./layout";
+import { MIN_ZOOM, NODE_H, NODE_W, ROW_H } from "./layout";
 import {
   ancestry,
   eventOf,
@@ -18,6 +18,7 @@ import {
 import {
   appendThinking,
   cancelAllJobs,
+  cardHeight,
   checkpoint,
   computeLayout,
   endJob,
@@ -52,7 +53,8 @@ function frame(ids: string[], opts: { maxZoom?: number; minZoom?: number; keepZo
   const boxes = ids
     .map((id) => {
       const p = positions.get(id);
-            return p && { x1: p.x, y1: p.y, x2: p.x + NODE_W, y2: p.y + NODE_H };
+            const h = cardHeight(id) ?? NODE_H;
+            return p && { x1: p.x, y1: p.y, x2: p.x + NODE_W, y2: p.y + h };
     })
     .filter((b): b is { x1: number; y1: number; x2: number; y2: number } => !!b);
   if (boxes.length === 0) return;
@@ -69,7 +71,7 @@ function frame(ids: string[], opts: { maxZoom?: number; minZoom?: number; keepZo
   const availH = Math.max(200, rect.height - TOP - BOTTOM);
   const zoom = opts.keepZoom
     ? Math.max(flow.getZoom(), opts.minZoom ?? 0.85)
-    : Math.min(opts.maxZoom ?? 1, Math.max(opts.minZoom ?? 0.3, Math.min(availW / (b.x2 - b.x1), availH / (b.y2 - b.y1))));
+    : Math.min(opts.maxZoom ?? 1, Math.max(opts.minZoom ?? MIN_ZOOM, Math.min(availW / (b.x2 - b.x1), availH / (b.y2 - b.y1))));
   const cx = (b.x1 + b.x2) / 2;
   const cy = (b.y1 + b.y2) / 2;
   void flow.setViewport(
@@ -83,7 +85,7 @@ export function fitTo(ids: string[], maxZoom = 1) {
 }
 
 export function fitAll() {
-  frame(graph().nodes.map((n) => n.id), { maxZoom: 1, minZoom: 0.15 });
+  frame(graph().nodes.map((n) => n.id), { maxZoom: 1, minZoom: MIN_ZOOM });
 }
 
 export function centerOn(id: string) {

@@ -6,6 +6,7 @@ import {
   BackgroundVariant,
   useStore,
   type Connection,
+  type NodeChange,
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 
@@ -16,7 +17,8 @@ import { EmptyState, SearchForm, useSearch } from "./components/SearchBar";
 import { AtlasPanel } from "./components/AtlasPanel";
 import { ActivityHud, HelpDialog, Legend, TimeRuler, Toasts, Toolbar } from "./components/Overlay";
 import { useShortcuts } from "./hooks/useShortcuts";
-import { graph, select, undo, useGraph } from "./graph/store";
+import { graph, recordHeights, select, setOverview, undo, useGraph } from "./graph/store";
+import { DETAIL_ZOOM, MIN_ZOOM } from "./graph/layout";
 import {
   connect,
   expand,
@@ -31,6 +33,13 @@ import type { CausalEdgeType, EventNodeType } from "./graph/model";
 
 const nodeTypes = { event: EventNode };
 const edgeTypes = { causal: CausalEdge };
+
+// Only size measurements flow back from React Flow: positions are owned by
+// the timeline layout and selection by the store.
+function onNodesChange(changes: NodeChange<EventNodeType>[]) {
+  const measured = changes.flatMap((c) => (c.type === "dimensions" && c.dimensions ? [{ id: c.id, height: c.dimensions.height }] : []));
+  if (measured.length) recordHeights(measured);
+}
 
 function onConnect(c: Connection) {
   if (!c.source || !c.target || c.source === c.target) return;
@@ -71,7 +80,8 @@ function Canvas() {
   const nodes = useGraph((s) => s.nodes);
   const edges = useGraph((s) => s.edges);
   const hasFocus = useGraph((s) => !!s.focus);
-  const far = useStore((s) => s.transform[2] < 0.6);
+  const far = useStore((s) => s.transform[2] < DETAIL_ZOOM);
+  setOverview(far);
   const search = useSearch();
   const [help, setHelp] = useState(false);
   const [atlasOpen, setAtlasOpen] = useState(false);
@@ -110,7 +120,8 @@ function Canvas() {
           edgesFocusable={false}
           elementsSelectable={false}
           deleteKeyCode={null}
-          minZoom={0.15}
+          onNodesChange={onNodesChange}
+          minZoom={MIN_ZOOM}
           maxZoom={1.6}
           fitView
           fitViewOptions={{ padding: 0.2, maxZoom: 1 }}

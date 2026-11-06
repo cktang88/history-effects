@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { EdgeLabelRenderer, getBezierPath, type EdgeProps } from "@xyflow/react";
+import { EdgeLabelRenderer, getBezierPath, useStore, type EdgeProps } from "@xyflow/react";
 import { useGraph } from "../graph/store";
 import type { CausalEdgeType } from "../graph/model";
 import { STRENGTH_LABEL } from "../types";
@@ -19,6 +19,9 @@ export function CausalEdge({
   const focus = useGraph((s) => (s.focus ? (s.focus.edges.has(id) ? "lit" : "dim") : "none"));
   const busy = useGraph((s) => !!s.jobs[id]);
   const strength = data?.strength ?? "contributing";
+  // The tooltip lives inside the zoomed canvas; counter-scale it so it reads
+  // at the same size at any zoom.
+  const zoom = useStore((s) => s.transform[2]);
 
   const [path, labelX, labelY] = getBezierPath({
     sourceX,
@@ -49,7 +52,10 @@ export function CausalEdge({
         <EdgeLabelRenderer>
           <div
             className={`edge-tip strength-${strength}`}
-            style={{ transform: `translate(-50%, calc(-100% - 10px)) translate(${labelX}px, ${labelY}px)` }}
+            style={{
+              transform: `translate(${labelX}px, ${labelY}px) scale(${1 / zoom}) translate(-50%, calc(-100% - 10px))`,
+              transformOrigin: "0 0",
+            }}
           >
             <div className="edge-tip-strength">
               {STRENGTH_LABEL[strength]} ·{" "}
