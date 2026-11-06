@@ -22,7 +22,10 @@ export type GraphState = Snapshot & {
   targets: Map<string, Point>;
   routes: Map<string, Point[]>;
   selection: Selection;
-  focus: { nodes: Set<string>; edges: Set<string> } | null;
+  focus: { nodes: Set<string>; edges: Set<string>; upstream?: Set<string> } | null;
+  // What the pointer is over: a card lights its direct causes and effects, a
+  // link lights the two cards it joins.
+  peek: Peek;
   jobs: Record<string, Job>;
   toasts: Toast[];
   history: Snapshot[];
@@ -92,6 +95,7 @@ export const useGraph = create<GraphState>(() => ({
   routes: new Map(),
   selection: null,
   focus: null,
+  peek: null,
   jobs: {},
   toasts: [],
   history: [],
@@ -263,6 +267,14 @@ export function undo() {
 }
 
 // --- selection & focus -------------------------------------------------------
+
+export type Peek = { type: "node"; id: string } | { type: "edge"; source: string; target: string } | null;
+
+export function peek(next: Peek) {
+  const cur = graph().peek;
+  if (cur === next || (cur && next && JSON.stringify(cur) === JSON.stringify(next))) return;
+  useGraph.setState({ peek: next });
+}
 
 export function select(selection: Selection) {
   useGraph.setState({ selection, focus: computeFocus(selection) });

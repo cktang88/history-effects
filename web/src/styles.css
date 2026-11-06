@@ -12,6 +12,8 @@
   --accent-soft: rgba(180, 83, 42, 0.12);
   --edge: #a69c8c;
   --edge-lit: #b4532a;
+  --edge-cause: #3c68b0;
+  --edge-effect: #b4532a;
   --shadow: 0 1px 2px rgba(60, 40, 20, 0.06), 0 6px 20px rgba(60, 40, 20, 0.07);
   --shadow-lg: 0 10px 40px rgba(60, 40, 20, 0.16);
   --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
@@ -46,6 +48,8 @@
     --accent-soft: rgba(227, 134, 79, 0.14);
     --edge: #6b6357;
     --edge-lit: #e3864f;
+    --edge-cause: #7ea6e6;
+    --edge-effect: #e3864f;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.3);
     --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.5);
   }
@@ -323,6 +327,12 @@ kbd {
 .arrow-lit {
   fill: var(--edge-lit);
 }
+.arrow-cause {
+  fill: var(--edge-cause);
+}
+.arrow-effect {
+  fill: var(--edge-effect);
+}
 
 /* ---------- Event card ---------- */
 
@@ -595,8 +605,69 @@ kbd {
 .edge.is-selected {
   stroke-width: 3.2;
 }
-.edge.focus-dim {
+.edge.focus-dim,
+.edge-casing.focus-dim,
+.edge-chevron.focus-dim {
   opacity: 0.15;
+}
+/* Cause/effect colors around the selected or pointed-at event. */
+.edge.role-cause,
+.edge-chevron.role-cause {
+  stroke: var(--edge-cause);
+}
+.edge.role-effect,
+.edge-chevron.role-effect {
+  stroke: var(--edge-effect);
+}
+.edge.role-cause,
+.edge.role-effect {
+  stroke-width: 2.6;
+}
+.edge.role-cause.edge-primary,
+.edge.role-effect.edge-primary {
+  stroke-width: 3.4;
+}
+/* Pointing at a card fades the links that don't touch it (after a beat, so
+   sweeping the pointer across the map doesn't flicker). */
+.is-peeking .edge.peek-other,
+.is-peeking .edge-chevron.peek-other {
+  opacity: 0.16;
+  transition: opacity 0.2s 0.12s, stroke 0.2s;
+}
+.edge-casing {
+  fill: none;
+  stroke: var(--bg);
+  stroke-width: 6;
+  stroke-linecap: butt;
+  transition: opacity 0.3s;
+}
+.edge-casing.edge-primary {
+  stroke-width: 7.5;
+}
+.edge-chevron {
+  fill: none;
+  stroke: var(--edge);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.2s, opacity 0.3s;
+  pointer-events: none;
+}
+.edge-chevron.edge-primary {
+  stroke-width: 2.8;
+}
+.edge-chevron.is-selected,
+.edge-chevron.is-hover {
+  stroke: var(--edge-lit);
+}
+/* A link the pointer is on lights up the cards at its ends. */
+.card.peek-cause {
+  border-color: var(--edge-cause);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--edge-cause) 18%, transparent), var(--shadow);
+}
+.card.peek-effect {
+  border-color: var(--edge-effect);
+  box-shadow: 0 0 0 3px var(--accent-soft), var(--shadow);
 }
 .edge-hit {
   fill: none;
@@ -642,6 +713,15 @@ kbd {
   height: 100%;
   pointer-events: none;
   z-index: 4;
+}
+.ruler::before {
+  /* A soft band behind the year labels so cards scrolled under them fade
+     out instead of colliding with the labels. */
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 104px;
+  background: linear-gradient(var(--bg) 62%, color-mix(in srgb, var(--bg) 0%, transparent));
 }
 .ruler-col {
   position: absolute;

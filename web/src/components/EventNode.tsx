@@ -19,6 +19,8 @@ export function EventNode({ id, data }: NodeProps<EventNodeType>) {
   const job = useGraph((s) => s.jobs[id]);
   const selected = useGraph((s) => s.selection?.type === "node" && s.selection.id === id);
   const focus = useGraph((s) => (s.focus ? (s.focus.nodes.has(id) ? "lit" : "dim") : "none"));
+  // Pointing at a link lights the cards at both ends.
+  const peeked = useGraph((s) => s.peek?.type === "edge" && (s.peek.source === id ? "cause" : s.peek.target === id ? "effect" : false));
   const countIn = useGraph((s) => s.degree[id]?.in ?? 0);
   const countOut = useGraph((s) => s.degree[id]?.out ?? 0);
   const pending = job?.kind === "explore" && !data.description;
@@ -30,7 +32,7 @@ export function EventNode({ id, data }: NodeProps<EventNodeType>) {
 
   return (
     <div
-      className={`card domain-${data.domain ?? "none"} focus-${focus}${selected ? " is-selected" : ""}${job ? " is-busy" : ""}`}
+      className={`card domain-${data.domain ?? "none"} focus-${focus}${selected ? " is-selected" : ""}${job ? " is-busy" : ""}${peeked ? ` peek-${peeked}` : ""}`}
     >
       <Handle type="target" position={Position.Left} className="handle handle-in" />
       <GrowButton side="in" onMap={countIn} available={data.nCauses} busy={!!job} onClick={grow("causes")} />

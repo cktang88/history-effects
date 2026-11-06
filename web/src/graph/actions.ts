@@ -74,10 +74,14 @@ async function frame(ids: string[], opts: { maxZoom?: number; minZoom?: number; 
   const zoom = opts.keepZoom
     ? Math.max(flow.getZoom(), opts.minZoom ?? 0.85)
     : Math.min(opts.maxZoom ?? 1, Math.max(opts.minZoom ?? MIN_ZOOM, Math.min(availW / (b.x2 - b.x1), availH / (b.y2 - b.y1))));
+  // Center what fits; when the map is bigger than the screen at the smallest
+  // readable zoom, start from its top (below the year ruler) instead of
+  // cutting it in the middle.
   const cx = (b.x1 + b.x2) / 2;
   const cy = (b.y1 + b.y2) / 2;
+  const y = (b.y2 - b.y1) * zoom > availH ? TOP + 8 - b.y1 * zoom : TOP + availH / 2 - cy * zoom;
   void flow.setViewport(
-    { x: 40 + availW / 2 - cx * zoom, y: TOP + availH / 2 - cy * zoom, zoom },
+    { x: 40 + availW / 2 - cx * zoom, y, zoom },
     { duration: 650 }
   );
 }

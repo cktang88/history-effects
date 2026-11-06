@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { attachRoute, pointAlong, roundedPath } from "./routes";
+import { attachRoute, pointAlong, roundedPath, flowPath, midArrow } from "./routes";
 
 describe("roundedPath", () => {
   it("draws straight lines and rounds corners", () => {
@@ -31,5 +31,29 @@ describe("attachRoute", () => {
   it("is the identity at rest", () => {
     const route = [{ x: 0, y: 0 }, { x: 5, y: 5 }];
     expect(attachRoute(route, { x: 0, y: 0 }, { x: 0, y: 0 })).toEqual(route);
+  });
+});
+
+describe("flowPath", () => {
+  it("turns a vertical jog into an S-curve with horizontal tangents", () => {
+    const d = flowPath([{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 200, y: 80 }]);
+    expect(d.startsWith("M 0 0")).toBe(true);
+    const c = d.match(/C ([\d. -]+)/)![1]!.trim().split(/\s+/).map(Number);
+    // Control points sit on the jog; the curve ends back on the horizontal run.
+    expect(c.slice(0, 4)).toEqual([100, 0, 100, 80]);
+    expect(c[5]).toBe(80);
+    expect(c[4]).toBeGreaterThan(100);
+    expect(d.endsWith("L 200 80")).toBe(true);
+  });
+  it("draws a straight route as a line", () => {
+    expect(flowPath([{ x: 0, y: 5 }, { x: 50, y: 5 }, { x: 90, y: 5 }])).toBe("M 0 5 L 90 5");
+  });
+});
+
+describe("midArrow", () => {
+  it("points along the longest horizontal run", () => {
+    const a = midArrow([{ x: 0, y: 0 }, { x: 40, y: 0 }, { x: 40, y: 100 }, { x: 300, y: 100 }])!;
+    expect(a).toMatchObject({ x: 170, y: 100, angle: 0 });
+    expect(a.length).toBe(400);
   });
 });

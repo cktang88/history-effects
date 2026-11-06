@@ -63,7 +63,8 @@ Visual encoding: line weight (primary thickest, minor dashed) plus a 3-bar stren
 - ELK layered layout, left to right, computed in a Web Worker (`web/src/graph/elkLayout.ts`).
 - x: time. Year columns (nearby years clustered; causal order decides sub-columns) are ELK partitions, and the ruler labels each column and the gaps between them.
 - y: ELK orders and places cards. Current positions seed the ordering so the map stays stable; the remembered `row` seeds new cards near their anchor.
-- Edges: orthogonal routes around cards, with rounded corners and one port per edge end. Spacing leaves room for the expand badges that protrude below each card.
+- Edges: ELK routes them orthogonally around cards (one port per edge end), and they are drawn as smooth left-to-right flow curves: each vertical jog becomes an S-curve, so crossings meet at an angle instead of forming ambiguous T/+ junctions. Each edge has a background-colored casing that cuts a small gap where a later edge crosses it. Long edges get a mid-edge direction chevron. Spacing leaves room for the expand badges that protrude below each card.
+- Direction on demand: pointing at a card colors its links (blue = what led to it, orange = what it led to) and fades the rest; pointing at a link outlines its cause and effect cards. Selecting a card colors its whole upstream lineage blue and its downstream lineage orange.
 - Cards are content-sized and measured per mode (detail ≥0.9× zoom: full text; overview: date and large title). Zoom never goes below 0.45×.
 - Positions tween over ~480 ms. Routes deform with their moving endpoints and settle exactly on ELK's route. If ELK fails, a simple column layout with right-angle edges is used.
 

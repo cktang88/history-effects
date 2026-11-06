@@ -42,7 +42,7 @@ const LAYOUT_OPTIONS: Record<string, string> = {
   // graphs (long edges across many year columns), with similar quality.
   "elk.layered.nodePlacement.strategy": "BRANDES_KOEPF",
   "elk.layered.thoroughness": "4",
-  "elk.layered.spacing.nodeNodeBetweenLayers": "84",
+  "elk.layered.spacing.nodeNodeBetweenLayers": "104",
   "elk.layered.spacing.edgeNodeBetweenLayers": "22",
   "elk.layered.spacing.edgeEdgeBetweenLayers": "12",
   // Room for the badges that protrude below each card.

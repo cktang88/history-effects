@@ -118,6 +118,18 @@ export function Legend() {
               {STRENGTH_LABEL[s]}
             </div>
           ))}
+          <div className="legend-row">
+            <svg width="38" height="10">
+              <line x1="2" y1="5" x2="36" y2="5" className="edge edge-contributing role-cause" />
+            </svg>
+            Led to the event you point at
+          </div>
+          <div className="legend-row">
+            <svg width="38" height="10">
+              <line x1="2" y1="5" x2="36" y2="5" className="edge edge-contributing role-effect" />
+            </svg>
+            What it led to
+          </div>
           <div className="legend-domains">
             {DOMAINS.map((d) => (
               <span key={d} className={`legend-domain domain-${d}`}>

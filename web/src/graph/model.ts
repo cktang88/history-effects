@@ -55,16 +55,13 @@ export function lineage(edges: CausalEdgeType[], id: string) {
   const ancestors = walk(id, (n) => incoming(edges, n).map((e) => e.source));
   const descendants = walk(id, (n) => outgoing(edges, n).map((e) => e.target));
   const nodes = new Set([id, ...ancestors, ...descendants]);
-  const edgeIds = new Set(
-    edges
-      .filter(
-        (e) =>
-          (e.target === id || descendants.has(e.target)) && (e.source === id || descendants.has(e.source)) ||
-          (e.source === id || ancestors.has(e.source)) && (e.target === id || ancestors.has(e.target))
-      )
-      .map((e) => e.id)
-  );
-  return { nodes, edges: edgeIds };
+  const down = (e: CausalEdgeType) => (e.target === id || descendants.has(e.target)) && (e.source === id || descendants.has(e.source));
+  const up = (e: CausalEdgeType) => (e.source === id || ancestors.has(e.source)) && (e.target === id || ancestors.has(e.target));
+  const edgeIds = new Set(edges.filter((e) => down(e) || up(e)).map((e) => e.id));
+  // Upstream edges (what led to it) are drawn in a different color from
+  // downstream ones (what it led to).
+  const upstream = new Set(edges.filter((e) => up(e) && !down(e)).map((e) => e.id));
+  return { nodes, edges: edgeIds, upstream };
 }
 
 // The chain of titles that led to this node, following the strongest cause at

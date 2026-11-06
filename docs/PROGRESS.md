@@ -4,6 +4,12 @@ Running build log. Newest entry on top.
 
 ---
 
+## 2026-11-06 — readable edge direction
+- Feedback: with right-angle edges it was hard to tell what leads to what, and intersections were ambiguous.
+- Edges are now drawn as smooth flow curves along ELK's routes, with a background casing (gap at crossings) and mid-edge chevrons on long edges.
+- Hovering a card colors its causes blue and its effects orange and fades the rest; hovering a link outlines both cards. Selection colors the upstream and downstream lineage the same way. Legend explains the colors.
+- Fit-all starts at the top of the map when it can't fit at the minimum zoom, and a soft band behind the year ruler stops labels from colliding with cards.
+
 ## 2026-11-06 — graph layout: orthogonal routing, no overlaps
 
 - Replaced the hand-rolled column layout plus free Bézier edges (which crossed through cards and piled onto one attach point) with **ELK layered layout** (`web/src/graph/elkLayout.ts`):

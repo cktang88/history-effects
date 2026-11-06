@@ -17,7 +17,7 @@ import { EmptyState, SearchForm, useSearch } from "./components/SearchBar";
 import { AtlasPanel } from "./components/AtlasPanel";
 import { ActivityHud, HelpDialog, Legend, TimeRuler, Toasts, Toolbar } from "./components/Overlay";
 import { useShortcuts } from "./hooks/useShortcuts";
-import { graph, recordHeights, select, setOverview, undo, useGraph } from "./graph/store";
+import { graph, peek, recordHeights, select, setOverview, undo, useGraph } from "./graph/store";
 import { DETAIL_ZOOM, MIN_ZOOM } from "./graph/layout";
 import {
   connect,
@@ -80,6 +80,7 @@ function Canvas() {
   const nodes = useGraph((s) => s.nodes);
   const edges = useGraph((s) => s.edges);
   const hasFocus = useGraph((s) => !!s.focus);
+  const peeking = useGraph((s) => s.peek?.type === "node");
   const far = useStore((s) => s.transform[2] < DETAIL_ZOOM);
   setOverview(far);
   const search = useSearch();
@@ -91,7 +92,7 @@ function Canvas() {
   const empty = nodes.length === 0;
 
   return (
-    <div className={`app${hasFocus ? " has-focus" : ""}${far ? " zoom-far" : ""}`}>
+    <div className={`app${hasFocus ? " has-focus" : ""}${far ? " zoom-far" : ""}${peeking ? " is-peeking" : ""}`}>
       <header className="topbar">
         <div className="brand">
           <span className="brand-mark">⟶</span> History Effects
@@ -115,6 +116,8 @@ function Canvas() {
           onNodeClick={(_, n) => select({ type: "node", id: n.id })}
           onEdgeClick={(_, e) => select({ type: "edge", id: e.id })}
           onPaneClick={() => select(null)}
+          onNodeMouseEnter={(_, n) => peek({ type: "node", id: n.id })}
+          onNodeMouseLeave={() => peek(null)}
           nodesDraggable={false}
           nodesFocusable={false}
           edgesFocusable={false}
