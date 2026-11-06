@@ -76,9 +76,10 @@ function GrowButton(props: { side: "in" | "out"; onMap: number; available?: numb
       : props.side === "in"
         ? "What caused this? (C)"
         : "What did this lead to? (E)";
+  const n = remaining > 0 ? `+${remaining}` : props.onMap > 0 ? String(props.onMap) : "+";
   return (
     <button className={`grow grow-${props.side}${remaining > 0 ? " has-more" : ""}`} title={title} onClick={props.onClick} disabled={props.busy}>
-      {remaining > 0 ? <span className="grow-count">+{remaining}</span> : props.onMap > 0 ? <span className="grow-count">{props.onMap}</span> : "+"}
+      <span className={remaining > 0 || props.onMap > 0 ? "grow-count" : undefined}>{props.side === "in" ? `← ${n}` : `${n} →`}</span>
     </button>
   );
 }

@@ -15,11 +15,13 @@
   },
   "dependencies": {
     "@xyflow/react": "^12.3.5",
+    "elkjs": "0.9.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "zustand": "5"
   },
   "devDependencies": {
+    "@types/node": "22",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^4.3.4",

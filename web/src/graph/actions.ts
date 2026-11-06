@@ -20,7 +20,7 @@ import {
   cancelAllJobs,
   cardHeight,
   checkpoint,
-  computeLayout,
+  layoutSettled,
   endJob,
   graph,
   rekeyJob,
@@ -45,11 +45,13 @@ const BOTTOM = 70;
 
 // Frames a set of nodes using their layout *targets* (not their in-flight
 // tweened positions), leaving room for the top bar and the inspector.
-function frame(ids: string[], opts: { maxZoom?: number; minZoom?: number; keepZoom?: boolean } = {}) {
+async function frame(ids: string[], opts: { maxZoom?: number; minZoom?: number; keepZoom?: boolean } = {}) {
+  // Wait for the async layout, then frame its final positions.
+  await layoutSettled();
   const el = document.querySelector(".react-flow");
   if (!flow || !el) return;
-  const { nodes, edges, selection } = graph();
-  const { positions } = computeLayout(nodes, edges);
+  const { nodes, selection, targets } = graph();
+  const positions = targets.size ? targets : new Map(nodes.map((n) => [n.id, n.position]));
   const boxes = ids
     .map((id) => {
       const p = positions.get(id);
@@ -81,22 +83,22 @@ function frame(ids: string[], opts: { maxZoom?: number; minZoom?: number; keepZo
 }
 
 export function fitTo(ids: string[], maxZoom = 1) {
-  frame(ids, { maxZoom });
+  void frame(ids, { maxZoom });
 }
 
 export function fitAll() {
-  frame(graph().nodes.map((n) => n.id), { maxZoom: 1, minZoom: MIN_ZOOM });
+  void frame(graph().nodes.map((n) => n.id), { maxZoom: 1, minZoom: MIN_ZOOM });
 }
 
 export function centerOn(id: string) {
-  frame([id], { keepZoom: true });
+  void frame([id], { keepZoom: true });
 }
 
 export function focusEdge(id: string) {
   const edge = graph().edges.find((e) => e.id === id);
   if (!edge) return;
   select({ type: "edge", id });
-  frame([edge.source, edge.target], { maxZoom: 1 });
+  void frame([edge.source, edge.target], { maxZoom: 1 });
 }
 
 export function focusStory(id: string) {

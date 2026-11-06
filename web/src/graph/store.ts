@@ -1,7 +1,8 @@
 import { create } from "zustand";
 import type { Story } from "../types";
 import * as atlas from "../atlas/api";
-import { layoutTimeline, type Column, type Layout } from "./layout";
+import { layoutTimeline, ROW_H, type Column, type Layout } from "./layout";
+import { layoutWithElk, type Point } from "./elkLayout";
 import { lineage, type CausalEdgeType, type EventNodeType } from "./model";
 
 export type JobKind = "explore" | "effects" | "causes" | "more" | "enrich" | "path" | "explain";
@@ -17,6 +18,9 @@ type Snapshot = { nodes: EventNodeType[]; edges: CausalEdgeType[]; stories: Stor
 
 export type GraphState = Snapshot & {
   columns: Column[];
+  // Latest layout: final card positions and orthogonal edge routes.
+  targets: Map<string, Point>;
+  routes: Map<string, Point[]>;
   selection: Selection;
   focus: { nodes: Set<string>; edges: Set<string> } | null;
   jobs: Record<string, Job>;
@@ -72,6 +76,8 @@ function degreesOf(edges: CausalEdgeType[]): GraphState["degree"] {
   return d;
 }
 
+// Synchronous fallback layout (straight edges), used before ELK is ready and
+// if it fails.
 function withLayout(nodes: EventNodeType[], edges: CausalEdgeType[]) {
   const { positions, columns } = computeLayout(nodes, edges);
   return { nodes: nodes.map((n) => ({ ...n, position: positions.get(n.id)! })), columns };
@@ -82,6 +88,8 @@ const initial = loadSnapshot();
 export const useGraph = create<GraphState>(() => ({
   ...initial,
   ...withLayout(initial.nodes, initial.edges),
+  targets: new Map(),
+  routes: new Map(),
   selection: null,
   focus: null,
   jobs: {},
@@ -93,6 +101,8 @@ export const useGraph = create<GraphState>(() => ({
 
 export const graph = () => useGraph.getState();
 
+if (typeof requestAnimationFrame !== "undefined" && initial.nodes.length) queueMicrotask(() => scheduleLayout());
+
 // --- structural mutations ----------------------------------------------------
 
 let layoutFrame = 0;
@@ -101,17 +111,53 @@ const TWEEN_MS = 480;
 
 // Coalesces layout to the next frames. Two frames so a newly inserted node is
 // painted at its spawn point first and then glides to its slot.
+let layoutVersion = 0;
+let pending = 0;
+let settledWaiters: (() => void)[] = [];
+
 export function scheduleLayout() {
   if (layoutFrame) return;
+  pending++;
   layoutFrame = requestAnimationFrame(() => {
     layoutFrame = requestAnimationFrame(() => {
       layoutFrame = 0;
-      const { nodes, edges } = graph();
-      const { positions, columns } = computeLayout(nodes, edges);
-      useGraph.setState({ columns });
-      tweenTo(positions);
+      void runLayout().finally(() => {
+        pending--;
+        if (pending === 0) {
+          const waiters = settledWaiters;
+          settledWaiters = [];
+          waiters.forEach((w) => w());
+        }
+      });
     });
   });
+}
+
+// Resolves once no layout is pending, i.e. `targets` reflect the graph.
+export function layoutSettled(): Promise<void> {
+  return pending === 0 ? Promise.resolve() : new Promise((r) => settledWaiters.push(r));
+}
+
+async function runLayout() {
+  const version = ++layoutVersion;
+  const { nodes, edges } = graph();
+  try {
+    // Current positions seed ELK's ordering, so the map stays recognizable.
+    const result = await layoutWithElk(
+      nodes.map((n) => ({ id: n.id, year: n.data.year, row: n.position.y / ROW_H, height: cardHeight(n.id) })),
+      edges.map((e) => ({ id: e.id, source: e.source, target: e.target }))
+    );
+    if (version !== layoutVersion) return; // a newer layout superseded this one
+    useGraph.setState({ columns: result.columns, routes: result.routes, targets: result.positions });
+    tweenTo(result.positions);
+  } catch (e) {
+    // Fall back to the simple timeline layout (straight edges) if ELK fails.
+    console.error("layout failed", e);
+    if (version !== layoutVersion) return;
+    const { positions, columns } = computeLayout(nodes, edges);
+    useGraph.setState({ columns, routes: new Map(), targets: positions });
+    tweenTo(positions);
+  }
 }
 
 // Positions are tweened in JS (not CSS) so edges, which React Flow derives

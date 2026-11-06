@@ -60,14 +60,12 @@ Visual encoding: line weight (primary thickest, minor dashed) plus a 3-bar stren
 
 ## Layout
 
-- x: ordinal time. Distinct years within 3 years of a cluster's start share a cluster; inside a cluster, causal order picks the sub-column (a cause is always left of its effect). The ruler labels each column and the gaps between clusters.
-- y: each node has a persistent `row`. New neighbors fan into free rows around their anchor, then are re-sorted by year so their edges don't cross. Overlaps within a column are resolved by pushing apart and re-centering.
-- Cards have a fixed height; zooming out below 0.6 switches them to large titles only.
-- Positions tween over ~480 ms in JS so edges track the cards. New nodes spawn at their anchor and glide out.
-
-## Atlas
-
-Browse by **age → era → region → lens**. Eras are coarse in deep time and fine in modern history: millennia before 1000 BCE, then 500-, 250-, 100- and 50-year windows, then decades from 1800. Results are ranked by significance. Things that *happened* in the window outrank long-lived states and people who merely existed then; people count for the window of their career. "Map the top 12" puts a slice on the map and draws every sourced link among its events and anything already there.
+- ELK layered layout, left to right, computed in a Web Worker (`web/src/graph/elkLayout.ts`).
+- x: time. Year columns (nearby years clustered; causal order decides sub-columns) are ELK partitions, and the ruler labels each column and the gaps between them.
+- y: ELK orders and places cards. Current positions seed the ordering so the map stays stable; the remembered `row` seeds new cards near their anchor.
+- Edges: orthogonal routes around cards, with rounded corners and one port per edge end. Spacing leaves room for the expand badges that protrude below each card.
+- Cards are content-sized and measured per mode (detail ≥0.9× zoom: full text; overview: date and large title). Zoom never goes below 0.45×.
+- Positions tween over ~480 ms. Routes deform with their moving endpoints and settle exactly on ELK's route. If ELK fails, a simple column layout with right-angle edges is used.
 
 ## Interaction
 

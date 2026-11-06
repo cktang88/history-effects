@@ -99,7 +99,7 @@ function rangeLabel(years: number[]): string {
   return `${formatYear(lo)}–${formatYear(hi)}`;
 }
 
-function assignColumns(nodes: LayoutNode[], edges: LayoutEdge[]) {
+export function assignColumns(nodes: LayoutNode[], edges: LayoutEdge[]) {
   const years = inferYears(nodes, edges);
   const column = new Map<string, number>();
   const columns: Column[] = [];

@@ -1,11 +1,16 @@
 import { useState } from "react";
-import { EdgeLabelRenderer, getBezierPath, useStore, type EdgeProps } from "@xyflow/react";
+import { EdgeLabelRenderer, getSmoothStepPath, useInternalNode, useStore, type EdgeProps } from "@xyflow/react";
+import { attachRoute, pointAlong, roundedPath, type Point } from "../graph/routes";
 import { useGraph } from "../graph/store";
 import type { CausalEdgeType } from "../graph/model";
 import { STRENGTH_LABEL } from "../types";
 
+const ZERO: Point = { x: 0, y: 0 };
+
 export function CausalEdge({
   id,
+  source,
+  target,
   sourceX,
   sourceY,
   targetX,
@@ -23,15 +28,25 @@ export function CausalEdge({
   // at the same size at any zoom.
   const zoom = useStore((s) => s.transform[2]);
 
-  const [path, labelX, labelY] = getBezierPath({
-    sourceX,
-    sourceY,
-    targetX,
-    targetY,
-    sourcePosition,
-    targetPosition,
-    curvature: 0.35,
-  });
+  // ELK's orthogonal route, kept attached to the cards while they animate.
+  const route = useGraph((s) => s.routes.get(id));
+  const sourceFinal = useGraph((s) => s.targets.get(source));
+  const targetFinal = useGraph((s) => s.targets.get(target));
+  const sourceLive = useInternalNode(source)?.internals.positionAbsolute;
+  const targetLive = useInternalNode(target)?.internals.positionAbsolute;
+  const shift = (live?: Point, final?: Point) => (live && final ? { x: live.x - final.x, y: live.y - final.y } : ZERO);
+
+  let path: string;
+  let labelX: number;
+  let labelY: number;
+  if (route && route.length >= 2 && sourceFinal && targetFinal) {
+    const points = attachRoute(route, shift(sourceLive, sourceFinal), shift(targetLive, targetFinal));
+    path = roundedPath(points, 12);
+    ({ x: labelX, y: labelY } = pointAlong(points, 0.5));
+  } else {
+    // Before the first routed layout: a right-angled path between handles.
+    [path, labelX, labelY] = getSmoothStepPath({ sourceX, sourceY, targetX, targetY, sourcePosition, targetPosition, borderRadius: 12 });
+  }
 
   return (
     <>
@@ -81,7 +96,7 @@ export function EdgeMarkers() {
     <svg className="edge-markers" aria-hidden>
       <defs>
         {(["base", "lit"] as const).map((k) => (
-          <marker key={k} id={`arrow-${k}`} viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <marker key={k} id={`arrow-${k}`} viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
             <path d="M 0 1 L 9 5 L 0 9 z" className={`arrow-${k}`} />
           </marker>
         ))}

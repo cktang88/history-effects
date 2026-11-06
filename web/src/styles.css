@@ -329,8 +329,9 @@ kbd {
 .card {
   position: relative;
   width: 264px;
-  /* Side padding keeps text clear of the +/count badges on the edges. */
-  padding: 11px 20px 12px;
+  /* Bottom padding keeps text clear of the corner badges; the sides stay
+     free for edges, which attach along the card's left and right. */
+  padding: 11px 14px 24px;
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -425,7 +426,20 @@ kbd {
 /* Overview mode (zoom < 0.9, never below 0.45): date + title in type large
    enough to stay ≥12px on screen. Cards re-measure in this mode. */
 .zoom-far .card {
-  padding: 12px 34px 14px;
+  padding: 12px 16px 36px;
+}
+.zoom-far .grow {
+  height: 52px;
+  bottom: -26px;
+  border-radius: 26px;
+  padding: 0 14px;
+  font-size: 27px;
+}
+.zoom-far .grow-in {
+  left: 16px;
+}
+.zoom-far .grow-out {
+  right: 16px;
 }
 .zoom-far .card-title {
   font-size: 27px;
@@ -445,30 +459,6 @@ kbd {
 .zoom-far .card-dot {
   width: 14px;
   height: 14px;
-}
-.zoom-far .grow {
-  width: 52px;
-  height: 52px;
-  margin-top: -26px;
-  border-radius: 26px;
-  font-size: 28px;
-}
-.zoom-far .grow-in {
-  left: -26px;
-}
-.zoom-far .grow-out {
-  right: -26px;
-}
-.zoom-far .grow.has-more {
-  padding: 0 10px;
-}
-.zoom-far .grow-in.has-more {
-  left: auto;
-  right: calc(100% - 26px);
-}
-.zoom-far .grow-out.has-more {
-  right: auto;
-  left: calc(100% - 26px);
 }
 .zoom-far .grow-count {
   font-size: 27px;
@@ -508,54 +498,43 @@ kbd {
   width: 60%;
 }
 
+/* Expand badges sit on the bottom corners (causes left, effects right), half
+   outside the card, so they never cover text or the edges' attach points. */
 .grow {
   position: absolute;
-  top: 50%;
-  width: 28px;
+  bottom: -14px;
   height: 28px;
-  margin-top: -14px;
-  border-radius: 50%;
+  min-width: 28px;
+  padding: 0 8px;
+  border-radius: 14px;
   border: 1px solid var(--border-strong);
   background: var(--panel);
   color: var(--muted);
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 600;
   line-height: 1;
   display: grid;
   place-items: center;
+  white-space: nowrap;
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.15s, background 0.15s, color 0.15s, transform 0.15s;
   z-index: 2;
 }
 .grow-in {
-  left: -12px;
+  left: 12px;
 }
 .grow-out {
-  right: -12px;
+  right: 12px;
 }
 .card:hover .grow,
-.card.is-selected .grow {
-  opacity: 1;
-}
+.card.is-selected .grow,
 .grow:has(.grow-count) {
   opacity: 1;
 }
 .grow.has-more {
-  width: auto;
-  min-width: 24px;
-  padding: 0 5px;
-  border-radius: 12px;
   border-color: var(--accent);
   color: var(--accent);
-  background: var(--panel);
-}
-.grow-in.has-more {
-  left: auto;
-  right: calc(100% - 12px);
-}
-.grow-out.has-more {
-  right: auto;
-  left: calc(100% - 12px);
 }
 .grow:hover:not(:disabled) {
   background: var(--accent);
@@ -570,13 +549,7 @@ kbd {
   font-size: 14px;
   font-weight: 600;
 }
-.card:hover .grow:hover .grow-count {
-  font-size: 0;
-}
-.card:hover .grow:hover .grow-count::after {
-  content: "+";
-  font-size: 15px;
-}
+
 
 .handle.react-flow__handle {
   width: 10px;

@@ -4,6 +4,21 @@ Running build log. Newest entry on top.
 
 ---
 
+## 2026-11-06 — graph layout: orthogonal routing, no overlaps
+
+- Replaced the hand-rolled column layout plus free Bézier edges (which crossed through cards and piled onto one attach point) with **ELK layered layout** (`web/src/graph/elkLayout.ts`):
+  - Year columns are ELK partitions, so the map stays a timeline. Component separation is off, because partitions only constrain within a component.
+  - **Orthogonal edge routing** around cards, with rounded corners (`graph/routes.ts`).
+  - One port per edge end, so arrows spread along a card's side. Shared ports made ELK route edges as branching hyperedges.
+  - Current positions seed the ordering (semi-interactive crossing minimization), so maps stay stable as they grow.
+  - Brandes–Köpf placement: ~10× faster than network simplex on timeline graphs. ~0.1–0.4 s for 60 cards / 94 links.
+  - Runs in a **Web Worker** (the 1.6 MB engine loads separately), so layouts never block the main thread. The old layout remains as a fallback.
+- Routes stay attached to cards while they animate (each route deforms between its moving endpoints) and settle exactly on ELK's route.
+- The camera waits for the async layout to settle before framing.
+- Expand badges moved to the bottom corners with direction arrows ("← +4", "+7 →"), freeing both sides for edges and arrowheads. Cards no longer need wide side padding.
+- New test on a real 60-card neighborhood: 0 card overlaps, 0 route samples through cards, all routes orthogonal, correct time order, under 1.5 s.
+
+
 ## 2026-11-06 — readability: no cut-off text, nothing under 12px
 
 - Added `web/scripts/readability-audit.cjs` (`bun run audit:readability` with the app running). It drives every view on desktop and mobile: landing, suggestions, entity, link, story, explanation, Atlas, legend, help, live AI streaming, toasts, and zoom extremes. It fails on text that renders under 12px (canvas zoom included, measured on the real transform), is cut off (overflow, ellipsis, line clamp, hidden-scrollbar scrollers), or is covered by another element of its own component. Baseline: 119 issue groups. Now: 0.
