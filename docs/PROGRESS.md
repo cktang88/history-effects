@@ -4,6 +4,9 @@ Running build log. Newest entry on top.
 
 ---
 
+## 2026-11-06 — default model
+- Default OpenRouter model is now `anthropic/claude-haiku-5.5` (override with `OPENROUTER_MODEL`).
+
 ## 2026-11-06 — readable edge direction
 - Feedback: with right-angle edges it was hard to tell what leads to what, and intersections were ambiguous.
 - Edges are now drawn as smooth flow curves along ELK's routes, with a background casing (gap at crossings) and mid-edge chevrons on long edges.

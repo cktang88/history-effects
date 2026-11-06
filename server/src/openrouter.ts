@@ -19,6 +19,8 @@ type CompletionOptions = {
 
 type ReasoningEffort = "minimal" | "low" | "medium" | "high";
 
+export const DEFAULT_MODEL = "anthropic/claude-haiku-5.5";
+
 function reasoningEffort(): ReasoningEffort | null {
   const v = (process.env.OPENROUTER_REASONING || "low").toLowerCase();
   if (v === "off" || v === "none" || v === "0") return null;
@@ -52,7 +54,7 @@ export async function completeJSON<T = unknown>(opts: CompletionOptions): Promis
   if (!apiKey) {
     throw new Error("OPENROUTER_API_KEY is not set. Copy server/.env.example to server/.env and add your key.");
   }
-  const model = process.env.OPENROUTER_MODEL || "moonshotai/kimi-k2.6";
+  const model = process.env.OPENROUTER_MODEL || DEFAULT_MODEL;
   const client = clientFor(apiKey);
 
   const chatRequest: ChatRequest = {

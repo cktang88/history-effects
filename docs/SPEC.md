@@ -109,7 +109,7 @@ The model is told to:
 ## OpenRouter / Kimi JSON handling
 
 - The server uses `@openrouter/sdk` rather than hand-built `fetch` calls.
-- The default model is `moonshotai/kimi-k2.6`.
+- The default model is `anthropic/claude-haiku-5.5`.
 - Requests use OpenRouter JSON mode with `responseFormat: { type: "json_object" }`.
 - Prompts include explicit output examples and field meanings, matching Kimi's JSON Mode guidance.
 - Non-streaming calls enable OpenRouter's `response-healing` plugin.
@@ -128,7 +128,7 @@ The model is told to:
 
 ```
 OPENROUTER_API_KEY=sk-or-...
-OPENROUTER_MODEL=moonshotai/kimi-k2.6
+OPENROUTER_MODEL=anthropic/claude-haiku-5.5
 PORT=3000
 ```
 

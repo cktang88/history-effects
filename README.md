@@ -19,7 +19,7 @@ How the database is built is described in [`pipeline/README.md`](./pipeline/READ
 - **Tests**: Vitest in both packages (70 tests total).
 - **Lint**: oxlint at the repo root.
 - **Pre-commit**: [prek](https://github.com/j178/prek) runs oxlint + tests via `.pre-commit-config.yaml` before every commit.
-- **Default model**: `moonshotai/kimi-k2.6` (override via `OPENROUTER_MODEL` env var).
+- **Default model**: `anthropic/claude-haiku-5.5` (override via `OPENROUTER_MODEL` env var).
 
 ## Project layout
 

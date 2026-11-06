@@ -48,7 +48,7 @@ These are the conventions for this repo. They were established in conversation; 
 ## LLM / OpenRouter
 
 - LLM calls are server-side only.
-- Models default to `moonshotai/kimi-k2.6` (override via `OPENROUTER_MODEL`).
+- Models default to `anthropic/claude-haiku-5.5` (override via `OPENROUTER_MODEL`).
 - Reasoning effort comes from `OPENROUTER_REASONING` (default `low`). Web search is opt-in, only via `/api/enrich`.
 
 ## Tests

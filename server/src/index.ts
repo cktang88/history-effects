@@ -2,7 +2,7 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { compress } from "hono/compress";
 import { etag } from "hono/etag";
-import { completeJSON } from "./openrouter.ts";
+import { completeJSON, DEFAULT_MODEL } from "./openrouter.ts";
 import { Atlas } from "./atlas.ts";
 import { createJsonObjectStream } from "./jsonStream.ts";
 import {
@@ -432,7 +432,7 @@ app.onError((err, c) => {
 const port = Number(process.env.PORT || 3000);
 
 if (import.meta.main) {
-  const mode = process.env.MOCK_LLM === "1" ? " (MOCK_LLM: canned responses, no API calls)" : "";
+  const mode = process.env.MOCK_LLM === "1" ? " (MOCK_LLM: canned responses, no API calls)" : ` (model: ${process.env.OPENROUTER_MODEL || DEFAULT_MODEL})`;
   console.log(`history-effects API listening on http://localhost:${port}${mode}`);
   console.log(`atlas: ${atlas.meta.total} entities, ${atlas.meta.links} causal links`);
 }
