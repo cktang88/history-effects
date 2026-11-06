@@ -14,6 +14,7 @@ type CompletionOptions = {
   webSearch?: boolean;
   onToken?: (token: string) => void;
   onReasoning?: (text: string) => void;
+  signal?: AbortSignal;
 };
 
 type ReasoningEffort = "minimal" | "low" | "medium" | "high";
@@ -30,6 +31,19 @@ const JSON_REPAIR_SYSTEM_PROMPT = `
 You repair malformed JSON. Return ONLY valid JSON. Do not explain, do not use markdown, and do not add fields that are not implied by the input.
 `.trim();
 
+// One client per key, so connections are reused across requests.
+let cachedClient: { key: string; client: OpenRouter } | null = null;
+
+function clientFor(apiKey: string): OpenRouter {
+  if (cachedClient?.key !== apiKey) {
+    cachedClient = {
+      key: apiKey,
+      client: new OpenRouter({ apiKey, httpReferer: "http://localhost:5173", appTitle: "History Effects", timeoutMs: REQUEST_TIMEOUT_MS }),
+    };
+  }
+  return cachedClient.client;
+}
+
 export async function completeJSON<T = unknown>(opts: CompletionOptions): Promise<T> {
   if (process.env.MOCK_LLM === "1") {
     return parseJSONLoose<T>(await mockCompletion(opts));
@@ -39,12 +53,7 @@ export async function completeJSON<T = unknown>(opts: CompletionOptions): Promis
     throw new Error("OPENROUTER_API_KEY is not set. Copy server/.env.example to server/.env and add your key.");
   }
   const model = process.env.OPENROUTER_MODEL || "moonshotai/kimi-k2.6";
-  const client = new OpenRouter({
-    apiKey,
-    httpReferer: "http://localhost:5173",
-    appTitle: "History Effects",
-    timeoutMs: REQUEST_TIMEOUT_MS,
-  });
+  const client = clientFor(apiKey);
 
   const chatRequest: ChatRequest = {
     model,
@@ -89,13 +98,13 @@ export async function completeJSON<T = unknown>(opts: CompletionOptions): Promis
   try {
     if (opts.onToken) {
       content = await readStreamingContent(
-        await client.chat.send({ chatRequest: { ...chatRequest, stream: true } }),
+        await client.chat.send({ chatRequest: { ...chatRequest, stream: true } }, { signal: opts.signal }),
         opts.onToken,
         log,
         opts.onReasoning
       );
     } else {
-      const result = await client.chat.send({ chatRequest: { ...chatRequest, stream: false } });
+      const result = await client.chat.send({ chatRequest: { ...chatRequest, stream: false } }, { signal: opts.signal });
       log.response = result;
       log.reasoning = extractResultReasoning(result);
       content = readCompletionContent(result);

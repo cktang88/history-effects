@@ -2,7 +2,7 @@
 // Output: pipeline/out/entities.raw.json
 
 import { LENSES, type Lens, type LensId } from "./lenses.ts";
-import { chunk, log, qid, sparql, writePipeline, yearOf, type Binding } from "./lib.ts";
+import { cachedPerId, chunk, log, qid, sparql, writePipeline, yearOf, type Binding } from "./lib.ts";
 
 export type RawEntity = {
   id: string;
@@ -108,15 +108,14 @@ async function main() {
     log(`${lens.id}: ${rows.length} ranked, ${added} new`);
   }
 
-  const ids = [...byId.keys()];
-  let done = 0;
-  for (const batch of chunk(ids, 150)) {
-    for (const d of parseDetails(await sparql(detailsQuery(batch)))) {
-      const e = byId.get(d.id);
-      if (e) Object.assign(e, { ...d, lenses: e.lenses, sitelinks: e.sitelinks });
-    }
-    done += batch.length;
-    log(`details ${done}/${ids.length}`);
+  const details = await cachedPerId("details", [...byId.keys()], 150, async (batch) => {
+    const out = new Map<string, RawEntity>();
+    for (const d of parseDetails(await sparql(detailsQuery(batch)))) out.set(d.id, d);
+    return out;
+  });
+  for (const [id, d] of details) {
+    const e = byId.get(id);
+    if (e && d) Object.assign(e, { ...d, lenses: e.lenses, sitelinks: e.sitelinks });
   }
 
   // "Time of discovery" also covers stars, islands and chemicals: keep only

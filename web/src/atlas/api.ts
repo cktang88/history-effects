@@ -85,4 +85,18 @@ export const browse = (p: { from: number; to: number; region?: string; lens?: st
 export const detail = (id: string) => get<Detail>(`/api/atlas/entity/${encodeURIComponent(id)}`);
 
 export const path = (from: string, to: string, skipDirect = false) =>
-  get<{ links: LinkView[]; reversed: boolean }>(`/api/atlas/path?${qs({ from, to, skipDirect: skipDirect ? 1 : undefined })}`);
+  get<{ links: LinkView[]; reversed: boolean; entities: EntitySummary[] }>(
+    `/api/atlas/path?${qs({ from, to, skipDirect: skipDirect ? 1 : undefined })}`
+  );
+
+// All sourced links among a set of entities, in one request.
+export async function linksAmong(ids: string[]): Promise<LinkView[]> {
+  if (ids.length < 2) return [];
+  const res = await fetch("/api/atlas/links", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ ids }),
+  });
+  if (!res.ok) throw new Error(`/api/atlas/links: ${res.status}`);
+  return ((await res.json()) as { links: LinkView[] }).links;
+}

@@ -107,6 +107,20 @@ describe("postStream", () => {
   });
 });
 
+describe("response cache", () => {
+  it("keeps at most 150 entries, evicting the oldest", async () => {
+    const store = mockLocalStorage();
+    for (let i = 0; i < 160; i++) {
+      vi.stubGlobal("fetch", mockSSE([sse("result", { event: { title: `T${i}` } })]));
+      await api.explore(`topic ${i}`);
+    }
+    const cached = [...store.keys()].filter((k) => k.startsWith("history-effects:api:v2:/api"));
+    expect(cached).toHaveLength(150);
+    expect(cached.some((k) => k.includes("topic 0\""))).toBe(false);
+    expect(cached.some((k) => k.includes("topic 159"))).toBe(true);
+  });
+});
+
 describe("stableStringify", () => {
   it("is independent of key order", () => {
     expect(api.stableStringify({ b: 1, a: { d: 2, c: 3 } })).toBe(api.stableStringify({ a: { c: 3, d: 2 }, b: 1 }));

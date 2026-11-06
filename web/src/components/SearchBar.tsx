@@ -27,12 +27,16 @@ const CONNECT_STARTERS: [string, string][] = [
   ["Protestant Reformation", "Thirty Years' War"],
 ];
 
+let debounce: ReturnType<typeof setTimeout> | undefined;
+
 export function useSearch() {
   const [mode, setMode] = useState<Mode>("explore");
   const [text, setText] = useState("");
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [highlight, setHighlight] = useState(-1);
+  // Suggestions follow the text after a short pause, not on every keystroke.
+  const [query, setQuery] = useState("");
 
   const submit = (picked?: atlas.EntitySummary) => {
     if (picked) {
@@ -59,9 +63,12 @@ export function useSearch() {
     mode,
     setMode,
     text,
+    query,
     setText: (t: string) => {
       setText(t);
       setHighlight(-1);
+      clearTimeout(debounce);
+      debounce = setTimeout(() => setQuery(t), 120);
     },
     from,
     setFrom,
@@ -79,8 +86,8 @@ export function SearchForm({ search, large }: { search: Search; large?: boolean 
   const titles = useGraph((s) => s.nodes.map((n) => n.data.title).join("\u0000"));
   const { mode, setMode } = search;
   const [focused, setFocused] = useState(false);
-  const q = search.text.trim();
-  const showSuggestions = mode === "explore" && focused && q.length >= 2 && !q.includes("->") && !/^how /i.test(q);
+  const q = search.query.trim();
+  const showSuggestions = mode === "explore" && focused && search.text.trim().length >= 2 && q.length >= 2 && !q.includes("->") && !/^how /i.test(q);
   const suggestions = useQuery(showSuggestions ? `search:${q.toLowerCase()}` : null, () => atlas.search(q, 7));
   const list = showSuggestions ? (suggestions.data ?? []) : [];
 
@@ -175,8 +182,7 @@ export function SearchForm({ search, large }: { search: Search; large?: boolean 
         {mode === "explore" ? "Explore" : "Trace"}
       </button>
       <datalist id="all-titles">
-        {titles
-          .split("\u0000")
+        {[...new Set(titles.split("\u0000"))]
           .filter(Boolean)
           .map((t) => (
             <option key={t} value={t} />

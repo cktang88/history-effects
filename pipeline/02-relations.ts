@@ -3,7 +3,7 @@
 // Output: pipeline/out/relations.raw.json, pipeline/out/countries.raw.json
 
 import type { RawEntity } from "./01-entities.ts";
-import { chunk, log, qid, readPipeline, sparql, writePipeline } from "./lib.ts";
+import { cachedPerId, chunk, log, qid, readPipeline, sparql, writePipeline } from "./lib.ts";
 
 export const PROPERTIES: Record<string, string> = {
   P828: "has_cause",
@@ -34,20 +34,20 @@ async function main() {
   const ids = new Set(entities.map((e) => e.id));
   const props = Object.keys(PROPERTIES).map((p) => `wdt:${p}`).join(" ");
 
-  const relations: RawRelation[] = [];
-  let done = 0;
-  for (const batch of chunk([...ids], 250)) {
+  const perEntity = await cachedPerId("relations", [...ids], 250, async (batch) => {
+    const out = new Map<string, { p: string; b: string }[]>();
     const rows = await sparql(
       `SELECT ?a ?p ?b WHERE { VALUES ?a { ${batch.map((i) => `wd:${i}`).join(" ")} } VALUES ?p { ${props} } ?a ?p ?b . FILTER(isIRI(?b)) }`
     );
     for (const r of rows) {
-      const b = qid(r.b!.value);
-      if (!ids.has(b)) continue;
-      relations.push({ a: qid(r.a!.value), p: qid(r.p!.value), b });
+      const a = qid(r.a!.value);
+      out.set(a, [...(out.get(a) ?? []), { p: qid(r.p!.value), b: qid(r.b!.value) }]);
     }
-    done += batch.length;
-    log(`relations ${done}/${ids.size} (${relations.length} kept)`);
-  }
+    return out;
+  });
+  // Cached per entity with all targets; filter to the current entity set here.
+  const relations: RawRelation[] = [];
+  for (const [a, rels] of perEntity) for (const r of rels ?? []) if (ids.has(r.b)) relations.push({ a, p: r.p, b: r.b });
   await writePipeline("relations.raw.json", relations);
 
   const countryIds = [...new Set(entities.flatMap((e) => e.countries))];

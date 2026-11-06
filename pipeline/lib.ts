@@ -120,3 +120,33 @@ export async function writeWiki(value: unknown) {
   await mkdir(new URL("./out/", import.meta.url), { recursive: true });
   await writeFile(new URL("./out/wiki.json.gz", import.meta.url), gzipSync(JSON.stringify(value), { level: 9 }));
 }
+
+// Per-entity cache for batched lookups: results are stored per id, so adding
+// entities only queries the new ones (batch-keyed caching would re-query
+// everything whenever batch boundaries shift).
+export async function cachedPerId<T>(
+  name: string,
+  ids: string[],
+  batchSize: number,
+  fetchBatch: (batch: string[]) => Promise<Map<string, T>>
+): Promise<Map<string, T | null>> {
+  const file = new URL(`per-id-${name}.json`, CACHE_DIR);
+  let cache: Record<string, T | null> = {};
+  try {
+    cache = JSON.parse(await readFile(file, "utf8"));
+  } catch {}
+  const missing = [...new Set(ids)].filter((id) => !(id in cache));
+  for (const [i, batch] of chunk(missing, batchSize).entries()) {
+    const found = await fetchBatch(batch);
+    // Ids with no result are cached as null so they aren't re-queried.
+    for (const id of batch) cache[id] = found.get(id) ?? null;
+    if (i % 5 === 4) await persist();
+  }
+  async function persist() {
+    await mkdir(CACHE_DIR, { recursive: true });
+    await writeFile(file, JSON.stringify(cache));
+  }
+  if (missing.length) await persist();
+  log(`${name}: ${ids.length - missing.length} cached, ${missing.length} fetched`);
+  return new Map(ids.map((id) => [id, cache[id] ?? null]));
+}

@@ -100,26 +100,27 @@ export class Atlas {
     curated: Record<string, Curated> = {}
   ) {
     for (const e of entities) this.entities.set(e.id, e);
-    const sourcedPairs = new Set(links.map((l) => `${l.s}>${l.t}`));
-    const curatedLinks: CausalLink[] = Object.entries(curated)
-      .filter(([key]) => !sourcedPairs.has(key))
-      .map(([key, c]) => {
-        const [s, t] = key.split(">") as [string, string];
-        return { s, t, score: 2, ev: [{ src: "curated" as const }], review: { verdict: "keep" as const, ...c } };
-      });
     const seen = new Set<string>();
-    for (const raw of [...links, ...curatedLinks]) {
+    const accept = (raw: CausalLink) => {
       const review = raw.review ?? reviews[`${raw.s}>${raw.t}`];
-      if (review?.verdict === "reject") continue;
-      if (!review && raw.score < minUnreviewedScore) continue;
+      if (review?.verdict === "reject") return;
+      if (!review && raw.score < minUnreviewedScore) return;
       const link = review?.verdict === "reverse" ? { ...raw, s: raw.t, t: raw.s, review } : { ...raw, review };
-      if (!this.entities.has(link.s) || !this.entities.has(link.t)) continue;
+      if (!this.entities.has(link.s) || !this.entities.has(link.t)) return;
       // A reversed candidate can coincide with the opposite candidate; keep one.
       const pair = `${link.s}>${link.t}`;
-      if (seen.has(pair)) continue;
+      if (seen.has(pair)) return;
       seen.add(pair);
       this.push(this.causes, link.t, link);
       this.push(this.effects, link.s, link);
+    };
+    for (const raw of links) accept(raw);
+    // Curated links fill pairs that no accepted sourced link covers (a
+    // rejected or withheld candidate doesn't block them).
+    for (const [key, c] of Object.entries(curated)) {
+      if (seen.has(key)) continue;
+      const [s, t] = key.split(">") as [string, string];
+      accept({ s, t, score: 2, ev: [{ src: "curated" }], review: { verdict: "keep", ...c } });
     }
     for (const list of [...this.causes.values(), ...this.effects.values()]) list.sort((a, b) => rank(b) - rank(a));
     this.struct = structure.filter((l) => this.entities.has(l.s) && this.entities.has(l.t));
@@ -236,6 +237,19 @@ export class Atlas {
     return (this.effects.get(id) ?? []).slice(0, limit).map((l) => this.view(l));
   }
 
+  // All visible links whose two ends are both in `ids`: one call instead of
+  // fetching every entity's detail to find connections among them.
+  linksAmong(ids: string[]): LinkView[] {
+    const set = new Set(ids);
+    const out: LinkView[] = [];
+    for (const id of set) for (const l of this.effects.get(id) ?? []) if (set.has(l.t)) out.push(this.view(l));
+    return out;
+  }
+
+  summaries(ids: string[]): EntitySummary[] {
+    return ids.map((id) => this.entities.get(id)).filter((e): e is Entity => !!e).map((e) => this.summary(e));
+  }
+
   link(source: string, target: string): LinkView | null {
     const l = (this.effects.get(source) ?? []).find((x) => x.t === target);
     return l ? this.view(l) : null;
@@ -255,7 +269,7 @@ export class Atlas {
     const effects = this.effectsOf(id);
     const neighbors = new Set([...causes.map((l) => l.source), ...effects.map((l) => l.target)]);
     return {
-      entity: e,
+      entity: { ...e, ...this.summary(e) },
       causes,
       effects,
       neighbors: [...neighbors].map((n) => this.summary(this.entities.get(n)!)),
@@ -278,33 +292,42 @@ export class Atlas {
     return this.searchPath(from, to, maxSteps, 1.8, skip) ?? this.searchPath(from, to, maxSteps, 0, skip);
   }
 
+  // Exact cheapest path with at most `maxSteps` links: a layered
+  // Bellman–Ford over (node, steps), cheap at this graph size, and unlike
+  // plain Dijkstra it can't lose a short route behind a cheaper long one.
   private searchPath(from: string, to: string, maxSteps: number, minScore: number, skip: string | null): LinkView[] | null {
-    const dist = new Map<string, number>([[from, 0]]);
-    const steps = new Map<string, number>([[from, 0]]);
-    const prev = new Map<string, CausalLink>();
-    const queue: [number, string][] = [[0, from]];
-    while (queue.length) {
-      queue.sort((a, b) => a[0] - b[0]);
-      const [d, id] = queue.shift()!;
-      if (id === to) break;
-      if (d > (dist.get(id) ?? Infinity) || steps.get(id)! >= maxSteps) continue;
-      for (const link of this.effects.get(id) ?? []) {
-        if (link.score < minScore && !link.review) continue;
-        if (skip && `${link.s}>${link.t}` === skip) continue;
-        const nd = d + 1 + 2 / (0.5 + link.score);
-        if (nd < (dist.get(link.t) ?? Infinity)) {
-          dist.set(link.t, nd);
-          steps.set(link.t, steps.get(id)! + 1);
-          prev.set(link.t, link);
-          queue.push([nd, link.t]);
+    type State = { cost: number; via: CausalLink | null };
+    const layers: Map<string, State>[] = [new Map([[from, { cost: 0, via: null }]])];
+    for (let k = 1; k <= maxSteps; k++) {
+      const next = new Map<string, State>();
+      for (const [id, st] of layers[k - 1]!) {
+        if (id === to) continue;
+        for (const link of this.effects.get(id) ?? []) {
+          if (link.score < minScore && !link.review) continue;
+          if (skip && `${link.s}>${link.t}` === skip) continue;
+          const cost = st.cost + 1 + 2 / (0.5 + link.score);
+          if (cost < (next.get(link.t)?.cost ?? Infinity)) next.set(link.t, { cost, via: link });
         }
       }
+      if (next.size === 0) break;
+      layers.push(next);
     }
-    if (!prev.has(to)) return null;
+    let bestK = -1;
+    for (let k = 1; k < layers.length; k++) {
+      const c = layers[k]!.get(to)?.cost;
+      if (c !== undefined && (bestK < 0 || c < layers[bestK]!.get(to)!.cost)) bestK = k;
+    }
+    if (bestK < 0) return null;
     const chain: CausalLink[] = [];
-    for (let cur = to; cur !== from; cur = prev.get(cur)!.s) chain.unshift(prev.get(cur)!);
+    let cur = to;
+    for (let k = bestK; k > 0; k--) {
+      const link = layers[k]!.get(cur)!.via!;
+      chain.unshift(link);
+      cur = link.s;
+    }
     return chain.map((l) => this.view(l));
   }
+
 }
 
 // In mixed views, what happened leads; people and discoveries follow.

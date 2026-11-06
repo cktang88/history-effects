@@ -1,5 +1,7 @@
 import { Hono } from "hono";
 import { cors } from "hono/cors";
+import { compress } from "hono/compress";
+import { etag } from "hono/etag";
 import { completeJSON } from "./openrouter.ts";
 import { Atlas } from "./atlas.ts";
 import { createJsonObjectStream } from "./jsonStream.ts";
@@ -54,8 +56,9 @@ type Task<B> = {
 
 type Emit = (event: string, data: unknown) => void;
 
-async function runTask<B>(task: Task<B>, body: B, emit?: Emit) {
+async function runTask<B>(task: Task<B>, body: B, emit?: Emit, withTokens = false, signal?: AbortSignal) {
   const p = task.prompt(body);
+  const thinking = coalesce((text) => emit?.("thinking", { text }), 150);
   const counts = new Map<string, number>();
   const objects = createJsonObjectStream((key, value) => {
     const clean = task.item?.(key, value, body);
@@ -72,29 +75,64 @@ async function runTask<B>(task: Task<B>, body: B, emit?: Emit) {
     label: task.label,
     onToken: emit
       ? (token) => {
-          emit("token", { token });
+          if (withTokens) emit("token", { token });
           objects.feed(token);
         }
       : undefined,
-    onReasoning: emit ? (text) => emit("thinking", { text }) : undefined,
+    onReasoning: emit ? thinking.push : undefined,
+    signal,
   });
+  thinking.flush();
   return task.finish(raw, body);
 }
 
-function sseResponse(producer: (emit: Emit) => Promise<unknown>) {
+// Batches many tiny reasoning deltas into one event per interval.
+export function coalesce(send: (text: string) => void, ms: number) {
+  let buffer = "";
+  let timer: ReturnType<typeof setTimeout> | null = null;
+  const flush = () => {
+    if (timer) clearTimeout(timer);
+    timer = null;
+    if (buffer) send(buffer);
+    buffer = "";
+  };
+  return {
+    push: (text: string) => {
+      buffer += text;
+      timer ??= setTimeout(flush, ms);
+    },
+    flush,
+  };
+}
+
+function sseResponse(producer: (emit: Emit, signal: AbortSignal) => Promise<unknown>) {
   const encoder = new TextEncoder();
+  // Aborted when the client disconnects, so the upstream model call stops too.
+  const abort = new AbortController();
   const stream = new ReadableStream<Uint8Array>({
     async start(controller) {
       const send: Emit = (event, data) => {
-        controller.enqueue(encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`));
+        if (abort.signal.aborted) return;
+        try {
+          controller.enqueue(encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`));
+        } catch {
+          abort.abort();
+        }
       };
       try {
-        send("result", await producer(send));
+        send("result", await producer(send, abort.signal));
       } catch (e) {
         send("error", { error: e instanceof Error ? e.message : String(e) });
       } finally {
-        controller.close();
+        try {
+          controller.close();
+        } catch {
+          // Already closed by a disconnect.
+        }
       }
+    },
+    cancel() {
+      abort.abort();
     },
   });
 
@@ -131,7 +169,10 @@ function register<B>(path: string, task: Task<B>) {
   app.post(`${path}/stream`, async (c) => {
     const body = task.parse(await readBody(c.req));
     if (typeof body === "string") return c.json({ error: body }, 400);
-    return sseResponse((emit) => runTask(task, body, emit));
+    // Raw token events are opt-in (?tokens=1); clients normally only need
+    // the parsed items, thinking, and the result.
+    const withTokens = c.req.query("tokens") === "1";
+    return sseResponse((emit, signal) => runTask(task, body, emit, withTokens, signal));
   });
 }
 
@@ -331,11 +372,21 @@ register<BridgeBody>("/api/bridge", {
 
 export const atlas = Atlas.load();
 
+// Atlas data only changes when the database is rebuilt (and the server
+// restarted), so responses are cacheable: ETags make revalidation cheap and a
+// short max-age avoids refetching within a session. JSON is compressed; SSE
+// routes are left alone so streaming isn't buffered.
+app.use("/api/atlas/*", compress(), etag(), async (c, next) => {
+  await next();
+  if (c.req.method === "GET" && c.res.ok) c.header("Cache-Control", "public, max-age=600, stale-while-revalidate=86400");
+});
+
 const numberParam = (v: string | undefined) => (v === undefined || v === "" || !Number.isFinite(Number(v)) ? undefined : Number(v));
+const limitParam = (v: string | undefined, fallback: number) => Math.max(1, Math.min(100, Math.floor(numberParam(v) ?? fallback)));
 
 app.get("/api/atlas/meta", (c) => c.json(atlas.meta));
 
-app.get("/api/atlas/search", (c) => c.json({ results: atlas.search(c.req.query("q") ?? "", numberParam(c.req.query("limit")) ?? 8) }));
+app.get("/api/atlas/search", (c) => c.json({ results: atlas.search(c.req.query("q") ?? "", limitParam(c.req.query("limit"), 8)) }));
 
 app.get("/api/atlas/browse", (c) =>
   c.json(
@@ -344,7 +395,7 @@ app.get("/api/atlas/browse", (c) =>
       to: numberParam(c.req.query("to")),
       region: c.req.query("region"),
       lens: c.req.query("lens"),
-      limit: Math.min(100, numberParam(c.req.query("limit")) ?? 40),
+      limit: limitParam(c.req.query("limit"), 40),
     })
   )
 );
@@ -359,9 +410,17 @@ app.get("/api/atlas/path", (c) => {
   const to = c.req.query("to") ?? "";
   const skipDirect = c.req.query("skipDirect") === "1";
   const forward = atlas.path(from, to, { skipDirect });
-  if (forward) return c.json({ links: forward, reversed: false });
-  const backward = atlas.path(to, from, { skipDirect });
-  return c.json({ links: backward ?? [], reversed: !!backward });
+  const links = forward ?? atlas.path(to, from, { skipDirect }) ?? [];
+  // Include the chain's entities so the client needn't fetch each one.
+  const ids = links.length ? [links[0]!.source, ...links.map((l) => l.target)] : [];
+  return c.json({ links, reversed: !forward && links.length > 0, entities: atlas.summaries(ids) });
+});
+
+// Links among a set of entities (e.g. everything on the user's map).
+app.post("/api/atlas/links", async (c) => {
+  const body = await readBody(c.req);
+  const ids = Array.isArray(body.ids) ? body.ids.filter((x): x is string => typeof x === "string").slice(0, 1000) : [];
+  return c.json({ links: atlas.linksAmong(ids) });
 });
 
 app.onError((err, c) => {

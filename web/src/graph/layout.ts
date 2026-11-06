@@ -33,21 +33,36 @@ export function inferYears(nodes: LayoutNode[], edges: LayoutEdge[]): Map<string
   return years;
 }
 
-// Within a cluster, a cause still has to sit left of its effect.
+// Within a cluster, a cause still has to sit left of its effect. Depths come
+// from a topological pass; edges closing a cycle are ignored, so a cyclic
+// group can't stretch into one column per node.
 function sameYearDepths(ids: string[], edges: LayoutEdge[]): Map<string, number> {
   const inGroup = new Set(ids);
   const local = edges.filter((e) => inGroup.has(e.source) && inGroup.has(e.target) && e.source !== e.target);
   const depth = new Map(ids.map((id) => [id, 0]));
-  for (let pass = 0; pass < ids.length; pass++) {
-    let changed = false;
-    for (const e of local) {
-      const d = depth.get(e.source)! + 1;
-      if (d > depth.get(e.target)! && d < ids.length) {
-        depth.set(e.target, d);
-        changed = true;
-      }
+  const indeg = new Map(ids.map((id) => [id, 0]));
+  const out = new Map<string, string[]>();
+  for (const e of local) {
+    indeg.set(e.target, indeg.get(e.target)! + 1);
+    out.set(e.source, [...(out.get(e.source) ?? []), e.target]);
+  }
+  const done = new Set<string>();
+  const queue = ids.filter((id) => indeg.get(id) === 0);
+  const settle = (id: string) => {
+    done.add(id);
+    for (const t of out.get(id) ?? []) {
+      if (done.has(t)) continue;
+      depth.set(t, Math.max(depth.get(t)!, depth.get(id)! + 1));
+      indeg.set(t, indeg.get(t)! - 1);
+      if (indeg.get(t) === 0) queue.push(t);
     }
-    if (!changed) break;
+  };
+  for (;;) {
+    while (queue.length) settle(queue.shift()!);
+    // Only cycles remain: break one by settling its first member as is.
+    const next = ids.find((id) => !done.has(id));
+    if (!next) break;
+    settle(next);
   }
   return depth;
 }

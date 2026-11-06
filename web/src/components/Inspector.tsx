@@ -14,13 +14,21 @@ import {
   resolveEndpoint,
   verify,
 } from "../graph/actions";
-import { incoming, outgoing, yearsBetween, type CausalEdgeType, type EventNodeType } from "../graph/model";
+import { useShallow } from "zustand/react/shallow";
+import { incoming, outgoing, yearsBetween, type CausalEdgeType } from "../graph/model";
+import type { EventNodeData } from "../types";
+
+// What the inspector needs of a node: identity and data, not position. Node
+// data keeps its identity while the layout animates positions, so selecting
+// only this avoids re-rendering the panel on every animation frame.
+type MapNode = { id: string; data: EventNodeData };
 import { addNeighbor, KIND_LABEL, openEntity } from "../graph/atlasActions";
 import * as atlas from "../atlas/api";
 
 export function Inspector() {
   const selection = useGraph((s) => s.selection);
-  const nodes = useGraph((s) => s.nodes);
+  const nodeData = useGraph(useShallow((s) => Object.fromEntries(s.nodes.map((n) => [n.id, n.data]))));
+  const nodes: MapNode[] = Object.entries(nodeData).map(([id, data]) => ({ id, data }));
   const edges = useGraph((s) => s.edges);
   const stories = useGraph((s) => s.stories);
   const jobs = useGraph((s) => s.jobs);
@@ -60,8 +68,8 @@ function NodePanel({
   stories,
   job,
 }: {
-  node: EventNodeType;
-  nodes: EventNodeType[];
+  node: MapNode;
+  nodes: MapNode[];
   edges: CausalEdgeType[];
   stories: Story[];
   job?: Job;
@@ -176,7 +184,7 @@ function SourcedList({
   links: atlas.LinkView[];
   entities: atlas.EntitySummary[];
   side: "source" | "target";
-  onMap: Map<string, EventNodeType>;
+  onMap: Map<string, MapNode>;
 }) {
   const byId = new Map(entities.map((e) => [e.id, e]));
   const rows = links
@@ -255,11 +263,11 @@ function LinkList({
   title: string;
   empty: string;
   edges: CausalEdgeType[];
-  other: (e: CausalEdgeType) => EventNodeType | undefined;
+  other: (e: CausalEdgeType) => MapNode | undefined;
 }) {
   const items = edges
     .map((e) => ({ e, n: other(e) }))
-    .filter((x): x is { e: CausalEdgeType; n: EventNodeType } => !!x.n)
+    .filter((x): x is { e: CausalEdgeType; n: MapNode } => !!x.n)
     .sort((a, b) => (a.n.data.year ?? 0) - (b.n.data.year ?? 0));
   return (
     <section className="links">
@@ -285,7 +293,7 @@ function LinkList({
   );
 }
 
-function TraceBox({ nodeId, nodes }: { nodeId: string; nodes: EventNodeType[] }) {
+function TraceBox({ nodeId, nodes }: { nodeId: string; nodes: MapNode[] }) {
   const [text, setText] = useState("");
   const [direction, setDirection] = useState<"to" | "from">("to");
   const submit = () => {
@@ -332,7 +340,7 @@ function TraceBox({ nodeId, nodes }: { nodeId: string; nodes: EventNodeType[] })
   );
 }
 
-function EdgePanel({ edge, nodes, job }: { edge: CausalEdgeType; nodes: EventNodeType[]; job?: Job }) {
+function EdgePanel({ edge, nodes, job }: { edge: CausalEdgeType; nodes: MapNode[]; job?: Job }) {
   const cause = nodes.find((n) => n.id === edge.source);
   const effect = nodes.find((n) => n.id === edge.target);
   if (!cause || !effect || !edge.data) return null;
@@ -443,8 +451,8 @@ function ExplanationView({ explanation: x }: { explanation: Explanation }) {
         <>
           <h4 className="sub-title">It also took</h4>
           <div className="factor-list">
-            {x.keyFactors.map((f) => (
-              <span key={f} className="factor">
+            {x.keyFactors.map((f, i) => (
+              <span key={i} className="factor">
                 {f}
               </span>
             ))}
@@ -474,9 +482,9 @@ const VERDICT_TEXT = {
   none: "No meaningful causal connection",
 } as const;
 
-function StoryPanel({ story, nodes, edges }: { story: Story; nodes: EventNodeType[]; edges: CausalEdgeType[] }) {
+function StoryPanel({ story, nodes, edges }: { story: Story; nodes: MapNode[]; edges: CausalEdgeType[] }) {
   const byId = new Map(nodes.map((n) => [n.id, n]));
-  const chain = story.nodeIds.map((id) => byId.get(id)).filter((n): n is EventNodeType => !!n);
+  const chain = story.nodeIds.map((id) => byId.get(id)).filter((n): n is MapNode => !!n);
   const first = chain[0];
   const last = chain[chain.length - 1];
   const edgeInto = (id: string) => edges.find((e) => e.target === id && story.edgeIds.includes(e.id));

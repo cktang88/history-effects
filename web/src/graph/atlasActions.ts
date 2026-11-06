@@ -91,41 +91,64 @@ function addEntity(e: atlas.EntitySummary, row: number, spawnFrom?: string): boo
   return true;
 }
 
-function addLink(view: atlas.LinkView): string | null {
-  const { edges } = graph();
-  const existing = edges.find(
-    (e) => (e.source === view.source && e.target === view.target) || (e.source === view.target && e.target === view.source)
-  );
-  if (existing?.data?.source === "db") return existing.id;
-  const edge: CausalEdgeType = {
+// Draws every sourced link between entities already on the map (one request,
+// one state update), so separate threads visibly converge.
+export async function linkAmong(signal?: AbortSignal) {
+  const ids = graph()
+    .nodes.filter((n) => n.data.source === "db")
+    .map((n) => n.id);
+  const links = await atlas.linksAmong(ids).catch(() => []);
+  if (signal?.aborted) return;
+  addLinks(links.filter((l) => onMap(l.source) && onMap(l.target)));
+}
+
+function edgeFor(view: atlas.LinkView): CausalEdgeType {
+  return {
     id: view.id,
     type: "causal",
     source: view.source,
     target: view.target,
     data: { strength: view.strength, reasoning: view.reasoning, source: "db", evidence: view.evidence, reviewed: view.reviewed },
   };
-  // A sourced link supersedes an AI guess between the same pair.
-  setGraph({ edges: [...edges.filter((e) => e.id !== existing?.id), edge] });
-  return edge.id;
 }
 
-// Draws every sourced link between entities that are already on the map, so
-// separate threads visibly converge.
-export async function linkAmong(ids: string[]) {
-  const details = await Promise.all(ids.map((id) => atlas.detail(id).catch(() => null)));
-  for (const d of details) {
-    if (!d) continue;
-    for (const l of [...d.causes, ...d.effects]) if (onMap(l.source) && onMap(l.target)) addLink(l);
+// Adds sourced links in a single update. A sourced link supersedes an AI
+// guess between the same pair; existing sourced links are kept as they are.
+function addLinks(views: atlas.LinkView[]) {
+  if (views.length === 0) return;
+  const { edges } = graph();
+  const pairKey = (a: string, b: string) => (a < b ? `${a}|${b}` : `${b}|${a}`);
+  const existing = new Map(edges.map((e) => [pairKey(e.source, e.target), e]));
+  const replaced = new Set<string>();
+  const fresh: CausalEdgeType[] = [];
+  for (const v of views) {
+    if (!onMap(v.source) || !onMap(v.target)) continue;
+    const key = pairKey(v.source, v.target);
+    const prior = existing.get(key);
+    if (prior?.data?.source === "db") continue;
+    if (prior) replaced.add(prior.id);
+    const edge = edgeFor(v);
+    existing.set(key, edge);
+    fresh.push(edge);
   }
+  if (fresh.length) setGraph({ edges: [...edges.filter((e) => !replaced.has(e.id)), ...fresh] });
+}
+
+function addLink(view: atlas.LinkView): string | null {
+  addLinks([view]);
+  const pairs = graph().edges.find(
+    (e) => (e.source === view.source && e.target === view.target) || (e.source === view.target && e.target === view.source)
+  );
+  return pairs?.id ?? null;
 }
 
 const isDbNode = (id: string) => graph().nodes.find((n) => n.id === id)?.data.source === "db";
 
 // Adds up to `n` sourced neighbors not yet on the map; returns how many.
-async function grow(id: string, direction: "effects" | "causes", n: number): Promise<string[]> {
+async function grow(id: string, direction: "effects" | "causes", n: number, signal: AbortSignal): Promise<string[]> {
   const d = await atlas.detail(id);
   const node = graph().nodes.find((x) => x.id === id);
-  if (!node) return [];
+  if (!node || signal.aborted) return [];
   const links = direction === "effects" ? d.effects : d.causes;
   const other = (l: atlas.LinkView) => (direction === "effects" ? l.target : l.source);
   const byId = new Map(d.neighbors.map((e) => [e.id, e]));
@@ -137,7 +160,7 @@ async function grow(id: string, direction: "effects" | "causes", n: number): Pro
     const e = byId.get(other(l));
     if (e && addEntity(e, rows[i] ?? node.data.row + i + 1, id)) added.push(e.id);
   });
-  for (const l of links) if (onMap(l.source) && onMap(l.target)) addLink(l);
+  addLinks(links.filter((l) => onMap(l.source) && onMap(l.target)));
   sortRowsByYear(added);
   return added;
 }
@@ -148,18 +171,20 @@ export async function openEntity(id: string, opts: { causes?: number; effects?: 
   if (!abort) return;
   try {
     const d = await atlas.detail(id);
+    if (abort.signal.aborted) return;
+    checkpoint();
     const { nodes } = graph();
     const row = nodes.length ? Math.round(maxRow(nodes)) + 4 : 0;
     addEntity(d.entity, row);
     select({ type: "node", id });
-    const effects = await grow(id, "effects", opts.effects ?? 5);
-    const causes = await grow(id, "causes", opts.causes ?? 3);
-    await linkAmong([...effects, ...causes]);
-    fitTo([id, ...effects, ...causes], 0.95);
+    const effects = await grow(id, "effects", opts.effects ?? 5, abort.signal);
+    const causes = await grow(id, "causes", opts.causes ?? 3, abort.signal);
+    await linkAmong(abort.signal);
+    if (!abort.signal.aborted) fitTo([id, ...effects, ...causes], 0.95);
   } catch (e) {
-    toast(e instanceof Error ? e.message : String(e));
+    if (!abort.signal.aborted) toast(e instanceof Error ? e.message : String(e));
   } finally {
-    endJob(id);
+    endJob(id, abort);
   }
 }
 
@@ -167,16 +192,18 @@ export async function openEntity(id: string, opts: { causes?: number; effects?: 
 // caller can fall back to the model.
 export async function expandFromDb(id: string, direction: "effects" | "causes"): Promise<boolean> {
   if (!isDbNode(id)) return false;
-  const abort = startJob(id, direction, direction === "effects" ? "Adding sourced effects" : "Adding sourced causes");
+  const abort = startJob(id, direction, direction === "effects" ? "Adding sourced effects" : "Adding sourced causes", [id]);
   if (!abort) return true;
   try {
-    const added = await grow(id, direction, 5);
-    await linkAmong(added);
+    checkpoint();
+    const added = await grow(id, direction, 5, abort.signal);
+    await linkAmong(abort.signal);
+    if (abort.signal.aborted) return true;
     if (added.length === 0) return false;
     fitTo([id, ...added]);
     return true;
   } finally {
-    endJob(id);
+    endJob(id, abort);
   }
 }
 
@@ -200,13 +227,24 @@ export async function resolveEntity(text: string): Promise<atlas.EntitySummary |
 // Traces the strongest sourced chain between two entities. Returns false if
 // the database has no path, so the caller can ask the model instead.
 export async function connectFromDb(fromId: string, toId: string, opts: { skipDirect?: boolean } = {}): Promise<boolean> {
-  const { links, reversed } = await atlas.path(fromId, toId, opts.skipDirect);
+  const key = `db-path:${fromId}>${toId}`;
+  const abort = startJob(key, "path", "Tracing sourced links", [fromId, toId].filter(onMap));
+  if (!abort) return true;
+  try {
+    return await tracePathFromDb(fromId, toId, opts, abort.signal);
+  } finally {
+    endJob(key, abort);
+  }
+}
+
+async function tracePathFromDb(fromId: string, toId: string, opts: { skipDirect?: boolean }, signal: AbortSignal): Promise<boolean> {
+  const { links, reversed, entities } = await atlas.path(fromId, toId, opts.skipDirect);
+  if (signal.aborted) return true;
   if (links.length === 0) return false;
   checkpoint();
   const [a, b] = reversed ? [toId, fromId] : [fromId, toId];
   const ids = [links[0]!.source, ...links.map((l) => l.target)];
-  const details = await Promise.all(ids.filter((id) => !onMap(id)).map((id) => atlas.detail(id)));
-  const byId = new Map(details.map((d) => [d.entity.id, d.entity]));
+  const byId = new Map(entities.map((e) => [e.id, e]));
   const { nodes } = graph();
   const baseRow = onMap(a) ? nodes.find((n) => n.id === a)!.data.row : nodes.length ? Math.round(maxRow(nodes)) + 3 : 0;
   let prev: string | undefined;
@@ -215,7 +253,10 @@ export async function connectFromDb(fromId: string, toId: string, opts: { skipDi
     if (e) addEntity(e, baseRow, prev);
     prev = id;
   }
-  const edgeIds = links.map((l) => addLink(l)).filter((x): x is string => !!x);
+  addLinks(links);
+  const edgeIds = links
+    .map((l) => graph().edges.find((e) => (e.source === l.source && e.target === l.target) || (e.source === l.target && e.target === l.source))?.id)
+    .filter((x): x is string => !!x);
   const story: Story = {
     id: newId("s"),
     fromId: a,
@@ -227,6 +268,10 @@ export async function connectFromDb(fromId: string, toId: string, opts: { skipDi
       (reversed ? "The second event came first, so this traces the chain in the order it happened. " : "") +
       `A chain of ${links.length} sourced link${links.length === 1 ? "" : "s"}, each backed by Wikipedia or Wikidata. Open any link to see its evidence.`,
   };
+  // "Show the steps in between": the chain replaces the direct link.
+  if (opts.skipDirect && links.length > 1) {
+    setGraph({ edges: graph().edges.filter((e) => !(e.source === a && e.target === b) && !(e.source === b && e.target === a)) });
+  }
   setGraph({ stories: [...graph().stories, story] });
   select({ type: "story", id: story.id });
   fitTo(ids, 0.95);
@@ -241,16 +286,19 @@ export async function addSlice(era: Era, region: string, lens: string, limit = 1
   if (!abort) return;
   try {
     const { items } = await atlas.browse({ from: era.from, to: era.to, region, lens, limit });
+    if (abort.signal.aborted) return;
+    checkpoint();
     const { nodes } = graph();
     const band = nodes.length ? Math.round(maxRow(nodes)) + 3 : 0;
     const added = items.filter((e, i) => addEntity(e, band + (i % 4)));
-    await linkAmong([...items.map((e) => e.id), ...graph().nodes.filter((n) => n.data.source === "db").map((n) => n.id)].filter(onMap));
+    await linkAmong(abort.signal);
+    if (abort.signal.aborted) return;
     if (added.length === 0 && items[0]) focusNode(items[0].id);
     else fitTo(items.map((e) => e.id), 0.9);
   } catch (e) {
-    toast(e instanceof Error ? e.message : String(e));
+    if (!abort.signal.aborted) toast(e instanceof Error ? e.message : String(e));
   } finally {
-    endJob(key);
+    endJob(key, abort);
   }
 }
 
@@ -259,6 +307,7 @@ export async function addNeighbor(anchorId: string, link: atlas.LinkView, entity
   const anchor = graph().nodes.find((n) => n.id === anchorId);
   if (!anchor) return openEntity(entity.id);
   if (!onMap(entity.id)) {
+    checkpoint();
     const isEffect = link.source === anchorId;
     const siblings = graph()
       .edges.filter((e) => (isEffect ? e.source === anchorId : e.target === anchorId))
@@ -267,7 +316,8 @@ export async function addNeighbor(anchorId: string, link: atlas.LinkView, entity
     addEntity(entity, freeRows(anchor.data.row, 1, taken)[0] ?? anchor.data.row + 1, anchorId);
   }
   addLink(link);
-  await linkAmong([entity.id]);
+  await linkAmong();
+  if (!onMap(entity.id)) return;
   select({ type: "edge", id: link.id });
   fitTo([anchorId, entity.id]);
 }

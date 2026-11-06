@@ -4,6 +4,41 @@ Running build log. Newest entry on top.
 
 ---
 
+## 2026-11-06 — bugfix pass; network, caching and rendering optimization
+
+**Network (measured with an instrumented browser)**
+
+| Flow | Before | After |
+|---|---|---|
+| Typing a 17-character search | 15 requests | 2 (debounced) |
+| Opening an entity | 9 | 2 (detail + one batched links call) |
+| Expanding / "Map the top 12" | 1 + one per node on the map | 1–2 |
+| Revisiting an era | 1 | 0 (cached) |
+
+- New `POST /api/atlas/links` returns all links among a set of entities. Path responses include their entities.
+- Atlas responses are gzipped and carry an ETag plus `Cache-Control` (data is immutable per build).
+- SSE: raw token events are opt-in (`?tokens=1`), reasoning deltas are coalesced (~150 ms), and a client disconnect aborts the upstream model call. One OpenRouter client is reused across requests.
+- The AI response cache is capped at 150 entries with oldest-first eviction, so it can't crowd out the saved map. Its key excludes the ever-changing "titles on the map" context, so repeat expansions actually hit.
+
+**Bugs fixed** (from an independent review plus measurement)
+- Path search: replaced plain Dijkstra, which could miss a valid short route behind a cheaper long one under the step limit, with an exact layered search over (node, steps).
+- Concurrency: jobs declare the nodes they build on and are aborted if those disappear. `endJob` only ends its own job. Database actions honor cancel and Clear. Undo cancels in-flight work, and every structural action is undoable.
+- Store invariants enforced centrally in `setGraph`: no edge without both endpoints, and no story pointing at removed nodes or edges.
+- A Connect race could leave a job stuck forever, and free-text paths silently dropped steps.
+- "Show the steps in between" now replaces the direct link for database paths too. Entity detail includes "+N" counts.
+- Curated links are no longer blocked by rejected sourced candidates. Reversed-duplicate links are deduplicated. Negative `limit` values are clamped.
+- `useQuery` retries failures instead of caching errors forever. A causal cycle within a year cluster no longer blows up the layout width. Duplicate React keys fixed.
+
+**Rendering**
+- Node in/out degrees are computed once per edge change instead of scanned per card on every store update (which included every animation frame).
+- The inspector subscribes to node *data*, not positions, so it no longer re-renders ~60×/s during layout tweens.
+
+**Pipeline**
+- Per-entity caching of Wikidata lookups (details, relations, images): a rebuild with nothing new takes ~18 s instead of 5+ minutes, and new entities only fetch their own data.
+- Deterministic output ordering, so data diffs reflect real changes only.
+- The intermediate snapshot is committed (`pipeline/out`, minus the raw dump), including every agent's inputs and outputs.
+
+
 ## 2026-11-06 — balancing coverage across the world; images; exploration cues
 
 **Coverage (era × region)**

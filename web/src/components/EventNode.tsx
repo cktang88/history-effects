@@ -19,8 +19,8 @@ export function EventNode({ id, data }: NodeProps<EventNodeType>) {
   const job = useGraph((s) => s.jobs[id]);
   const selected = useGraph((s) => s.selection?.type === "node" && s.selection.id === id);
   const focus = useGraph((s) => (s.focus ? (s.focus.nodes.has(id) ? "lit" : "dim") : "none"));
-  const countIn = useGraph((s) => s.edges.reduce((k, e) => k + (e.target === id ? 1 : 0), 0));
-  const countOut = useGraph((s) => s.edges.reduce((k, e) => k + (e.source === id ? 1 : 0), 0));
+  const countIn = useGraph((s) => s.degree[id]?.in ?? 0);
+  const countOut = useGraph((s) => s.degree[id]?.out ?? 0);
   const pending = job?.kind === "explore" && !data.description;
 
   const grow = (direction: "effects" | "causes") => (e: React.MouseEvent) => {

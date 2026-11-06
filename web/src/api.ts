@@ -1,6 +1,9 @@
 import type { CausalItem, Explanation, HistoricalEvent, PathResult } from "./types";
 
 export type StreamHandlers = {
+  // What identifies the response for caching, when it differs from the body
+  // (e.g. excluding context that changes on every call).
+  cacheKey?: unknown;
   // Called once per object as soon as the model finishes writing it.
   onItem?: (key: string, value: unknown, index: number) => void;
   onThinking?: (text: string) => void;
@@ -19,7 +22,7 @@ const API_CACHE_PREFIX = "history-effects:api:v2:";
 type CachedStream<T> = { items: { key: string; value: unknown; index: number }[]; result: T };
 
 export async function postStream<T>(path: string, body: unknown, handlers: StreamHandlers = {}): Promise<T> {
-  const cacheKey = `${API_CACHE_PREFIX}${path}:${stableStringify(body)}`;
+  const cacheKey = `${API_CACHE_PREFIX}${path}:${stableStringify(handlers.cacheKey ?? body)}`;
   const cached = handlers.refresh ? null : readCache<CachedStream<T>>(cacheKey);
   if (cached) {
     for (const item of cached.items) handlers.onItem?.(item.key, item.value, item.index);
@@ -68,11 +71,38 @@ function readCache<T>(key: string): T | null {
   }
 }
 
+// Bounded: keeps the most recent responses and evicts the oldest, so the
+// cache can't crowd out the saved map in localStorage.
+const CACHE_INDEX = `${API_CACHE_PREFIX}index`;
+const CACHE_MAX = 150;
+
+function cacheIndex(): string[] {
+  try {
+    return JSON.parse(localStorage.getItem(CACHE_INDEX) ?? "[]") as string[];
+  } catch {
+    return [];
+  }
+}
+
+function evict(index: string[], count: number): string[] {
+  for (const k of index.slice(0, count)) localStorage.removeItem(k);
+  return index.slice(count);
+}
+
 function writeCache(key: string, value: unknown) {
   try {
-    localStorage.setItem(key, JSON.stringify(value));
+    let index = cacheIndex().filter((k) => k !== key);
+    if (index.length >= CACHE_MAX) index = evict(index, index.length - CACHE_MAX + 1);
+    const json = JSON.stringify(value);
+    try {
+      localStorage.setItem(key, json);
+    } catch {
+      index = evict(index, Math.ceil(index.length / 2));
+      localStorage.setItem(key, json);
+    }
+    localStorage.setItem(CACHE_INDEX, JSON.stringify([...index, key]));
   } catch {
-    // Storage full or unavailable: caching is best-effort.
+    // Storage unavailable: caching is best-effort.
   }
 }
 
@@ -92,6 +122,15 @@ function sortForCache(value: unknown): unknown {
 
 export async function readSSE<T>(body: ReadableStream<Uint8Array>, handlers: StreamHandlers = {}): Promise<T> {
   const reader = body.getReader();
+  try {
+    return await consumeSSE<T>(reader, handlers);
+  } finally {
+    // Release the connection even if a handler threw or parsing failed.
+    reader.cancel().catch(() => {});
+  }
+}
+
+async function consumeSSE<T>(reader: ReadableStreamDefaultReader<Uint8Array>, handlers: StreamHandlers): Promise<T> {
   const decoder = new TextDecoder();
   let buffer = "";
   let result: T | undefined;
@@ -136,13 +175,19 @@ function parseSSEEvent(raw: string): { event: string; data: string } | null {
 export const explore = (text: string, h?: StreamHandlers) =>
   postStream<{ event: HistoricalEvent; effects: CausalItem[]; causes: CausalItem[] }>("/api/explore", { text, n: 5 }, h);
 
+// The "existing titles" context changes with every map edit, so it's left
+// out of the cache key; the event, count, path and exclusions identify it.
 export const expand = (
   direction: "effects" | "causes",
   event: HistoricalEvent,
   n: number,
   context: ExpandContext,
   h?: StreamHandlers
-) => postStream<Record<string, CausalItem[]>>(`/api/${direction}`, { event, n, context }, h);
+) =>
+  postStream<Record<string, CausalItem[]>>(`/api/${direction}`, { event, n, context }, {
+    ...h,
+    cacheKey: { event, n, path: context.path, exclude: context.exclude },
+  });
 
 export const tracePath = (from: HistoricalEvent | string, to: HistoricalEvent | string, h?: StreamHandlers) =>
   postStream<PathResult>("/api/path", { from, to }, h);

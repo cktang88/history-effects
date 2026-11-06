@@ -221,11 +221,13 @@ async function main() {
   const asEffect = topBy("t", MAX_CAUSES);
   const links: CausalLink[] = scored
     .filter((c) => c.score >= MIN_SCORE && (asCause.has(`${c.s}>${c.t}`) || asEffect.has(`${c.s}>${c.t}`)))
-    .sort((a, b) => b.score - a.score)
+    .sort((a, b) => b.score - a.score || a.s.localeCompare(b.s) || a.t.localeCompare(b.t))
     .map(({ s, t, score, ev }) => ({ s, t, score, ev }));
 
   log(`causal candidates: ${candidates.size} → kept ${links.length}; structural: ${structure.length}`);
-  const sorted = [...entities.values()].sort((a, b) => b.sig - a.sig);
+  // Deterministic order keeps rebuild diffs to real changes.
+  const sorted = [...entities.values()].sort((a, b) => b.sig - a.sig || a.id.localeCompare(b.id));
+  structure.sort((a, b) => a.s.localeCompare(b.s) || a.t.localeCompare(b.t) || a.rel.localeCompare(b.rel));
   await writeJSONLines("entities.json", sorted);
   await writeJSONLines("links.json", links);
   await writeJSONLines("structure.json", structure);

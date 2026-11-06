@@ -22,6 +22,7 @@ import {
   computeLayout,
   endJob,
   graph,
+  rekeyJob,
   select,
   setGraph,
   startJob,
@@ -142,7 +143,7 @@ function upsertEvent(event: HistoricalEvent, row: number, spawnFrom?: string): {
 }
 
 function link(source: string, target: string, data: CausalEdgeData): string | null {
-  if (source === target) return null;
+  if (source === target || !findNode(source) || !findNode(target)) return null;
   const { edges } = graph();
   const existing = findEdgeBetween(edges, source, target);
   if (existing) return existing.id;
@@ -211,11 +212,12 @@ export async function explore(text: string) {
   const entity = await resolveEntity(phrase).catch(() => null);
   if (entity) return openEntity(entity.id);
 
+  checkpoint();
   const { nodes } = graph();
   const row = nodes.length ? Math.round(maxRow(nodes)) + 4 : 0;
   const placeholder = upsertEvent({ title: phrase.charAt(0).toUpperCase() + phrase.slice(1), description: "" }, row);
   let rootId = placeholder.id;
-  const abort = startJob(rootId, "explore", `Exploring “${phrase}”`);
+  const abort = startJob(rootId, "explore", `Exploring “${phrase}”`, [rootId]);
   if (!abort) return;
   select({ type: "node", id: rootId });
   centerOn(rootId);
@@ -228,6 +230,7 @@ export async function explore(text: string) {
       onThinking: thinking(placeholder.id),
       onItem: (key, value, index) => {
         if (key === "event") {
+          // May merge into an existing node, which then owns the job.
           rootId = settleRoot(placeholder.id, value as HistoricalEvent);
           return;
         }
@@ -252,7 +255,8 @@ export async function explore(text: string) {
     const node = findNode(placeholder.id);
     if (node && !node.data.description) removeNodes([placeholder.id], false);
   } finally {
-    endJob(placeholder.id);
+    endJob(placeholder.id, abort);
+    endJob(rootId, abort);
   }
 }
 
@@ -264,6 +268,8 @@ function settleRoot(placeholderId: string, event: HistoricalEvent): string {
     return placeholderId;
   }
   // The phrase resolved to an event already on the map: grow from that one.
+  // Re-key the job first so removing the placeholder doesn't abort it.
+  rekeyJob(placeholderId, twin.id, [twin.id]);
   setGraph({ nodes: nodes.filter((n) => n.id !== placeholderId), edges });
   select({ type: "node", id: twin.id });
   return twin.id;
@@ -286,8 +292,9 @@ export async function expand(nodeId: string, direction: "effects" | "causes") {
   const more = neighbors.length > 0;
   const n = more ? 3 : direction === "effects" ? 5 : 4;
   const verb = direction === "effects" ? (more ? "Finding more effects of" : "Tracing effects of") : more ? "Finding more causes of" : "Tracing causes of";
-  const abort = startJob(nodeId, more ? "more" : direction, `${verb} ${node.data.title}`);
+  const abort = startJob(nodeId, more ? "more" : direction, `${verb} ${node.data.title}`, [nodeId]);
   if (!abort) return;
+  checkpoint();
 
   const rows = freeRows(node.data.row, n, neighbors.map((x) => x.data.row));
   const created: string[] = [];
@@ -321,7 +328,7 @@ export async function expand(nodeId: string, direction: "effects" | "causes") {
   } catch (e) {
     reportError(e, abort);
   } finally {
-    endJob(nodeId);
+    endJob(nodeId, abort);
   }
 }
 
@@ -350,13 +357,18 @@ export async function connect(from: Endpoint, to: Endpoint, opts: { replaceDirec
   const [a, b] = await Promise.all([toEntityId(from), toEntityId(to)]);
   if (a && b && (await connectFromDb(a, b, { skipDirect: opts.replaceDirect }).catch(() => false))) return;
   const storyId = newId("s");
-  const abort = startJob(storyId, "path", `Connecting ${endpointLabel(from)} → ${endpointLabel(to)}`);
-  if (!abort) return;
-
-  const { nodes } = graph();
   let fromId = "nodeId" in from ? from.nodeId : undefined;
   let toId = "nodeId" in to ? to.nodeId : undefined;
-  const fromRow = fromId ? findNode(fromId)!.data.row : toId ? findNode(toId)!.data.row : nodes.length ? Math.round(maxRow(nodes)) + 3 : 0;
+  // An endpoint node may have been removed while we were resolving.
+  if ((fromId && !findNode(fromId)) || (toId && !findNode(toId))) return;
+  const anchors = [fromId, toId].filter((x): x is string => !!x);
+  const abort = startJob(storyId, "path", `Connecting ${endpointLabel(from)} → ${endpointLabel(to)}`, anchors);
+  if (!abort) return;
+  checkpoint();
+
+  const { nodes } = graph();
+  const anchorNode = (fromId && findNode(fromId)) || (toId && findNode(toId));
+  const fromRow = anchorNode ? anchorNode.data.row : nodes.length ? Math.round(maxRow(nodes)) + 3 : 0;
   const stepIds: string[] = [];
   const edgeIds: string[] = [];
   let prev: string | undefined = fromId;
@@ -378,7 +390,7 @@ export async function connect(from: Endpoint, to: Endpoint, opts: { replaceDirec
         else if (key === "steps") {
           const { strength, reasoning, ...event } = value as CausalItem;
           const start = ensureFrom();
-          if (findByTitle(event.title)?.id === toId) return;
+          if (toId && findByTitle(event.title)?.id === toId) return;
           const { id } = upsertEvent(event, fromRow, prev ?? start);
           if (id === start || stepIds.includes(id)) return;
           const edgeId = link(prev ?? start, id, { strength, reasoning });
@@ -395,7 +407,7 @@ export async function connect(from: Endpoint, to: Endpoint, opts: { replaceDirec
   } catch (e) {
     reportError(e, abort);
   } finally {
-    endJob(storyId);
+    endJob(storyId, abort);
   }
 }
 
@@ -461,7 +473,7 @@ export async function explainEdge(edgeId: string) {
   const cause = edge && findNode(edge.source);
   const effect = edge && findNode(edge.target);
   if (!edge || !cause || !effect) return;
-  const abort = startJob(edgeId, "explain", `Explaining ${cause.data.title} → ${effect.data.title}`);
+  const abort = startJob(edgeId, "explain", `Explaining ${cause.data.title} → ${effect.data.title}`, [cause.id, effect.id]);
   if (!abort) return;
   try {
     const explanation = await api.explain(eventOf(cause), eventOf(effect), edge.data?.reasoning ?? "", {
@@ -474,22 +486,22 @@ export async function explainEdge(edgeId: string) {
   } catch (e) {
     reportError(e, abort);
   } finally {
-    endJob(edgeId);
+    endJob(edgeId, abort);
   }
 }
 
 export async function verify(nodeId: string) {
   const node = findNode(nodeId);
   if (!node) return;
-  const abort = startJob(nodeId, "enrich", `Checking sources for ${node.data.title}`);
+  const abort = startJob(nodeId, "enrich", `Checking sources for ${node.data.title}`, [nodeId]);
   if (!abort) return;
   try {
     const { event } = await api.enrich(eventOf(node), { signal: abort.signal, onThinking: thinking(nodeId) });
-    patchNode(nodeId, { ...event, title: node.data.title, verified: true });
+    if (!abort.signal.aborted) patchNode(nodeId, { ...event, title: node.data.title, verified: true });
   } catch (e) {
     reportError(e, abort);
   } finally {
-    endJob(nodeId);
+    endJob(nodeId, abort);
   }
 }
 

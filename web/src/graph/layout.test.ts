@@ -51,6 +51,19 @@ describe("layoutTimeline", () => {
     expect(Math.abs(positions.get("a")!.y - positions.get("b")!.y)).toBeGreaterThanOrEqual(NODE_H);
   });
 
+  it("keeps a causal cycle within a year cluster compact", () => {
+    const ids = ["a", "b", "c", "d", "e", "f"];
+    const { columns } = layoutTimeline(
+      ids.map((id) => ({ id, year: 1800, row: 0 })),
+      [
+        { source: "a", target: "b" },
+        { source: "b", target: "c" },
+        { source: "c", target: "a" },
+      ]
+    );
+    expect(columns.length).toBeLessThanOrEqual(3);
+  });
+
   it("labels BCE years", () => {
     const { columns } = layoutTimeline([{ id: "a", year: -44, row: 0 }], []);
     expect(columns[0]!.label).toBe("44 BCE");

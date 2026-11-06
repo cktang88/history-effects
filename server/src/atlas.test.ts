@@ -90,6 +90,31 @@ describe("Atlas", () => {
     expect(dup.effectsOf("Q1").filter((l) => l.target === "Q2")).toHaveLength(1);
   });
 
+  it("returns links among a set in one call", () => {
+    expect(atlas.linksAmong(["Q1", "Q2", "Q3"]).map((l) => l.id).sort()).toEqual(["Q1>Q2", "Q2>Q3"]);
+    expect(atlas.linksAmong(["Q1"])).toEqual([]);
+  });
+
+  it("finds a valid short path even when a cheaper long route hits the step limit", () => {
+    // A→X cheaply via a 3-step detour, or directly at a higher cost; X→T.
+    const ents = ["A", "B", "C", "D", "X", "T"].map((id, i) => e(id, id, 1000 + i * 10));
+    const strong = (s: string, t: string): CausalLink => ({ s, t, score: 50, ev: [] });
+    const g = new Atlas(ents, [strong("A", "B"), strong("B", "C"), strong("C", "X"), { s: "A", t: "X", score: 0.1, ev: [] }, strong("X", "T")], []);
+    expect(g.path("A", "T", { maxSteps: 2 })!.map((l) => l.target)).toEqual(["X", "T"]);
+    expect(g.path("A", "T", { maxSteps: 4 })!.map((l) => l.target)).toEqual(["B", "C", "X", "T"]);
+  });
+
+  it("lets a curated link fill a pair whose sourced candidate was rejected", () => {
+    const g = new Atlas(entities, links, [], { "Q6>Q4": { verdict: "reject", strength: "minor", mechanism: "" } }, 0, {
+      "Q6>Q4": { strength: "minor", mechanism: "curated" },
+    });
+    expect(g.link("Q6", "Q4")!.reasoning).toBe("curated");
+  });
+
+  it("includes link counts on the detail entity", () => {
+    expect(atlas.detail("Q4")!.entity).toMatchObject({ nCauses: 3, nEffects: 0 });
+  });
+
   it("finds no path backwards in time", () => {
     expect(atlas.path("Q4", "Q1")).toBeNull();
   });

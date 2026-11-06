@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
-import { app } from "./index.ts";
+import { app, coalesce } from "./index.ts";
 
 // Helpers ---------------------------------------------------------------------
 
@@ -195,7 +195,7 @@ describe("POST /api/effects/stream", () => {
       ])
     );
 
-    const res = await jsonReq("/api/effects/stream", {
+    const res = await jsonReq("/api/effects/stream?tokens=1", {
       event: { title: "X", description: "" },
       n: 1,
     });
@@ -346,6 +346,12 @@ function parseEvents(text: string) {
 }
 
 describe("POST /api/explore/stream", () => {
+  it("omits raw token events unless asked", async () => {
+    vi.stubGlobal("fetch", streamOf({ event: { title: "T", year: 1, description: "d" }, effects: [], causes: [] }));
+    const res = await jsonReq("/api/explore/stream", { text: "t" });
+    expect(parseEvents(await res.text()).some((e) => e.event === "token")).toBe(false);
+  });
+
   it("streams the event and each effect/cause as separate item events", async () => {
     vi.stubGlobal(
       "fetch",
@@ -458,5 +464,18 @@ describe("error handling", () => {
     expect(res.status).toBe(500);
     const json = (await res.json()) as { error: string };
     expect(json.error).toMatch(/OPENROUTER_API_KEY/);
+  });
+});
+
+describe("coalesce", () => {
+  it("batches pushes into one send per interval and flushes the rest", async () => {
+    const sent: string[] = [];
+    const c = coalesce((t) => sent.push(t), 20);
+    c.push("a");
+    c.push("b");
+    await new Promise((r) => setTimeout(r, 40));
+    c.push("c");
+    c.flush();
+    expect(sent).toEqual(["ab", "c"]);
   });
 });

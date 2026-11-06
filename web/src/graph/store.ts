@@ -6,7 +6,8 @@ import { lineage, type CausalEdgeType, type EventNodeType } from "./model";
 
 export type JobKind = "explore" | "effects" | "causes" | "more" | "enrich" | "path" | "explain";
 
-export type Job = { kind: JobKind; label: string; thinking: string; abort: AbortController };
+// `anchors`: nodes the job builds on; if one disappears the job is aborted.
+export type Job = { kind: JobKind; label: string; thinking: string; abort: AbortController; anchors: string[] };
 
 export type Selection = { type: "node" | "edge" | "story"; id: string } | null;
 
@@ -22,6 +23,9 @@ export type GraphState = Snapshot & {
   toasts: Toast[];
   history: Snapshot[];
   details: Record<string, atlas.Detail>;
+  // In/out edge counts per node, recomputed only when edges change, so cards
+  // don't scan every edge on every store update.
+  degree: Record<string, { in: number; out: number }>;
 };
 
 const STORAGE_KEY = "history-effects:graph:v2";
@@ -48,6 +52,15 @@ export function computeLayout(nodes: EventNodeType[], edges: CausalEdgeType[]) {
   );
 }
 
+function degreesOf(edges: CausalEdgeType[]): GraphState["degree"] {
+  const d: GraphState["degree"] = {};
+  for (const e of edges) {
+    (d[e.source] ??= { in: 0, out: 0 }).out++;
+    (d[e.target] ??= { in: 0, out: 0 }).in++;
+  }
+  return d;
+}
+
 function withLayout(nodes: EventNodeType[], edges: CausalEdgeType[]) {
   const { positions, columns } = computeLayout(nodes, edges);
   return { nodes: nodes.map((n) => ({ ...n, position: positions.get(n.id)! })), columns };
@@ -64,6 +77,7 @@ export const useGraph = create<GraphState>(() => ({
   toasts: [],
   history: [],
   details: {},
+  degree: degreesOf(initial.edges),
 }));
 
 export const graph = () => useGraph.getState();
@@ -117,11 +131,44 @@ function tweenTo(targets: Map<string, { x: number; y: number }>) {
   tweenFrame = requestAnimationFrame(frame);
 }
 
+// The single entry point for structural changes. It keeps invariants that
+// concurrent async actions could otherwise break: no edge without both
+// endpoints, no story pointing at missing nodes/edges, and no job running
+// for a node that's gone.
 export function setGraph(patch: Partial<Pick<GraphState, "nodes" | "edges" | "stories">>) {
-  useGraph.setState(patch);
+  const cur = graph();
+  const nodes = patch.nodes ?? cur.nodes;
+  let edges = patch.edges ?? cur.edges;
+  let stories = patch.stories ?? cur.stories;
+  if (patch.nodes || patch.edges) {
+    const ids = new Set(nodes.map((n) => n.id));
+    const valid = edges.filter((e) => ids.has(e.source) && ids.has(e.target));
+    if (valid.length !== edges.length) edges = valid;
+    const edgeIds = new Set(edges.map((e) => e.id));
+    stories = stories
+      .filter((st) => st.nodeIds.every((id) => ids.has(id)))
+      .map((st) => (st.edgeIds.every((id) => edgeIds.has(id)) ? st : { ...st, edgeIds: st.edgeIds.filter((id) => edgeIds.has(id)) }));
+    abortOrphanedJobs(ids);
+  }
+  const changedEdges = edges !== cur.edges;
+  useGraph.setState({
+    ...(patch.nodes ? { nodes } : {}),
+    ...(changedEdges ? { edges, degree: degreesOf(edges) } : {}),
+    ...(stories !== cur.stories ? { stories } : {}),
+  });
   refreshFocus();
   scheduleLayout();
   schedulePersist();
+}
+
+function abortOrphanedJobs(nodeIds: Set<string>) {
+  const { jobs } = graph();
+  const orphaned = Object.entries(jobs).filter(([, j]) => j.anchors.some((a) => !nodeIds.has(a)));
+  if (orphaned.length === 0) return;
+  for (const [, j] of orphaned) j.abort.abort();
+  const rest = { ...jobs };
+  for (const [k] of orphaned) delete rest[k];
+  useGraph.setState({ jobs: rest });
 }
 
 export function checkpoint() {
@@ -133,6 +180,8 @@ export function undo() {
   const { history } = graph();
   const last = history[history.length - 1];
   if (!last) return toast("Nothing to undo", "info");
+  // In-flight actions were building on the state being undone.
+  cancelAllJobs();
   useGraph.setState({ history: history.slice(0, -1), selection: null, focus: null });
   setGraph(last);
 }
@@ -180,17 +229,32 @@ function refreshFocus() {
 
 // --- jobs ---------------------------------------------------------------------
 
-export function startJob(key: string, kind: JobKind, label: string): AbortController | null {
+export function startJob(key: string, kind: JobKind, label: string, anchors: string[] = []): AbortController | null {
   if (graph().jobs[key]) return null;
   const abort = new AbortController();
-  useGraph.setState((s) => ({ jobs: { ...s.jobs, [key]: { kind, label, thinking: "", abort } } }));
+  useGraph.setState((s) => ({ jobs: { ...s.jobs, [key]: { kind, label, thinking: "", abort, anchors } } }));
   return abort;
 }
 
-export function endJob(key: string) {
+// Ends a job, but only the caller's own: after a cancel, a newer job may
+// already be running under the same key.
+export function endJob(key: string, abort?: AbortController) {
   useGraph.setState((s) => {
+    const job = s.jobs[key];
+    if (!job || (abort && job.abort !== abort)) return {};
     const { [key]: _, ...rest } = s.jobs;
     return { jobs: rest };
+  });
+}
+
+// Moves a running job to a new key (e.g. when a placeholder merges into an
+// existing node), keeping its controller.
+export function rekeyJob(from: string, to: string, anchors: string[]) {
+  useGraph.setState((s) => {
+    const job = s.jobs[from];
+    if (!job || s.jobs[to]) return {};
+    const { [from]: _, ...rest } = s.jobs;
+    return { jobs: { ...rest, [to]: { ...job, anchors } } };
   });
 }
 
