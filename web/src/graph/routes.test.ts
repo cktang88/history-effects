@@ -55,5 +55,7 @@ describe("midArrow", () => {
     const a = midArrow([{ x: 0, y: 0 }, { x: 40, y: 0 }, { x: 40, y: 100 }, { x: 300, y: 100 }])!;
     expect(a).toMatchObject({ x: 170, y: 100, angle: 0 });
     expect(a.length).toBe(400);
+    expect(a.fromStart).toBe(270);
+    expect(a.toEnd).toBe(130);
   });
 });

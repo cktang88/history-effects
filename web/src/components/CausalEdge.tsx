@@ -72,7 +72,9 @@ export function CausalEdge({
         pathLength={1}
         markerEnd={`url(#arrow-${tone})`}
       />
-      {arrow && arrow.length > 260 && (
+      {/* Only where the end arrowhead is far off on screen: near either end
+          it is redundant. */}
+      {arrow && arrow.toEnd * zoom > 160 && arrow.fromStart * zoom > 60 && (
         <path
           d="M -6 -6 L 3 0 L -6 6"
           className={`edge-chevron edge-${strength} ${state}`}

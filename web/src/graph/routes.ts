@@ -125,7 +125,7 @@ function simplify(points: Point[]): Point[] {
 
 // Where to draw a mid-edge direction arrow: the middle of the longest straight
 // run (which the flow path follows exactly), with its heading in degrees.
-export function midArrow(points: Point[]): { x: number; y: number; angle: number; length: number } | null {
+export function midArrow(points: Point[]): { x: number; y: number; angle: number; length: number; fromStart: number; toEnd: number } | null {
   const pts = simplify(points);
   if (pts.length < 2) return null;
   let best = -1;
@@ -141,10 +141,14 @@ export function midArrow(points: Point[]): { x: number; y: number; angle: number
   }
   if (best < 0) return null;
   const a = pts[best]!, b = pts[best + 1]!;
+  const before = pts.slice(1, best + 1).reduce((sum, p, i) => sum + dist(pts[i]!, p), 0) + bestLen / 2;
   return {
     x: (a.x + b.x) / 2,
     y: (a.y + b.y) / 2,
     angle: (Math.atan2(b.y - a.y, b.x - a.x) * 180) / Math.PI,
     length: total,
+    // Distance along the route from the start and to the arrowhead at the end.
+    fromStart: before,
+    toEnd: total - before,
   };
 }
